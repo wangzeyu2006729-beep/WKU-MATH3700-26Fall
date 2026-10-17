@@ -1,94 +1,100 @@
-# WKU3700Midquiz · 26fall Gupta
+# WKU3700Midquiz
 
-**WKU MATH 3700 · 2026 Fall · Gupta Midquiz**
+**Reference questions for Gupta's Fall 2027 MATH 3700 Mid Quiz at Wenzhou-Kean University.**
 
-**MATH 3700 · 习题间** — a self-contained, offline midquiz practice app for Gupta’s 2026 Fall Big Data Computing course at WKU.
+This interactive study tool is based on the reference-question PDF provided by Gupta for **MATH 3700: Big Data Computing, Fall 2027 (27Fall)**. It presents the PDF's 100 multiple-choice questions and answer key in a browser, with Chinese study explanations and individually saved practice progress.
 
-100 道英文课程题目，配中文界面与解析。零运行时依赖，不需要账号或后端。
+**[Start practicing online](https://wangzeyu2006729-beep.github.io/WKU3700Midquiz/)** — no account or installation required.
 
-**在线刷题：[打开 Gupta 26fall Midquiz](https://wangzeyu2006729-beep.github.io/WKU3700Midquiz/)**
+- **University:** Wenzhou-Kean University (WKU)
+- **Course:** MATH 3700 — Big Data Computing
+- **Instructor:** Gupta
+- **Semester:** Fall 2027 (27Fall)
+- **Material:** Mid Quiz reference questions from the instructor-provided PDF
+- **Coverage:** Weeks 1–5, 100 questions across seven topics
 
-可直接将此网址分享给同学，无需下载或登录。每个人的答题记录保存在自己的浏览器里。
+This is an independent study aid for working through the reference questions.
 
-- **学期 / Term**：2026 Fall（26fall）
-- **课程 / Course**：WKU MATH 3700 — Big Data Computing
-- **教师 / Instructor**：Gupta
-- **用途 / Purpose**：Midquiz / 期中测验复习
+![Quiz interface preview](docs/preview.png)
 
-课程、学期与教师信息由本仓库维护者提供。题库取自所提供的 100-question multiple-choice quiz，涵盖 Weeks 1–5；本仓库为独立复习工具。
+## Features
 
-![桌面刷题界面](docs/preview.png)
+- Sequential and randomized practice.
+- Review of incorrect answers and bookmarked questions.
+- Seven topic filters, question-number search, and keyword search.
+- Answer confirmation before revealing the correct choice and explanation.
+- Automatic restoration of progress, current position, and unsubmitted selections.
+- Responsive desktop and mobile layouts, keyboard shortcuts, and practice summaries.
+- A self-contained HTML file with no runtime dependencies or backend.
 
-## 快速开始
+The original questions remain in English. The app interface and supplementary explanations are in Chinese.
 
-下载仓库（Code → Download ZIP）并解压，或运行：
+## Independent progress
+
+Everyone uses the same public question bank, while answers, incorrect-answer records, and bookmarks are saved **only in their own browser's localStorage**. The app does not upload practice records or share them with other learners.
+
+Different devices, browsers, and browser profiles have independent records. Tabs in the same browser profile use the same local record. If several people share a computer, use separate browser profiles. There are no accounts or cross-device synchronization; clearing browser data removes progress, and private-window records may disappear when the session closes.
+
+The online site and a downloaded HTML file use separate storage. If browser storage is unavailable, the app displays a warning and remains usable for the current session. Resetting progress requires confirmation.
+
+## Use offline
+
+Download and extract this repository using **Code → Download ZIP**, or clone it:
 
 ```bash
 git clone https://github.com/wangzeyu2006729-beep/WKU3700Midquiz.git
 cd WKU3700Midquiz
 ```
 
-直接用 Chrome、Safari 或 Edge 打开 **index.html** 即可刷题。不用安装软件、运行服务器或联网；复制这一个 HTML 文件即可携带全部题库。
+Open `index.html` in a browser. You can copy this single file to another device and practice offline without running a server.
 
-## 刷题方式
+## Controls
 
-- **顺序练习**：按原题号做题，自动恢复题目位置和未提交的选项。
-- **随机练习**：在当前章节及搜索范围内打乱题目，开启新一轮作答。
-- **错题本**：收集每题最近一次答错的记录。进入时隐藏旧答案；答对后从错题库移出。本轮列表保留到重新进入，以便查看解析。
-- **我的收藏**：点击题目右上角星标，集中复习收藏题。
-- **章节 / 搜索**：按 7 个章节筛选；输入 Q35、35 或英文关键词搜索。筛选与当前模式同时生效。
-- **重新练习本组 / 再答一次**：隐藏答案以便重新作答，保留累计记录；新的提交替换该题最近一次结果。
-- **小结**：最后一题可查看当前组的已提交数量、答对数量、正确率与未答题数。
+Select an option, then confirm your answer to reveal the explanation.
 
-选择后点击「确认答案」才会揭示正确选项与中文解析。方向键切题；1–4 或 A–D 选择；Enter 提交或进入下一题；S 收藏。手机可以使用章节下拉菜单与可点击题号。
+| Shortcut | Action |
+| --- | --- |
+| `1`–`4` or `A`–`D` | Select an answer |
+| `Enter` | Confirm the answer or continue |
+| Left / right arrow | Move between questions |
+| `S` | Toggle the bookmark |
 
-## 进度与数据
+Incorrect answers enter the review list automatically. Answering correctly removes a question from that list when it is refreshed. Restarting a question or group hides its solutions while retaining existing records until the next submission. Statistics use the most recent submission for each question.
 
-记录保存在当前浏览器的 localStorage，键名为 `math3700-practice-v1`，不上传。概览按每题最近一次提交计算：已练习 / 100、答对数、待巩固数、正确率。
+## Source material and editorial notes
 
-公开网址提供同一份题库，个人答题数据互不上传或共享。不同设备、浏览器或浏览器用户配置的记录独立；同一浏览器用户配置下打开的多个标签页使用同一份本地记录。多人共用电脑时，请分别使用不同的浏览器用户配置。
+The question bank comes from Gupta's provided PDF, titled **MATH 3700: Big Data Computing — 100-Question Multiple-Choice Quiz**. The supplied text is preserved in `source.txt`; the structured question bank is in `questions.json`.
 
-本版不提供账号与跨设备同步。清除浏览数据会清除进度；隐私窗口的记录通常只保留到窗口关闭。
+Question numbers, answer-choice order, and answer-key choices are preserved. Formatting repairs restore superscripts, fractions, matrix layouts, and line breaks lost during text extraction. Chinese explanations are supplementary study notes.
 
-同一浏览器、同一文件路径打开时可恢复记录；移动文件、更换浏览器、使用隐私模式或清除浏览数据可能导致记录不可用。HTTP 预览与直接打开文件的记录分别保存。浏览器禁止 localStorage 时会明确显示提示。
+Notes attached to Q3, Q58, Q64–65, Q88, and Q90 explain source wording or formatting ambiguities. Q64–65 follow the standard error stated in the questions. Q90 uses `acfdeg`, consistent with the supplied answer key.
 
-清空学习记录需要在页面弹窗中确认。移动端可从「?」说明弹窗清空记录。
+## Build and verification
 
-## 题库来源与整理
-
-- 用户提供的原始文本完整保留在 `source.txt`。
-- 100 道题的题号、选项顺序、正确答案沿用原始题库。
-- 整理复制导致丢失的上下标、矩阵换行、分数与幂，不加载外部公式库。
-- 中文解析为补充说明。Q3、Q58、Q64–65、Q88、Q90 的原题排版或措辞问题在对应解析中提示；Q64–65 按题目给定标准误作答，Q90 的字符串依答案表整理为 `acfdeg`。
-- 课程名称与原题保留英文，界面与解析使用中文。
-
-## 文件与验证
-
-`index.html` 是最终独立文件。`template.html` 为界面源码，`build.py` 从文本提取题目并整理公式，`questions.json` 为可检查的题库。修改源码后运行：
+Edit `template.html` for the interface or `build.py` for question parsing and notation repairs, then rebuild:
 
 ```bash
 python3 build.py
 ```
 
-浏览器行为检查脚本是 `verify-browser.js`，供 Playwright CLI 的 `run-code` 执行。2026-10-17 已通过 39 项 Chrome 浏览器检查，包括全部 100 题的评分、进度恢复、错题与收藏、筛选和 320–1440px 布局；也已验证直接以 `file://` 打开 HTML。验证摘要保存在 [docs/verification.json](docs/verification.json)。本地运行日志和测试截图在 `output/playwright/`，不纳入版本控制。
+The generated `index.html` embeds the entire question bank. The app has passed 39 browser checks covering all 100 questions, grading, progress restoration, review modes, and layouts from 320 to 1440 pixels. The verification summary is in [docs/verification.json](docs/verification.json). The deployed site also passed eight independent-browser isolation checks.
 
-如需重新运行浏览器检查，先在仓库根目录启动本地服务：
+To run the browser checks, start a local server:
 
 ```bash
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-在另一个终端运行（需要 Node.js / npm）：
+In another terminal, with Node.js and npm available:
 
 ```bash
 npx --yes --package @playwright/cli playwright-cli -s=wku3700 open http://127.0.0.1:8000/index.html
 npx --yes --package @playwright/cli playwright-cli -s=wku3700 run-code "$(cat verify-browser.js)"
+npx --yes --package @playwright/cli playwright-cli -s=wku3700 run-code "$(cat verify-isolation.js)"
 ```
 
-这些检查会清空该测试浏览器的练习记录，请使用单独的测试会话。
+Use a dedicated test session: `verify-browser.js` resets its test browser's records. `verify-isolation.js` creates two separate browser sessions and checks that answers, bookmarks, incorrect-answer review, refresh, and resets remain independent. Local test outputs are excluded from version control.
 
-`verify-isolation.js` 使用两个独立浏览器会话，验证答题、错题、收藏、刷新与清空操作互不影响，并检查没有提交答题数据的网络请求。可在打开网页后，将上面的 `run-code` 文件名替换为 `verify-isolation.js` 运行；此检查不会改动已打开浏览器的学习记录。
+## License and attribution
 
-## 许可证与来源
-
-应用代码使用 [MIT License](LICENSE)。课程题目与原答案表的权利归原作者所有，MIT 许可不重新授权这些课程材料，具体见 [CONTENT_NOTICE.md](CONTENT_NOTICE.md)。本项目是独立复习工具。
+Application code is available under the [MIT License](LICENSE). The course questions and original answer key remain the materials of their respective authors; the application's MIT License does not relicense them. See [CONTENT_NOTICE.md](CONTENT_NOTICE.md) for attribution and scope. This project is not an official university website or an assertion of university endorsement.
