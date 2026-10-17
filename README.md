@@ -11,7 +11,7 @@
 下载仓库（Code → Download ZIP）并解压，或运行：
 
 ```bash
-git clone https://github.com/zy06-learn/WKU3700Midquiz.git
+git clone https://github.com/wangzeyu2006729-beep/WKU3700Midquiz.git
 cd WKU3700Midquiz
 ```
 
