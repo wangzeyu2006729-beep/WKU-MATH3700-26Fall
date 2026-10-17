@@ -87,6 +87,8 @@ npx --yes --package @playwright/cli playwright-cli -s=wku3700 run-code "$(cat ve
 
 这些检查会清空该测试浏览器的练习记录，请使用单独的测试会话。
 
+`verify-isolation.js` 使用两个独立浏览器会话，验证答题、错题、收藏、刷新与清空操作互不影响，并检查没有提交答题数据的网络请求。可在打开网页后，将上面的 `run-code` 文件名替换为 `verify-isolation.js` 运行；此检查不会改动已打开浏览器的学习记录。
+
 ## 许可证与来源
 
 应用代码使用 [MIT License](LICENSE)。课程题目与原答案表的权利归原作者所有，MIT 许可不重新授权这些课程材料，具体见 [CONTENT_NOTICE.md](CONTENT_NOTICE.md)。本项目是独立复习工具。
