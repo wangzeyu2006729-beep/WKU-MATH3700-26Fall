@@ -1,8 +1,17 @@
-# WKU3700Midquiz
+# WKU3700Midquiz · 26fall Gupta
 
-**MATH 3700 · 习题间** — a self-contained, offline quiz app for Big Data Computing revision.
+**WKU MATH 3700 · 2026 Fall · Gupta Midquiz**
+
+**MATH 3700 · 习题间** — a self-contained, offline midquiz practice app for Gupta’s 2026 Fall Big Data Computing course at WKU.
 
 100 道英文课程题目，配中文界面与解析。零运行时依赖，不需要账号或后端。
+
+- **学期 / Term**：2026 Fall（26fall）
+- **课程 / Course**：WKU MATH 3700 — Big Data Computing
+- **教师 / Instructor**：Gupta
+- **用途 / Purpose**：Midquiz / 期中测验复习
+
+课程、学期与教师信息由本仓库维护者提供。题库取自所提供的 100-question multiple-choice quiz，涵盖 Weeks 1–5；本仓库为独立复习工具。
 
 ![桌面刷题界面](docs/preview.png)
 

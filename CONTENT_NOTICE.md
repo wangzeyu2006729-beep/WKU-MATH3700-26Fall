@@ -2,6 +2,14 @@
 
 The application code is released under the [MIT License](LICENSE).
 
+Course context supplied by the repository owner:
+
+- **Institution:** WKU
+- **Term:** 2026 Fall (26fall)
+- **Course:** MATH 3700 — Big Data Computing
+- **Instructor:** Gupta
+- **Study context:** Midquiz / midterm quiz revision
+
 The question statements, answer choices, and original answer key were supplied
 by the repository owner from the course handout titled **MATH 3700: Big Data
 Computing — 100-Question Multiple-Choice Quiz**, covering Weeks 1–5. The
