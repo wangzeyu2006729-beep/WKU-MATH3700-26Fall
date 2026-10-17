@@ -44,7 +44,7 @@
   <button class="mode" data-mode="saved"><svg><use href="#i-star"/></svg><span>我的收藏</span><span id="saved-count" class="count">0</span></button>
  </nav>
  <div class="chapter-nav"><div class="nav-label">按章节练习</div><nav id="chapters" aria-label="章节筛选"></nav></div>
- <div class="sidebar-bottom"><div class="offline"><i></i>离线也能专注学习</div><p id="save-status">学习进度自动保存在此浏览器</p><button id="reset" class="quiet-btn">清空学习记录</button></div>
+ <div class="sidebar-bottom"><div class="offline"><i></i>下载后可离线使用</div><p id="save-status">学习进度自动保存在此浏览器</p><button id="reset" class="quiet-btn">清空学习记录</button></div>
 </aside>
 <main class="workspace">
  <header class="topbar"><div class="course-title">MATH 3700<span>26fall · Gupta · Midquiz</span></div><div class="top-tools"><label class="search-box"><svg><use href="#i-search"/></svg><input id="search" type="search" placeholder="搜索题号、关键词" aria-label="搜索题号或英文关键词" autocomplete="off"></label><button id="help" class="help-btn" aria-label="使用说明与快捷键">?</button></div></header>
@@ -66,7 +66,7 @@
 </main>
 <noscript><p style="padding:30px">此刷题网站需要启用 JavaScript。请在浏览器中启用后重新打开。</p></noscript>
 <div class="toast" id="toast" role="status" hidden></div>
-<dialog id="help-dialog" aria-labelledby="help-title"><h2 id="help-title">按自己的节奏练习。</h2><p>选择一个答案，点击「确认答案」后查看中文解析。你可以随时切换题目和章节。</p><ul><li>顺序练习会接着上次的位置继续。</li><li>随机练习会打乱当前筛选下的题目，开始一轮新的作答。</li><li>错题本会自动收集最近一次答错的题；答对后移出。</li><li>点击星标收藏，点击题号快速跳转。</li><li>重新练习本组会隐藏答案，保留已有学习记录。</li></ul><p>快捷键：1–4 或 A–D 选择；Enter 提交 / 下一题；左右方向键切题；S 收藏。</p><p>无需联网或注册。进度只存于当前浏览器，更换浏览器、移动文件或清除浏览数据后，记录可能不可用。正确率按每题最近一次提交统计。</p><p>答案沿用提供的题库；少数排版与措辞问题会在解析中单独提示。</p><div class="dialog-actions"><button class="secondary" id="help-reset">清空记录</button><button class="primary" data-close="help-dialog">开始练习</button></div></dialog>
+<dialog id="help-dialog" aria-labelledby="help-title"><h2 id="help-title">按自己的节奏练习。</h2><p>选择一个答案，点击「确认答案」后查看中文解析。你可以随时切换题目和章节。</p><ul><li>顺序练习会接着上次的位置继续。</li><li>随机练习会打乱当前筛选下的题目，开始一轮新的作答。</li><li>错题本会自动收集最近一次答错的题；答对后移出。</li><li>点击星标收藏，点击题号快速跳转。</li><li>重新练习本组会隐藏答案，保留已有学习记录。</li></ul><p>快捷键：1–4 或 A–D 选择；Enter 提交 / 下一题；左右方向键切题；S 收藏。</p><p>无需注册。网页版打开需要联网，下载 HTML 后可离线使用。进度仅存于各自浏览器，不会共享或上传。不同设备和浏览器用户配置的记录独立，同一浏览器用户配置共用一份记录；暂不支持跨设备同步。清除浏览数据会清除进度。正确率按每题最近一次提交统计。</p><p>答案沿用提供的题库；少数排版与措辞问题会在解析中单独提示。</p><div class="dialog-actions"><button class="secondary" id="help-reset">清空记录</button><button class="primary" data-close="help-dialog">开始练习</button></div></dialog>
 <dialog id="reset-dialog" aria-labelledby="reset-title"><h2 id="reset-title">清空学习记录？</h2><p>将清除本浏览器中的答题记录、错题、收藏与练习位置。题库不会受影响，此操作无法撤销。</p><div class="dialog-actions"><button class="secondary" data-close="reset-dialog">保留记录</button><button id="confirm-reset" class="primary">确认清空</button></div></dialog>
 <dialog id="summary-dialog" aria-labelledby="summary-title"><h2 id="summary-title">给这轮练习做个小结。</h2><div id="summary-body"></div><div class="dialog-actions"><button class="secondary" data-close="summary-dialog">返回题目</button><button id="summary-next" class="primary">继续未答</button></div></dialog>
 <script id="quiz-data" type="application/json">__QUIZ_DATA__</script>
