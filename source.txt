@@ -1,0 +1,870 @@
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+MATH 3700: Big Data Computing
+100-Question Multiple-Choice Quiz
+Weeks 1–5: Big Data, Linear Algebra, Matrix Calculus, Probability,
+Curse of Dimensionality, Distances & Metrics, Gradient Descent & SGD
+Name: Student ID: Score: /100
+Instructions. Each question has exactly one correct answer. Circle the best choice. No calculators
+are required; all arithmetic is designed to be done by hand. An answer key with brief explanations
+is provided at the end.
+Part Topic Questions
+I Big Data & the 5 V’s Q1–Q10
+II Linear Algebra Foundations Q11–Q34
+III Matrix Calculus & Eigenvalues Q35–Q44
+IV Probability Q45–Q74
+V Curse of Dimensionality Q75–Q83
+VI Distances & Metrics Q84–Q91
+VII Gradient Descent & SGD Q92–Q100
+Part I — Big Data & the 5 V’s (Q1–Q10)
+Q1. Which of the 5 V’s concerns the correctness, consistency, trustworthiness, and reliability of
+data?
+(A) Volume
+(B) Velocity
+(C) Variety
+(D) Veracity
+Q2. A DNA sequencer produces 1–2 TB per day, so the pipeline processes each read once, keeps a
+small summary, and discards the read. Which V is at play and which mathematical tool fits?
+(A) Variety; matrix inversion
+(B) Velocity; streaming algorithms (e.g., Count-Min Sketch)
+(C) Value; gradient descent
+(D) Veracity; Bayes’ rule
+Q3. JSON, XML, and log files are examples of which type of data?
+(A) Structured
+(B) Unstructured
+(C) Semi-structured
+(D) Metadata
+Q4. What is the mathematical implication of Variety?
+(A) We need streaming algorithms with O(1) time per item
+(B) Diverse data types must be converted into numerical vectors in R
+p
+so linear algebra applies
+(C) We need exponentially more storage
+(D) We must always remove outliers first
+1
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+Q5. A 224 × 224 RGB image is flattened into a raw pixel vector. What is its dimension?
+(A) 50,176
+(B) 150,528
+(C) 1,080
+(D) 448
+Q6. In the agriculture scenario, each drone image is 3000 × 4000 × 3. How many pixel values is
+that?
+(A) 3.6 × 106
+(B) 12 × 106
+(C) 36 × 106
+(D) 360 × 106
+Q7. Which of the following is not one of the 5 V’s of Big Data?
+(A) Volume
+(B) Value
+(C) Validity
+(D) Velocity
+Q8. Which sequence correctly orders the data analytics workflow?
+(A) Raw data → Cleaning → Transform (X ∈ R
+n×p
+) → Explore → Model → Interpret
+(B) Raw data → Model → Cleaning → Explore → Transform → Interpret
+(C) Raw data → Explore → Interpret → Cleaning → Transform → Model
+(D) Cleaning → Interpret → Raw data → Transform → Explore → Model
+Q9. Why is explicit matrix inversion impractical for big data?
+(A) It costs O(p), about 104 operations for p = 10,000
+(B) It costs O(p
+2
+), about 108 operations for p = 10,000
+(C) It costs O(log p), about 13 operations for p = 10,000
+(D) It costs O(p
+3
+), about 1012 operations for p = 10,000
+Q10. In a CNN filter computation Y = W X + b, which statement is correct?
+(A) W = learned filter weights, X = image patches, Y = feature map
+(B) W = image patches, X = learned filter weights, Y = labels
+(C) W = feature map, X = bias, Y = filter weights
+(D) W = labels, X = feature map, Y = image patches
+Part II — Linear Algebra Foundations (Q11–Q34)
+Q11. A dataset has 1000 patients (observations) and 20 features. In the course convention X ∈
+R
+n×p
+, what are the shape of X and its number of entries?
+(A) 20 × 1000 with 20,000 entries
+(B) 1000 × 20 with 20,000 entries
+(C) 1000 × 20 with 1,020 entries
+(D) 20 × 20 with 400 entries
+2
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+Q12. Which identity is correct for the transpose of a product?
+(A) (AB)
+T = AT BT
+(B) (AB)
+T = ABT
+(C) (AB)
+T = BT AT
+(D) (AB)
+T = AT B
+Q13. If A ∈ R
+3×4 and B ∈ R
+4×2
+, what is the shape of AB?
+(A) 4 × 4
+(B) 3 × 4
+(C) 2 × 3
+(D) 3 × 2
+Q14. Which statement about matrix multiplication is true in general?
+(A) AB = BA for all square A, B
+(B) (AB)C ̸= A(BC) in general
+(C) A(B + C) = AB + AC, but AB ̸= BA in general
+(D) (AB)
+T = AT BT
+Q15. In R, which expression computes the matrix product AB (not the element-wise product)?
+(A) A * B
+(B) A %*% B
+(C) A @ B
+(D) t(A) * B
+Q16. In NumPy, which expression computes the element-wise product of arrays A and B?
+(A) A * B
+(B) A @ B
+(C) np.linalg.inv(A)
+(D) A.T
+Q17. What is the trace of A =
+[︃
+2 7
+1 6]︃
+?
+(A) 5
+(B) 13
+(C) 8
+(D) 12
+Q18. Which identity holds for all compatible square matrices A, B?
+(A) tr(AB) = tr(A) tr(B)
+(B) tr(AB) = tr(BA)
+(C) tr(AB) = tr(A) + tr(B)
+(D) tr(AB) = tr(A−1B)
+Q19. What is det [︃
+3 1
+2 4]︃
+?
+(A) 14
+(B) 12
+(C) 8
+(D) 10
+3
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+Q20. For square matrices A and B, det(AB) equals
+(A) det(A) + det(B)
+(B) det(A) − det(B)
+(C) det(A) det(B)
+(D) det(A)/ det(B)
+Q21. Which of the following is not equivalent to a square matrix A being invertible?
+(A) det(A) ̸= 0
+(B) A has full rank
+(C) There exists A−1 with AA−1 = I
+(D) rank(A) < p
+Q22. If A is invertible, det(A−1
+) equals
+(A) det(A)
+(B) − det(A)
+(C) 1/ det(A)
+(D) det(A)
+2
+Q23. Which of the following matrices is not invertible?
+(A) [︃
+1 2
+2 4]︃
+(B) [︃
+2 0
+0 3]︃
+(C) [︃
+1 2
+3 4]︃
+(D) I2
+Q24. What is ∥v∥2 for v = (2, −3, 6)T
+?
+(A) 11
+(B) 7
+(C) 5
+(D) 49
+Q25. For u = (3, −4, 0)T
+, the values (∥u∥1, ∥u∥2, ∥u∥∞) are
+(A) (3, 5, 4)
+(B) (7, 25, 4)
+(C) (7, 5, 4)
+(D) (7, 5, 3)
+Q26. Let u = (1, 2, 2)T and v = (2, −1, 0)T
+. What is the angle between them?
+(A) 90◦
+(B) 0
+◦
+(C) 60◦
+(D) 180◦
+4
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+Q27. Which inequality is the Cauchy–Schwarz inequality?
+(A) u
+T v ≥ ∥u∥2∥v∥2
+(B) |u
+T v| ≤ ∥u∥2∥v∥2
+(C) ∥u + v∥2 ≥ ∥u∥2 + ∥v∥2
+(D) |u
+T v| ≥ ∥u∥2∥v∥2
+Q28. Compute the cross product (1, 0, 0) × (0, 1, 0).
+(A) (0, 0, 0)
+(B) (1, 1, 0)
+(C) (0, 0, −1)
+(D) (0, 0, 1)
+Q29. A 3×3 matrix has a third column equal to the sum of its first two columns. Which statement
+is true?
+(A) It has rank 3 and is invertible
+(B) It has rank at most 2 and is singular
+(C) It has rank 1
+(D) Its determinant is nonzero
+Q30. Which statement defines an orthogonal matrix Q?
+(A) QTQ = QQT = Ip (columns and rows are orthonormal)
+(B) Q = QT
+(C) det(Q) = 0
+(D) All entries of Q are 0 or 1
+Q31. A 5 × 3 matrix is full rank. What is its rank?
+(A) 5
+(B) 8
+(C) 3
+(D) 15
+Q32. The Frobenius norm of a matrix is the square root of the sum of squares of all entries. What
+is it for A =
+[︃
+1 2
+2 4]︃
+?
+(A) 9
+(B) 5
+(C) 25
+(D) 3
+Q33. Which matrix is symmetric?
+(A) [︃
+1 2
+3 1]︃
+(B) [︃
+0 1
+−1 0]︃
+(C) [︃
+1 0
+2 1]︃
+(D) [︃
+1 2
+2 5]︃
+5
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+Q34. Which property makes orthogonal matrices crucial for PCA and SVD?
+(A) They preserve distances (norms) of vectors
+(B) They are always singular
+(C) They increase the dimension of the data
+(D) They change the eigenvalues of the data
+Part III — Matrix Calculus & Eigenvalues (Q35–Q44)
+Q35. For a ∈ R
+p
+, the gradient ∇x(a
+T x) is
+(A) a
+(B) x
+(C) AT a
+(D) 0
+Q36. The gradient ∇x(x
+T Ax) equals
+(A) Ax
+(B) AT x
+(C) (A + AT
+)x
+(D) 2A
+Q37. The gradient ∇x∥Ax − b∥
+2
+2
+equals
+(A) 2(Ax − b)
+(B) 2AT
+(Ax − b)
+(C) AT
+(Ax − b)
+(D) 2A(Ax − b)
+Q38. The gradient ∇x(x
+T x) is
+(A) x
+(B) x
+T
+(C) 2
+(D) 2x
+Q39. For L(w) = ∥Xw − y∥
+2
+2
+, why is gradient descent preferred over the closed form w =
+(XT X)
+−1XT y when p is huge?
+(A) The closed form does not minimize L
+(B) Inverting a p × p matrix costs O(p
+3
+), which is infeasible for huge p
+(C) Gradient descent gives the exact solution in one step
+(D) XT X is always singular
+Q40. In ridge regression L = ∥Xw − y∥
+2 + λwT w, the gradient of the penalty term λwT w is
+(A) λ
+(B) λw
+(C) 2λw
+(D) 2λwT w
+6
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+Q41. A neuron has z = w
+T x+b with output error δ = 0.5. Take w = (1, 1)T
+, x = (2, −1)T
+, η = 0.1.
+After the update w ← w − η δ x, what is w?
+(A) (0.9, 0.95)
+(B) (1.1, 0.95)
+(C) (0.8, 1.1)
+(D) (0.9, 1.05)
+Q42. Find the eigenvalues of A =
+[︃
+2 1
+1 2]︃
+using det(A − λI) = 0.
+(A) 1 and 3
+(B) 2 and 3
+(C) 0 and 4
+(D) 1 and 2
+Q43. If A = P DP −1 with D diagonal, then Ak
+equals
+(A) P
+kDP −k
+(B) Dk
+(C) P DkP
+−1
+(D) P
+kDkP
+−1
+Q44. Maximizing w
+T XT Xw subject to w
+T w = 1 (the PCA problem) is solved by
+(A) the rows of X
+(B) the eigenvectors of XT X
+(C) the inverse of XT X
+(D) the gradient 2XT w
+Part IV — Probability (Q45–Q74)
+Q45. Which of the following is not required of a probability measure Pr on a sample space Ω?
+(A) 0 ≤ Pr(A) ≤ 1
+(B) Pr(Ω) = 1
+(C) Pr(︁ ⋃︁
+i Ai
+)︁
+=
+∑︁
+i Pr(Ai) for disjoint events
+(D) Pr(A) + Pr(B) = 1 for any two events A, B
+Q46. A fair six-sided die is rolled. The probability of the event A = {1, 3, 5} is
+(A) 1/6
+(B) 1/3
+(C) 1/2
+(D) 2/3
+Q47. From 1,000,000 sessions, 43,217 ended in a purchase (4.32%). According to the slides, what
+is the key distinction between a percentage and a probability?
+(A) A percentage describes what happened; a probability lets us predict and reason about the
+future (Bayes, expectation, LLN)
+(B) They are always different numbers
+(C) A percentage requires Bayes’ rule, a probability does not
+(D) A probability can exceed 1, a percentage cannot
+7
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+Q48. The conditional probability Pr(A | B) is defined (for Pr(B) > 0) as
+(A) Pr(A ∩ B)/Pr(A)
+(B) Pr(A ∩ B)/Pr(B)
+(C) Pr(A) Pr(B)
+(D) Pr(A)/Pr(B)
+Q49. A test has joint probabilities: Pr(C=1, T=1) = 0.10, Pr(C=1, T=0) = 0.05, Pr(C=0, T=1) =
+0.02, Pr(C=0, T=0) = 0.83. What is Pr(C=1 | T=1)?
+(A) 0.10
+(B) 0.15
+(C) 0.67
+(D) 0.83
+Q50. In the same cancer-test table, Pr(C=1) = 0.15 while Pr(C=1 | T=1) ≈ 0.833. Are C and T
+independent?
+(A) Yes, because Pr(C=1) > 0
+(B) No, because Pr(C=1 | T=1) ̸= Pr(C=1)
+(C) Yes, because the table sums to 1
+(D) Cannot be determined
+Q51. In the fraud example, Pr(F=1, A=1) = 0.0004 and Pr(F=0, A=1) = 0.0096 (where A=1
+means flagged). What is Pr(F=1 | A=1)?
+(A) 0.04
+(B) 0.80
+(C) 0.0004
+(D) 0.96
+Q52. Using Pr(F=1, A=1) = 0.0004 and Pr(F=1, A=0) = 0.0001, what fraction of fraud is flagged,
+Pr(A=1 | F=1)?
+(A) 0.04
+(B) 0.20
+(C) 0.80
+(D) 0.0005
+Q53. The Naive Bayes assumption states that
+(A) all features are independent of the class label
+(B) features are conditionally independent given the class
+(C) the class is independent of the prior
+(D) all features are perfectly correlated
+Q54. With 10,000 binary word features and 2 classes, how many conditional probabilities Pr(wordj |
+class) does Naive Bayes need (instead of roughly 2
+10000 joint probabilities)?
+(A) 10,000
+(B) 100,000
+(C) 2
+10000
+(D) 20,000
+8
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+Q55. Given Pr(FREE | Spam) = 0.05, Pr(MONEY | Spam) = 0.03, Pr(!!! | Spam) = 0.20, what is
+Pr(email | Spam) under Naive Bayes?
+(A) 0.0003
+(B) 0.28
+(C) 0.003
+(D) 0.03
+Q56. Laplace smoothing, Pr(word | spam) = count + α
+Nspam + 2α
+, is used mainly to
+(A) make training faster
+(B) make probabilities sum to 2
+(C) avoid zero probabilities for words never seen in a class
+(D) remove the prior
+Q57. Why does Naive Bayes work with log-probabilities?
+(A) Logs make the product of many small probabilities a sum and avoid numerical underflow
+(B) Logs make probabilities larger than 1
+(C) Logs remove the need for the prior
+(D) Logs make the features independent
+Q58. For a continuous random variable X with PDF fX, which statement is correct?
+(A) fX(ω) is a probability and is always ≤ 1
+(B) The CDF is the derivative of the PDF
+(C) Pr(X = ω) can be large for a single ω
+(D) Pr(X = ω) = 0 for any single value; fX(ω) is a likelihood, not a probability
+Q59. What is the expected value of a fair six-sided die roll?
+(A) 3.5
+(B) 3
+(C) 4
+(D) 21
+Q60. Linearity of expectation, E[X + Y ] = E[X] + E[Y ], requires which assumption?
+(A) X and Y independent
+(B) X and Y uncorrelated
+(C) X and Y identically distributed
+(D) No assumption at all
+Q61. Let H be height in meters (E[H] = 1.755) and S shoe height in cm (E[S] = 3). What is
+E[100H + S] in cm?
+(A) 175.5
+(B) 181.5
+(C) 178.5
+(D) 1.785
+Q62. Shoe height S ∈ {1, 2, 3, 4} has probabilities 0.1, 0.1, 0.5, 0.3 and E[S] = 3. What is Var[S]?
+(A) 0.2
+(B) 0.8
+(C) 3.0
+(D) 0.4
+9
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+Q63. Which formula for variance is correct?
+(A) Var[X] = E[X2
+] − E[X]
+2
+(B) Var[X] = E[X2
+] + E[X]
+2
+(C) Var[X] = E[X]
+2 − E[X2
+]
+(D) Var[X] = E[X − E[X]]
+Q64. An A/B test has control 3.2% and treatment 3.5% conversion with n = 100,000 users each.
+The SE of the difference is about 0.056%. At α = 0.05 (critical |z| = 1.96), the conclusion is
+(A) not significant, since 0.3% is small
+(B) significant only if n < 1000
+(C) significant, since z ≈ 0.30/0.056 ≈ 5.4 > 1.96
+(D) not significant, since z ≈ 0.54
+Q65. The difference is 0.30% with SE = 0.056%. Which is the approximate 95% confidence interval
+for the difference?
+(A) [−0.11%, 0.71%]
+(B) [3.2%, 3.5%]
+(C) [0.0%, 0.6%]
+(D) [0.19%, 0.41%]
+Q66. In Bayes’ rule Pr(M | D) = Pr(D | M) Pr(M)
+Pr(D)
+, the term Pr(M) is called the
+(A) prior
+(B) likelihood
+(C) posterior
+(D) evidence
+Q67. Factories A, B, C make 50%, 30%, 20% of cars with windshield-crack rates 1%, 10%, 2%. A
+car has a cracked windshield. Which factory is most likely and with what posterior?
+(A) Factory A, about 0.13
+(B) Factory B, about 0.77
+(C) Factory C, about 0.10
+(D) Factory A, 0.50
+Q68. A disease has prevalence 0.1%; the test has sensitivity 99% and specificity 95%. What is
+Pr(Disease | Positive)?
+(A) 99%
+(B) 95%
+(C) 50%
+(D) about 1.94%
+Q69. The MLE is the MAP estimate when the prior is
+(A) uniform (all models equally likely)
+(B) Gaussian
+(C) Laplace
+(D) Beta(2, 38)
+10
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+Q70. Data D = {1, 3, 12, 5, 9} come from a Gaussian with known σ = 2. The MLE of the mean M
+minimizes ∑︁(M − x)
+2
+. What is it?
+(A) 5
+(B) 6
+(C) 9
+(D) 12
+Q71. YouTube has 50,000,000 impressions and 2,500,000 clicks. The MLE of the click probability
+is
+(A) 0.5
+(B) 0.005
+(C) 0.05
+(D) 0.25
+Q72. Which pairing of prior and regularizer is correct?
+(A) Gaussian prior ↔ Lasso; Laplace prior ↔ Ridge
+(B) Uniform prior ↔ Ridge
+(C) Uniform prior ↔ Lasso
+(D) Gaussian prior ↔ Ridge; Laplace prior ↔ Lasso
+Q73. As the number of samples n → ∞, what happens to the effect of the prior?
+(A) It grows and dominates the posterior
+(B) It becomes a uniform prior automatically
+(C) It is overwhelmed by the data; MAP and MLE converge
+(D) It makes the likelihood zero
+Q74. A prior CTR is Beta(2, 38) (mean 5%). An ad gets 1 click in 10 impressions. The posterior
+and its mean are
+(A) Beta(2, 38), 5%
+(B) Beta(3, 47), 6%
+(C) Beta(1, 10), 10%
+(D) Beta(3, 37), 7.5%
+Part V — Curse of Dimensionality (Q75–Q83)
+Q75. Which statement best describes the curse of dimensionality?
+(A) Data becomes denser and distances more informative as p grows
+(B) Complexity and data requirements grow exponentially with p, and geometry becomes counterintuitive (sparse space, concentrated distances and volume)
+(C) Low-dimensional intuition always extends to high dimensions
+(D) It only affects datasets with fewer samples than 100
+Q76. Each axis of [0, 1]p
+is divided into 10 bins. How many cells are there when p = 5?
+(A) 50
+(B) 105 = 100,000
+(C) 1010
+(D) 10
+11
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+Q77. For two random points uniform in [0, 1]p
+, the typical distance is about √︁
+p/6. What is it for
+p = 600?
+(A) 10
+(B) 100
+(C) 6
+(D) 1
+Q78. As p → ∞,
+maxi,j ∥xi − xj∥ − mini,j ∥xi − xj∥
+mini,j ∥xi − xj∥
+→ 0. What is the consequence for KNN?
+(A) “Nearest” neighbors become more meaningful
+(B) KNN becomes faster
+(C) The notion of nearest neighbor loses meaning, so distance-based methods break down
+(D) There is no effect on KNN
+Q79. A unit cube [0, 1]p has an inner cube of side 0.9. For p = 10, about what fraction of the
+volume is inside it?
+(A) 90%
+(B) 35%
+(C) 0.5%
+(D) 0.003%
+Q80. To capture 10% of the volume of [0, 1]10 with a sub-cube, the side length must be about
+(A) 0.10
+(B) 0.316
+(C) 0.464
+(D) 0.794
+Q81. For a ball in p = 100 dimensions, what fraction of its volume lies in the outer shell of relative
+thickness ϵ = 0.1?
+(A) about 0.99997
+(B) 0.10
+(C) 0.90
+(D) about 0.00003
+Q82. A standard Gaussian N(0, Ip) in high dimension concentrates its mass near a sphere (annulus)
+of radius
+(A) 0
+(B) √p
+(C) p
+(D) p
+2
+Q83. The Johnson–Lindenstrauss lemma says that n points can be embedded into R
+k preserving
+pairwise distances up to 1 ± ϵ with
+(A) k = O(p)
+(B) k = O(n
+2
+)
+(C) k = O(log n/ϵ2
+)
+(D) k = O(1/p)
+12
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+Part VI — Distances & Metrics (Q84–Q91)
+Q84. Which of the following is not an axiom of a distance measure d?
+(A) d(x, y) ≥ 0
+(B) d(x, y) = d(y, x)
+(C) d(x, y) ≤ d(x, z) + d(z, y)
+(D) d(x, y) = d(x, z) + d(z, y) for every z
+Q85. For the points (2, 7) and (6, 4), what are (L1, L2, L∞)?
+(A) (5, 7, 4)
+(B) (7, 5, 4)
+(C) (7, 25, 3)
+(D) (4, 5, 7)
+Q86. What are the L1 and L∞ distances between (5, 6, 7) and (8, 2, 4)?
+(A) 10 and 4
+(B) 10 and 7
+(C) 13 and 4
+(D) 4 and 10
+Q87. Bag A = {red, blue, green, yellow} and bag B = {red, blue, purple}. What is the Jaccard
+distance?
+(A) 0.4
+(B) 0.5
+(C) 0.6
+(D) 2/3
+Q88. For x = [1, 2, −1] and y = [2, 1, 1], what is the angle (cosine distance) between them?
+(A) 30◦
+(B) 45◦
+(C) 60◦
+(D) 90◦
+Q89. For x = (1, 2, 3) and y = (2, 4, 6), which statement is correct?
+(A) cos θ = 1 although L2 =
+√
+14 ̸= 0: cosine ignores magnitude (scale-invariant)
+(B) cos θ = 0 because their lengths differ
+(C) cos θ = 1, so the points are identical
+(D) cos θ = −1 because y is larger than x
+Q90. The edit distance (insertions and deletions only) between x = abcde and y = acf deg is
+(A) 2
+(B) 3
+(C) 4
+(D) 5
+13
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+Q91. What is the Hamming distance between 10101 and 11110?
+(A) 2
+(B) 4
+(C) 3
+(D) 5
+Part VII — Gradient Descent & SGD (Q92–Q100)
+Q92. The gradient descent update rule is
+(A) w
+(t+1) = w
+(t) + η∇L(w
+(t)
+)
+(B) w
+(t+1) = w
+(t) − η∇L(w
+(t)
+)
+(C) w
+(t+1) = ηw(t) − ∇L(w
+(t)
+)
+(D) w
+(t+1) = w
+(t) − ηL(w
+(t)
+)
+Q93. A dataset has n = 108
+samples and d = 104
+features. One full-batch GD step costs about
+(A) 104 FLOPs
+(B) 108 FLOPs
+(C) 1012 FLOPs
+(D) 1016 FLOPs
+Q94. With n = 108 and mini-batch size B = 256, about how many mini-batch steps cost the same
+as one full GD step?
+(A) 256
+(B) 104
+(C) 3.9 × 105
+(D) 108
+Q95. Minimize L(w) = (w − 3)2 with η = 0.1 starting at w
+(0) = 0. What is w
+(1)?
+(A) 0.3
+(B) 0.6
+(C) 3.0
+(D) −0.6
+Q96. On Iris (n = 150), how many weight updates per epoch do mini-batch SGD with B = 32 and
+pure SGD make?
+(A) 1 and 150
+(B) 5 and 150
+(C) 150 and 5
+(D) 5 and 1
+Q97. In a PyTorch DataLoader loop, setting batch_size=1 gives
+(A) full-batch gradient descent
+(B) mini-batch SGD with 1 update per epoch
+(C) Adam
+(D) pure SGD with n updates per epoch
+14
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+Q98. A mini-batch of B = 512 samples with d = 103
+features stored as 4-byte floats needs about
+how much memory?
+(A) 2 KB
+(B) 2 MB
+(C) 2 GB
+(D) 2 TB
+Q99. Which statement about the learning rate η is correct?
+(A) A tiny η always causes divergence
+(B) η has no effect on convergence
+(C) η = 1 is always optimal
+(D) Too large an η can diverge; too small wastes iterations
+Q100. Which description of the Adam optimizer is correct?
+(A) Plain gradient descent with a fixed learning rate
+(B) Nesterov look-ahead only, with no adaptive scaling
+(C) Momentum plus RMSProp-style per-parameter adaptive rates (AdamW is the common default
+for large models)
+(D) Newton’s method using the full Hessian
+15
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+Answer Key with Brief Explanations
+1. (D) Veracity is data quality; it motivates robust statistics and concentration inequalities.
+2. (B) Fast, continuous data generation calls for single-pass streaming summaries.
+3. (C) Tables/SQL are structured; text, images, audio and video are unstructured.
+4. (B) Variety ⇒ vectorization of text, images, logs, etc.
+5. (B) 224 × 224 × 3 = 150,528.
+6. (C) 3000 × 4000 = 12 × 106
+, times 3 channels gives 36 × 106
+.
+7. (C) The five V’s are Volume, Velocity, Variety, Veracity, Value.
+8. (A) This is the workflow shown in the Week 1 slides.
+9. (D) Cubic cost motivates iterative methods such as gradient descent.
+10. (A) Convolution is implemented as a matrix multiplication of learned weights with image patches.
+11. (B) Rows are observations (n = 1000), columns are features (p = 20); entries = np.
+12. (C) The transpose reverses the order of the product.
+13. (D) (m × n)(n × p) gives m × p.
+14. (C) Multiplication is associative and distributive but not commutative.
+15. (B) In R, * is element-wise and %*% is matrix multiplication.
+16. (A) In NumPy, * is element-wise and @ is matrix multiplication.
+17. (C) tr(A) = 2 + 6 = 8 (sum of diagonal entries).
+18. (B) The trace is invariant under cyclic permutations.
+19. (D) ad − bc = 12 − 2 = 10.
+20. (C) The determinant is multiplicative.
+21. (D) Rank less than p means A is singular (not invertible).
+22. (C) From det(A) det(A−1
+) = det(I) = 1.
+23. (A) Its determinant is 4 − 4 = 0; the second column is twice the first.
+24. (B) √
+4 + 9 + 36 = √
+49 = 7.
+25. (C) ℓ1 = 3 + 4 + 0 = 7, ℓ2 =
+√
+9 + 16 = 5, ℓ∞ = max |ui
+| = 4.
+26. (A) u
+T v = 2 − 2 + 0 = 0, so the vectors are orthogonal.
+27. (B) It follows from u
+T v = ∥u∥∥v∥ cos θ with | cos θ| ≤ 1.
+28. (D) (u2v3 − u3v2, u3v1 − u1v3, u1v2 − u2v1) = (0, 0, 1).
+29. (B) The columns are linearly dependent, so rank ≤ 2 < 3.
+30. (A) Orthonormal columns/rows give QT Q = I.
+31. (C) Full rank means rank = min(m, n) = min(5, 3) = 3.
+32. (B) √
+1 + 4 + 4 + 16 = √
+25 = 5.
+33. (D) Symmetric means A = AT
+, i.e., Aij = Aji.
+34. (A) Orthogonal transformations rotate/reflect without changing lengths.
+35. (A) Linear functions have constant gradient a.
+36. (C) For symmetric A this reduces to 2Ax.
+37. (B) This is the least-squares gradient identity.
+38. (D) Special case A = I of the quadratic-form identity.
+39. (B) Cubic cost in p is the bottleneck; GD only needs matrix–vector products.
+40. (C) ∇w(w
+T w) = 2w.
+41. (D) ηδ = 0.05, so w = (1 − 0.1, 1 + 0.05) = (0.9, 1.05).
+42. (A) (2 − λ)
+2 − 1 = 0 ⇒ λ = 1, 3.
+43. (C) Powers are easy: only the diagonal entries are raised to the k-th power.
+44. (B) The top eigenvector of XT X gives the first principal direction.
+45. (D) Only complementary events sum to 1; this is not an axiom.
+16
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+46. (C) |A|/|Ω| = 3/6.
+47. (A) Percentages describe the past; probabilities come with predictive mathematical tools.
+48. (B) It is the “renormalized” probability of A within the world where B holds.
+49. (D) 0.10/(0.10 + 0.02) = 0.8333.
+50. (B) Independence requires Pr(A | B) = Pr(A); the test carries information about cancer.
+51. (A) 0.0004/(0.0004 + 0.0096) = 4%: only 4% of flagged transactions are fraud.
+52. (C) 0.0004/(0.0004 + 0.0001) = 0.80.
+53. (B) Pr(words | Spam) = ∏︁
+j Pr(wordj | Spam).
+54. (D) 2 × 10,000 = 20,000 parameters.
+55. (A) 0.05 × 0.03 × 0.20 = 0.0003.
+56. (C) Without it, one unseen word would force the whole product to zero.
+57. (A) log ∏︁
+=
+∑︁log; the maximizer is unchanged because log is monotonic.
+58. (D) Probabilities come from integrating the density over a set.
+59. (A) 1
+6
+(1 + 2 + · · · + 6) = 3.5.
+60. (D) This is the “magic” property: it holds even for correlated variables.
+61. (C) 100(1.755) + 3 = 175.5 + 3 = 178.5.
+62. (B) 0.1(4) + 0.1(1) + 0.5(0) + 0.3(1) = 0.8.
+63. (A) Option D is always 0; the correct form squares the deviation.
+64. (C) The huge sample size makes a small difference highly significant.
+65. (D) 0.30% ± 1.96 × 0.056%; the interval excludes 0.
+66. (A) Prior = belief before seeing data.
+67. (B) Numerators 0.005, 0.030, 0.004; Pr(W) = 0.039, so Pr(B | W) = 0.030/0.039 ≈ 0.77.
+68. (D) 0.99 · 0.001
+0.99 · 0.001 + 0.05 · 0.999
+≈ 0.0194.
+69. (A) With a flat prior, maximizing the posterior equals maximizing the likelihood.
+70. (B) The minimizer is the sample mean 30/5 = 6 (the median would be 5).
+71. (C) pˆ = clicks/impressions = 0.05.
+72. (D) Ridge = Gaussian prior, Lasso = Laplace prior.
+73. (C) With big data, even weak priors are dominated by the likelihood.
+74. (B) Posterior = Beta(a + clicks, b + impr − clicks) = Beta(3, 47); mean = 3/50 = 0.06.
+75. (B) Sparsity, distance concentration and volume concentration are the three symptoms.
+76. (B) There are 10p
+cells.
+77. (A) √︁
+600/6 = √
+100 = 10.
+78. (C) When all distances look alike, nearest and farthest points are indistinguishable.
+79. (B) 0.9
+10 ≈ 0.349.
+80. (D) Side = f
+1/p = 0.1
+1/10 ≈ 0.794.
+81. (A) 1 − (0.9)100 ≈ 0.99997.
+82. (B) E[∥X∥
+2
+] = p, so ∥X∥ ≈ √p with constant-width fluctuations.
+83. (C) The target dimension depends on n and ϵ, not on the original dimension p.
+84. (D) The triangle inequality is an inequality, not an equality; also d(x, y) = 0 ⇐⇒ x = y.
+85. (B) 4 + 3 = 7;
+√
+16 + 9 = 5; max(4, 3) = 4.
+86. (A) Coordinate gaps are 3, 4, 3: sum = 10, max = 4.
+87. (C) J = 2/5 = 0.4, so d = 1 − 0.4 = 0.6.
+88. (C) x · y = 3, ∥x∥ = ∥y∥ =
+√
+6, so cos θ = 1/2.
+89. (A) The vectors are parallel; Euclidean distance is scale-sensitive, cosine is not.
+90. (B) LCS = acde (length 4), so d = 5 + 6 − 2 · 4 = 3.
+91. (C) They differ at positions 2, 4 and 5.
+17
+MATH 3700: Big Data Computing 100-Question Multiple-Choice Quiz
+92. (B) Step against the gradient, scaled by the learning rate η.
+93. (C) Cost per step is O(nd) = 1012
+.
+94. (C) n/B = 108/256 ≈ 3.9 × 105
+.
+95. (B) L
+′
+(0) = −6, so w
+(1) = 0 − 0.1(−6) = 0.6.
+96. (B) Mini-batch: ⌈150/32⌉ = 5; pure SGD: n = 150.
+97. (D) batch_size= n gives full-batch GD; = 1 gives pure SGD.
+98. (B) 512 × 1000 × 4 ≈ 2.05 × 106 bytes.
+99. (D) The learning rate trades off speed against stability.
+100. (C) Adam combines a moving average of gradients with a moving average of squared gradients.
+18
