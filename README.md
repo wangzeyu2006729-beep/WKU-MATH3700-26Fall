@@ -1,100 +1,83 @@
 # WKU3700Midquiz
 
-**Reference questions for Gupta's Fall 2027 MATH 3700 Mid Quiz at Wenzhou-Kean University.**
+**140 practice questions for Gupta's Fall 2027 MATH 3700 Mid Quiz at Wenzhou-Kean University.**
 
-This interactive study tool is based on the reference-question PDF provided by Gupta for **MATH 3700: Big Data Computing, Fall 2027 (27Fall)**. It presents the PDF's 100 multiple-choice questions and answer key in a browser, with Chinese study explanations and individually saved practice progress.
+[Start practicing online](https://wangzeyu2006729-beep.github.io/WKU3700Midquiz/)
 
-**[Start practicing online](https://wangzeyu2006729-beep.github.io/WKU3700Midquiz/)** — no account or installation required.
+The bank combines **100 instructor-provided reference questions** with **40 independently written, slightly harder variants** based on the original questions and Weeks 1–5 lecture material. Questions are in English; explanations and study controls are in Chinese.
 
 - **University:** Wenzhou-Kean University (WKU)
 - **Course:** MATH 3700 — Big Data Computing
 - **Instructor:** Gupta
 - **Semester:** Fall 2027 (27Fall)
-- **Material:** Mid Quiz reference questions from the instructor-provided PDF
-- **Coverage:** Weeks 1–5, 100 questions across seven topics
+- **Coverage:** Big data foundations, linear algebra, matrix calculus and eigenvalues, probability, high-dimensional geometry, distance measures, and gradient descent/SGD.
 
-This is an independent study aid for working through the reference questions.
+This is an independent study aid. The variants are not instructor-issued questions or exam predictions.
 
-![Quiz interface preview](docs/preview.png)
+![Dark practice interface](docs/preview.png)
 
-## Features
+## Practice
 
-- Sequential and randomized practice.
-- Review of incorrect answers and bookmarked questions.
-- Seven topic filters, question-number search, and keyword search.
-- Answer confirmation before revealing the correct choice and explanation.
-- Automatic restoration of progress, current position, and unsubmitted selections.
-- Responsive desktop and mobile layouts, keyboard shortcuts, and practice summaries.
-- A self-contained HTML file with no runtime dependencies or backend.
+A compact dark interface keeps the question and choices at the center. Choose **全部** for all 140 questions, **原题** for the original 100, or **变式** for the additional 40. Combine a bank with a chapter filter, random practice, incorrect-answer review, or bookmarks.
 
-The original questions remain in English. The app interface and supplementary explanations are in Chinese.
+- Original labels are **Q01–Q100**; variant labels are **V01–V40**.
+- Search `Q12` or `V12` to find a specific question, or enter a keyword.
+- Select an answer, then confirm to reveal the solution.
+- Variants include source-question references, difficulty, worked Chinese explanations, and common pitfalls. Five challenge questions provide necessary formulas in the stem.
+- Answering a missed question correctly removes it from incorrect-answer review when the list is refreshed.
+- Restarting a group hides solutions while retaining previous records.
+- Keyboard: `1`–`4` or `A`–`D` select; `Enter` confirms or continues; arrow keys navigate; `S` bookmarks.
 
-## Independent progress
+## Private progress and upgrades
 
-Everyone uses the same public question bank, while answers, incorrect-answer records, and bookmarks are saved **only in their own browser's localStorage**. The app does not upload practice records or share them with other learners.
+Answers, drafts, bookmarks, and position stay in **the current browser's localStorage**, under `math3700-practice-v1`. There is no backend, account, tracking, or answer upload.
 
-Different devices, browsers, and browser profiles have independent records. Tabs in the same browser profile use the same local record. If several people share a computer, use separate browser profiles. There are no accounts or cross-device synchronization; clearing browser data removes progress, and private-window records may disappear when the session closes.
+The original 100 questions keep their internal IDs. Existing online progress continues after this update; a saved 100-question queue expands to include the new variants while keeping the current question, answers, attempts, and drafts. Variant internal IDs are 101–140, displayed as V01–V40.
 
-The online site and a downloaded HTML file use separate storage. If browser storage is unavailable, the app displays a warning and remains usable for the current session. Resetting progress requires confirmation.
+Different devices, browsers, and browser profiles have independent records. Tabs within one browser profile share the record. Clearing browser data removes progress; private-window records may disappear after closing. There is no cross-device synchronization. The former separate offline variant page has its own browser storage and is not automatically imported across origins.
 
-## Use offline
+If storage is unavailable, the page shows a warning and remains usable for that session.
 
-Download and extract this repository using **Code → Download ZIP**, or clone it:
+## Offline use
 
-```bash
-git clone https://github.com/wangzeyu2006729-beep/WKU3700Midquiz.git
-cd WKU3700Midquiz
-```
+Download `index.html` and open it in a browser. It contains the entire app and all questions, with no runtime dependencies or network requirement. Offline and online copies have separate browser storage.
 
-Open `index.html` in a browser. You can copy this single file to another device and practice offline without running a server.
+## Sources and build
 
-## Controls
+- `source.txt`: original text supplied from Gupta's **MATH 3700: Big Data Computing — 100-Question Multiple-Choice Quiz**.
+- `build.py`: parses the original text, repairs extracted notation, adds Chinese explanations, and merges the variants.
+- `variants.json`: independently written variants with original-question references and difficulty metadata.
+- `questions.json`: generated merged bank.
+- `template.html`: interface and browser behavior.
+- `index.html`: generated standalone page deployed by GitHub Pages.
 
-Select an option, then confirm your answer to reveal the explanation.
+The original 100 question texts, choice order, answer-key choices, explanations, and ambiguity notes are preserved. Notes for Q3, Q58, Q64–65, Q88, and Q90 explain source wording or extraction ambiguities. Q64–65 use the standard error supplied in the question; Q90 uses `acfdeg`.
 
-| Shortcut | Action |
-| --- | --- |
-| `1`–`4` or `A`–`D` | Select an answer |
-| `Enter` | Confirm the answer or continue |
-| Left / right arrow | Move between questions |
-| `S` | Toggle the bookmark |
-
-Incorrect answers enter the review list automatically. Answering correctly removes a question from that list when it is refreshed. Restarting a question or group hides its solutions while retaining existing records until the next submission. Statistics use the most recent submission for each question.
-
-## Source material and editorial notes
-
-The question bank comes from Gupta's provided PDF, titled **MATH 3700: Big Data Computing — 100-Question Multiple-Choice Quiz**. The supplied text is preserved in `source.txt`; the structured question bank is in `questions.json`.
-
-Question numbers, answer-choice order, and answer-key choices are preserved. Formatting repairs restore superscripts, fractions, matrix layouts, and line breaks lost during text extraction. Chinese explanations are supplementary study notes.
-
-Notes attached to Q3, Q58, Q64–65, Q88, and Q90 explain source wording or formatting ambiguities. Q64–65 follow the standard error stated in the questions. Q90 uses `acfdeg`, consistent with the supplied answer key.
-
-## Build and verification
-
-Edit `template.html` for the interface or `build.py` for question parsing and notation repairs, then rebuild:
+Rebuild using Python 3:
 
 ```bash
 python3 build.py
 ```
 
-The generated `index.html` embeds the entire question bank. The app has passed 39 browser checks covering all 100 questions, grading, progress restoration, review modes, and layouts from 320 to 1440 pixels. The verification summary is in [docs/verification.json](docs/verification.json). The deployed site also passed eight independent-browser isolation checks.
+## Verification
 
-To run the browser checks, start a local server:
+Serve the repository locally:
 
 ```bash
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-In another terminal, with Node.js and npm available:
+Use a dedicated disposable browser session for checks. `verify-browser.js` clears that session's practice progress. `verify-merge.js` and `verify-isolation.js` use independent browser contexts.
 
 ```bash
 npx --yes --package @playwright/cli playwright-cli -s=wku3700 open http://127.0.0.1:8000/index.html
-npx --yes --package @playwright/cli playwright-cli -s=wku3700 run-code "$(cat verify-browser.js)"
-npx --yes --package @playwright/cli playwright-cli -s=wku3700 run-code "$(cat verify-isolation.js)"
+npx --yes --package @playwright/cli playwright-cli -s=wku3700 run-code --filename verify-browser.js
+npx --yes --package @playwright/cli playwright-cli -s=wku3700 run-code --filename verify-merge.js
+npx --yes --package @playwright/cli playwright-cli -s=wku3700 run-code --filename verify-isolation.js
 ```
 
-Use a dedicated test session: `verify-browser.js` resets its test browser's records. `verify-isolation.js` creates two separate browser sessions and checks that answers, bookmarks, incorrect-answer review, refresh, and resets remain independent. Local test outputs are excluded from version control.
+These checks cover grading and navigation through all 140 questions, original/variant filters, upgrade compatibility, browser isolation, persistence, storage-denied operation, and layouts from 320 to 1440 pixels. See `docs/verification.json` for the verified run.
 
 ## License and attribution
 
-Application code is available under the [MIT License](LICENSE). The course questions and original answer key remain the materials of their respective authors; the application's MIT License does not relicense them. See [CONTENT_NOTICE.md](CONTENT_NOTICE.md) for attribution and scope. This project is not an official university website or an assertion of university endorsement.
+Application code is available under the [MIT License](LICENSE). The original course materials retain their respective authors' rights; the code license does not relicense them. See [CONTENT_NOTICE.md](CONTENT_NOTICE.md).

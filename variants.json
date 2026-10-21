@@ -1,0 +1,827 @@
+[
+  {
+    "id": 1,
+    "chapter": 0,
+    "source_ids": [
+      1,
+      2
+    ],
+    "topic": "5 V’s 情境辨析",
+    "level": "中等",
+    "text": "A sensor platform must process 50,000 records per second, and 8% of the incoming records contain inconsistent timestamps. Which pair of V’s describes these two challenges, in that order?",
+    "options": [
+      "Volume and Variety",
+      "Velocity and Veracity",
+      "Veracity and Velocity",
+      "Value and Volume"
+    ],
+    "answer": "B",
+    "explanation": "每秒大量记录对应到达和处理速度 Velocity；时间戳不一致对应数据可信度与一致性 Veracity。 易错点：数据总量与数据到达速度不是同一概念。",
+    "note": "自编变式 · 对应原题 Q1, Q2 · 5 V’s 情境辨析 · 中等。"
+  },
+  {
+    "id": 2,
+    "chapter": 0,
+    "source_ids": [
+      5,
+      6,
+      11,
+      98
+    ],
+    "topic": "图像维度与内存",
+    "level": "中等",
+    "text": "A dataset contains 2,000 RGB images of size 128 × 128. Each channel value is stored as one byte. Ignoring overhead, what are the number of features per flattened image and the total storage in decimal MB (1 MB = 10⁶ bytes)?",
+    "options": [
+      "16,384 features; 32.768 MB",
+      "49,152 features; 393.216 MB",
+      "98,304,000 features; 98.304 MB",
+      "49,152 features; 98.304 MB"
+    ],
+    "answer": "D",
+    "explanation": "每张图 p = 128 × 128 × 3 = 49,152。总存储 = 2,000 × 49,152 × 1 = 98,304,000 bytes = 98.304 MB。 易错点：题目存的是单字节通道值，不是每个数 4 bytes 的 float32；样本数 n 也不是特征数 p。",
+    "note": "自编变式 · 对应原题 Q5, Q6, Q11, Q98 · 图像维度与内存 · 中等。"
+  },
+  {
+    "id": 3,
+    "chapter": 0,
+    "source_ids": [
+      9,
+      39
+    ],
+    "topic": "复杂度缩放",
+    "level": "中等",
+    "text": "For a dense p × p matrix, assume conventional inversion takes O(p³) time and matrix storage takes O(p²) memory. If p doubles, the leading-order time and storage are multiplied by approximately:",
+    "options": [
+      "8 and 4",
+      "4 and 8",
+      "2 and 2",
+      "8 and 2"
+    ],
+    "answer": "A",
+    "explanation": "时间比为 (2p)³/p³ = 8；矩阵存储比为 (2p)²/p² = 4。这里比较相同算法与数值精度下的主要计算量和存储量。 易错点：求逆的三次方时间不能与二次方存储混淆。",
+    "note": "自编变式 · 对应原题 Q9, Q39 · 复杂度缩放 · 中等。"
+  },
+  {
+    "id": 4,
+    "chapter": 1,
+    "source_ids": [
+      11,
+      12,
+      13
+    ],
+    "topic": "维度检查与转置",
+    "level": "中等",
+    "text": "Let X ∈ ℝ¹²⁰ˣ⁸ and W ∈ ℝ⁸ˣ³. Which expression equals (XW)ᵀ, and what is its shape?",
+    "options": [
+      "XᵀWᵀ; 8 × 8",
+      "WᵀXᵀ; 120 × 3",
+      "WᵀXᵀ; 3 × 120",
+      "WX; 8 × 8"
+    ],
+    "answer": "C",
+    "explanation": "(XW)ᵀ = WᵀXᵀ。Wᵀ 是 3 × 8，Xᵀ 是 8 × 120，乘积为 3 × 120。 易错点：转置后必须逆序，结果的行列数也要交换。",
+    "note": "自编变式 · 对应原题 Q11, Q12, Q13 · 维度检查与转置 · 中等。"
+  },
+  {
+    "id": 5,
+    "chapter": 1,
+    "source_ids": [
+      14,
+      17,
+      18
+    ],
+    "topic": "乘法不交换与迹",
+    "level": "稍难",
+    "text": "Let A = [[1,2;0,1]] and B = [[2,0;1,3]]. Which statement is correct?",
+    "options": [
+      "AB = BA, and both have trace 7",
+      "AB ≠ BA, but tr(AB) = tr(BA) = 7",
+      "AB ≠ BA, so their traces must differ",
+      "tr(AB) = tr(A)tr(B) = 10"
+    ],
+    "answer": "B",
+    "explanation": "AB = [[4,6;1,3]]，BA = [[2,4;1,5]]，两者不同，但迹均为 7。tr(A)tr(B) = 2 × 5 = 10 并不等于 tr(AB)。 易错点：迹的循环性质不表示矩阵乘法具有交换律。",
+    "note": "自编变式 · 对应原题 Q14, Q17, Q18 · 乘法不交换与迹 · 稍难。"
+  },
+  {
+    "id": 6,
+    "chapter": 1,
+    "source_ids": [
+      19,
+      20,
+      22
+    ],
+    "topic": "行列式与逆的组合",
+    "level": "稍难",
+    "text": "A is an invertible 2 × 2 matrix with det(A) = −3. What is det(2A⁻¹)?",
+    "options": [
+      "−2/3",
+      "−6",
+      "4/3",
+      "−4/3"
+    ],
+    "answer": "D",
+    "explanation": "det(A⁻¹) = −1/3。对 2 × 2 矩阵，整体乘 2 相当于两行都乘 2，行列式乘 2²。因此 det(2A⁻¹) = 4 × (−1/3) = −4/3。 易错点：det(cA) = cᵖdet(A)，不是一律只乘 c。",
+    "note": "自编变式 · 对应原题 Q19, Q20, Q22 · 行列式与逆的组合 · 稍难。"
+  },
+  {
+    "id": 7,
+    "chapter": 1,
+    "source_ids": [
+      21,
+      29,
+      31,
+      39
+    ],
+    "topic": "秩与正规方程",
+    "level": "稍难",
+    "text": "A 4 × 3 data matrix X has linearly independent first and second columns, and its third column is their sum. Which statement is correct?",
+    "options": [
+      "rank(X) = 2, and XᵀX is singular",
+      "rank(X) = 3 because X has four rows",
+      "rank(X) = 1, and XᵀX is invertible",
+      "rank(X) = 2, but XᵀX must be invertible"
+    ],
+    "answer": "A",
+    "explanation": "前两列独立，第三列没有增加独立方向，所以 rank(X) = 2。令 v = (1,1,−1)ᵀ，则 Xv = 0，因而 XᵀXv = 0；XᵀX 有非零零空间向量，不能求逆。 易错点：样本数大于特征数仍不保证特征列独立。",
+    "note": "自编变式 · 对应原题 Q21, Q29, Q31, Q39 · 秩与正规方程 · 稍难。"
+  },
+  {
+    "id": 8,
+    "chapter": 1,
+    "source_ids": [
+      24,
+      25
+    ],
+    "topic": "范数与缩放",
+    "level": "中等",
+    "text": "Let v = (−2,1,2)ᵀ and w = −3v. What are (‖w‖₁, ‖w‖₂, ‖w‖∞)?",
+    "options": [
+      "(−15,−9,−6)",
+      "(15,27,6)",
+      "(15,9,6)",
+      "(5,3,2)"
+    ],
+    "answer": "C",
+    "explanation": "v 的三个范数为 5、3、2。范数满足 ‖cv‖ = |c|‖v‖，所以 w 的三个范数为 15、9、6。 易错点：负倍数不会产生负范数；L₂ 范数最后要开平方。",
+    "note": "自编变式 · 对应原题 Q24, Q25 · 范数与缩放 · 中等。"
+  },
+  {
+    "id": 9,
+    "chapter": 1,
+    "source_ids": [
+      30,
+      34
+    ],
+    "topic": "正交变换保持距离",
+    "level": "中等",
+    "text": "Q is a 2 × 2 orthogonal matrix, u = (3,0)ᵀ, and v = (0,4)ᵀ. What can be concluded about ‖Qu − Qv‖₂?",
+    "options": [
+      "It equals 7",
+      "It equals 5",
+      "It equals 25",
+      "It depends on the entries of Q and cannot be determined"
+    ],
+    "answer": "B",
+    "explanation": "Qu − Qv = Q(u−v)。由 QᵀQ = I，‖Q(u−v)‖₂² = (u−v)ᵀ(u−v) = 3² + (−4)² = 25，故距离为 5。 易错点：正交变换可以改变坐标，但保持完整空间中的欧氏距离。",
+    "note": "自编变式 · 对应原题 Q30, Q34 · 正交变换保持距离 · 中等。"
+  },
+  {
+    "id": 10,
+    "chapter": 1,
+    "source_ids": [
+      17,
+      18,
+      32
+    ],
+    "topic": "Frobenius 范数与迹",
+    "level": "稍难",
+    "text": "For X = [[1,−2;0,3;2,1]], what is tr(XᵀX)? Use tr(XᵀX) = ‖X‖²_F.",
+    "options": [
+      "√19",
+      "7",
+      "11",
+      "19"
+    ],
+    "answer": "D",
+    "explanation": "tr(XᵀX) 等于 X 的全部元素平方和：1 + 4 + 0 + 9 + 4 + 1 = 19。XᵀX = [[5,0;0,14]]，其迹也是 19。 易错点：‖X‖_F = √19，而题目问的是它的平方。",
+    "note": "自编变式 · 对应原题 Q17, Q18, Q32 · Frobenius 范数与迹 · 稍难。"
+  },
+  {
+    "id": 11,
+    "chapter": 2,
+    "source_ids": [
+      35,
+      36,
+      38
+    ],
+    "topic": "非对称二次型梯度",
+    "level": "稍难",
+    "text": "Let f(x) = xᵀAx, where A = [[1,3;0,2]]. What is ∇f(x) at x = (1,−1)ᵀ?",
+    "options": [
+      "(−4,−4)ᵀ",
+      "(2,−1)ᵀ",
+      "(−1,−1)ᵀ",
+      "(−2,−2)ᵀ"
+    ],
+    "answer": "C",
+    "explanation": "A 不对称，因此 ∇f = (A + Aᵀ)x。A + Aᵀ = [[2,3;3,4]]，乘 (1,−1)ᵀ 得 (−1,−1)ᵀ。也可展开 f = x₁² + 3x₁x₂ + 2x₂² 逐项求导。 易错点：只有 A 对称时才能直接使用 2Ax。",
+    "note": "自编变式 · 对应原题 Q35, Q36, Q38 · 非对称二次型梯度 · 稍难。"
+  },
+  {
+    "id": 12,
+    "chapter": 2,
+    "source_ids": [
+      37,
+      39
+    ],
+    "topic": "半平方损失的梯度",
+    "level": "稍难",
+    "text": "Let L(w) = ½‖Xw − y‖₂², X = [[1,2;0,1]], w = (1,0)ᵀ, and y = (0,2)ᵀ. What is ∇L(w)?",
+    "options": [
+      "(1,0)ᵀ",
+      "(2,0)ᵀ",
+      "(1,−2)ᵀ",
+      "(−3,−2)ᵀ"
+    ],
+    "answer": "A",
+    "explanation": "残差 r = Xw − y = (1,−2)ᵀ。因为损失带 1/2，梯度为 Xᵀr = [[1,0;2,1]](1,−2)ᵀ = (1,0)ᵀ。 易错点：不能遗漏 Xᵀ，也不能在已有 1/2 时再多乘 2。",
+    "note": "自编变式 · 对应原题 Q37, Q39 · 半平方损失的梯度 · 稍难。"
+  },
+  {
+    "id": 13,
+    "chapter": 2,
+    "source_ids": [
+      37,
+      40
+    ],
+    "topic": "拟合项加 Ridge 梯度",
+    "level": "稍难",
+    "text": "Let L(w) = ‖w − y‖₂² + 0.5wᵀw, with w = (1,−1)ᵀ and y = (2,1)ᵀ. What is ∇L(w)?",
+    "options": [
+      "(−2,−4)ᵀ",
+      "(−1,−3)ᵀ",
+      "(1,−5)ᵀ",
+      "(−1,−5)ᵀ"
+    ],
+    "answer": "D",
+    "explanation": "拟合项梯度为 2(w−y) = (−2,−4)ᵀ，惩罚项梯度为 2 × 0.5w = (1,−1)ᵀ。相加得到 (−1,−5)ᵀ。 易错点：惩罚项也依赖 w，不能只求拟合项的导数。",
+    "note": "自编变式 · 对应原题 Q37, Q40 · 拟合项加 Ridge 梯度 · 稍难。"
+  },
+  {
+    "id": 14,
+    "chapter": 2,
+    "source_ids": [
+      42,
+      44
+    ],
+    "topic": "主特征方向",
+    "level": "稍难",
+    "text": "For S = [[3,1;1,3]], choose a unit vector w maximizing wᵀSw and give the maximum value.",
+    "options": [
+      "w = (1,−1)ᵀ/√2; maximum 4",
+      "w = (1,1)ᵀ/√2; maximum 4",
+      "w = (1,1)ᵀ/√2; maximum 2",
+      "w = (1,0)ᵀ; maximum 3"
+    ],
+    "answer": "B",
+    "explanation": "S(1,1)ᵀ = 4(1,1)ᵀ，S(1,−1)ᵀ = 2(1,−1)ᵀ。单位长度约束下，最大二次型值为最大特征值 4，由对应单位特征向量取得。负的同方向向量也同样最优。 易错点：需要最大特征值对应的方向，并且向量必须归一化。",
+    "note": "自编变式 · 对应原题 Q42, Q44 · 主特征方向 · 稍难。"
+  },
+  {
+    "id": 15,
+    "chapter": 2,
+    "source_ids": [
+      20,
+      42,
+      43
+    ],
+    "topic": "矩阵幂的特征值",
+    "level": "稍难",
+    "text": "A = [[2,1;1,2]] has eigenvalues 1 and 3. What are the eigenvalues, trace, and determinant of A²?",
+    "options": [
+      "Eigenvalues 2 and 6; trace 8; determinant 12",
+      "Eigenvalues 1 and 3; trace 4; determinant 3",
+      "Eigenvalues 1 and 9; trace 10; determinant 9",
+      "Eigenvalues 1 and 9; trace 9; determinant 10"
+    ],
+    "answer": "C",
+    "explanation": "若 Av = λv，则 A²v = λ²v。因此特征值变成 1、9；迹为其和 10，行列式为其积 9。直接算 A² = [[5,4;4,5]] 也可验证。 易错点：矩阵平方的特征值是 λ²，不是 2λ。",
+    "note": "自编变式 · 对应原题 Q20, Q42, Q43 · 矩阵幂的特征值 · 稍难。"
+  },
+  {
+    "id": 16,
+    "chapter": 3,
+    "source_ids": [
+      48,
+      49,
+      50,
+      51,
+      52
+    ],
+    "topic": "条件概率的方向",
+    "level": "稍难",
+    "text": "Let F mean fraud and A mean an alert. The joint probabilities are P(F,A)=0.03, P(F,Aᶜ)=0.01, P(Fᶜ,A)=0.06, and P(Fᶜ,Aᶜ)=0.90. What are (P(F|A), P(A|F))?",
+    "options": [
+      "(1/3, 3/4)",
+      "(3/4, 1/3)",
+      "(0.03, 0.03)",
+      "(1/2, 3/4)"
+    ],
+    "answer": "A",
+    "explanation": "P(A)=0.03+0.06=0.09，所以 P(F|A)=0.03/0.09=1/3。P(F)=0.03+0.01=0.04，所以 P(A|F)=0.03/0.04=3/4。 易错点：交换条件方向会改变分母，precision 与 sensitivity 也不是同一指标。",
+    "note": "自编变式 · 对应原题 Q48, Q49, Q50, Q51, Q52 · 条件概率的方向 · 稍难。"
+  },
+  {
+    "id": 17,
+    "chapter": 3,
+    "source_ids": [
+      66,
+      67,
+      68
+    ],
+    "topic": "基准率与 Bayes",
+    "level": "稍难",
+    "text": "In a hypothetical screening model, prevalence is 2%, sensitivity is 90%, and specificity is 95%. Approximately what is P(condition | positive)?",
+    "options": [
+      "90%",
+      "95%",
+      "2%",
+      "26.9%"
+    ],
+    "answer": "D",
+    "explanation": "真阳性概率为 0.02 × 0.90 = 0.018，假阳性概率为 0.98 × 0.05 = 0.049。后验为 0.018/(0.018+0.049) ≈ 0.2687。 易错点：specificity 是 P(negative|无该状况)，假阳性率才是 1−specificity；不要忽略基准率。",
+    "note": "自编变式 · 对应原题 Q66, Q67, Q68 · 基准率与 Bayes · 稍难。"
+  },
+  {
+    "id": 18,
+    "chapter": 3,
+    "source_ids": [
+      53,
+      55,
+      57,
+      66
+    ],
+    "topic": "Naive Bayes 加先验",
+    "level": "稍难",
+    "text": "A classifier uses exactly two binary features, and both are present. P(S)=0.2 and P(H)=0.8. The feature-presence probabilities are (0.6,0.5) given S and (0.1,0.2) given H. Assuming conditional independence, what is P(S | both present)?",
+    "options": [
+      "0.300",
+      "0.789",
+      "0.938",
+      "0.200"
+    ],
+    "answer": "B",
+    "explanation": "两类未归一化后验分数：S 为 0.2 × 0.6 × 0.5 = 0.06；H 为 0.8 × 0.1 × 0.2 = 0.016。归一化得 0.06/0.076 = 15/19 ≈ 0.789。若忽略先验会误得 0.3/(0.3+0.02)=0.9375。 易错点：似然不是后验；必须乘类别先验，再在各类之间归一化。",
+    "note": "自编变式 · 对应原题 Q53, Q55, Q57, Q66 · Naive Bayes 加先验 · 稍难。"
+  },
+  {
+    "id": 19,
+    "chapter": 3,
+    "source_ids": [
+      54,
+      56
+    ],
+    "topic": "二元特征 Laplace 平滑",
+    "level": "中等",
+    "text": "For a binary word-presence feature, a class contains 18 documents and the word appears in none. With α=1 and P(word present | class)=(count+α)/(N+2α), what is the smoothed probability?",
+    "options": [
+      "0",
+      "1/19",
+      "1/20",
+      "1/18"
+    ],
+    "answer": "C",
+    "explanation": "分子为 0+1=1，分母为 18+2=20，因此概率为 1/20=0.05。题目明确是二元词出现特征，两个取值都需要加平滑。 易错点：这里不是词频多项式模型，分母也不是 N+词表大小。",
+    "note": "自编变式 · 对应原题 Q54, Q56 · 二元特征 Laplace 平滑 · 中等。"
+  },
+  {
+    "id": 20,
+    "chapter": 3,
+    "source_ids": [
+      58
+    ],
+    "topic": "PDF 高度与区间概率",
+    "level": "稍难",
+    "text": "X is uniform on [0,0.25]. Which triple gives (the density on the interval interior, P(X=0.10), P(0≤X≤0.10))?",
+    "options": [
+      "(4, 0, 0.4)",
+      "(0.25, 0.10, 0.025)",
+      "(4, 0.4, 0.4)",
+      "(1, 0, 0.1)"
+    ],
+    "answer": "A",
+    "explanation": "密度为 1/0.25=4；连续分布的单点概率为 0；区间概率等于面积 4 × 0.10=0.4。密度可以大于 1，只要总积分为 1。 易错点：f(x) 是密度值，不是 P(X=x)。",
+    "note": "自编变式 · 对应原题 Q58 · PDF 高度与区间概率 · 稍难。"
+  },
+  {
+    "id": 21,
+    "chapter": 3,
+    "source_ids": [
+      59,
+      61,
+      62,
+      63
+    ],
+    "topic": "方差与仿射变换",
+    "level": "稍难",
+    "text": "X takes values 0, 2, and 4 with probabilities 0.25, 0.50, and 0.25. What are (E[X], Var(X), Var(3X−1))?",
+    "options": [
+      "(2, 2, 5)",
+      "(2, 6, 54)",
+      "(2, 2, 6)",
+      "(2, 2, 18)"
+    ],
+    "answer": "D",
+    "explanation": "E[X]=2，E[X²]=0+4×0.5+16×0.25=6，所以 Var(X)=6−2²=2。Var(aX+b)=a²Var(X)，因此 Var(3X−1)=9×2=18。 易错点：平移不改变方差，乘 3 会使方差乘 9。",
+    "note": "自编变式 · 对应原题 Q59, Q61, Q62, Q63 · 方差与仿射变换 · 稍难。"
+  },
+  {
+    "id": 22,
+    "chapter": 3,
+    "source_ids": [
+      60,
+      61,
+      63
+    ],
+    "topic": "依赖关系与方差",
+    "level": "稍难",
+    "text": "Let Y=2X, E[X]=1, and Var(X)=3. What are (E[X+Y], Var(X+Y))?",
+    "options": [
+      "(3, 15)",
+      "(3, 27)",
+      "(2, 9)",
+      "(3, 9)"
+    ],
+    "answer": "B",
+    "explanation": "X+Y=3X，所以期望为 3，方差为 9×3=27。若错误地把 X 与 Y 当独立，则会算成 Var(X)+Var(Y)=3+12=15。 易错点：期望线性性不要求独立；方差相加则必须处理协方差。",
+    "note": "自编变式 · 对应原题 Q60, Q61, Q63 · 依赖关系与方差 · 稍难。"
+  },
+  {
+    "id": 23,
+    "chapter": 3,
+    "source_ids": [
+      64,
+      65
+    ],
+    "topic": "A/B 检验与百分点",
+    "level": "稍难",
+    "text": "Independent A/B groups each have 10,000 users. Conversion rates are 4.0% (control) and 4.4% (treatment). Use the unpooled SE = √[pC(1−pC)/nC + pT(1−pT)/nT], z=Δ/SE, and the 95% interval Δ±1.96SE. Which result is closest? All interval endpoints below are in percentage points (pp).",
+    "options": [
+      "z≈14.1; CI [0.344,0.456] pp; significant",
+      "z≈1.41; CI [−0.156,0.956] pp; significant",
+      "z≈1.41; CI [−0.156,0.956] pp; not significant",
+      "z≈0.14; CI [4.0,4.4] pp; not significant"
+    ],
+    "answer": "C",
+    "explanation": "Δ=0.044−0.040=0.004=0.4 pp。SE=√(0.04×0.96/10000+0.044×0.956/10000)≈0.002837=0.2837 pp。z≈1.410<1.96；区间约为 0.4±0.556 pp，即 [−0.156,0.956] pp，包含 0。 易错点：从 4.0% 到 4.4% 是增加 0.4 个百分点，相对增幅是 10%；二者不能混用。",
+    "note": "自编变式 · 对应原题 Q64, Q65 · A/B 检验与百分点 · 稍难。"
+  },
+  {
+    "id": 24,
+    "chapter": 3,
+    "source_ids": [
+      69,
+      71,
+      74
+    ],
+    "topic": "MLE、后验均值与 MAP",
+    "level": "挑战",
+    "text": "A Bernoulli probability has prior Beta(3,17). There are 4 successes in 10 independent trials. For Beta(a,b), the mean is a/(a+b), and the mode is (a−1)/(a+b−2) when a,b>1. Which gives (posterior, posterior mean, MAP, MLE)?",
+    "options": [
+      "(Beta(7,23), 7/30, 3/14, 0.4)",
+      "(Beta(7,27), 7/34, 3/16, 0.4)",
+      "(Beta(7,23), 3/14, 7/30, 0.4)",
+      "(Beta(4,6), 0.4, 0.4, 0.4)"
+    ],
+    "answer": "A",
+    "explanation": "后验参数为 (3+4,17+6)=(7,23)。后验均值是 7/30≈0.2333；MAP 是后验众数 (7−1)/(7+23−2)=6/28=3/14≈0.2143；MLE=4/10=0.4。 易错点：原题的 Beta 后验均值不是自动等于 MAP。本题已提供众数公式，不要求背额外公式。",
+    "note": "自编变式 · 对应原题 Q69, Q71, Q74 · MLE、后验均值与 MAP · 挑战。"
+  },
+  {
+    "id": 25,
+    "chapter": 3,
+    "source_ids": [
+      69,
+      70,
+      72,
+      40
+    ],
+    "topic": "Gaussian 均值与先验收缩",
+    "level": "挑战",
+    "text": "Three independent Gaussian observations with known common variance are 1, 2, and 9. A Gaussian prior makes the MAP objective J(μ)=Σᵢ(μ−xᵢ)²+3μ² (up to a positive scale and constants). What are (MLE of μ, MAP of μ)?",
+    "options": [
+      "(4, 4)",
+      "(2, 4)",
+      "(3, 2)",
+      "(4, 2)"
+    ],
+    "answer": "D",
+    "explanation": "Gaussian 均值的 MLE 是样本均值 (1+2+9)/3=4。MAP 目标导数为 2(3μ−12)+6μ=12μ−24，置零得 μ=2。二阶导数为 12>0，确为最小值。 易错点：先验对应的二次惩罚把估计向 0 收缩；MAP 不必等于 MLE。",
+    "note": "自编变式 · 对应原题 Q69, Q70, Q72, Q40 · Gaussian 均值与先验收缩 · 挑战。"
+  },
+  {
+    "id": 26,
+    "chapter": 4,
+    "source_ids": [
+      75,
+      76
+    ],
+    "topic": "维度与网格数",
+    "level": "中等",
+    "text": "Each coordinate axis of [0,1]ᵖ is divided into 8 equal bins. If dimension increases from p=3 to p=6, by what factor does the number of cells increase?",
+    "options": [
+      "2",
+      "3",
+      "512",
+      "64"
+    ],
+    "answer": "C",
+    "explanation": "格子数从 8³ 增加到 8⁶，倍数为 8⁶/8³=8³=512。维度翻倍不表示格子数只翻倍。 易错点：网格总数为 每轴格数 的 p 次方，不是每轴格数乘 p。",
+    "note": "自编变式 · 对应原题 Q75, Q76 · 维度与网格数 · 中等。"
+  },
+  {
+    "id": 27,
+    "chapter": 4,
+    "source_ids": [
+      77,
+      78
+    ],
+    "topic": "平方距离与 RMS",
+    "level": "稍难",
+    "text": "X and Y are independent uniform points in [0,1]ᵖ. Use E[‖X−Y‖₂²]=p/6. When p increases from 240 to 960, what happens to this expected squared distance and to the root-mean-square (RMS) distance?",
+    "options": [
+      "Both multiply by 4",
+      "Expected squared distance multiplies by 4; RMS distance multiplies by 2",
+      "Both multiply by 2",
+      "Expected squared distance multiplies by 2; RMS distance multiplies by 4"
+    ],
+    "answer": "B",
+    "explanation": "期望平方距离从 240/6=40 增加到 960/6=160，变成 4 倍。RMS 距离为 √E[d²]，从 √40 增加到 √160，变成 2 倍。这是 RMS 的精确计算。 易错点：√E[d²] 一般不等于 E[d]；绝对距离增大也不保证最近与最远的相对差异更明显。",
+    "note": "自编变式 · 对应原题 Q77, Q78 · 平方距离与 RMS · 稍难。"
+  },
+  {
+    "id": 28,
+    "chapter": 4,
+    "source_ids": [
+      79,
+      81
+    ],
+    "topic": "高维球的外壳体积",
+    "level": "稍难",
+    "text": "A point is sampled uniformly by volume from a 20-dimensional ball of radius R. What fraction of the volume lies at distance greater than 0.95R from the center?",
+    "options": [
+      "1−0.95²⁰ ≈ 64.2%",
+      "5%",
+      "0.95²⁰ ≈ 35.8%",
+      "95%"
+    ],
+    "answer": "A",
+    "explanation": "球体积随半径的 20 次方缩放，内球体积比为 0.95²⁰≈0.35849。外壳比例为 1−0.95²⁰≈0.64151，即约 64.2%。 易错点：5% 是半径方向的相对厚度，不是体积比例。",
+    "note": "自编变式 · 对应原题 Q79, Q81 · 高维球的外壳体积 · 稍难。"
+  },
+  {
+    "id": 29,
+    "chapter": 4,
+    "source_ids": [
+      83
+    ],
+    "topic": "JL 误差与目标维度",
+    "level": "稍难",
+    "text": "Use the design rule k=C log(n)/ε² with the same constant C. If n stays fixed and the allowed distortion ε is halved, how does the target dimension k change?",
+    "options": [
+      "It is halved",
+      "It doubles",
+      "It stays unchanged",
+      "It quadruples"
+    ],
+    "answer": "D",
+    "explanation": "k_new/k_old = ε²/(ε/2)²=4。在这条设计公式下，允许误差越小，需要的目标维度越大。 易错点：这是给定 JL 缩放规则下的比较，不是对所有数据集最小嵌入维度的精确断言。",
+    "note": "自编变式 · 对应原题 Q83 · JL 误差与目标维度 · 稍难。"
+  },
+  {
+    "id": 30,
+    "chapter": 5,
+    "source_ids": [
+      84
+    ],
+    "topic": "平方欧氏距离的反例",
+    "level": "稍难",
+    "text": "On ℝ define d(x,y)=(x−y)². For x=0, z=1, and y=2, which metric axiom fails?",
+    "options": [
+      "Nonnegativity, because d(0,2)<0",
+      "Symmetry, because d(0,2)≠d(2,0)",
+      "Triangle inequality, because d(0,2)=4>1+1",
+      "Identity of indiscernibles, because d(0,0)>0"
+    ],
+    "answer": "C",
+    "explanation": "d(0,2)=4，而 d(0,1)+d(1,2)=1+1=2，因此三角不等式不成立。平方欧氏距离仍满足非负、对称和 d(x,y)=0 当且仅当 x=y。 易错点：欧氏距离是 metric，但平方欧氏距离一般不是。",
+    "note": "自编变式 · 对应原题 Q84 · 平方欧氏距离的反例 · 稍难。"
+  },
+  {
+    "id": 31,
+    "chapter": 5,
+    "source_ids": [
+      25,
+      85,
+      86
+    ],
+    "topic": "三种范数距离",
+    "level": "中等",
+    "text": "For x=(1,−2,5) and y=(4,2,−7), what are (L₁ distance, L₂ distance, L∞ distance)?",
+    "options": [
+      "(19,169,12)",
+      "(19,13,12)",
+      "(13,19,12)",
+      "(19,13,7)"
+    ],
+    "answer": "B",
+    "explanation": "坐标差的绝对值为 (3,4,12)。L₁=3+4+12=19；L₂=√(9+16+144)=13；L∞=12。 易错点：L∞ 取坐标差的最大绝对值，不是原向量的最大坐标。",
+    "note": "自编变式 · 对应原题 Q25, Q85, Q86 · 三种范数距离 · 中等。"
+  },
+  {
+    "id": 32,
+    "chapter": 5,
+    "source_ids": [
+      87
+    ],
+    "topic": "Jaccard 共同新增元素",
+    "level": "稍难",
+    "text": "A={a,b,c,d} and B={b,c,e}. A new element f, initially in neither set, is then added to both. What are the Jaccard distances before and after adding f?",
+    "options": [
+      "(2/5, 1/2)",
+      "(3/5, 3/5)",
+      "(3/5, 2/3)",
+      "(3/5, 1/2)"
+    ],
+    "answer": "D",
+    "explanation": "原交集大小为 2，并集大小为 5，距离 1−2/5=3/5。共同加入 f 后交集为 3，并集为 6，距离 1−3/6=1/2。 易错点：交集与并集同时加 1 通常会改变比例；相似度与距离要分清。",
+    "note": "自编变式 · 对应原题 Q87 · Jaccard 共同新增元素 · 稍难。"
+  },
+  {
+    "id": 33,
+    "chapter": 5,
+    "source_ids": [
+      26,
+      88,
+      89
+    ],
+    "topic": "余弦相似度、距离与夹角",
+    "level": "稍难",
+    "text": "Let x=(1,0) and y=(1,√3). Define cosine distance as 1−cos(θ). What are (cosine similarity, cosine distance, angle, Euclidean distance between the unit-normalized vectors)?",
+    "options": [
+      "(1/2, 1/2, 60°, 1)",
+      "(1/2, 60°, 1/2, 1)",
+      "(1/2, 1/2, 60°, √3)",
+      "(1, 0, 0°, 0)"
+    ],
+    "answer": "A",
+    "explanation": "内积为 1，范数为 1 与 2，因此 cosθ=1/2，余弦距离为 1/2，夹角为 60°。单位向量为 (1,0) 与 (1/2,√3/2)，两者欧氏距离为 √(1/4+3/4)=1。 易错点：角度 60° 不是数值为 0.5 的余弦距离；归一化前后的欧氏距离也不同。",
+    "note": "自编变式 · 对应原题 Q26, Q88, Q89 · 余弦相似度、距离与夹角 · 稍难。"
+  },
+  {
+    "id": 34,
+    "chapter": 5,
+    "source_ids": [
+      90,
+      91
+    ],
+    "topic": "Hamming 与插入删除距离",
+    "level": "稍难",
+    "text": "Compare the strings abcde and abXde, treating X as a distinct character. What are (Hamming distance, edit distance allowing insertions and deletions only)?",
+    "options": [
+      "(1,1)",
+      "(2,2)",
+      "(1,2)",
+      "(2,1)"
+    ],
+    "answer": "C",
+    "explanation": "只有第 3 个位置不同，所以 Hamming 距离为 1。插入删除模型不允许一次替换：需要删除 c 并插入 X，共 2 步。LCS 为 abde，长度 4，也可用 5+5−2×4=2。 易错点：若允许单位成本替换，编辑距离才会是 1；必须先读操作定义。",
+    "note": "自编变式 · 对应原题 Q90, Q91 · Hamming 与插入删除距离 · 稍难。"
+  },
+  {
+    "id": 35,
+    "chapter": 6,
+    "source_ids": [
+      92,
+      95
+    ],
+    "topic": "连续两步 GD",
+    "level": "中等",
+    "text": "Minimize L(w)=(w−4)² using η=0.25 and w⁽⁰⁾=0. What are (w⁽¹⁾, w⁽²⁾, L(w⁽²⁾))?",
+    "options": [
+      "(1,2,4)",
+      "(2,3,1)",
+      "(2,4,0)",
+      "(−2,−5,81)"
+    ],
+    "answer": "B",
+    "explanation": "L′(w)=2(w−4)。第一步 w₁=0−0.25×(−8)=2；第二步须重新计算梯度 2(2−4)=−4，得 w₂=2+1=3；损失为 (3−4)²=1。 易错点：第二步不能继续沿用初始点的梯度。",
+    "note": "自编变式 · 对应原题 Q92, Q95 · 连续两步 GD · 中等。"
+  },
+  {
+    "id": 36,
+    "chapter": 6,
+    "source_ids": [
+      92,
+      95,
+      99
+    ],
+    "topic": "学习率与振荡收敛",
+    "level": "挑战",
+    "text": "For L(w)=(w−3)², use fixed-step GD with η=0.75 from any w⁽⁰⁾≠3. Since eₜ=w⁽ᵗ⁾−3 satisfies eₜ₊₁=(1−2η)eₜ, which behavior occurs?",
+    "options": [
+      "Monotone convergence without crossing 3",
+      "Divergence because every oscillation implies instability",
+      "The loss remains constant",
+      "The iterates alternate around 3 and converge to 3"
+    ],
+    "answer": "D",
+    "explanation": "1−2η=−0.5，因此每步误差变号且绝对值减半。参数会跨越最优点，但逐步接近 3；损失每步变为原来的 1/4。这个一维二次损失在 0<η<1 时对任意初值收敛。 易错点：参数振荡不等于发散；要检查误差倍数的绝对值是否小于 1。",
+    "note": "自编变式 · 对应原题 Q92, Q95, Q99 · 学习率与振荡收敛 · 挑战。"
+  },
+  {
+    "id": 37,
+    "chapter": 6,
+    "source_ids": [
+      94,
+      96,
+      97
+    ],
+    "topic": "不足一个 batch 的处理",
+    "level": "稍难",
+    "text": "There are n=103 samples and batch size B=20, with one pass through the data and no replacement. How many updates occur with drop_last=False and drop_last=True, and how many samples are used in the latter case?",
+    "options": [
+      "(6 updates, 5 updates, 100 samples)",
+      "(5 updates, 6 updates, 103 samples)",
+      "(6 updates, 6 updates, 120 samples)",
+      "(5 updates, 5 updates, 100 samples)"
+    ],
+    "answer": "A",
+    "explanation": "保留末尾小 batch 时，更新次数为 ⌈103/20⌉=6。丢弃末尾小 batch 时为 ⌊103/20⌋=5，只用 5×20=100 个样本，剩余 3 个在本轮不使用。 易错点：必须先确认是否丢弃最后不足一批的数据，不能一律向上取整。",
+    "note": "自编变式 · 对应原题 Q94, Q96, Q97 · 不足一个 batch 的处理 · 稍难。"
+  },
+  {
+    "id": 38,
+    "chapter": 6,
+    "source_ids": [
+      37,
+      92,
+      95,
+      96
+    ],
+    "topic": "平均 batch 梯度与顺序 SGD",
+    "level": "挑战",
+    "text": "Two samples are (x₁,y₁)=(1,2) and (x₂,y₂)=(2,1), with ℓᵢ(w)=½(wxᵢ−yᵢ)². Start at w=0 and use η=0.1 for every update. Compare one update using the average gradient of both samples with two pure-SGD updates in the order 1 then 2. What are the final weights (batch, SGD)?",
+    "options": [
+      "(0.4,0.4)",
+      "(0.2,0.2)",
+      "(0.2,0.32)",
+      "(0.4,0.32)"
+    ],
+    "answer": "C",
+    "explanation": "单样本梯度为 (wxᵢ−yᵢ)xᵢ。在 w=0 时两个梯度都是 −2，平均仍为 −2，batch 更新得 0.2。SGD 第一步也得 0.2；第二个样本的梯度须在新权重计算，为 (0.2×2−1)×2=−1.2，因此最终为 0.2+0.12=0.32。 易错点：纯 SGD 第二步使用更新后的权重；batch 平均梯度不能直接换成求和。",
+    "note": "自编变式 · 对应原题 Q37, Q92, Q95, Q96 · 平均 batch 梯度与顺序 SGD · 挑战。"
+  },
+  {
+    "id": 39,
+    "chapter": 6,
+    "source_ids": [
+      93,
+      94,
+      96,
+      98
+    ],
+    "topic": "batch 大小的内存与更新数",
+    "level": "稍难",
+    "text": "A dataset has n=8,192 and d=2,000. Inputs use float32 (4 bytes/value). If batch size increases from 256 to 512, what are the new input-batch memory in decimal MB and the updates per epoch? Ignore all storage except the input batch; do not drop samples.",
+    "options": [
+      "2.048 MB; 32 updates",
+      "4.096 MB; 16 updates",
+      "4.096 MB; 32 updates",
+      "8.192 MB; 16 updates"
+    ],
+    "answer": "B",
+    "explanation": "新 batch 内存为 512×2000×4=4,096,000 bytes=4.096 MB。每轮更新次数为 8192/512=16。原来是 2.048 MB 与 32 次，因此 batch 翻倍使输入内存翻倍、每轮更新次数减半。 易错点：仅统计输入 batch；完整训练内存还包含模型、梯度等，不能直接用这个数替代。",
+    "note": "自编变式 · 对应原题 Q93, Q94, Q96, Q98 · batch 大小的内存与更新数 · 稍难。"
+  },
+  {
+    "id": 40,
+    "chapter": 6,
+    "source_ids": [
+      100
+    ],
+    "topic": "Adam 逐坐标归一化",
+    "level": "挑战",
+    "text": "For one Adam step, the bias-corrected moments are m̂=(2,0.1) and v̂=(4,0.01). Use θ_new=θ−ηm̂/(√v̂+ε) element-wise, with η=0.01 and ε=0. What is Δθ=θ_new−θ?",
+    "options": [
+      "(−0.02,−0.001)",
+      "(−0.005,−0.10)",
+      "(−0.01,−0.001)",
+      "(−0.01,−0.01)"
+    ],
+    "answer": "D",
+    "explanation": "逐坐标平方根 √v̂=(2,0.1)，所以 m̂/√v̂=(1,1)，更新量为 −0.01×(1,1)=(−0.01,−0.01)。题目直接给定校正后矩，并为手算设 ε=0。 易错点：Adam 会按每个坐标的二阶矩缩放；这个给定步骤不表示任意步骤的所有坐标更新都相等。",
+    "note": "自编变式 · 对应原题 Q100 · Adam 逐坐标归一化 · 挑战。"
+  }
+]

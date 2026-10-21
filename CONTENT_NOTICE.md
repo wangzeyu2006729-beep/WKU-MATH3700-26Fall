@@ -23,3 +23,12 @@ The questions are included for course revision, with formatting repairs and
 Chinese study explanations. Source ambiguities are identified alongside the
 affected explanations. This is an independent study aid, not an official
 university website or a statement of university endorsement.
+
+## Additional practice variants
+
+The 40 entries in `variants.json` are independently written practice variants
+based on the concepts in the original question bank and Weeks 1–5 lecture
+materials. They are displayed as V01–V40 and include references to the related
+original questions, difficulty labels, Chinese explanations, and common pitfalls.
+They are not questions issued or endorsed by Gupta or the university, and are
+not predictions of exam content. Original reference questions remain Q01–Q100.
