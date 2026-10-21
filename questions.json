@@ -1,4 +1,11 @@
 {
+  "course": {
+    "code": "MATH3700",
+    "school": "Wenzhou-Kean University",
+    "instructor": "Gupta",
+    "term": "26Fall",
+    "storage_key": "math3700-practice-v1"
+  },
   "chapters": [
     {
       "name": "大数据基础",

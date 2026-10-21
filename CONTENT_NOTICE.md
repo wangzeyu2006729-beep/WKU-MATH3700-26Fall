@@ -5,14 +5,14 @@ The application code is released under the [MIT License](LICENSE).
 Course context supplied by the repository owner:
 
 - **Institution:** Wenzhou-Kean University (WKU)
-- **Term:** Fall 2027 (27Fall)
+- **Term:** Fall 2026 (26Fall)
 - **Course:** MATH 3700 — Big Data Computing
 - **Instructor:** Gupta
 - **Study context:** MATH 3700 Mid Quiz reference-question practice
 
 The question statements, answer choices, and original answer key were supplied
 by the repository owner from the reference-question PDF provided by Gupta
-for the Fall 2027 MATH 3700 Mid Quiz at Wenzhou-Kean University, titled **MATH 3700: Big Data
+for the Fall 2026 MATH 3700 Mid Quiz at Wenzhou-Kean University, titled **MATH 3700: Big Data
 Computing — 100-Question Multiple-Choice Quiz**, covering Weeks 1–5. The
 original supplied text is preserved in `source.txt`; its authorship and a
 separate redistribution license were not specified in that text.

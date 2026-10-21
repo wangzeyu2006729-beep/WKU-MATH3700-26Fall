@@ -224,7 +224,7 @@ for variant in variants:
     assert all(1 <= ref <= 100 for ref in q['source_ids'])
     questions.append(q)
 assert [q['id'] for q in questions] == list(range(1, 141))
-data = {'chapters':[{'name':c[0], 'english':c[1], 'start':c[2], 'end':c[3]} for c in chapters], 'questions':questions}
+data = {'course': {'code':'MATH3700', 'school':'Wenzhou-Kean University', 'instructor':'Gupta', 'term':'26Fall', 'storage_key':'math3700-practice-v1'}, 'chapters':[{'name':c[0], 'english':c[1], 'start':c[2], 'end':c[3]} for c in chapters], 'questions':questions}
 (ROOT/'questions.json').write_text(json.dumps(data,ensure_ascii=False,indent=2))
 template = (ROOT/'template.html').read_text()
 (ROOT/'index.html').write_text(template.replace('__QUIZ_DATA__',json.dumps(data,ensure_ascii=False).replace('</','<\\/')))

@@ -1,87 +1,91 @@
-# WKU3700Midquiz
+# WKU-MATH3700-26Fall
 
-**140 practice questions for Gupta's Fall 2027 MATH 3700 Mid Quiz at Wenzhou-Kean University.**
+**Wenzhou-Kean University · MATH3700 · Gupta · Fall 2026 (26Fall)**
 
-[Start practicing online](https://wangzeyu2006729-beep.github.io/WKU3700Midquiz/)
+[Practice online](https://wangzeyu2006729-beep.github.io/WKU-MATH3700-26Fall/) · [Other course: CPS2390](https://wangzeyu2006729-beep.github.io/WKU-CPS2390-26Fall/)
 
-The bank combines **100 instructor-provided reference questions** with **40 independently written, slightly harder variants** based on the original questions and Weeks 1–5 lecture material. Questions are in English; explanations and study controls are in Chinese.
+140 practice questions: 100 instructor-provided Mid Quiz reference questions and 40 independently written, slightly harder variants based on Weeks 1–5. This is one of the repository owner's Fall 2026 courses at WKU. Both course sites use a compact dark interface and independent browser progress.
 
-- **University:** Wenzhou-Kean University (WKU)
-- **Course:** MATH 3700 — Big Data Computing
-- **Instructor:** Gupta
-- **Semester:** Fall 2027 (27Fall)
-- **Coverage:** Big data foundations, linear algebra, matrix calculus and eigenvalues, probability, high-dimensional geometry, distance measures, and gradient descent/SGD.
+![Practice interface](docs/preview.png)
 
-This is an independent study aid. The variants are not instructor-issued questions or exam predictions.
+## Course information
 
-![Dark practice interface](docs/preview.png)
+| Field | Details |
+|---|---|
+| University | Wenzhou-Kean University (WKU) |
+| Course | MATH3700 |
+| Instructor | Gupta |
+| Semester | Fall 2026 (26Fall) |
 
-## Courses
+Use the course selector at the top to switch between MATH3700 and CPS2390. Questions are in English; controls and supplementary study notes are in Chinese. This is an independent revision aid, not an official university site or a statement of instructor endorsement.
 
-Use the course selector at the top of the page to switch between this site and [CPS2390 TestBank](https://wangzeyu2006729-beep.github.io/WKUCPS2390TestBank/) for WKU, Qixia Zhang, Fall 2026. CPS2390 has its own repository and browser progress; switching courses does not reset MATH3700 answers.
+## Coverage
 
-## Practice
+| Topic | Original | Variants | Total |
+|---|---:|---:|---:|
+| Big data foundations | 10 | 3 | 13 |
+| Linear algebra | 24 | 7 | 31 |
+| Matrix calculus and eigenvalues | 10 | 5 | 15 |
+| Probability and statistics | 30 | 10 | 40 |
+| High-dimensional geometry | 9 | 4 | 13 |
+| Distances and metrics | 8 | 5 | 13 |
+| Gradient descent and SGD | 9 | 6 | 15 |
+| **Total** | **100** | **40** | **140** |
 
-A compact dark interface keeps the question and choices at the center. Choose **全部** for all 140 questions, **原题** for the original 100, or **变式** for the additional 40. Combine a bank with a chapter filter, random practice, incorrect-answer review, or bookmarks.
+## Practice controls
 
-- Original labels are **Q01–Q100**; variant labels are **V01–V40**.
-- Search `Q12` or `V12` to find a specific question, or enter a keyword.
-- Select an answer, then confirm to reveal the solution.
-- Variants include source-question references, difficulty, worked Chinese explanations, and common pitfalls. Five challenge questions provide necessary formulas in the stem.
-- Answering a missed question correctly removes it from incorrect-answer review when the list is refreshed.
-- Restarting a group hides solutions while retaining previous records.
-- Keyboard: `1`–`4` or `A`–`D` select; `Enter` confirms or continues; arrow keys navigate; `S` bookmarks.
+- Choose all questions, original questions, or variants, then combine with a chapter filter.
+- Original labels are `Q01–Q100`; variant labels are `V01–V40`. Search a label or keyword.
+- Select an answer and confirm to reveal the solution. Chinese explanations cover the calculation and common pitfalls.
+- Variants include related original-question numbers and difficulty. Five challenge questions supply the formulas needed in the stem.
+- Keyboard: `1`–`4` or `A`–`D` select; `Enter` confirms; arrow keys navigate; `S` bookmarks.
 
-## Private progress and upgrades
+Incorrect-answer review collects the latest mistakes; a correct retry removes a question when the list is refreshed. Restarting hides solutions while retaining previous records. Clearing course progress requires confirmation.
 
-Answers, drafts, bookmarks, and position stay in **the current browser's localStorage**, under `math3700-practice-v1`. There is no backend, account, tracking, or answer upload.
+## Source material and editorial notes
 
-The original 100 questions keep their internal IDs. Existing online progress continues after this update; a saved 100-question queue expands to include the new variants while keeping the current question, answers, attempts, and drafts. Variant internal IDs are 101–140, displayed as V01–V40.
+The 100 reference questions were supplied from Gupta's *MATH 3700: Big Data Computing — 100-Question Multiple-Choice Quiz*. The 40 variants are independent practice material, not instructor-issued questions or exam predictions.
 
-Different devices, browsers, and browser profiles have independent records. Tabs within one browser profile share the record. Clearing browser data removes progress; private-window records may disappear after closing. There is no cross-device synchronization. The former separate offline variant page has its own browser storage and is not automatically imported across origins.
+- `source.txt`: supplied original text.
+- `variants.json`: independently written variants and related-question references.
+- `build.py`: parses the originals, repairs extracted notation, adds Chinese explanations, and merges the variants.
 
-If storage is unavailable, the page shows a warning and remains usable for that session.
+Original question text, choice order, answer keys, explanations, and notes are preserved. Notes for Q3, Q58, Q64–65, Q88, and Q90 identify wording or extraction issues. Q64–65 use the standard error supplied in the question; Q90 uses `acfdeg`.
 
-## Offline use
+## Progress and privacy
 
-Download `index.html` and open it in a browser. It contains the entire app and all questions, with no runtime dependencies or network requirement. Offline and online copies have separate browser storage.
+Records stay in the current browser's localStorage under `math3700-practice-v1`. There is no backend, account, tracking, or answer upload. The other course uses its own key; switching courses or clearing one course does not clear the other.
 
-## Sources and build
+Original internal IDs 1–100 remain stable; variants use 101–140. Existing answers, attempts, bookmarks, drafts, and position remain compatible, including when a saved 100-question queue expands to 140.
 
-- `source.txt`: original text supplied from Gupta's **MATH 3700: Big Data Computing — 100-Question Multiple-Choice Quiz**.
-- `build.py`: parses the original text, repairs extracted notation, adds Chinese explanations, and merges the variants.
-- `variants.json`: independently written variants with original-question references and difficulty metadata.
-- `questions.json`: generated merged bank.
-- `template.html`: interface and browser behavior.
-- `index.html`: generated standalone page deployed by GitHub Pages.
+The repository rename changes the page path but keeps the same GitHub Pages hostname and storage key, so existing online records remain available in the same browser profile. Different devices, browsers, and profiles have independent records; tabs in one profile share them. There is no cross-device synchronization. Clearing browser data removes progress; private browsing may discard it on close. If storage is unavailable, practice remains usable for that session with a warning.
 
-The original 100 question texts, choice order, answer-key choices, explanations, and ambiguity notes are preserved. Notes for Q3, Q58, Q64–65, Q88, and Q90 explain source wording or extraction ambiguities. Q64–65 use the standard error supplied in the question; Q90 uses `acfdeg`.
+## Build and offline use
 
-Rebuild using Python 3:
+`index.html` embeds the full interface and question bank. Download it and open it to practice offline. Online and offline copies have separate browser storage; switching to the other online course requires an internet connection.
+
+Rebuild with Python 3, without third-party Python dependencies:
 
 ```bash
 python3 build.py
 ```
 
+`template.html` contains the interface; `questions.json` and `index.html` are generated outputs.
+
 ## Verification
 
-Serve the repository locally:
+Serve locally and use a disposable test browser profile; the functional checks clear that profile's progress:
 
 ```bash
 python3 -m http.server 8000 --bind 127.0.0.1
+npx --yes --package @playwright/cli playwright-cli -s=math3700 open http://127.0.0.1:8000/index.html
+npx --yes --package @playwright/cli playwright-cli -s=math3700 run-code --filename verify-browser.js
+npx --yes --package @playwright/cli playwright-cli -s=math3700 run-code --filename verify-merge.js
+npx --yes --package @playwright/cli playwright-cli -s=math3700 run-code --filename verify-isolation.js
 ```
 
-Use a dedicated disposable browser session for checks. `verify-browser.js` clears that session's practice progress. `verify-merge.js` and `verify-isolation.js` use independent browser contexts.
-
-```bash
-npx --yes --package @playwright/cli playwright-cli -s=wku3700 open http://127.0.0.1:8000/index.html
-npx --yes --package @playwright/cli playwright-cli -s=wku3700 run-code --filename verify-browser.js
-npx --yes --package @playwright/cli playwright-cli -s=wku3700 run-code --filename verify-merge.js
-npx --yes --package @playwright/cli playwright-cli -s=wku3700 run-code --filename verify-isolation.js
-```
-
-These checks cover grading and navigation through all 140 questions, original/variant filters, upgrade compatibility, browser isolation, persistence, storage-denied operation, and layouts from 320 to 1440 pixels. See `docs/verification.json` for the verified run.
+Checks cover question navigation and grading, filters, persistence, storage-denied operation, and layouts from 320 to 1440 pixels. Isolation checks use independent browser contexts. See `docs/verification.json` and the additional course checks in `docs/` for verified results.
 
 ## License and attribution
 
-Application code is available under the [MIT License](LICENSE). The original course materials retain their respective authors' rights; the code license does not relicense them. See [CONTENT_NOTICE.md](CONTENT_NOTICE.md).
+Application code is provided under the [MIT License](LICENSE). Original course questions and answer keys retain their respective authors' rights; the code license does not relicense those materials. See [CONTENT_NOTICE.md](CONTENT_NOTICE.md).
