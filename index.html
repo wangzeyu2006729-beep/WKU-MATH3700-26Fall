@@ -21,6 +21,7 @@
 @media(max-width:700px){.app{padding:0 18px}.topbar{min-height:76px}.brand{display:block}.brand h1{font-size:18px}.brand span{font-size:10px}.toolbar{padding:20px 0;gap:15px}.filter-row{align-items:stretch;flex-direction:column;gap:12px}.bank-tabs{align-self:flex-start}.search-box{width:100%}.practice-row{align-items:stretch;flex-direction:column;gap:13px}.modes{gap:0;justify-content:space-between}.mode{font-size:12px;min-height:38px}select{width:100%;max-width:none;min-height:40px}.layout{display:flex;flex-direction:column;gap:20px}.practice-column,.right-column{width:100%}.question-card{padding:20px 18px}.question-text{font-size:17px;line-height:1.75;margin-bottom:22px}.option{font-size:13px;min-height:56px;padding:11px 12px}.scope{align-items:center}.card-footer{gap:10px}.hint{font-size:10px}.primary{padding:10px 13px;font-size:12px;white-space:nowrap}.right-column{padding-top:0;display:grid;grid-template-columns:1fr;gap:0}.progress-panel{margin:0 0 18px;padding-bottom:18px}.progress-panel h2{margin-bottom:11px}.progress-summary{display:inline-flex;vertical-align:middle}.mini-stats{display:inline-flex;margin:0 0 0 24px;vertical-align:middle;gap:16px}.map-grid{grid-template-columns:repeat(8,minmax(0,1fr));max-height:210px}.privacy-note{margin-top:18px}.keyboard-tips{display:none}.footer-note{margin:20px 0;font-size:9px}.question-id small{font-size:10px}.explanation{padding:15px}.explanation p{font-size:12px}.map-panel summary{min-height:40px}}
 @media(max-width:360px){.app{padding:0 13px}.question-card{padding:18px 14px}.bank-tabs button{padding:7px 10px}.bank-tabs small{margin-left:3px}.mini-stats{margin-left:13px;gap:10px}.hint{max-width:105px;display:block}.mode{font-size:11px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+.course-select{max-width:none;border:0;background:transparent;color:var(--ink);font-size:20px;font-weight:650;letter-spacing:-.5px;padding:4px 26px 4px 0;width:auto;cursor:pointer}.course-select:hover{color:var(--accent)}.course-select option{background:var(--surface);font-size:14px}@media(max-width:700px){.course-select{font-size:18px;min-height:36px}.brand>span{display:block}}
 </style>
 </head>
 <body>
@@ -39,7 +40,7 @@
 </defs></svg>
 <a class="skip-link" href="#question">跳到当前题目</a>
 <div class="app">
-<header class="topbar"><div class="brand"><h1>MATH 3700</h1><span>WKU · 27Fall · Gupta Midquiz</span></div><button id="help" class="help-btn" aria-label="使用说明与快捷键">?</button></header>
+<header class="topbar"><div class="brand"><h1 class="sr-only">MATH 3700</h1><label><span class="sr-only">切换课程</span><select id="course-select" class="course-select" aria-label="切换课程"><option value="math" selected>MATH 3700</option><option value="cps">CPS2390</option></select></label><span>WKU · 27Fall · Gupta Midquiz</span></div><button id="help" class="help-btn" aria-label="使用说明与快捷键">?</button></header>
 <div id="storage-warning" class="storage-warning" hidden>浏览器未允许保存本地数据，进度仅在本次打开期间保留。</div>
 <main>
 <section class="toolbar" aria-label="练习筛选">
@@ -102,6 +103,7 @@ function render(){const q=current();const answered=Object.values(state.answers),
 $('chapter-select').onchange=e=>{state.chapter=e.target.value;queue();};
 document.querySelectorAll('[data-bank]').forEach(b=>b.onclick=()=>{state.bank=b.dataset.bank;queue();});
 document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{state.mode=b.dataset.mode;queue();});
+$('course-select').onchange=e=>{if(e.target.value==='cps')window.location.href='https://wangzeyu2006729-beep.github.io/WKUCPS2390TestBank/';};
 $('search').value=state.query;$('search').addEventListener('input',e=>{state.query=e.target.value;queue();});
 $('prev').onclick=()=>go(state.index-1);$('next').onclick=advance;$('restart').onclick=restart;$('help').onclick=()=>$('help-dialog').showModal();$('reset').onclick=()=>$('reset-dialog').showModal();$('help-reset').onclick=()=>{$('help-dialog').close();$('reset-dialog').showModal();};
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>$(b.dataset.close).close());

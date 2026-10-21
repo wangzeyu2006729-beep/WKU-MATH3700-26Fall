@@ -16,6 +16,10 @@ This is an independent study aid. The variants are not instructor-issued questio
 
 ![Dark practice interface](docs/preview.png)
 
+## Courses
+
+Use the course selector at the top of the page to switch between this site and [CPS2390 TestBank](https://wangzeyu2006729-beep.github.io/WKUCPS2390TestBank/) for WKU, Qixia Zhang, Fall 2026. CPS2390 has its own repository and browser progress; switching courses does not reset MATH3700 answers.
+
 ## Practice
 
 A compact dark interface keeps the question and choices at the center. Choose **全部** for all 140 questions, **原题** for the original 100, or **变式** for the additional 40. Combine a bank with a chapter filter, random practice, incorrect-answer review, or bookmarks.
