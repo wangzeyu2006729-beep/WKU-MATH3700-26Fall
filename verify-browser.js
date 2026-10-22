@@ -47,7 +47,7 @@ async (page) => {
   assert(await page.locator('#empty-back').count() === 1, 'Empty search is handled');
   await page.locator('#empty-back').click();
   await page.locator('#map [data-index="16"]').click();
-  assert(await page.locator('#question .matrix span').count() === 4, '2 by 2 matrix is rendered in rows and columns');
+  assert(await page.locator('#question .matrix:visible span').count() === 4, '2 by 2 matrix is rendered in rows and columns');
   await page.locator('[data-choice="C"]').click();
   await page.reload();
   assert((await getState()).drafts[17] === 'C' && await page.locator('.option.selected').count() === 1, 'Unsubmitted selection and current position survive refresh');

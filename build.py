@@ -2,6 +2,7 @@
 from pathlib import Path
 import json
 import re
+from practice_ui import prepare_ui
 
 ROOT = Path(__file__).resolve().parent
 raw = (ROOT / 'source.txt').read_text()
@@ -225,7 +226,10 @@ for variant in variants:
     questions.append(q)
 assert [q['id'] for q in questions] == list(range(1, 141))
 data = {'course': {'code':'MATH3700', 'school':'Wenzhou-Kean University', 'instructor':'Gupta', 'term':'26Fall', 'storage_key':'math3700-practice-v1'}, 'chapters':[{'name':c[0], 'english':c[1], 'start':c[2], 'end':c[3]} for c in chapters], 'questions':questions}
+ui = prepare_ui(ROOT, data)
 (ROOT/'questions.json').write_text(json.dumps(data,ensure_ascii=False,indent=2))
 template = (ROOT/'template.html').read_text()
+for marker, value in ui.items():
+    template = template.replace(marker, value)
 (ROOT/'index.html').write_text(template.replace('__QUIZ_DATA__',json.dumps(data,ensure_ascii=False).replace('</','<\\/')))
 print('Built index.html: 100 original questions + 40 variants, 560 options, Chinese explanations; 7 chapters.')
