@@ -2,9 +2,9 @@
 
 **Wenzhou-Kean University · MATH3700 · Gupta · Fall 2026 (26Fall)**
 
-[Practice online](https://wangzeyu2006729-beep.github.io/WKU-MATH3700-26Fall/) · [Other course: CPS2390](https://wangzeyu2006729-beep.github.io/WKU-CPS2390-26Fall/)
+[Practice online](https://wangzeyu2006729-beep.github.io/WKU-MATH3700-26Fall/) · Other courses: [CPS2390](https://wangzeyu2006729-beep.github.io/WKU-CPS2390-26Fall/) · [CPS2232](https://wangzeyu2006729-beep.github.io/WKU-CPS2232-26Fall/)
 
-140 practice questions: 100 instructor-provided Mid Quiz reference questions and 40 independently written, slightly harder variants based on Weeks 1–5. This is one of the repository owner's Fall 2026 courses at WKU. Both course sites use a compact dark interface and independent browser progress.
+140 practice questions: 100 instructor-provided Mid Quiz reference questions and 40 independently written, slightly harder variants based on Weeks 1–5. This is one of the repository owner's Fall 2026 courses at WKU. All three course sites use a compact dark interface and independent browser progress.
 
 ![Practice interface](docs/preview.png)
 
@@ -17,13 +17,13 @@
 | Instructor | Gupta |
 | Semester | Fall 2026 (26Fall) |
 
-Use the course selector at the top to switch between MATH3700 and CPS2390. Questions are in English; controls and supplementary study notes are in Chinese. This is an independent revision aid, not an official university site or a statement of instructor endorsement.
+Use the course selector at the top to switch between MATH3700, CPS2390 and CPS2232. Questions are in English; controls and supplementary study notes are in Chinese. This is an independent revision aid, not an official university site or a statement of instructor endorsement.
 
 ## Chinese meaning and course navigation
 
 Click **查看中文释义** below a question to expand its Chinese meaning, including all choices. Click again to collapse it. Formulas and code identifiers remain intact; fill questions retain blanks. This does not reveal an answer or change grading. The per-question expansion state survives refresh, and search accepts Chinese keywords.
 
-The course name opens a compact dark course panel with the current course marked. Use arrow keys or Tab to move, Enter to follow a course, and Escape or an outside click to dismiss. Both course pages retain their independent learning records.
+The course name opens a compact dark course panel with the current course marked. Use arrow keys or Tab to move, Enter to follow a course, and Escape or an outside click to dismiss. Each course page retains its own independent learning records.
 
 The shared course catalogue and presentation components support adding real courses later. Only the current Quiz and TestBank are included; exercises and assignments are not added. See [adding courses](docs/adding-courses.md).
 
@@ -62,7 +62,7 @@ Original question text, choice order, answer keys, explanations, and notes are p
 
 ## Progress and privacy
 
-Records stay in the current browser's localStorage under `math3700-practice-v1`. There is no backend, account, tracking, or answer upload. The other course uses its own key; switching courses or clearing one course does not clear the other.
+Records stay in the current browser's localStorage under `math3700-practice-v1`. There is no backend, account, tracking, or answer upload. Each other course uses its own key; switching courses or clearing one course does not clear the others.
 
 Original internal IDs 1–100 remain stable; variants use 101–140. Existing answers, attempts, bookmarks, drafts, and position remain compatible, including when a saved 100-question queue expands to 140.
 
