@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111315">
+<meta name="description" content="MATH3700 Mid2, Weeks 2–7. Original questions, harder variants and paper-solvable proofs, theory and calculations.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23191c1f'/%3E%3Cpath d='M8 8h6l2 2 2-2h6v16h-6l-2 1-2-1H8zM16 10v15' fill='none' stroke='%23bed1b9' stroke-width='1.5'/%3E%3C/svg%3E">
+<title>MATH3700 · Mid2 · Weeks 2–7</title>
+<style>
+:root{color-scheme:dark;--bg:#111315;--surface:#191c1f;--raised:#202428;--line:#33383e;--ink:#e7e9ec;--muted:#a2a8af;--accent:#bed1b9;--green:#b4d4b8;--red:#e5aaa4;--soft-green:#223029;--soft-red:#352724}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}button,input,select{font:inherit;color:inherit}button{cursor:pointer}button,input,select,a{ -webkit-tap-highlight-color:transparent}button{transition:background .15s,border-color .15s}button:disabled{cursor:default}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}button:active:not(:disabled){transform:translateY(1px)}a{color:var(--accent)}[hidden]{display:none!important}svg{width:18px;height:18px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0)}.skip-link{position:fixed;top:0;left:16px;z-index:3;padding:10px;background:var(--raised);transform:translateY(-150%)}.skip-link:focus{transform:translateY(0)}
+.app{max-width:1180px;margin:0 auto;padding:0 32px}.topbar{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}.brand h1{font-size:20px;font-weight:650;letter-spacing:-.5px;margin:0}.brand span{font-size:12px;color:var(--muted)}.help-btn{width:36px;height:36px;background:transparent;border:1px solid var(--line);border-radius:50%;color:var(--muted)}.help-btn:hover{color:var(--ink);background:var(--raised)}
+.toolbar{padding:26px 0 22px;display:grid;gap:18px}.filter-row,.practice-row{display:flex;align-items:center;justify-content:space-between;gap:16px}.bank-tabs{display:flex;gap:3px;padding:3px;border:1px solid var(--line);border-radius:9px;background:#141719}.bank-tabs button{background:transparent;border:0;padding:7px 13px;border-radius:5px;color:var(--muted);font-size:13px;white-space:nowrap}.bank-tabs button.active{color:var(--ink);background:var(--raised)}.bank-tabs small{font:11px/1.4 ui-monospace,SFMono-Regular,monospace;margin-left:5px;color:var(--muted)}.search-box{display:flex;align-items:center;gap:8px;color:var(--muted);border-bottom:1px solid var(--line);padding:7px 2px;width:260px}.search-box input{background:transparent;border:0;outline:none;width:100%;min-width:0;font-size:13px}.search-box:focus-within{border-color:var(--accent)}.search-box input::placeholder{color:var(--muted)}
+.modes{display:flex;gap:22px;flex-wrap:wrap}.mode{display:flex;align-items:center;gap:6px;background:none;border:0;border-bottom:2px solid transparent;padding:7px 0;color:var(--muted);font-size:13px}.mode.active{color:var(--ink);border-color:var(--accent)}.mode:hover{color:var(--ink)}.count{font:11px ui-monospace,SFMono-Regular,monospace;color:var(--muted)}.mode .count:empty{display:none}select{max-width:240px;font-size:12px;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px 30px 8px 10px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 222px;gap:30px;align-items:start}.practice-column{min-width:0}.scope{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 14px}.scope-title{font-size:12px;font-weight:600}.scope-title small{font-size:11px;color:var(--muted);font-weight:400;margin-left:10px}.text-btn{display:inline-flex;align-items:center;gap:6px;padding:4px 0;background:none;border:0;color:var(--muted);font-size:12px}.text-btn:hover{color:var(--ink)}.text-btn svg{width:14px;height:14px}
+.question-card{padding:28px 30px 24px;background:var(--surface);border:1px solid var(--line);border-radius:10px;scroll-margin-top:20px;overflow-wrap:anywhere}.question-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px}.question-id{display:flex;gap:10px;align-items:baseline}.question-id strong{font:600 14px ui-monospace,SFMono-Regular,monospace;color:var(--accent)}.question-id small{font-size:11px;color:var(--muted)}.bookmark{display:flex;align-items:center;gap:5px;font-size:11px;background:none;border:0;color:var(--muted);padding:5px 0}.bookmark svg{width:15px;height:15px}.bookmark.active{color:var(--accent)}.bookmark.active svg{fill:var(--accent)}.question-tag{font-size:11px;color:var(--muted)}.question-text{font-size:19px;font-weight:550;line-height:1.7;letter-spacing:-.15px;margin:10px 0 25px;overflow-wrap:anywhere}.options{display:grid;gap:10px}.option{display:flex;gap:12px;align-items:center;width:100%;min-height:56px;padding:12px 14px;text-align:left;border:1px solid var(--line);border-radius:7px;background:transparent;font-size:14px;line-height:1.6}.option:not(:disabled):hover{background:var(--raised);border-color:#59616b}.letter{display:grid;place-items:center;width:25px;height:25px;flex-shrink:0;font:12px ui-monospace,SFMono-Regular,monospace;color:var(--muted);border:1px solid var(--line);border-radius:4px}.option-copy{flex:1;overflow-wrap:anywhere}.option.selected{background:var(--raised);border-color:var(--accent)}.option.selected .letter{color:var(--accent);border-color:var(--accent)}.option.correct{background:var(--soft-green);border-color:#5c8065}.option.correct .letter{color:var(--green);border-color:#63836b}.option.incorrect{background:var(--soft-red);border-color:#a47570}.option.incorrect .letter{color:var(--red);border-color:#a47570}.result-icon{font-weight:650;color:var(--green)}.incorrect .result-icon{color:var(--red)}.option:disabled{opacity:1}.card-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}.hint{font-size:11px;color:var(--muted)}.primary,.secondary{display:inline-flex;justify-content:center;align-items:center;gap:9px;min-height:42px;border-radius:6px;padding:9px 16px;font-size:13px;font-weight:550;border:1px solid transparent}.primary{background:var(--accent);color:#182219}.primary:hover{background:#d1dfcd}.primary:disabled{background:#2c3230;color:#929b92}.secondary{background:transparent;border-color:var(--line);color:var(--ink)}.secondary:hover{background:var(--raised)}.primary svg{width:15px;height:15px}
+.explanation{margin-top:22px;padding:18px 18px 18px 20px;border-left:2px solid #739b7d;background:#1c2721;border-radius:0 6px 6px 0}.explanation.wrong{background:#2b2421;border-color:#b78d78}.feedback-title{display:flex;align-items:center;gap:7px;color:var(--green);font-size:13px;font-weight:600}.explanation.wrong .feedback-title{color:#e2baa2}.explanation p{margin:10px 0 0;line-height:1.9;font-size:13px;color:#d1dbd2;overflow-wrap:anywhere}.source-note{margin-top:14px;border-top:1px solid #39483d;padding-top:12px;font-size:11px;line-height:1.8;color:#b4c2b6}.source-note strong{display:block;font-weight:550;margin-bottom:4px}.navigation{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:12px 0 0}.nav-btn{display:flex;align-items:center;gap:8px;border:0;background:none;color:var(--muted);padding:10px 0;font-size:12px}.nav-btn:hover{color:var(--ink)}.nav-btn:disabled{color:#747b83}.position{font:11px ui-monospace,SFMono-Regular,monospace;color:var(--muted)}.keyboard-tips{display:flex;justify-content:center;gap:18px;font-size:10px;color:var(--muted);margin-top:22px}kbd{font:10px ui-monospace,SFMono-Regular,monospace;border:1px solid var(--line);padding:2px 4px;border-radius:3px;margin:0 3px}
+.right-column{padding-top:33px}.progress-panel{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:20px}.progress-panel h2{font-size:11px;font-weight:500;color:var(--muted);margin:0 0 14px}.progress-summary{display:flex;align-items:center;gap:13px}.ring{position:relative;display:grid;place-items:center;width:52px;height:52px;flex-shrink:0}.ring svg{position:absolute;width:52px;height:52px;transform:rotate(-90deg);stroke-width:4}.ring circle{fill:none;stroke:var(--line)}.ring circle.fill{stroke:var(--accent);stroke-dasharray:213.63;stroke-dashoffset:213.63}.ring strong{font-size:12px;font-weight:550}.ring small{font-size:8px}.progress-copy b{font:500 18px ui-monospace,SFMono-Regular,monospace}.progress-copy b span{font-size:11px;color:var(--muted)}.progress-copy p{margin:1px 0 0;color:var(--muted);font-size:10px}.mini-stats{display:flex;gap:20px;margin-top:15px;font-size:11px;color:var(--muted)}.mini-stats strong{font-weight:500;font-variant-numeric:tabular-nums;color:var(--ink);margin-right:5px}.map-panel summary{display:flex;align-items:center;justify-content:space-between;list-style:none;cursor:pointer;font-size:12px;color:var(--muted);padding-bottom:13px}.map-panel summary::-webkit-details-marker{display:none}.map-panel summary span:last-child{font-size:10px}.map-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;max-height:390px;overflow:auto;scrollbar-width:thin;scrollbar-color:#4b5157 transparent;padding:3px}.q-dot{height:29px;border:1px solid transparent;border-radius:4px;background:#202428;color:var(--muted);font:10px ui-monospace,SFMono-Regular,monospace;padding:0}.q-dot:hover{background:#353b41}.q-dot.correct{background:#26392c;color:#c0d9c5}.q-dot.incorrect{background:#3d2d2a;color:#e2b3ad}.q-dot.current{border-color:var(--accent);color:var(--ink)}.q-dot.saved{text-decoration:underline;text-underline-offset:3px}.map-empty{grid-column:1/-1;font-size:12px;color:var(--muted)}.legend{display:flex;gap:12px;margin-top:12px;font-size:10px;color:var(--muted)}.legend i{display:inline-block;width:5px;height:5px;border-radius:1px;background:#555c63;margin-right:4px}.legend i.correct{background:#94b89d}.legend i.incorrect{background:#c4918a}.privacy-note{font-size:10px;line-height:1.9;color:var(--muted);margin:22px 0 0}.reset-btn{background:none;border:0;color:var(--muted);font-size:10px;padding:8px 0;text-decoration:underline;text-underline-offset:3px}.footer-note{margin:38px 0 22px;color:var(--muted);font-size:10px}.empty{text-align:center;padding:50px 10px}.empty h2{font-size:18px}.empty p{font-size:13px;color:var(--muted)}.empty>svg{color:var(--accent);width:30px;height:30px}.matrix{display:inline-grid;grid-template-columns:repeat(var(--cols),max-content);gap:1px 11px;padding:2px 8px;margin:0 4px;vertical-align:middle;border-left:1px solid currentColor;border-right:1px solid currentColor;font-size:.92em;line-height:1.4}.matrix span{text-align:center}
+.storage-warning{background:var(--soft-red);color:var(--red);padding:12px 16px;font-size:12px;margin-top:18px;border-radius:6px}dialog{max-width:520px;width:calc(100% - 32px);padding:27px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:10px;max-height:85dvh;overflow:auto}dialog::backdrop{background:#0009}dialog h2{font-size:20px;margin:0 0 14px}dialog p,dialog li{font-size:13px;line-height:1.9;color:var(--muted)}dialog ul{padding-left:20px}.dialog-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:22px}.summary-number{font-size:38px;color:var(--accent)}.summary-number small{font-size:14px;color:var(--muted)}.summary-stats{display:flex;justify-content:space-between;gap:14px;margin-top:20px}.summary-stats b,.summary-stats span{display:block}.summary-stats b{font-size:20px}.summary-stats span{font-size:11px;color:var(--muted)}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);max-width:90%;padding:10px 16px;background:var(--raised);border:1px solid var(--line);border-radius:7px;color:var(--ink);font-size:12px;z-index:5}
+@media(max-width:900px){.app{padding:0 24px}.layout{grid-template-columns:minmax(0,1fr) 190px;gap:22px}.question-card{padding:24px}.scope-title small{display:block;margin:2px 0 0}.modes{gap:17px}.question-text{font-size:18px}}
+@media(max-width:700px){.app{padding:0 18px}.topbar{min-height:76px}.brand{display:block}.brand h1{font-size:18px}.brand span{font-size:10px}.toolbar{padding:20px 0;gap:15px}.filter-row{align-items:stretch;flex-direction:column;gap:12px}.bank-tabs{align-self:flex-start}.search-box{width:100%}.practice-row{align-items:stretch;flex-direction:column;gap:13px}.modes{gap:0;justify-content:space-between}.mode{font-size:12px;min-height:38px}select{width:100%;max-width:none;min-height:40px}.layout{display:flex;flex-direction:column;gap:20px}.practice-column,.right-column{width:100%}.question-card{padding:20px 18px}.question-text{font-size:17px;line-height:1.75;margin-bottom:22px}.option{font-size:13px;min-height:56px;padding:11px 12px}.scope{align-items:center}.card-footer{gap:10px}.hint{font-size:10px}.primary{padding:10px 13px;font-size:12px;white-space:nowrap}.right-column{padding-top:0;display:grid;grid-template-columns:1fr;gap:0}.progress-panel{margin:0 0 18px;padding-bottom:18px}.progress-panel h2{margin-bottom:11px}.progress-summary{display:inline-flex;vertical-align:middle}.mini-stats{display:inline-flex;margin:0 0 0 24px;vertical-align:middle;gap:16px}.map-grid{grid-template-columns:repeat(8,minmax(0,1fr));max-height:210px}.privacy-note{margin-top:18px}.keyboard-tips{display:none}.footer-note{margin:20px 0;font-size:9px}.question-id small{font-size:10px}.explanation{padding:15px}.explanation p{font-size:12px}.map-panel summary{min-height:40px}}
+@media(max-width:360px){.app{padding:0 13px}.question-card{padding:18px 14px}.bank-tabs button{padding:7px 10px}.bank-tabs small{margin-left:3px}.mini-stats{margin-left:13px;gap:10px}.hint{max-width:105px;display:block}.mode{font-size:11px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+/* Shared dark course navigation and optional question translation. */
+.topbar{min-height:106px;position:relative}.study-brand{min-width:0;padding:17px 0}.study-name{display:block;font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--muted)}.study-name small{font-size:10px;font-weight:400;letter-spacing:0;margin-left:9px;color:var(--muted)}.course-context{display:flex;align-items:center;gap:16px;margin-top:5px;min-width:0}.course-meta{font-size:11px;color:var(--muted);min-width:0}.course-switch{position:relative;flex-shrink:0;z-index:4}.course-switch>summary{display:flex;align-items:center;gap:16px;list-style:none;cursor:pointer;min-height:44px;border:1px solid transparent;border-radius:6px;padding:2px 9px 2px 0;font-size:20px;font-weight:600;letter-spacing:-.4px;transition:color .15s,background .15s}.course-switch>summary::-webkit-details-marker{display:none}.course-switch>summary svg{width:17px;height:17px;color:var(--muted);transition:transform .15s}.course-switch[open]>summary svg{transform:rotate(180deg)}.course-switch>summary:focus-visible{outline-offset:2px}.course-switch>summary:hover{color:var(--accent)}.course-panel{position:absolute;top:calc(100% + 9px);left:0;width:310px;max-width:calc(100vw - 36px);padding:8px;background:var(--surface);border:1px solid #454b51;border-radius:10px;box-shadow:0 10px 26px #0004}.course-panel-heading{display:flex;justify-content:space-between;padding:7px 10px 11px;font-size:11px;color:var(--muted)}.course-panel-heading span{font-size:10px}.course-entry{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 11px;min-height:68px;border:1px solid transparent;border-radius:6px;color:var(--ink);text-decoration:none}.course-entry:hover,.course-entry:focus-visible{background:var(--raised)}.course-entry[aria-current="page"]{background:#252e28;border-color:#3e5143}.course-entry strong{display:block;font-size:14px;line-height:1.5;font-weight:600;letter-spacing:0}.course-entry small{display:block;margin-top:3px;font-size:11px;color:var(--muted)}.course-current{font-size:10px;color:var(--accent);flex-shrink:0}.help-btn{width:44px;height:44px;flex-shrink:0}.bookmark{min-height:44px;padding:6px}.mode{min-height:44px}.nav-btn{min-height:44px}.translation-panel{margin:-8px 0 22px;border:1px solid var(--line);border-radius:7px;background:#15181a}.translation-panel>summary{display:flex;align-items:center;gap:9px;min-height:44px;padding:10px 13px;cursor:pointer;list-style:none;color:var(--accent);font-size:12px;font-weight:500}.translation-panel>summary::-webkit-details-marker{display:none}.translation-panel>summary::before{content:'+';font:16px/1 ui-monospace,monospace;width:13px;text-align:center;color:var(--muted)}.translation-panel[open]>summary::before{content:'−'}.translation-panel>summary small{font-size:10px;font-weight:400;color:var(--muted);margin-left:auto}.translation-body{padding:1px 15px 17px;border-top:1px solid var(--line);font-size:14px;line-height:1.95;color:var(--ink);overflow-wrap:anywhere}.translation-stem{margin:12px 0;white-space:pre-wrap}.question-text{line-height:1.8;text-wrap:pretty}.option{align-items:flex-start}.option .letter{margin-top:1px}.option .result-icon{align-self:center}.ring strong{font-variant-numeric:tabular-nums}.explanation{scroll-margin-top:18px}.question-card{overflow-wrap:anywhere}
+@media(max-width:700px){.topbar{min-height:108px;gap:10px}.study-brand{padding:12px 0}.study-name{font-size:10px}.course-context{gap:0;display:block;margin-top:4px}.course-switch{width:max-content}.course-switch>summary{font-size:18px;min-height:44px;gap:14px}.course-meta{display:block;font-size:10px;margin-top:6px}.course-panel{top:calc(100% + 7px);width:300px}.translation-panel{margin-bottom:20px}.translation-body{font-size:13px;padding:1px 13px 15px}.translation-panel>summary small{font-size:10px}.help-btn{align-self:flex-start;margin-top:23px}.question-card{padding-top:17px}.question-top{margin-bottom:11px}.bookmark{min-height:44px}.question-text{font-weight:500}.hint{line-height:1.75}}
+@media(max-width:360px){.course-meta{font-size:9px}.course-panel{max-width:calc(100vw - 30px)}.translation-panel>summary small{display:none}}
+
+.bank-tabs button{min-height:40px}
+
+.option-translation{display:block;margin-top:7px;color:var(--muted);font-size:12px;line-height:1.8;overflow-wrap:anywhere}
+
+.multi,.written-stem,.translation-stem{white-space:pre-line}
+.written-stem{line-height:1.5;margin-bottom:6px}
+.written-body{margin:0 0 12px;line-height:1.65;font-weight:400}
+.draft-label{display:block;margin:16px 0 6px;color:var(--muted);font-size:13px}
+#written-draft{width:100%;padding:11px;border:1px solid var(--line);border-radius:6px;resize:vertical;background:var(--bg);color:var(--ink);font:inherit}
+.self-review{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.self-review [aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+.q-dot.pending{border-color:#a4916e;color:#e6cea2}
+.legend .pending{background:#a4916e}
+.coverage{margin-top:14px}
+.source-tabs{width:fit-content;max-width:100%;flex-wrap:wrap}
+.original-context{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:14px 0;font-size:14px}
+.coverage summary{cursor:pointer;color:var(--accent)}
+.coverage table{width:100%;border-collapse:collapse;font-size:13px}
+.coverage :is(th,td){padding:5px 8px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+
+
+.back-bank{color:var(--accent);font-size:13px;text-underline-offset:3px}
+.mid2-selects{display:flex;flex-wrap:wrap;gap:8px}
+.map-grid{max-height:420px;overflow:auto}
+.q-dot{min-height:36px;font-size:11px;overflow-wrap:anywhere;padding-inline:2px}
+@media(max-width:700px){.brand .back-bank{display:block;margin-bottom:7px}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M3 4h6a4 4 0 0 1 3 1.5A4 4 0 0 1 15 4h6v15h-6a4 4 0 0 0-3 1.5A4 4 0 0 0 9 19H3zM12 6v14"/></symbol>
+<symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h12M8 12h12M8 18h12M3 6h.01M3 12h.01M3 18h.01"/></symbol>
+<symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M3 6h3c5 0 7 12 12 12h3M18 15l3 3-3 3M3 18h3c2 0 4-3 5-5M13 9c2-3 3-3 5-3h3M18 3l3 3-3 3"/></symbol>
+<symbol id="i-error" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4M15 3h6v6M13 11l8-8M7 12v5h5"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9z"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M20 12H4M10 6l-6 6 6 6"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7a9 9 0 1 0 1 8M20 3v5h-5"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></symbol>
+<symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M9 21h6M8 14a7 7 0 1 1 8 0l-1 4H9z"/></symbol>
+</defs></svg>
+<a class="skip-link" href="#question">跳到当前题目</a>
+<div class="app">
+<header class="topbar"><div class="brand"><h1>MATH3700 · Mid2</h1><span>Weeks 2–7 · 期中练习</span><a class="back-bank" href="../index.html">返回原题库</a></div><button id="help" class="help-btn" aria-label="练习说明与逐页覆盖">?</button></header>
+<div id="storage-warning" class="storage-warning" hidden>浏览器未允许保存本地数据，进度仅在本次打开期间保留。</div>
+<main>
+<section class="toolbar" aria-label="练习筛选">
+ <div class="filter-row"><nav class="bank-tabs" aria-label="选择题库"><button data-bank="all">全部<small>__TOTAL__</small></button><button data-bank="mc">选择题<small>__MC_COUNT__</small></button><button data-bank="written">纸笔短答<small>__WRITTEN_COUNT__</small></button></nav><label class="search-box"><svg aria-hidden="true"><use href="#i-search"/></svg><input id="search" type="search" placeholder="搜索 Q45、M45、W4-L01 或关键词" aria-label="搜索题号或关键词" autocomplete="off"></label></div>
+ <nav class="bank-tabs source-tabs" aria-label="选择题目来源">
+ <button data-origin="all">按周排序</button><button data-origin="bank">原题库 56 对</button><button data-origin="slides">Slides 原题＋变式</button>
+ <button data-origin="homework">作业原题＋变式</button><button data-origin="extra">补充练习</button></nav>
+ <div class="practice-row"><nav class="modes" aria-label="练习模式"><button class="mode" data-mode="all">顺序练习</button><button class="mode" data-mode="random">随机练习</button><button class="mode" data-mode="wrong">错题本 <span id="wrong-count" class="count">0</span></button><button class="mode" data-mode="saved">收藏 <span id="saved-count" class="count">0</span></button></nav><div class="mid2-selects"><select id="chapter-select" aria-label="选择周次"></select><select id="kind-select" aria-label="选择知识题型"><option value="all">全部题型</option><option value="证明">证明题</option><option value="理论">理论题</option><option value="计算">计算题</option></select></div></div>
+</section>
+<div class="layout">
+ <section class="practice-column" aria-label="答题区"><div class="scope"><div id="scope-title" class="scope-title"></div><button id="restart" class="text-btn"><svg aria-hidden="true"><use href="#i-refresh"/></svg>重新练习</button></div><article class="question-card" id="question" tabindex="-1"></article><div class="navigation" id="navigation"><button id="prev" class="nav-btn"><svg aria-hidden="true"><use href="#i-back"/></svg>上一题</button><span id="position" class="position"></span><button id="next" class="nav-btn">下一题<svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div><div class="keyboard-tips"><span><kbd>1</kbd>–<kbd>4</kbd>选择</span><span><kbd>Enter</kbd>确认</span><span><kbd>←</kbd><kbd>→</kbd>切题</span></div></section>
+ <aside class="right-column" aria-label="学习进度与题目导航"><section class="progress-panel"><h2>总进度</h2><div class="progress-summary"><div class="ring"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="34"/><circle id="progress-ring" class="fill" cx="40" cy="40" r="34"/></svg><strong><span id="coverage">0</span><small>%</small></strong></div><div class="progress-copy"><b id="done-stat">0 <span>/ __TOTAL__</span></b><p id="accuracy">已自评或判分 0 题</p></div></div><div class="mini-stats"><span><strong id="correct-stat">0</strong>答对／掌握</span><span><strong id="wrong-stat">0</strong>待巩固</span></div></section><details class="map-panel" open><summary><span>题目导航</span><span id="map-count">__TOTAL__ 题</span></summary><div id="map" class="map-grid" aria-label="点击题号跳转"></div><div class="legend"><span><i></i>未答</span><span><i class="correct"></i>答对／掌握</span><span><i class="incorrect"></i>待巩固</span><span><i class="pending"></i>待自评</span></div></details><p class="privacy-note" id="save-status">学习进度自动保存在此浏览器</p><button id="reset" class="reset-btn">清空学习记录</button></aside>
+</div>
+</main>
+<footer class="footer-note">Mid2 · Weeks 2–7 · 英文题目 / 中文释义与解析 · 浏览器本地保存</footer>
+</div>
+<noscript><p>请启用 JavaScript 后使用练习题库。</p></noscript>
+<div class="toast" id="toast" role="status" hidden></div>
+<dialog id="help-dialog" aria-labelledby="help-title"><h2 id="help-title">练习说明</h2><p>原 100 题按主要考点归类：Week 2 为 Q45–Q74（30），Week 3 为 Q75–Q83（9），Week 4 为 Q84–Q91（8），Week 5 为 Q92–Q100（9）。共 56 道，保留原题号，每题的提高变式用相同数字的 M 编号，例如 Q45 → M45。</p>
+<p>Q24–Q27 的范数、角度与 Cauchy–Schwarz，以及 Q35–Q39、Q41 的梯度与更新是 Week 4–5 的前置重合题。按原库归类属于线性代数和矩阵微积分，未计入 56 道。相应考点在补充题里复练。</p>
+<p>先选周次，或直接搜索 Q45、M45。可按来源、题型、错题和收藏筛选。选择题自动判分，短答核对参考解后可自行标记。学习记录保存在本浏览器。</p>
+<p>课件 Exercise 与作业选题聚焦可独立用纸笔完成的内容。注意：有限 Lᵢ/Lⱼ 可以相等；角距离要排除零向量；高维距离的 RMS 不等于有限维的精确均值；Ridge 通常不诱导稀疏，但个别系数可以恰好为零。</p>
+<details class="coverage"><summary>Week 2 · 逐页考点</summary><table><thead><tr><th scope="col">页</th><th scope="col">考点与练习</th></tr></thead><tbody><tr><td>1</td><td>Week 2: Probability Refresher &amp; Bayes for Big Data · 导论</td></tr>
+<tr><td>2</td><td>Today’s Agenda · 目录</td></tr>
+<tr><td>3</td><td>Why Probability for Big Data? · W2-RV、M47</td></tr>
+<tr><td>4</td><td>Sample Spaces (Phillips Ch 1.1) · Q45–46、M45</td></tr>
+<tr><td>5</td><td>Example: Rolling a Fair Die · Q46、M46</td></tr>
+<tr><td>6</td><td>Big Data Example: Web Clickstream · Q47、M47</td></tr>
+<tr><td>7</td><td>Percentage vs. Probability: Why the Distinction Matters · Q47、M47</td></tr>
+<tr><td>8</td><td>Example: Biased Coin · M46</td></tr>
+<tr><td>9</td><td>Continuous Sample Spaces · M58、W2-CDF</td></tr>
+<tr><td>10</td><td>Random Variables · W2-RV</td></tr>
+<tr><td>11</td><td>Conditional Probability (Phillips Ch 1.2) · Q48–52、M48–52</td></tr>
+<tr><td>12</td><td>Big Data Example: Fraud Detection · Q51–52、M51–52</td></tr>
+<tr><td>13</td><td>Independence · Q50、W2-CHI</td></tr>
+<tr><td>14</td><td>Big Data Example: Spam Filtering · Q53–57、W2-NAIVE</td></tr>
+<tr><td>15</td><td>Independence in Big Data · M53、M54</td></tr>
+<tr><td>16</td><td>Density Functions (Phillips Ch 1.3) · Q58、W2-CDF</td></tr>
+<tr><td>17</td><td>Expected Value (Phillips Ch 1.4) · Q59、W2-CDF</td></tr>
+<tr><td>18</td><td>Linearity of Expectation — The ”Magic” Property · Q60–61、W2-EV</td></tr>
+<tr><td>19</td><td>Big Data Example: Recommender Systems · M61、W2-EV</td></tr>
+<tr><td>20</td><td>Variance (Phillips Ch 1.5) · Q62–63、W2-VAR、W2-COV</td></tr>
+<tr><td>21</td><td>Big Data Example: A/B Testing · Q64–65、W2-SE、W2-CHI</td></tr>
+<tr><td>22</td><td>Joint, Marginal, Conditional Distributions · W2-JOINT、W2-TOTAL</td></tr>
+<tr><td>23</td><td>Example: Pants and Shirts · W2-JOINT</td></tr>
+<tr><td>24</td><td>Big Data Example: Targeted Ads · W2-JOINT、M74</td></tr>
+<tr><td>25</td><td>Bayes’ Rule (Phillips Ch 1.7) · Q66、W2-TOTAL</td></tr>
+<tr><td>26</td><td>Example: Cracked Windshield · Q67、M67</td></tr>
+<tr><td>27</td><td>Example: Cracked Windshield (Continued) · Q67、M67</td></tr>
+<tr><td>28</td><td>Big Data Example: Medical Diagnosis · Q68、M68</td></tr>
+<tr><td>29</td><td>Model Given Data (Phillips Ch 1.7.1) · Q69–73、W2-LOG</td></tr>
+<tr><td>30</td><td>Log-Likelihood — A Powerful Trick · Q57、W2-LOG</td></tr>
+<tr><td>31</td><td>MLE Example: Gaussian Data · Q70、M70</td></tr>
+<tr><td>32</td><td>Big Data Example: User Engagement · Q71、M71</td></tr>
+<tr><td>33</td><td>Geometry of Sum of Squared Errors · M70</td></tr>
+<tr><td>34</td><td>Bayesian Inference (Phillips Ch 1.8) · Q69、Q72–73、W2-LOG</td></tr>
+<tr><td>35</td><td>Example: Average Height with Prior · Q69、M69</td></tr>
+<tr><td>36</td><td>Weight of the Prior in Big Data · Q73、M73</td></tr>
+<tr><td>37</td><td>Big Data Example: CTR Prediction · Q74、W2-H03</td></tr>
+<tr><td>38</td><td>Big Data Applications of Probability · W2-NAIVE、M74</td></tr>
+<tr><td>39</td><td>How Week 2 Connects to Future Weeks · W2-TOTAL、W2-LOG</td></tr>
+<tr><td>40</td><td>Next Week · 预告</td></tr>
+<tr><td>41</td><td>References · 参考文献</td></tr>
+<tr><td>42</td><td>Q&amp;A · 答疑</td></tr></tbody></table></details><details class="coverage"><summary>Week 3 · 逐页考点</summary><table><thead><tr><th scope="col">页</th><th scope="col">考点与练习</th></tr></thead><tbody><tr><td>1</td><td>Week 3: The Curse of Dimensionality · 导论</td></tr>
+<tr><td>2</td><td>Outline · 目录</td></tr>
+<tr><td>3</td><td>The Curse of Dimensionality · Q75、W3-H01</td></tr>
+<tr><td>4</td><td>Example · Q75、W3-KNN</td></tr>
+<tr><td>5</td><td>How Distance Changes with Dimension · Q77、W3-UNIFPAIR</td></tr>
+<tr><td>6</td><td>The Curse of Dimensionality: A Machine-Learning Example · M75、M76</td></tr>
+<tr><td>7</td><td>Quick Recap: What is KNN? · W3-KNN</td></tr>
+<tr><td>8</td><td>KNN in Action: Three Concrete Examples · W3-KNN</td></tr>
+<tr><td>9</td><td>Common Solutions to the Curse of Dimensionality · W3-H04、W3-JL</td></tr>
+<tr><td>10</td><td>Symptom 1: The Space Explodes · Q76、M76</td></tr>
+<tr><td>11</td><td>Symptom 1: The Feature Space Explodes · Q76、M75</td></tr>
+<tr><td>12</td><td>Solution: Control the Dimensionality · W3-H04</td></tr>
+<tr><td>13</td><td>Symptom 2: Distances Lose Meaning · M78</td></tr>
+<tr><td>14</td><td>Distance Concentration: The Phenomenon · Q78、M78</td></tr>
+<tr><td>15</td><td>Distance Concentration: Mathematical Formulation · W3-GAUSPAIR、W3-UNIFCON</td></tr>
+<tr><td>16</td><td>Why KNN Fails in High Dimensions · W3-KNN、W3-H04</td></tr>
+<tr><td>17</td><td>Symptom 3: Volume Hides in the Corners · Q79、W3-VOLUME</td></tr>
+<tr><td>18</td><td>The 10% Neighborhood Thought Experiment · Q80、M80</td></tr>
+<tr><td>19</td><td>The 10% Neighborhood (Visual) · W3-VOLUME</td></tr>
+<tr><td>20</td><td>Volume of a Hypersphere · W3-HYPER、W3-BALL</td></tr>
+<tr><td>21</td><td>Hypersphere: 1D → 2D → 3D → 100D · W3-HYPER、W3-BALL</td></tr>
+<tr><td>22</td><td>Where is the Volume? · Q81、M81、W3-HYPER</td></tr>
+<tr><td>23</td><td>Volume Concentration: The Gaussian Case · Q82、W3-GAUSSHELL</td></tr>
+<tr><td>24</td><td>Random Vectors in High Dimensions · W3-UNIFSHELL、W3-GAUSSHELL</td></tr>
+<tr><td>25</td><td>Concentration Inequalities · W3-HOEFF</td></tr>
+<tr><td>26</td><td>The Curse of Dimensionality in Practice · W3-H01、W3-H04</td></tr>
+<tr><td>27</td><td>The Johnson-Lindenstrauss Lemma · Q83、W3-H05</td></tr>
+<tr><td>28</td><td>Summary: The Curse of Dimensionality · W3-H01、W3-H05</td></tr>
+<tr><td>29</td><td>Questions? · 答疑</td></tr></tbody></table></details><details class="coverage"><summary>Week 4 · 逐页考点</summary><table><thead><tr><th scope="col">页</th><th scope="col">考点与练习</th></tr></thead><tbody><tr><td>1</td><td>Week 4: Distances, Similarities &amp; Metrics · 导论</td></tr>
+<tr><td>2</td><td>Outline · 目录</td></tr>
+<tr><td>3</td><td>Recap — Why Distances Matter in Big Data · W4-CHOICE</td></tr>
+<tr><td>4</td><td>Big Data Connection: Scale of Modern Datasets · W4-CHOICE</td></tr>
+<tr><td>5</td><td>Definition of a Distance Measure · Q84、W4-EUCLID</td></tr>
+<tr><td>6</td><td>Euclidean Distance · W4-EUCLID</td></tr>
+<tr><td>7</td><td>The Lr -Norm Family · W4-NORMS</td></tr>
+<tr><td>8</td><td>Example — Computing L1 , L2 , L∞ · Q85–86、W4-L02</td></tr>
+<tr><td>9</td><td>Python: Computing L1 , L2 , L∞ · W4-NORMS</td></tr>
+<tr><td>10</td><td>Graph — Unit Balls for Different r · W4-NORMS</td></tr>
+<tr><td>11</td><td>Big Data Connection: Geometry of High-Dimensional Balls · W4-NORMS、W3-HYPER</td></tr>
+<tr><td>12</td><td>Exercise · W4-L01</td></tr>
+<tr><td>13</td><td>Exercise · W4-L02–03</td></tr>
+<tr><td>14</td><td>Exercise: Distance in Real Data · W4-L04</td></tr>
+<tr><td>15</td><td>Jaccard Distance · Q87、W4-LV12</td></tr>
+<tr><td>16</td><td>Proof of the Triangle Inequality for Jaccard · W4-L12</td></tr>
+<tr><td>17</td><td>Jaccard Distance — Two Friends’ Marbles · M87</td></tr>
+<tr><td>18</td><td>Jaccard Distance — Visual &amp; Big Data · W4-SHINGLE</td></tr>
+<tr><td>19</td><td>Example — Jaccard Similarity and Distance · Q87、M87</td></tr>
+<tr><td>20</td><td>Python: Jaccard Distance on Sets · M87</td></tr>
+<tr><td>21</td><td>Python: Jaccard on Shingled Text (Near-Duplicate Detection) · W4-SHINGLE</td></tr>
+<tr><td>22</td><td>Big Data Connection: Jaccard at Scale · W4-SHINGLE</td></tr>
+<tr><td>23</td><td>Cosine Distance · Q88–89、W4-ANGULAR</td></tr>
+<tr><td>24</td><td>Python: Cosine Similarity and Distance · M88、W4-H02</td></tr>
+<tr><td>25</td><td>Cosine Distance is a Valid Metric · W4-ANGULAR、W4-L11</td></tr>
+<tr><td>26</td><td>Graph — Cosine Similarity vs. Euclidean Distance · W4-L14、W4-LV10</td></tr>
+<tr><td>27</td><td>Big Data Connection: Cosine Similarity at Scale · W4-H02、W4-CHOICE</td></tr>
+<tr><td>28</td><td>Exercise · W4-L05</td></tr>
+<tr><td>29</td><td>Exercise · W4-L06</td></tr>
+<tr><td>30</td><td>Edit Distance · Q90、W4-EDITDP</td></tr>
+<tr><td>31</td><td>Edit Distance is a Valid Metric · W4-EDITDP、W4-LV13</td></tr>
+<tr><td>32</td><td>Python: Edit Distance (Dynamic Programming) · W4-EDITDP</td></tr>
+<tr><td>33</td><td>Python: Edit Distance on Real Words (Spell Check) · W4-H03</td></tr>
+<tr><td>34</td><td>Exercise · W4-L07</td></tr>
+<tr><td>35</td><td>Exercise (Extended Edit Distance) · W4-L08</td></tr>
+<tr><td>36</td><td>Hamming Distance · Q91、M91</td></tr>
+<tr><td>37</td><td>Python: Hamming Distance · W4-LV09</td></tr>
+<tr><td>38</td><td>Big Data Connection: Hamming Distance at Scale · W4-CHOICE、W4-H01</td></tr>
+<tr><td>39</td><td>Exercise · W4-L09</td></tr>
+<tr><td>40</td><td>Non-Euclidean Spaces · W4-H04</td></tr>
+<tr><td>41</td><td>Summary of Distance Measures · W4-CHOICE</td></tr>
+<tr><td>42</td><td>Big Data Connection: Metric Choice in Practice · W4-CHOICE</td></tr>
+<tr><td>43</td><td>Python: Comparing All Metrics on a Real Dataset · W4-CHOICE</td></tr>
+<tr><td>44</td><td>Summary &amp; Key Takeaways · W4-EUCLID、W4-CHOICE</td></tr>
+<tr><td>45</td><td>Practice Problems · W4-L10–14</td></tr>
+<tr><td>46</td><td>References · 参考文献</td></tr></tbody></table></details><details class="coverage"><summary>Week 5 · 逐页考点</summary><table><thead><tr><th scope="col">页</th><th scope="col">考点与练习</th></tr></thead><tbody><tr><td>1</td><td>Week 5: Gradient Descent &amp; Stochastic Gradient Descent · 导论</td></tr>
+<tr><td>2</td><td>Outline · 目录</td></tr>
+<tr><td>3</td><td>The Big Data Training Problem · Q93、W5-MEM</td></tr>
+<tr><td>4</td><td>Understanding the Big Data Training Problem · Q93–94、W5-L02</td></tr>
+<tr><td>5</td><td>What We Need From an Algorithm · W5-L05、W5-MEM</td></tr>
+<tr><td>6</td><td>Gradient Descent: The Algorithm · Q92、M92</td></tr>
+<tr><td>7</td><td>Worked Example: One GD Step at a Time · Q95、M95</td></tr>
+<tr><td>8</td><td>Why the Learning Rate Matters Computationally · Q99、M99</td></tr>
+<tr><td>9</td><td>GD in Practice: Scikit-learn &amp; PyTorch · W5-SHAPE</td></tr>
+<tr><td>10</td><td>What is Data? Understanding X and y · W5-SHAPE</td></tr>
+<tr><td>11</td><td>Iris Dataset(n = 150, d = 4) · Q96、W5-L01</td></tr>
+<tr><td>12</td><td>One Epoch on Iris — Three Algorithms, Same Data · Q96、M96</td></tr>
+<tr><td>13</td><td>Run It Yourself — Iris in PyTorch · Q97、W5-L01</td></tr>
+<tr><td>14</td><td>What to Point Out · Q96–97、W5-H02</td></tr>
+<tr><td>15</td><td>Iris vs. Big Data — Same Algorithm, Different Scale · Q93、Q98、W5-L02–03</td></tr>
+<tr><td>16</td><td>Iris by hand. · W5-L01</td></tr>
+<tr><td>17</td><td>Stochastic Gradient Descent (SGD): The Scalability Breakthrough · W5-UNBIASED、Q97</td></tr>
+<tr><td>18</td><td>Mini-Batch SGD: The Practical Workhorse · W5-BVAR、Q96</td></tr>
+<tr><td>19</td><td>Comparing the Two: A Computational View · W5-LV02、W5-BVAR</td></tr>
+<tr><td>20</td><td>SGD in Practice: PyTorch DataLoader · Q97、M97</td></tr>
+<tr><td>21</td><td>Big Data Connection: Where SGD Powers the World · W5-PAR、W5-MEM</td></tr>
+<tr><td>22</td><td>Big Data Challenge 1: Data Doesn’t Fit in Memory · W5-L03、W5-MEM</td></tr>
+<tr><td>23</td><td>Big Data Challenge 2: One GPU Isn’t Enough · W5-L04、W5-PAR</td></tr>
+<tr><td>24</td><td>Big Data Challenge 3: Finding the Right Learning Rate · M99、W5-LR</td></tr>
+<tr><td>25</td><td>From SGD to Adam: The Optimizer Zoo · Q100、M100、W5-OPT</td></tr>
+<tr><td>26</td><td>Big Data Connection: Distributed Training Preview · W5-LV04、W5-PAR</td></tr>
+<tr><td>27</td><td>Summary · W5-L02–05</td></tr>
+<tr><td>28</td><td>Exercises · W5-L02–05</td></tr>
+<tr><td>29</td><td>References · 参考文献</td></tr></tbody></table></details><details class="coverage"><summary>Week 6 · 逐页考点</summary><table><thead><tr><th scope="col">页</th><th scope="col">考点与练习</th></tr></thead><tbody>
+<tr><td>1</td><td>课程标题，确定优化与正则化范围</td></tr>
+<tr><td>2</td><td>课程路线，确定三组题目</td></tr>
+<tr><td>3</td><td>全批与小批的代价、训练与泛化 · L05、W6-01、W6-03</td></tr>
+<tr><td>4</td><td>优化器回顾与 AdamW 衰减 · W6-03、W6-S06</td></tr>
+<tr><td>5</td><td>低训练损失不保证泛化 · W6-01</td></tr>
+<tr><td>6</td><td>经验风险与未见数据风险 · W6-01、W6-S02</td></tr>
+<tr><td>7</td><td>过拟合与偏差–方差 · W6-01、W6-02</td></tr>
+<tr><td>8</td><td>惩罚目标、λ 和 L1/L2 · W6-03、W6-04、W6-S02</td></tr>
+<tr><td>9</td><td>惩罚对拟合和泛化的影响 · W6-02、W6-S02</td></tr>
+<tr><td>10</td><td>验证表现选择正则强度 · W6-15、W6-S14</td></tr>
+<tr><td>11</td><td>样本与参数、经验风险和泛化 · W6-01、W6-S01</td></tr>
+<tr><td>12</td><td>少量样本的精确拟合 · W6-S01</td></tr>
+<tr><td>13</td><td>加罚后允许训练误差上升 · W6-02、W6-S02</td></tr>
+<tr><td>14</td><td>偏差平方、方差和噪声 · W6-02</td></tr>
+<tr><td>15</td><td>总误差的复杂度折中 · W6-02、W6-15</td></tr>
+<tr><td>16</td><td>Ridge 正规方程与正定性 · L01、H01、W6-04–05</td></tr>
+<tr><td>17</td><td>一维 Ridge 的原尺度计算 · L03、W6-S03</td></tr>
+<tr><td>18</td><td>二元 Ridge 与对称性 · LV01、W6-S04</td></tr>
+<tr><td>19</td><td>Ridge 梯度与方向收缩 · W6-04–06、W6-S05</td></tr>
+<tr><td>20</td><td>Ridge 的 SGD 更新与衰减口径 · HV08、W6-06、W6-S06</td></tr>
+<tr><td>21</td><td>Lasso 的 L1 目标与零点次梯度 · L02、W6-07</td></tr>
+<tr><td>22</td><td>一维 Lasso 与损失归一化 · L02–L03、W6-09</td></tr>
+<tr><td>23</td><td>双变量 Lasso 与坐标更新 · W6-S08</td></tr>
+<tr><td>24</td><td>完全相关列、Ridge 分摊和 Lasso 多解 · W6-10、W6-S12</td></tr>
+<tr><td>25</td><td>圆形、菱形与角点 · L04、LV04</td></tr>
+<tr><td>26</td><td>软阈值的三种分支 · L02、LV02、W6-08</td></tr>
+<tr><td>27</td><td>数值软阈值与归零门槛 · W6-08、W6-S07</td></tr>
+<tr><td>28</td><td>坐标下降与缓存残差 · W6-S08–09</td></tr>
+<tr><td>29</td><td>用刚更新的系数手算一轮 · W6-S08</td></tr>
+<tr><td>30</td><td>Elastic Net 及 α 两个端点 · LV06、W6-11</td></tr>
+<tr><td>31</td><td>相关特征上的 Elastic Net · W6-S11–12</td></tr>
+<tr><td>32</td><td>按稀疏性和相关组选择惩罚 · LV06、W6-10–11、W6-16、W6-COMPARE</td></tr>
+<tr><td>33</td><td>平滑梯度步加近端步 · W6-12、H05、W6-S13</td></tr>
+<tr><td>34</td><td>手算一次近端梯度 · W6-12、HV05、W6-S13</td></tr>
+<tr><td>35</td><td>折点与近端归零 · W6-07、HV05、W6-S13</td></tr>
+<tr><td>36</td><td>LARS、ISTA、坐标下降、随机近端 · W6-13、H07、W6-S13</td></tr>
+<tr><td>37</td><td>广告、基因组、权重衰减应用 · L06、H07、W6-16、W6-S06</td></tr>
+<tr><td>38</td><td>CV、正则化路径与验证数据 · W6-13、W6-15、W6-S14</td></tr>
+<tr><td>39</td><td>按各折平均误差选 λ · W6-15、W6-S14</td></tr>
+<tr><td>40</td><td>梯度聚合、近端更新和 ADMM · HV07、W6-14、W6-S15–16</td></tr>
+<tr><td>41</td><td>三类惩罚与优化方法总结 · L01–L06、H05、H07–H08</td></tr>
+<tr><td>42</td><td>原题各紧跟一道变式 · L01–L06、LV01–LV06</td></tr>
+<tr><td>43</td><td>参考文献页</td></tr>
+<tr><td>44</td><td>答疑与 Week 7 预告</td></tr>
+</tbody></table></details><details class="coverage"><summary>Week 7 · 逐页考点</summary><table><thead><tr><th scope="col">页</th><th scope="col">考点与练习</th></tr></thead><tbody>
+<tr><td>1</td><td>课程标题，确定 SVD/PCA 范围</td></tr>
+<tr><td>2</td><td>章节路线，确定题库分组</td></tr>
+<tr><td>3</td><td>从正则化过渡到表示压缩，H08、S25</td></tr>
+<tr><td>4</td><td>高维困难与距离集中，01、S28</td></tr>
+<tr><td>5</td><td>特征提取与特征选择，01、15</td></tr>
+<tr><td>6</td><td>样本轴、特征轴、投影尺寸，01、08</td></tr>
+<tr><td>7</td><td>对角矩阵的幂、行列式和逆，02、S37</td></tr>
+<tr><td>8</td><td>特征方程、零空间和对角化，02–03、S37</td></tr>
+<tr><td>9</td><td>完整 SVD、正交性、形状及行列空间，04、L01、S01–S02</td></tr>
+<tr><td>10</td><td>几何变换、外积展开与截断，05、S03、S29</td></tr>
+<tr><td>11</td><td>秩一分解和重构，05、S03</td></tr>
+<tr><td>12</td><td>Frobenius 与谱范数、最大拉伸，06、S05、S12、S30</td></tr>
+<tr><td>13</td><td>Eckart–Young 及截断误差，06、L02、S04–S05、S12</td></tr>
+<tr><td>14</td><td>两种 Gram 矩阵及正谱，07、10、S01、S33</td></tr>
+<tr><td>15</td><td>最大方差目标与低维方向，L03、S09、S31</td></tr>
+<tr><td>16</td><td>中心化、标准化、投影，07–08、S06、S08、S19–S20</td></tr>
+<tr><td>17</td><td>方向、样本得分、累计 EVR，08、16、L04、S10–S11</td></tr>
+<tr><td>18</td><td>标准化 PCA 与投影的数学结果，08–09、S20</td></tr>
+<tr><td>19</td><td>SVD 的得分与样本方差公式，07–08、16、S31</td></tr>
+<tr><td>20</td><td>协方差与相关矩阵、尺度效应，09、S20、W7-SCALE</td></tr>
+<tr><td>21</td><td>协方差特征问题与极值证明，L03、S06–S09</td></tr>
+<tr><td>22</td><td>投影、残差、加回均值，08、S08</td></tr>
+<tr><td>23</td><td>宽矩阵的内存代价与 Gram 数值问题，10、S33–S34</td></tr>
+<tr><td>24</td><td>碎石图、累计方差门槛及任务表现，14、16、S32</td></tr>
+<tr><td>25</td><td>二维手算案例，S06–S08</td></tr>
+<tr><td>26</td><td>完整 SVD 的规模与方法选择，10–12、S34</td></tr>
+<tr><td>27</td><td>随机草图、过采样和回映射，11、L05、S13–S15、S26</td></tr>
+<tr><td>28</td><td>幂迭代与尺寸的数学推演，11、S13–S16</td></tr>
+<tr><td>29</td><td>Oja 投影、残差、逐样本更新及内存，S21</td></tr>
+<tr><td>30</td><td>分批拟合、共用投影基，12、S23</td></tr>
+<tr><td>31</td><td>单图 SVD 与因子存储，L06、S24</td></tr>
+<tr><td>32</td><td>词项方向与文档坐标，13</td></tr>
+<tr><td>33</td><td>基因表达的无监督方向，14</td></tr>
+<tr><td>34</td><td>推荐系统的潜在因子与奇异值权重，13</td></tr>
+<tr><td>35</td><td>中心化 PCA 与一般 SVD，07–08、S31</td></tr>
+<tr><td>36</td><td>尺度、异常点、非线性、稠密载荷和无监督局限，09、14–15、S35–S36</td></tr>
+<tr><td>37</td><td>应用规模与方法选择，12–14、L06、S21–S24</td></tr>
+<tr><td>38</td><td>SVD、PCA 与大数据要点归纳，L01–L06</td></tr>
+<tr><td>39</td><td>原题 L01–L06；每题后的变式分别为 S02、S04、S09、S10、S26、S23</td></tr>
+<tr><td>40</td><td>参考书目页，供延伸阅读</td></tr>
+<tr><td>41</td><td>答疑与 Week 8 预告</td></tr>
+</tbody></table></details><div class="dialog-actions"><button id="help-reset" class="secondary">清空记录</button><button class="primary" data-close="help-dialog">继续练习</button></div></dialog>
+<dialog id="reset-dialog" aria-labelledby="reset-title"><h2 id="reset-title">清空学习记录？</h2><p>将清除本浏览器中 Mid2的答题、草稿、错题、收藏与练习位置。</p><div class="dialog-actions"><button class="secondary" data-close="reset-dialog">保留记录</button><button id="confirm-reset" class="primary">确认清空</button></div></dialog>
+<dialog id="summary-dialog" aria-labelledby="summary-title"><h2 id="summary-title">本轮练习</h2><div id="summary-body"></div><div class="dialog-actions"><button class="secondary" data-close="summary-dialog">返回题目</button><button id="summary-next" class="primary">继续未答</button></div></dialog>
+<script id="quiz-data" type="application/json">__MID2_DATA__</script>
+<script>
+'use strict';
+const {chapters,questions,practiceOrder} = JSON.parse(document.getElementById('quiz-data').textContent);
+const questionById=new Map(questions.map(q=>[q.id,q]));
+const questionByLabel=new Map(questions.map(q=>[q.label.toLowerCase(),q]));
+const KEY='math3700-mid2-practice-v1';
+const $=id=>document.getElementById(id);
+const icon=name=>`<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
+const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const format=s=>escapeHTML(s).replace(/\[\[([^\]]+)\]\]/g,(_,cells)=>{const rows=cells.split(';'),cols=rows[0].split(',').length;return `<span class="matrix" role="math" aria-label="${rows.join('; ')}" style="--cols:${cols}">${rows.flatMap(r=>r.split(',')).map(v=>`<span>${v}</span>`).join('')}</span>`;});
+function initial(){return {answers:{},favorites:[],mode:'all',bank:'all',origin:'all',kind:'all',chapter:'all',order:[],index:0,drafts:{},retry:[],translated:[],query:''};}
+let state=initial(),storageOK=true,toastTimer;
+try{const stored=JSON.parse(localStorage.getItem(KEY));if(stored&&stored.answers&&Array.isArray(stored.favorites)&&Array.isArray(stored.order)&&Array.isArray(stored.retry)&&stored.drafts){state={...state,...stored};if(!['all','random','wrong','saved'].includes(state.mode))state.mode='all';if(state.chapter!=='all'&&!chapters[Number(state.chapter)])state.chapter='all';state.order=state.order.filter(id=>questionById.has(id));}}catch(e){storageOK=false;}
+for (const key of ['answers','drafts']) {
+  for (const id of Object.keys(state[key])) if (!questionById.has(Number(id))) delete state[key][id];
+}
+state.favorites=state.favorites.filter(id=>questionById.has(id));
+state.retry=state.retry.filter(id=>questionById.has(id));
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state));storageOK=true;}catch(e){storageOK=false;}$('storage-warning').hidden=storageOK;$('save-status').textContent=storageOK?'学习进度自动保存在此浏览器':'当前浏览器不允许保存进度';}
+function toast(message){$('toast').textContent=message;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,2300);}
+function current(){return questionById.get(state.order[state.index]);}
+function isChecked(id){return Boolean(state.answers[id])&&!state.retry.includes(id);}
+function shuffle(ids){for(let i=ids.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[ids[i],ids[j]]=[ids[j],ids[i]];}return ids;}
+function matches(q){if(state.kind!=='all'&&q.kind!==state.kind)return false;if(state.origin!=='all'&&(q.origin||'extra')!==state.origin)return false;if(state.bank!=='all'&&q.bank!==state.bank)return false;if(state.chapter!=='all'&&q.chapter!==Number(state.chapter))return false;const query=state.query.trim().toLowerCase();if(!query)return true;const number=query.match(/^(?:q)?(\d+)$/);if(number){const label='Q'+String(Number(number[1])).padStart(2,'0');return q.label===label||q.pair===label;}const exact=questionByLabel.get(query);if(exact)return q.id===exact.id||(exact.role==='original'&&q.label===exact.pair);return [q.label,q.pair||'',q.note,q.text,q.zh.text,...q.options,...q.zh.options,q.topic||'',q.kind||'',chapters[q.chapter].name,chapters[q.chapter].english].join(' ').toLowerCase().includes(query);}
+function queue({fresh=false}={}){let ids=questions.filter(matches).filter(q=>state.mode==='wrong'?state.answers[q.id]?.correct===false:state.mode==='saved'?state.favorites.includes(q.id):true).map(q=>q.id);state.order=state.mode==='random'?shuffle(ids):practiceOrder.filter(id=>ids.includes(id));state.index=0;if(fresh||state.mode==='wrong'||state.mode==='random'){state.retry=Array.from(new Set([...state.retry,...ids]));for(const id of ids)delete state.drafts[id];}save();render();}
+function go(index){state.index=Math.max(0,Math.min(index,state.order.length-1));save();render();if(window.innerWidth<701)$('question').scrollIntoView({block:'start',behavior:'auto'});}
+function choose(letter){const q=current();if(!q||q.bank==='written'||isChecked(q.id))return;state.drafts[q.id]=letter;save();document.querySelectorAll('[data-choice]').forEach(b=>{b.classList.toggle('selected',b.dataset.choice===letter);b.setAttribute('aria-pressed',b.dataset.choice===letter);});$('submit').disabled=false;document.querySelector('.hint').textContent=`已选择 ${letter}，确认后查看解析`;document.querySelector(`[data-choice="${letter}"]`).focus({preventScroll:true});}
+function submit(){const q=current();if(!q)return;if(isChecked(q.id)){advance();return;}if(q.bank==='written'){submitWritten(q);return;}const choice=state.drafts[q.id];if(!choice)return;state.answers[q.id]={choice,correct:choice===q.answer,attempts:(state.answers[q.id]?.attempts||0)+1};state.retry=state.retry.filter(id=>id!==q.id);delete state.drafts[q.id];save();render();}
+function advance(){if(state.index<state.order.length-1)go(state.index+1);else summary();}
+function toggleFavorite(){const q=current();if(!q)return;const exists=state.favorites.includes(q.id);state.favorites=exists?state.favorites.filter(id=>id!==q.id):[...state.favorites,q.id];save();render();toast(exists?'已取消收藏':'已加入收藏');}
+function retryCurrent(){const q=current();if(!q)return;state.retry=Array.from(new Set([...state.retry,q.id]));delete state.drafts[q.id];save();render();}
+function restart(){if(!state.order.length)return;state.retry=Array.from(new Set([...state.retry,...state.order]));for(const id of state.order)delete state.drafts[id];state.index=0;if(state.mode==='random')shuffle(state.order);save();render();toast('新一轮练习已开始，已有记录已保留');}
+function summary(){
+  const done=state.order.filter(isChecked);
+  const mc=done.filter(id=>questionById.get(id).bank==='mc');
+  const correct=mc.filter(id=>state.answers[id].correct).length;
+  const written=done.filter(id=>questionById.get(id).bank==='written');
+  const selfRated=written.filter(id=>state.answers[id].correct!==null).length;
+  const remaining=state.order.length-done.length;
+  const maxPoints=state.order.filter(id=>questionById.get(id).bank==='mc').length*0.5;
+  $('summary-body').innerHTML=`<p>单选：${correct*0.5} / ${maxPoints} 分，已答 ${mc.length} 道。</p><p>短答：已核对 ${written.length} 道，已自评 ${selfRated} 道。</p><p>${remaining?`还有 ${remaining} 道未核对。`:'本组已完成。'}</p>`;
+  $('summary-next').textContent=remaining?'继续未答':'再练一轮';
+  $('summary-next').onclick=()=>{$('summary-dialog').close();if(remaining)go(state.order.findIndex(id=>!isChecked(id)));else restart();};
+  $('summary-dialog').showModal();
+}
+function renderQuestion(){const q=current();if(!q){const title=state.query?'没有找到匹配的题目':state.mode==='wrong'?'这里暂时没有错题':state.mode==='saved'?'把值得再看的题，收在这里':'这个章节还没有可练习的题目';const message=state.query?'试试 Q45、M45、W4-L01 或中英文关键词。':state.mode==='wrong'?'答错的题会自动收集到这里。<br>可以先回到顺序练习，继续积累。':state.mode==='saved'?'做题时点击右上角的星标，<br>就能在这里集中复习。':'试试选择全部周次。';$('question').innerHTML=`<div class="empty">${icon(state.mode==='saved'?'star':'book')}<h2>${title}</h2><p>${message}</p><button class="primary" id="empty-back">回到全部题目 ${icon('arrow')}</button></div>`;$('empty-back').onclick=()=>{state.mode='all';state.bank='all';state.origin='all';state.kind='all';state.chapter='all';state.query='';$('search').value='';queue();};return;}
+ const checked=isChecked(q.id),answer=state.answers[q.id],selected=checked?answer.choice:state.drafts[q.id],saved=state.favorites.includes(q.id);
+ if(q.bank==='written'){renderWritten(q,checked,answer,saved);return;}
+ $('question').innerHTML=`<div class="question-top"><div class="question-id"><strong>${q.label}</strong><small>单选 · ${q.kind} · 0.5 分${q.pair?' · 变式 '+q.pair:''}</small></div><button class="bookmark ${saved?'active':''}" id="bookmark" aria-pressed="${saved}" aria-label="${saved?'取消收藏此题':'收藏此题'}">${icon('star')}${saved?'已收藏':'收藏'}</button></div><span class="question-tag">${chapters[q.chapter].name}</span><h2 class="question-text" id="question-stem" lang="en">${format(q.text)}</h2>${translationMarkup(q)}<div class="options" role="group" aria-labelledby="question-stem">${q.options.map((text,i)=>{const letter='ABCD'[i],correct=checked&&letter===q.answer,wrong=checked&&selected===letter&&!answer.correct;return `<button class="option ${!checked&&selected===letter?'selected':''} ${correct?'correct':''} ${wrong?'incorrect':''}" data-choice="${letter}" aria-pressed="${selected===letter}" ${checked?'disabled':''}><span class="letter">${letter}</span><span class="option-copy">${optionContent(q,text,i)}</span>${correct?'<span class="result-icon" aria-label="正确答案">✓</span>':wrong?'<span class="result-icon" aria-label="你的错误答案">×</span>':''}</button>`;}).join('')}</div>${checked?`<section class="explanation ${answer.correct?'':'wrong'}" aria-live="polite"><div class="feedback-title">${icon(answer.correct?'check':'bulb')}${answer.correct?'回答正确':`正确答案是 ${q.answer}，再理解一次。`}</div><p>${escapeHTML(q.explanation)}</p>${q.note?`<div class="source-note"><strong>对应材料</strong>${escapeHTML(q.note)}</div>`:''}</section>`:''}<div class="card-footer"><div>${checked?`<button id="retry-current" class="text-btn">${icon('refresh')}再答一次</button>`:`<span class="hint">${selected?`已选择 ${selected}，确认后查看解析`:'选出你认为正确的答案'}</span>`}</div><button class="primary" id="submit" ${!checked&&!selected?'disabled':''}>${checked?(state.index===state.order.length-1?'查看小结':'下一题'):'确认答案'}${icon(checked?'arrow':'check')}</button></div>`;
+ bindTranslation(q);$('bookmark').onclick=toggleFavorite;$('submit').onclick=submit;document.querySelectorAll('[data-choice]').forEach(b=>b.onclick=()=>choose(b.dataset.choice));if(checked)$('retry-current').onclick=retryCurrent;
+}
+function render(){const q=current();const answered=Object.values(state.answers),correct=answered.filter(a=>a.correct).length,wrong=answered.filter(a=>a.correct===false).length;
+ document.querySelectorAll('[data-mode]').forEach(b=>{b.classList.toggle('active',b.dataset.mode===state.mode);b.setAttribute('aria-current',b.dataset.mode===state.mode?'page':'false');});$('wrong-count').textContent=wrong;$('saved-count').textContent=state.favorites.length;
+ document.querySelectorAll('[data-bank]').forEach(b=>{b.classList.toggle('active',b.dataset.bank===state.bank);b.setAttribute('aria-pressed',String(b.dataset.bank===state.bank));});
+ $('chapter-select').innerHTML=`<option value="all">全部周次</option>`+chapters.map((c,i)=>`<option value="${i}">${c.name} · ${questions.filter(q=>q.chapter===i&&(state.bank==='all'||q.bank===state.bank)&&(state.origin==='all'||(q.origin||'extra')===state.origin)&&(state.kind==='all'||q.kind===state.kind)).length} 题</option>`).join('');$('chapter-select').value=state.chapter;$('kind-select').value=state.kind;
+ document.querySelectorAll('[data-origin]').forEach(b=>{const active=b.dataset.origin===state.origin;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+ const names={all:'顺序练习',random:'随机练习',wrong:'错题复习',saved:'收藏练习'};$('scope-title').innerHTML=`${names[state.mode]}<small>${state.bank==='mc'?'选择题':state.bank==='written'?'手算短答':'全部题库'} · ${state.chapter==='all'?'全部周次':chapters[Number(state.chapter)].name} · ${state.order.length} 题</small>`;
+ $('restart').disabled=!state.order.length;renderQuestion();$('navigation').hidden=!q;$('prev').disabled=state.index===0;$('position').textContent=`${state.index+1} / ${state.order.length}`;$('next').innerHTML=`${state.index===state.order.length-1?'本组小结':'下一题'}${icon('arrow')}`;
+ $('coverage').textContent=coverageText(answered.length,questions.length);$('progress-ring').style.strokeDashoffset=213.63*(1-answered.length/questions.length);$('done-stat').innerHTML=`${answered.length} <span>/ ${questions.length}</span>`;$('correct-stat').textContent=correct;$('wrong-stat').textContent=wrong;$('accuracy').textContent=`已自评或判分 ${correct+wrong} 题`;$('map-count').textContent=`${state.order.length} 题`;
+ $('map').innerHTML=state.order.length?state.order.map((id,i)=>{const result=isChecked(id)?(state.answers[id].correct===null?'pending':state.answers[id].correct?'correct':'incorrect'):'';return `<button class="q-dot ${result} ${i===state.index?'current':''} ${state.favorites.includes(id)?'saved':''}" data-index="${i}" aria-label="${questionById.get(id).label}，${result==='correct'?'已答对':result==='incorrect'?'待巩固':result==='pending'?'待自评':'未答'}${state.favorites.includes(id)?'，已收藏':''}" ${i===state.index?'aria-current="true"':''}>${questionById.get(id).label}</button>`;}).join(''):'<span class="map-empty">当前筛选下没有题目</span>';document.querySelectorAll('[data-index]').forEach(b=>b.onclick=()=>go(Number(b.dataset.index)));
+}
+document.querySelectorAll('[data-origin]').forEach(b=>b.onclick=()=>{state.origin=b.dataset.origin;state.bank='all';queue();});
+$('kind-select').onchange=e=>{state.kind=e.target.value;queue();};
+$('chapter-select').onchange=e=>{state.chapter=e.target.value;queue();};
+document.querySelectorAll('[data-bank]').forEach(b=>b.onclick=()=>{state.bank=b.dataset.bank;queue();});
+document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{state.mode=b.dataset.mode;queue();});
+$('search').value=state.query;$('search').addEventListener('input',e=>{state.query=e.target.value;queue();});
+$('prev').onclick=()=>go(state.index-1);$('next').onclick=advance;$('restart').onclick=restart;$('help').onclick=()=>$('help-dialog').showModal();$('reset').onclick=()=>$('reset-dialog').showModal();$('help-reset').onclick=()=>{$('help-dialog').close();$('reset-dialog').showModal();};
+document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>$(b.dataset.close).close());
+$('confirm-reset').onclick=()=>{state=initial();$('search').value='';$('reset-dialog').close();queue();toast('学习记录已清空');};
+document.addEventListener('keydown',e=>{if(e.target.closest('summary')||e.ctrlKey||e.metaKey||e.altKey||e.target.closest('input,select,textarea')||document.querySelector('dialog[open]'))return;const q=current();if(!q)return;let letter='1234'.includes(e.key)&&e.key.length===1?'ABCD'[Number(e.key)-1]:/^[a-d]$/i.test(e.key)?e.key.toUpperCase():null;if(letter&&q.bank==='mc'){e.preventDefault();choose(letter);}else if(e.key==='Enter'&&(!e.target.closest('button,a,summary')||e.target.closest('[data-choice]'))){e.preventDefault();submit();}else if(e.key==='ArrowRight'){e.preventDefault();advance();}else if(e.key==='ArrowLeft'){e.preventDefault();go(state.index-1);}else if(e.key.toLowerCase()==='s'){e.preventDefault();toggleFavorite();}});
+// Presentation state is additive; course-specific answer storage stays unchanged.
+state.translated=Array.isArray(state.translated)?[...new Set(state.translated.filter(id=>questions.some(q=>q.id===id)))]:[];
+function optionContent(q,text,i){const identical=q.zh.options[i].trim()===text.trim();return `<span lang="en">${format(text)}</span><span class="option-translation" data-zh-option="${i}" data-translation-identical="${identical}" lang="zh-CN" ${state.translated.includes(q.id)&&!identical?'':'hidden'}>${format(q.zh.options[i])}</span>`;}
+function translationMarkup(q){return `<details id="question-translation" class="translation-panel" ${state.translated.includes(q.id)?'open':''}><summary><span class="translation-label">${state.translated.includes(q.id)?'收起中文释义':'查看中文释义'}</span><small>题干${q.options.length?'与选项':''}</small></summary><div class="translation-body" lang="zh-CN"><p class="translation-stem">${format(q.zh.text)}</p></div></details>`;}
+function bindTranslation(q){
+ const panel=$('question-translation');if(!panel)return;
+ const sync=()=>{if(!panel.isConnected)return;document.querySelectorAll('[data-zh-option]').forEach(el=>el.hidden=!panel.open||el.dataset.translationIdentical==='true');const wasOpen=state.translated.includes(q.id);if(panel.open!==wasOpen){state.translated=panel.open?[...state.translated,q.id]:state.translated.filter(id=>id!==q.id);save();}panel.querySelector('.translation-label').textContent=panel.open?'收起中文释义':'查看中文释义';};
+ panel.querySelector('summary').onclick=e=>{e.preventDefault();panel.open=!panel.open;sync();};
+ panel.ontoggle=sync;
+}
+function coverageText(n,total){const percent=100*n/total;return percent>0&&percent<1?percent.toFixed(1):String(Math.round(percent));}
+function submitWritten(q) {
+  state.answers[q.id] = {choice: state.drafts[q.id] || '', correct: null,
+    attempts: (state.answers[q.id]?.attempts || 0) + 1};
+  state.retry = state.retry.filter(id => id !== q.id);
+  delete state.drafts[q.id];
+  save();
+  render();
+}
+function renderWritten(q, checked, answer, saved) {
+  const newline = q.text.indexOf('\n');
+  const title = q.text.slice(0, newline);
+  const prompt = q.text.slice(newline + 1);
+  const role = q.role === 'original'
+    ? (q.origin === 'slides' ? 'Slides 原题' : '作业原题') + ' · 对应变式 ' + q.pair
+    : q.role === 'variant' ? q.pair + ' 变式 · ' + q.kind : q.kind + '题';
+  const draft = checked ? answer.choice : state.drafts[q.id] || '';
+  const selfReview = checked ? `<section class="explanation ${answer.correct === false ? 'wrong' : ''}" aria-live="polite">
+    <div class="feedback-title">${icon('bulb')}参考解</div>
+    <p class="multi">${format(q.explanation)}</p>
+    <div class="source-note"><strong>对应材料</strong>${escapeHTML(q.note)}</div>
+    <div class="self-review" role="group" aria-label="短答自评">
+      <button class="secondary" data-review="correct" aria-pressed="${answer.correct === true}">已掌握</button>
+      <button class="secondary" data-review="review" aria-pressed="${answer.correct === false}">加入错题本</button>
+    </div></section>` : '';
+  $('question').innerHTML = `<div class="question-top"><div class="question-id"><strong>${q.label}</strong><small>${escapeHTML(role)}</small></div>
+    <button class="bookmark ${saved ? 'active' : ''}" id="bookmark" aria-pressed="${saved}">${icon('star')}${saved ? '已收藏' : '收藏'}</button></div>
+    <span class="question-tag">${chapters[q.chapter].name}</span>
+    <h2 class="question-text written-stem" id="question-stem" lang="en">${format(title)}</h2>
+    <p class="multi written-body" lang="en">${format(prompt)}</p>
+    ${translationMarkup(q)}
+    ${q.context ? `<aside class="original-context multi">${format(q.context)}</aside>` : ''}
+    ${q.hint ? `<details class="original-context"><summary>查看手算提示</summary><p class="multi">${format(q.hint)}</p></details>` : ''}
+    <label class="draft-label" for="written-draft">${checked ? '本次作答' : '作答区（也可以先在纸上写）'}</label>
+    <textarea id="written-draft" rows="5" ${checked ? 'readonly' : ''} placeholder="写下计算步骤和判断依据"></textarea>
+    ${selfReview}
+    <div class="card-footer"><div>${checked ? `<button id="retry-current" class="text-btn">${icon('refresh')}再答一次</button>` : '<span class="hint">核对后可按参考解自评</span>'}</div>
+    <button class="primary" id="submit">${checked ? (state.index === state.order.length - 1 ? '查看小结' : '下一题') : '核对参考解'}${icon(checked ? 'arrow' : 'check')}</button></div>`;
+  bindTranslation(q);
+  $('bookmark').onclick = toggleFavorite;
+  $('submit').onclick = submit;
+  $('written-draft').value = draft;
+  if (checked) {
+    $('retry-current').onclick = retryCurrent;
+    document.querySelectorAll('[data-review]').forEach(button => {
+      button.onclick = () => {
+        answer.correct = button.dataset.review === 'correct';
+        save();
+        render();
+        document.querySelector(`[data-review="${button.dataset.review}"]`).focus({preventScroll: true});
+      };
+    });
+  } else {
+    $('written-draft').oninput = event => {
+      state.drafts[q.id] = event.target.value;
+      save();
+    };
+  }
+}
+
+if(!['all','mc','written'].includes(state.bank))state.bank='all';
+const previousId=(state.orderVersion===2||state.drafts[state.order[state.index]])?state.order[state.index]:undefined;
+state.orderVersion=2;
+const available=questions.filter(matches).filter(q=>state.mode==='wrong'?state.answers[q.id]?.correct===false:state.mode==='saved'?state.favorites.includes(q.id):true).map(q=>q.id);
+state.order=state.order.filter(id=>available.includes(id));
+const added=available.filter(id=>!state.order.includes(id));
+if(state.mode==='random')state.order.push(...shuffle(added));else state.order=practiceOrder.filter(id=>available.includes(id));
+state.index=Math.max(0,state.order.indexOf(previousId));
+save();render();
+</script>
+</body>
+</html>

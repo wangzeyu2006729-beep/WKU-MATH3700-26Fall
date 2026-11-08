@@ -30,6 +30,7 @@
 
 .option-translation{display:block;margin-top:7px;color:var(--muted);font-size:12px;line-height:1.8;overflow-wrap:anywhere}
 
+.mid2-entry{width:fit-content;color:var(--accent);font-weight:650;text-underline-offset:3px}
 </style>
 </head>
 <body>
@@ -52,6 +53,7 @@
 <div id="storage-warning" class="storage-warning" hidden>浏览器未允许保存本地数据，进度仅在本次打开期间保留。</div>
 <main>
 <section class="toolbar" aria-label="练习筛选">
+ <a class="mid2-entry" href="./mid2/index.html">Mid2 · Weeks 2–7 期中练习 <span aria-hidden="true">→</span></a>
  <div class="filter-row"><nav class="bank-tabs" aria-label="选择题库"><button data-bank="all">全部<small>140</small></button><button data-bank="original">原题<small>100</small></button><button data-bank="variants">变式<small>40</small></button></nav><label class="search-box"><svg aria-hidden="true"><use href="#i-search"/></svg><input id="search" type="search" placeholder="搜索 Q12、V12 或关键词" aria-label="搜索题号或关键词" autocomplete="off"></label></div>
  <div class="practice-row"><nav class="modes" aria-label="练习模式"><button class="mode" data-mode="all">顺序练习</button><button class="mode" data-mode="random">随机练习</button><button class="mode" data-mode="wrong">错题本 <span id="wrong-count" class="count">0</span></button><button class="mode" data-mode="saved">收藏 <span id="saved-count" class="count">0</span></button></nav><label><span class="sr-only">选择章节</span><select id="chapter-select" aria-label="选择章节"></select></label></div>
 </section>
