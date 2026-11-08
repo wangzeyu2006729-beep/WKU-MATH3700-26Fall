@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#111315">
-<meta name="description" content="MATH3700 Mid2, Weeks 2–7. Original questions, harder variants and paper-solvable proofs, theory and calculations.">
+<meta name="description" content="MATH3700 Mid2, Weeks 2–7. Lecture and assignment exercises, reference-bank variants, and paper-solvable proofs, theory and calculations.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23191c1f'/%3E%3Cpath d='M8 8h6l2 2 2-2h6v16h-6l-2 1-2-1H8zM16 10v15' fill='none' stroke='%23bed1b9' stroke-width='1.5'/%3E%3C/svg%3E">
 <title>MATH3700 · Mid2 · Weeks 2–7</title>
 <style>
@@ -76,7 +76,7 @@
 <section class="toolbar" aria-label="练习筛选">
  <div class="filter-row"><nav class="bank-tabs" aria-label="选择题库"><button data-bank="all">全部<small>__TOTAL__</small></button><button data-bank="mc">选择题<small>__MC_COUNT__</small></button><button data-bank="written">纸笔短答<small>__WRITTEN_COUNT__</small></button></nav><label class="search-box"><svg aria-hidden="true"><use href="#i-search"/></svg><input id="search" type="search" placeholder="搜索 Q45、M45、W4-L01 或关键词" aria-label="搜索题号或关键词" autocomplete="off"></label></div>
  <nav class="bank-tabs source-tabs" aria-label="选择题目来源">
- <button data-origin="all">按周排序</button><button data-origin="bank">原题库 56 对</button><button data-origin="slides">Slides 原题＋变式</button>
+ <button data-origin="all">按周排序</button><button data-origin="bank">原题库变式 56 题</button><button data-origin="slides">Slides 原题＋变式</button>
  <button data-origin="homework">作业原题＋变式</button><button data-origin="extra">补充练习</button></nav>
  <div class="practice-row"><nav class="modes" aria-label="练习模式"><button class="mode" data-mode="all">顺序练习</button><button class="mode" data-mode="random">随机练习</button><button class="mode" data-mode="wrong">错题本 <span id="wrong-count" class="count">0</span></button><button class="mode" data-mode="saved">收藏 <span id="saved-count" class="count">0</span></button></nav><div class="mid2-selects"><select id="chapter-select" aria-label="选择周次"></select><select id="kind-select" aria-label="选择知识题型"><option value="all">全部题型</option><option value="证明">证明题</option><option value="理论">理论题</option><option value="计算">计算题</option></select></div></div>
 </section>
@@ -89,7 +89,7 @@
 </div>
 <noscript><p>请启用 JavaScript 后使用练习题库。</p></noscript>
 <div class="toast" id="toast" role="status" hidden></div>
-<dialog id="help-dialog" aria-labelledby="help-title"><h2 id="help-title">练习说明</h2><p>原 100 题按主要考点归类：Week 2 为 Q45–Q74（30），Week 3 为 Q75–Q83（9），Week 4 为 Q84–Q91（8），Week 5 为 Q92–Q100（9）。共 56 道，保留原题号，每题的提高变式用相同数字的 M 编号，例如 Q45 → M45。</p>
+<dialog id="help-dialog" aria-labelledby="help-title"><h2 id="help-title">练习说明</h2><p>原 100 题按主要考点归类：Week 2 为 Q45–Q74（30），Week 3 为 Q75–Q83（9），Week 4 为 Q84–Q91（8），Week 5 为 Q92–Q100（9）。Mid2 收录对应的 56 道提高变式 M45–M100。搜索旧题号可找到对应变式，例如 Q45 → M45。100 道原题可从「返回原题库」查看。</p>
 <p>Q24–Q27 的范数、角度与 Cauchy–Schwarz，以及 Q35–Q39、Q41 的梯度与更新是 Week 4–5 的前置重合题。按原库归类属于线性代数和矩阵微积分，未计入 56 道。相应考点在补充题里复练。</p>
 <p>先选周次，或直接搜索 Q45、M45。可按来源、题型、错题和收藏筛选。选择题自动判分，短答核对参考解后可自行标记。学习记录保存在本浏览器。</p>
 <p>课件 Exercise 与作业选题聚焦可独立用纸笔完成的内容。注意：有限 Lᵢ/Lⱼ 可以相等；角距离要排除零向量；高维距离的 RMS 不等于有限维的精确均值；Ridge 通常不诱导稀疏，但个别系数可以恰好为零。</p>
@@ -338,7 +338,7 @@ const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>'
 const format=s=>escapeHTML(s).replace(/\[\[([^\]]+)\]\]/g,(_,cells)=>{const rows=cells.split(';'),cols=rows[0].split(',').length;return `<span class="matrix" role="math" aria-label="${rows.join('; ')}" style="--cols:${cols}">${rows.flatMap(r=>r.split(',')).map(v=>`<span>${v}</span>`).join('')}</span>`;});
 function initial(){return {answers:{},favorites:[],mode:'all',bank:'all',origin:'all',kind:'all',chapter:'all',order:[],index:0,drafts:{},retry:[],translated:[],query:''};}
 let state=initial(),storageOK=true,toastTimer;
-try{const stored=JSON.parse(localStorage.getItem(KEY));if(stored&&stored.answers&&Array.isArray(stored.favorites)&&Array.isArray(stored.order)&&Array.isArray(stored.retry)&&stored.drafts){state={...state,...stored};if(!['all','random','wrong','saved'].includes(state.mode))state.mode='all';if(state.chapter!=='all'&&!chapters[Number(state.chapter)])state.chapter='all';state.order=state.order.filter(id=>questionById.has(id));}}catch(e){storageOK=false;}
+try{const stored=JSON.parse(localStorage.getItem(KEY));if(stored&&stored.answers&&Array.isArray(stored.favorites)&&Array.isArray(stored.order)&&Array.isArray(stored.retry)&&stored.drafts){state={...state,...stored};if(!['all','random','wrong','saved'].includes(state.mode))state.mode='all';if(state.chapter!=='all'&&!chapters[Number(state.chapter)])state.chapter='all';}}catch(e){storageOK=false;}
 for (const key of ['answers','drafts']) {
   for (const id of Object.keys(state[key])) if (!questionById.has(Number(id))) delete state[key][id];
 }
@@ -468,9 +468,8 @@ function renderWritten(q, checked, answer, saved) {
 }
 
 if(!['all','mc','written'].includes(state.bank))state.bank='all';
-const previousId=(state.orderVersion===2||state.drafts[state.order[state.index]])?state.order[state.index]:undefined;
-state.orderVersion=2;
 const available=questions.filter(matches).filter(q=>state.mode==='wrong'?state.answers[q.id]?.correct===false:state.mode==='saved'?state.favorites.includes(q.id):true).map(q=>q.id);
+const previousId=state.order.slice(state.index).find(id=>available.includes(id));
 state.order=state.order.filter(id=>available.includes(id));
 const added=available.filter(id=>!state.order.includes(id));
 if(state.mode==='random')state.order.push(...shuffle(added));else state.order=practiceOrder.filter(id=>available.includes(id));

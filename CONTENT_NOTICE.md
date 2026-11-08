@@ -35,8 +35,7 @@ not predictions of exam content. Original reference questions remain Q01–Q100.
 
 ## Mid2 practice
 
-The Mid2 page retains the existing Q45–Q100 references and adds selected
-paper-solvable Week 2–7 lecture and assignment exercises, their independently
-written variants, Chinese meanings, and worked solutions. Exercise cards
-identify their source. The repository contains the practice question data
-and page for this set.
+The Mid2 page contains 56 independently written variants based on Q45–Q100,
+plus selected paper-solvable Week 2–7 lecture and assignment exercises, their
+variants, Chinese meanings, and worked solutions. Exercise cards identify
+their source.

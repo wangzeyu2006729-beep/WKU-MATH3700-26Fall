@@ -6,7 +6,7 @@
 
 140 practice questions: 100 instructor-provided Mid Quiz reference questions and 40 independently written, slightly harder variants based on Weeks 1–5. This is one of the repository owner's Fall 2026 courses at WKU. All three course sites use a compact dark interface and independent browser progress.
 
-[Mid2 · Weeks 2–7](https://wangzeyu2006729-beep.github.io/WKU-MATH3700-26Fall/mid2/) pairs the 56 reference questions Q45–Q100 with harder written variants, adds paper-solvable lecture and assignment exercises, and includes the Week 6–7 practice sets. Filter by week, source, and proof/theory/calculation. The Mid2 page is self-contained and stores its progress under a separate browser key. Rebuild it with `python3 mid2/build.py` after the original bank is built.
+[Mid2 · Weeks 2–7](https://wangzeyu2006729-beep.github.io/WKU-MATH3700-26Fall/mid2/) includes 56 harder written variants based on Q45–Q100, adds paper-solvable lecture and assignment exercises, and includes the Week 6–7 practice sets. Filter by week, source, and proof/theory/calculation. The Mid2 page is self-contained and stores its progress under a separate browser key. Rebuild it with `python3 mid2/build.py`.
 
 ![Practice interface](docs/preview.png)
 

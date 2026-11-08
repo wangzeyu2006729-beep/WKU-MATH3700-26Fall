@@ -1,36 +1,28 @@
-"""Build the offline Mid2 page from curated questions and the original quiz bank."""
+"""Build the offline Mid2 page from curated exercises and variants."""
 
 import json
+from itertools import count
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 data = json.loads((ROOT / 'content.json').read_text())
-reference = json.loads((ROOT.parent / 'questions.json').read_text())['questions']
-bank = {q['label']: q for q in reference if q['bank'] == 'original'}
-theory = {
-    45, 47, 48, 50, 53, 56, 57, 58, 60, 63, 66, 69, 72, 73,
-    75, 78, 82, 83, 84, 89, 92, 97, 99, 100,
-}
 
 questions = []
+question_ids = count(1)
 for chapter, group in enumerate(data['groups']):
     for entry in group:
+        question_id = next(question_ids)
+        # Reserve the removed Q slots so existing answers and drafts still use the same IDs.
         if isinstance(entry, str):
-            base = bank[entry]
-            item = dict(base, bank='mc', role='original', origin='bank',
-                        pair=f"M{base['id']:02d}",
-                        kind='理论' if base['id'] in theory else '计算',
-                        note='原 100 题 · '+entry+('。'+base['note'] if base['note'] else ''))
-        else:
-            item = dict(entry)
-        item.update(id=len(questions) + 1, chapter=chapter)
-        questions.append(item)
+            assert entry in {f'Q{i:02d}' for i in range(45, 101)}
+            continue
+        questions.append(dict(entry, id=question_id, chapter=chapter))
 
 labels = {q['label']: q for q in questions}
 assert len(questions) == len(labels)
-assert {q['label'] for q in questions if q.get('origin') == 'bank' and q['role'] == 'original'} == {
-    f'Q{i:02d}' for i in range(45, 101)
-}
+bank_variants = [q for q in questions if q.get('origin') == 'bank']
+assert {q['label'] for q in bank_variants} == {f'M{i:02d}' for i in range(45, 101)}
+assert all(q['role'] == 'variant' and q['pair'] == 'Q' + q['label'][1:] for q in bank_variants)
 for i, q in enumerate(questions):
     assert q['text'] and q['zh']['text'] and q['explanation'] and q['note']
     assert q['kind'] in {'计算', '证明', '理论'}
