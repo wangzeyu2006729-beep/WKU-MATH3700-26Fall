@@ -27,576 +27,6 @@
   ],
   "groups": [
     [
-      "Q45",
-      {
-        "label": "M45",
-        "text": "Three probability axioms\nState the three probability axioms. If A and B are disjoint with probabilities 0.3 and 0.4, find P((A∪B)ᶜ).",
-        "zh": {
-          "text": "概率三公理\n写出概率三公理。互斥事件 A、B 的概率为 0.3、0.4，求 P((A∪B)ᶜ)。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "非负性、P(Ω)=1、对可数个两两互斥事件可加。故 P(A∪B)=0.7，补集概率为 0.3。",
-        "note": "原 100 题 · Q45 提高变式",
-        "kind": "理论",
-        "pair": "Q45",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q46",
-      {
-        "label": "M46",
-        "text": "A biased die\nA die gives each even face twice the probability of each odd face. Find P(roll≥5).",
-        "zh": {
-          "text": "非均匀骰子\n每个偶数面的概率是每个奇数面的两倍。求 P(点数≥5)。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "设每个奇数面概率为 c，总和 3c+6c=1，所以 c=1/9。第 5、6 面合计 3c=1/3。",
-        "note": "原 100 题 · Q46 提高变式",
-        "kind": "计算",
-        "pair": "Q46",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q47",
-      {
-        "label": "M47",
-        "text": "Frequency and probability\n48 of 1,200 users click. What is the observed rate? Why could the probability for the next user differ?",
-        "zh": {
-          "text": "频率与概率\n1200 名用户中有 48 人点击。样本比例是多少？下一位用户点击的概率为什么可能不同？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "观察比例 4%。它是历史样本的频率；下一次的概率由生成机制和用户条件决定，样本波动或分布变化都会导致差异。",
-        "note": "原 100 题 · Q47 提高变式",
-        "kind": "理论",
-        "pair": "Q47",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q48",
-      {
-        "label": "M48",
-        "text": "Intersection from a conditional\nP(A|B)=0.6 and P(B)=0.25. Find P(A∩B). What if P(B)=0?",
-        "zh": {
-          "text": "由条件概率求交集\nP(A|B)=0.6、P(B)=0.25。求 P(A∩B)。若 P(B)=0 会怎样？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "乘回条件事件概率得 0.15。若 P(B)=0，交集概率为 0，但普通事件条件概率 P(A|B) 的分母为 0，未定义。",
-        "note": "原 100 题 · Q48 提高变式",
-        "kind": "计算",
-        "pair": "Q48",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q49",
-      {
-        "label": "M49",
-        "text": "Build a marginal first\nP(D,+)=0.06, P(D,−)=0.04, P(Dᶜ,+)=0.12 and P(Dᶜ,−)=0.78. Find P(D|+) and P(+|D).",
-        "zh": {
-          "text": "同一张表的两个条件概率\n四格联合概率为 P(D,+)=0.06、P(D,−)=0.04、P(Dᶜ,+)=0.12、P(Dᶜ,−)=0.78。求 P(D|+) 和 P(+|D)。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "P(+)=0.18，P(D)=0.10。两个条件概率分别为 0.06/0.18=1/3、0.06/0.10=0.6。",
-        "note": "原 100 题 · Q49 提高变式",
-        "kind": "计算",
-        "pair": "Q49",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q50",
-      {
-        "label": "M50",
-        "text": "Independence without a conditional\nP(A)=0.4, P(B)=0.5 and P(A∩B)=0.20. Are A and B independent? Are they mutually exclusive?",
-        "zh": {
-          "text": "独立还是互斥\nP(A)=0.4、P(B)=0.5、P(A∩B)=0.20。A、B 是否独立？是否互斥？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "0.4×0.5=0.20，满足独立。交集概率非零，因此不互斥。",
-        "note": "原 100 题 · Q50 提高变式",
-        "kind": "计算",
-        "pair": "Q50",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q51",
-      {
-        "label": "M51",
-        "text": "Flag precision from counts\nAmong 10,000 transactions, 100 are flagged and 6 of those are fraudulent. Find P(fraud|flag) empirically.",
-        "zh": {
-          "text": "警报的精确率\n10,000 笔交易中 100 笔被标记，其中 6 笔确实欺诈。求经验 P(欺诈|标记)。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "条件样本为 100 笔警报，答案 6/100=6%。",
-        "note": "原 100 题 · Q51 提高变式",
-        "kind": "计算",
-        "pair": "Q51",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q52",
-      {
-        "label": "M52",
-        "text": "Fraud recall from counts\nThere are 15 fraudulent transactions; 9 of them are flagged. What is recall? What extra count is needed to compute precision?",
-        "zh": {
-          "text": "欺诈召回率\n15 笔欺诈中 9 笔被标记。召回率是多少？计算精确率还需要什么计数？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "召回率为 P(标记|欺诈)=9/15=60%。精确率还需要总警报数，分母包括误报。",
-        "note": "原 100 题 · Q52 提高变式",
-        "kind": "计算",
-        "pair": "Q52",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q53",
-      {
-        "label": "M53",
-        "text": "Conditional vs. marginal independence\nClass C has values 0 and 1 with probability 1/2 each. Both binary features satisfy X₁=X₂=C. Are the features independent given C? Are they independent marginally?",
-        "zh": {
-          "text": "给定类别独立与边际独立\n类别 C 取 0、1 各一半。两个二元特征满足 X₁=X₂=C。给定 C 后独立吗？边际独立吗？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "给定 C 后两个特征均为常量，联合概率可分解，因此条件独立。边际上 P(两者均为1)=1/2，而乘积为 1/4，不独立。",
-        "note": "原 100 题 · Q53 提高变式",
-        "kind": "理论",
-        "pair": "Q53",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q54",
-      {
-        "label": "M54",
-        "text": "Count free Naive Bayes parameters\nA Bernoulli Naive Bayes model has 3 classes and 400 binary features. How many free feature probabilities and free class-prior parameters are needed?",
-        "zh": {
-          "text": "计算朴素贝叶斯参数量\nBernoulli 朴素贝叶斯有 3 类、400 个二元特征。需要多少个自由的特征条件概率参数和类别先验参数？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "每个类与特征组合只需一个成功概率，共 1200 个。3 个类别先验和为 1，因此有 2 个自由参数。",
-        "note": "原 100 题 · Q54 提高变式",
-        "kind": "计算",
-        "pair": "Q54",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q55",
-      {
-        "label": "M55",
-        "text": "Absent words contribute too\nIn a two-feature Bernoulli model, P(FREE|Spam)=0.4 and P(MONEY|Spam)=0.25. Find the class likelihood of observing FREE but not MONEY.",
-        "zh": {
-          "text": "未出现的词也贡献似然\n二特征 Bernoulli 模型中 P(FREE|Spam)=0.4，P(MONEY|Spam)=0.25。观察到 FREE 但未出现 MONEY 的类条件似然是多少？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "给定 Spam 的特征独立，似然为 0.4×(1−0.25)=0.30。",
-        "note": "原 100 题 · Q55 提高变式",
-        "kind": "计算",
-        "pair": "Q55",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q56",
-      {
-        "label": "M56",
-        "text": "Smooth an unseen feature\nA binary word feature appears in none of 8 spam emails. With add-one smoothing, estimate the presence and absence probabilities given spam.",
-        "zh": {
-          "text": "对没见过的词做平滑\n一个二元词特征在 8 封垃圾邮件中一次未出现。加一平滑后，给定垃圾类时出现和未出现的概率是多少？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "两个类别的计数都加一，分母为 8+2=10。出现 1/10，未出现 9/10。",
-        "note": "原 100 题 · Q56 提高变式",
-        "kind": "计算",
-        "pair": "Q56",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q57",
-      {
-        "label": "M57",
-        "text": "Compare scores in log space\nTwo classes have log prior −1 and −2. Their feature log-likelihoods are (−3,−4) and (−2,−3), respectively. Which class wins?",
-        "zh": {
-          "text": "在对数空间比较类别\n两个类别的对数先验为 −1 和 −2，各特征对数似然分别为 (−3,−4) 和 (−2,−3)。选哪个类别？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "总对数分数是 −8 和 −7，选第二类。对数严格递增，且把连乘变成求和以减少数值下溢。",
-        "note": "原 100 题 · Q57 提高变式",
-        "kind": "计算",
-        "pair": "Q57",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q58",
-      {
-        "label": "M58",
-        "text": "Density above one\nX is uniform on [0,1/2]. Give the density on its support, P(X=1/4), and P(0≤X≤1/4).",
-        "zh": {
-          "text": "密度可以大于 1\nX 在 [0,1/2] 上均匀。写出区间内的密度，并求 P(X=1/4)、P(0≤X≤1/4)。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "密度为 2，面积才是概率。单点概率为 0，所给区间概率为 2×1/4=1/2。",
-        "note": "原 100 题 · Q58 提高变式",
-        "kind": "计算",
-        "pair": "Q58",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q59",
-      {
-        "label": "M59",
-        "text": "An asymmetric discrete mean\nX takes 0, 2, 5 with probabilities 1/2, 1/4, 1/4. Find E[X].",
-        "zh": {
-          "text": "非均匀离散期望\nX 取 0、2、5，概率分别为 1/2、1/4、1/4。求 E[X]。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "加权和 0+2/4+5/4=7/4。",
-        "note": "原 100 题 · Q59 提高变式",
-        "kind": "计算",
-        "pair": "Q59",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q60",
-      {
-        "label": "M60",
-        "text": "Linearity under dependence\nLet Y=2X and E[X]=3. Find E[X+Y]. Does this calculation assume independence?",
-        "zh": {
-          "text": "相关变量的期望加法\n令 Y=2X，E[X]=3。求 E[X+Y]。计算要求独立吗？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "E[X+Y]=E[X]+2E[X]=9。可积时线性性不要求独立。",
-        "note": "原 100 题 · Q60 提高变式",
-        "kind": "计算",
-        "pair": "Q60",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q61",
-      {
-        "label": "M61",
-        "text": "Unit conversions and affine means\nE[H]=1.70 m and E[S]=4 cm. Find E[100H−2S+1] in cm.",
-        "zh": {
-          "text": "带常数和单位换算的期望\nE[H]=1.70 m，E[S]=4 cm。求 E[100H−2S+1]，以 cm 计。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "100×1.70−2×4+1=163 cm。",
-        "note": "原 100 题 · Q61 提高变式",
-        "kind": "计算",
-        "pair": "Q61",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q62",
-      {
-        "label": "M62",
-        "text": "Variance and SD from a two-point law\nX is 1 or 5 with equal probability. Find E[X], Var(X) and its standard deviation.",
-        "zh": {
-          "text": "由两点分布求方差\nX 等概率取 1 或 5。求期望、方差和标准差。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "E=3；偏离均值为 ±2，方差为 4，标准差为 2。也可用 E[X²]−E[X]²=13−9。",
-        "note": "原 100 题 · Q62 提高变式",
-        "kind": "计算",
-        "pair": "Q62",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q63",
-      {
-        "label": "M63",
-        "text": "Affine variance\nVar(X)=9. Find Var(7−2X) and its standard deviation.",
-        "zh": {
-          "text": "仿射变换后的方差\nVar(X)=9。求 Var(7−2X) 和标准差。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "平移不改方差，缩放系数平方为 4，所以方差 36，标准差 6。",
-        "note": "原 100 题 · Q63 提高变式",
-        "kind": "计算",
-        "pair": "Q63",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q64",
-      {
-        "label": "M64",
-        "text": "A borderline significance decision\nA conversion lift is 0.36 percentage points with SE=0.20 percentage points. Test equality at two-sided α=0.05 using critical 1.96.",
-        "zh": {
-          "text": "判断临界附近的显著性\n转化率提高 0.36 个百分点，SE=0.20 个百分点。用临界值 1.96，在双侧 α=0.05 检验是否相等。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "z=0.36/0.20=1.8<1.96，未拒绝相等的零假设。未拒绝不等于证明两组相等。",
-        "note": "原 100 题 · Q64 提高变式",
-        "kind": "计算",
-        "pair": "Q64",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q65",
-      {
-        "label": "M65",
-        "text": "Build and interpret a CI\nThe estimated difference is −0.30 percentage points and SE=0.10 percentage points. Find its approximate 95% CI and decide significance.",
-        "zh": {
-          "text": "置信区间与显著性\n估计差为 −0.30 个百分点，SE 为 0.10 个百分点。求近似 95% 区间并判断显著性。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "−0.30±1.96×0.10=[−0.496,−0.104] 个百分点，区间完全为负，在相应双侧 5% 检验下拒绝零差。",
-        "note": "原 100 题 · Q65 提高变式",
-        "kind": "计算",
-        "pair": "Q65",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q66",
-      {
-        "label": "M66",
-        "text": "Name all four terms\nIn P(H|D)=P(D|H)P(H)/P(D), identify all four terms and state which is constant across hypotheses for fixed observed D.",
-        "zh": {
-          "text": "辨认贝叶斯四项\n在 P(H|D)=P(D|H)P(H)/P(D) 中识别四项，并指出 D 固定时哪项不随假设而变。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "P(H|D) 后验、P(D|H) 似然、P(H) 先验、P(D) 证据。观测固定时证据是归一化常数，且用此式需 P(D)>0。",
-        "note": "原 100 题 · Q66 提高变式",
-        "kind": "理论",
-        "pair": "Q66",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q67",
-      {
-        "label": "M67",
-        "text": "When the rare source wins\nFactory A supplies 80% of parts at 1% defect rate. B supplies 20% at 8%. Given a defect, find P(B|defect).",
-        "zh": {
-          "text": "低先验的来源能胜出吗\nA 供货 80%，缺陷率 1%；B 供货 20%，缺陷率 8%。已知有缺陷，求 P(B|缺陷)。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "A、B 联合权重分别为 0.008、0.016，故后验为 0.016/0.024=2/3。",
-        "note": "原 100 题 · Q67 提高变式",
-        "kind": "计算",
-        "pair": "Q67",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q68",
-      {
-        "label": "M68",
-        "text": "Specificity is not a posterior\nPrevalence is 1%, sensitivity 90%, specificity 90%. Find P(disease|positive) using 1,000 people.",
-        "zh": {
-          "text": "特异度不是后验\n患病率 1%、灵敏度 90%、特异度 90%。用 1000 人的自然频数求阳性后患病概率。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "10 人患病，其中 9 人阳性。990 人未患病，其中 99 人假阳性。阳性后患病率为 9/(9+99)=1/12。",
-        "note": "原 100 题 · Q68 提高变式",
-        "kind": "计算",
-        "pair": "Q68",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q69",
-      {
-        "label": "M69",
-        "text": "Flat prior on restricted support\nThe unconstrained MLE is 0.8 and the likelihood increases up to 0.8. A prior is uniform on [0,0.6] and zero elsewhere. Find MAP.",
-        "zh": {
-          "text": "只在有限区间均匀的先验\n无约束 MLE 为 0.8，似然到 0.8 前单调增加。先验仅在 [0,0.6] 上均匀。求 MAP。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "MAP=0.6。先验在支持集内相同，但支持集外后验为零，所以只能在区间内选似然最大的点。",
-        "note": "原 100 题 · Q69 提高变式",
-        "kind": "计算",
-        "pair": "Q69",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q70",
-      {
-        "label": "M70",
-        "text": "Gaussian MLE by differentiation\nFor independent Gaussian observations 2,4,9 with known common variance, write the log-likelihood terms depending on μ and derive the MLE.",
-        "zh": {
-          "text": "用求导得到高斯 MLE\n独立同方差高斯观测为 2、4、9，方差已知。写出对数似然中依赖 μ 的部分并求 MLE。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "ℓ(μ)=常数−[(2−μ)²+(4−μ)²+(9−μ)²]/(2σ²)。设导数为零，得 μ̂=(2+4+9)/3=5，二阶导数为负。",
-        "note": "原 100 题 · Q70 提高变式",
-        "kind": "计算",
-        "pair": "Q70",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q71",
-      {
-        "label": "M71",
-        "text": "Bernoulli boundary MLE\nFive independent impressions yield zero clicks. Maximize the likelihood on 0≤p≤1. Why does the log-derivative interior formula need a boundary check?",
-        "zh": {
-          "text": "Bernoulli MLE 的边界\n五次独立曝光均无点击。在 [0,1] 上最大化似然。为什么要检查边界？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "L(p)=(1−p)⁵ 递减，最大值在 p=0。只有内部驻点能由导数为零找到，边界解无需满足该条件。",
-        "note": "原 100 题 · Q71 提高变式",
-        "kind": "计算",
-        "pair": "Q71",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q72",
-      {
-        "label": "M72",
-        "text": "Recover a penalty from a prior\nFor independent coefficients with prior density proportional to exp(−2Σ|wⱼ|), what objective is minimized by MAP?",
-        "zh": {
-          "text": "从先验反推惩罚\n各系数独立，先验密度正比于 exp(−2Σ|wⱼ|)。MAP 最小化的目标是什么？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "取负对数后，最小化负对数似然 + 2Σ|wⱼ|，即 L1 型惩罚；归一化常数可省略。",
-        "note": "原 100 题 · Q72 提高变式",
-        "kind": "理论",
-        "pair": "Q72",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q73",
-      {
-        "label": "M73",
-        "text": "When data cannot override a prior\nA prior gives probability zero to hypothesis H. Can positive likelihood under H make its posterior positive? How does this qualify “data dominate the prior”?",
-        "zh": {
-          "text": "先验为零的极端情况\n先验给假设 H 的概率为零。如果 H 的似然为正，其后验可以为正吗？这如何限制“数据压过先验”的说法？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "在证据为正时，后验仍为零。常规大样本中数据占主导需先验在真实或相关参数附近赋予支持等条件。",
-        "note": "原 100 题 · Q73 提高变式",
-        "kind": "理论",
-        "pair": "Q73",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
-      "Q74",
-      {
-        "label": "M74",
-        "text": "Posterior mean vs. mode\nA click probability has Beta(2,3) prior. After 2 clicks in 5 impressions, give the posterior, its mean, and its mode.",
-        "zh": {
-          "text": "区分 Beta 后验均值与众数\n点击率先验 Beta(2,3)，5 次曝光有 2 次点击。给出后验、均值和众数。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "后验 Beta(4,6)，均值 4/10=2/5，内部众数 (4−1)/(4+6−2)=3/8。后验均值与 MAP 众数不同。",
-        "note": "原 100 题 · Q74 提高变式",
-        "kind": "计算",
-        "pair": "Q74",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 0
-      },
       {
         "label": "W2-H01",
         "text": "Why take logs in Naive Bayes?\nExplain why we use log probabilities rather than raw probabilities in the Naive Bayes implementation. Include the mathematical justification.",
@@ -612,27 +42,9 @@
         "kind": "理论",
         "role": "original",
         "origin": "homework",
-        "pair": "W2-HV01",
         "context": "",
-        "chapter": 0
-      },
-      {
-        "label": "W2-HV01",
-        "text": "Compare extremely small scores\nTwo classes have scores 10⁻¹⁰⁰⁰ and 10⁻⁹⁹⁹. Compare their base-10 log scores and choose the class.",
-        "zh": {
-          "text": "比较很小的分数\n两个类别分数分别为 10⁻¹⁰⁰⁰、10⁻⁹⁹⁹。比较以 10 为底的对数并选类别。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "对数分别 −1000、−999。第二类更大，直接处理原分数在普通浮点精度下可能都下溢到 0。",
-        "note": "Week 2 Assignment · Q2c(i) 变式",
-        "kind": "理论",
-        "role": "variant",
-        "origin": "homework",
-        "pair": "W2-H01",
-        "chapter": 0
+        "chapter": 0,
+        "id": 61
       },
       {
         "label": "W2-H02",
@@ -649,27 +61,9 @@
         "kind": "理论",
         "role": "original",
         "origin": "homework",
-        "pair": "W2-HV02",
         "context": "",
-        "chapter": 0
-      },
-      {
-        "label": "W2-HV02",
-        "text": "Unknown word or unseen event?\nDistinguish a known binary feature with class count zero from a token outside the trained vocabulary.",
-        "zh": {
-          "text": "区分计数为零和词表外\n区分训练词表内某类计数为零的二元特征与训练词表外的词。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "前者是模型已有的参数，可以加伪计数；后者没有对应参数，需按词表策略处理。",
-        "note": "Week 2 Assignment · Q2c(ii) 变式",
-        "kind": "理论",
-        "role": "variant",
-        "origin": "homework",
-        "pair": "W2-H02",
-        "chapter": 0
+        "chapter": 0,
+        "id": 63
       },
       {
         "label": "W2-H03",
@@ -686,27 +80,28 @@
         "kind": "证明",
         "role": "original",
         "origin": "homework",
-        "pair": "W2-HV03",
         "context": "",
-        "chapter": 0
+        "chapter": 0,
+        "id": 65
       },
       {
-        "label": "W2-HV03",
-        "text": "No clicks with a prior\nWith a Beta(2,2) prior and 3 non-clicks, find MLE, posterior mean, and posterior mode.",
+        "label": "M45",
+        "text": "Three probability axioms\nState the three probability axioms. If A and B are disjoint with probabilities 0.3 and 0.4, find P((A∪B)ᶜ).",
         "zh": {
-          "text": "零点击时比较三个量\n先验 Beta(2,2)，3 次曝光都不点击。求 MLE、后验均值和众数。",
+          "text": "概率三公理\n写出概率三公理。互斥事件 A、B 的概率为 0.3、0.4，求 P((A∪B)ᶜ)。",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "MLE=0。后验 Beta(2,5)，均值 2/7，众数 (2−1)/(2+5−2)=1/5。",
-        "note": "Week 2 Assignment · Q4b(i) 变式",
-        "kind": "证明",
+        "explanation": "非负性、P(Ω)=1、对可数个两两互斥事件可加。故 P(A∪B)=0.7，补集概率为 0.3。",
+        "note": "原 100 题 · Q45 提高变式",
+        "kind": "理论",
+        "pair": "Q45",
+        "origin": "bank",
         "role": "variant",
-        "origin": "homework",
-        "pair": "W2-H03",
-        "chapter": 0
+        "chapter": 0,
+        "id": 2
       },
       {
         "label": "W2-RV",
@@ -721,331 +116,297 @@
         "explanation": "X(HH)=2，X(HT)=X(TH)=1，X(TT)=0。聚合等概率样本点得到 P(X=0,1,2) 依次是 1/4、1/2、1/4。",
         "note": "Week 2 Slides · p. 4–10",
         "kind": "理论",
-        "chapter": 0
+        "chapter": 0,
+        "id": 67
       },
       {
-        "label": "W2-CDF",
-        "text": "From PDF to CDF and expectation\nFor f(x)=2x on [0,1] and 0 elsewhere, derive F(x), P(1/2<X≤1), and E[X].",
+        "label": "M50",
+        "text": "Independence without a conditional\nP(A)=0.4, P(B)=0.5 and P(A∩B)=0.20. Are A and B independent? Are they mutually exclusive?",
         "zh": {
-          "text": "由 PDF 求 CDF 和期望\n密度 f(x)=2x（0≤x≤1），其余为 0。求 CDF、P(1/2<X≤1) 和 E[X]。",
+          "text": "独立还是互斥\nP(A)=0.4、P(B)=0.5、P(A∩B)=0.20。A、B 是否独立？是否互斥？",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "F(x) 在 x<0 时为 0，在 [0,1] 为 x²，在 x>1 为 1。区间概率 1−1/4=3/4。期望 ∫₀¹x·2x dx=2/3。",
-        "note": "Week 2 Slides · p. 9、16–17",
+        "explanation": "0.4×0.5=0.20，满足独立。交集概率非零，因此不互斥。",
+        "note": "原 100 题 · Q50 提高变式",
         "kind": "计算",
-        "chapter": 0
+        "pair": "Q50",
+        "origin": "bank",
+        "role": "variant",
+        "chapter": 0,
+        "id": 12
       },
       {
-        "label": "W2-EV",
-        "text": "Why expectation is linear\nFor a finite joint PMF p(x,y), prove E[aX+bY+c]=aE[X]+bE[Y]+c.",
+        "label": "M55",
+        "text": "Naive Bayes scores\nThe spam prior is 1/2. A word appears with probability 0.8 in spam and 0.2 otherwise. For a message containing it, find P(spam | word). What would Naive Bayes assume if there were two word features?",
         "zh": {
-          "text": "期望线性的推导\n给定有限联合 PMF p(x,y)，证明 E[aX+bY+c]=aE[X]+bE[Y]+c。",
+          "text": "朴素贝叶斯算一次后验\n垃圾邮件先验是 1/2。某词在垃圾邮件中出现的概率为 0.8，在其他邮件中为 0.2。已知这个词出现，求垃圾邮件的后验。若有两个词特征，朴素贝叶斯作什么假设？",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "把 ΣₓΣᵧ(ax+by+c)p(x,y) 分成三项。对 x 项先对 y 求和得到 pₓ(x)，对 y 项先对 x 求和得到 pᵧ(y)，常数项乘以总概率 1。全程未分解成独立乘积。",
-        "note": "Week 2 Slides · p. 17–19",
-        "kind": "证明",
-        "chapter": 0
-      },
-      {
-        "label": "W2-VAR",
-        "text": "Expand the square\nFrom the definition of Var, derive Var(X)=E[X²]−(E[X])² and Var(aX+b)=a²Var(X).",
-        "zh": {
-          "text": "方差公式推导\n从定义推导 Var(X)=E[X²]−(E[X])² 和 Var(aX+b)=a²Var(X)。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "令 μ=E[X]，展开 E[(X−μ)²]=E[X²]−2μE[X]+μ²。对 aX+b，其减去均值后的偏差为 a(X−μ)，取平方再期望。",
-        "note": "Week 2 Slides · p. 20",
-        "kind": "证明",
-        "chapter": 0
-      },
-      {
-        "label": "W2-COV",
-        "text": "Variance of a sum\nDerive Var(X+Y). Then let X=Y and Var(X)=4 to show why simply adding variances can fail.",
-        "zh": {
-          "text": "变量相加时方差怎么变\n推导 Var(X+Y)。再令 X=Y、Var(X)=4，说明为什么方差不能总是直接相加。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "展开两个中心化变量之和的平方，得 Var(X)+Var(Y)+2Cov(X,Y)。独立时协方差为零；本例 Var(2X)=16，而单纯相加只得 8。",
-        "note": "Week 2 Slides · p. 18、20",
-        "kind": "证明",
-        "chapter": 0
+        "explanation": "两类的未归一化分数为 0.5×0.8=0.4 和 0.5×0.2=0.1。后验为 0.4/(0.4+0.1)=0.8。朴素贝叶斯假设给定类别后各特征条件独立。",
+        "note": "原 100 题 · Q55 提高变式",
+        "kind": "计算",
+        "pair": "Q55",
+        "origin": "bank",
+        "role": "variant",
+        "chapter": 0,
+        "id": 327
       },
       {
         "label": "W2-JOINT",
-        "text": "Marginalize, then condition\nFor a joint PMF with rows X=0,1, columns Y=0,1, and entries [[0.2,0.3;0.1,0.4]], find both marginals and the conditional PMF of Y given X=1.",
+        "text": "Fill in the missing probability\nRows are Y=0,1 and columns X=0,1,2: [[0.2,0.1,0.2;0.1,0.3,?]]. Find the missing entry and P(X=1 | Y=1).",
         "zh": {
-          "text": "求两边边际和一个条件分布\n联合 PMF 行 X=0,1，列 Y=0,1，表为 [[0.2,0.3;0.1,0.4]]。求两个边际 PMF 和给定 X=1 时 Y 的条件 PMF。",
+          "text": "补齐联合分布，再求条件概率\n行是 Y=0,1，列是 X=0,1,2，联合表为 [[0.2,0.1,0.2;0.1,0.3,?]]。求缺失值和 P(X=1 | Y=1)。",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "行和为 (0.5,0.5)，列和为 (0.3,0.7)。X=1 行除以 0.5，得 (0.2,0.8)。",
-        "note": "Week 2 Slides · p. 22–24",
+        "explanation": "已知概率加起来为 0.9，缺失值为 0.1。Y=1 的行和为 0.5，所以 P(X=1 | Y=1)=0.3/0.5=0.6。",
+        "note": "Phillips, Mathematical Foundations for Data Analysis · Exercise 1.1（改编）",
         "kind": "计算",
-        "chapter": 0
+        "chapter": 0,
+        "id": 334,
+        "origin": "textbook"
       },
       {
-        "label": "W2-CHI",
-        "text": "Test independence from counts\nFor counts [[30,20;20,30]], compute the Pearson χ² statistic. With 1 degree of freedom and critical value 3.84, decide at 5%.",
+        "label": "W2-CDF",
+        "text": "A uniform density\nX is uniform on [0,2]. Give F(1), P(X=1), and P(0.5<X≤1.5).",
         "zh": {
-          "text": "用列联表检验独立性\n计数表 [[30,20;20,30]]，求 Pearson χ²。自由度 1、临界值 3.84，在 5% 水平判断。",
+          "text": "均匀分布的 CDF 与概率\nX 在 [0,2] 均匀。求 F(1)、P(X=1) 和 P(0.5<X≤1.5)。",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "独立零假设下各格期望 50×50/100=25。四项均为 25/25=1，χ²=4>3.84，拒绝独立。这里是对总体独立的检验，与直接比较已知概率的等式不同。",
-        "note": "Week 2 Slides · p. 13、21–22",
+        "explanation": "区间内密度为 1/2。F(1)=1/2，P(X=1)=0，长度为 1 的区间概率为 1/2。密度值 f(1)=1/2，与单点概率不同。",
+        "note": "Phillips, Mathematical Foundations for Data Analysis · Exercise 1.4（改编）",
         "kind": "计算",
-        "chapter": 0
+        "chapter": 0,
+        "id": 335,
+        "origin": "textbook"
       },
       {
-        "label": "W2-LOG",
-        "text": "MLE and MAP objectives\nWrite the MLE and MAP objectives for independent data. Explain why log preserves the maximizer and where the log prior appears.",
+        "id": 336,
+        "label": "W2-T01",
+        "chapter": 0,
+        "text": "Expected total distance\nA bus leaves you either 2 or 4 km from home with equal probability. A ride then adds a distance uniform on [0,2] km. What is your expected distance from home?",
         "zh": {
-          "text": "默写 MLE 和 MAP 的优化目标\n为独立数据写出 MLE 与 MAP 的优化式，解释取对数为何保留最优解，以及先验出现在哪。",
+          "text": "离家的平均距离\n下公交后离家 2 或 4 km，各有一半概率。再搭车多走一段 [0,2] km 的均匀随机距离。最后离家的期望距离是多少？",
+          "options": []
+        },
+        "explanation": "第一段的期望是 (2+4)/2=3 km，第二段均匀距离期望为 1 km。按期望线性性相加，得 4 km；不需要假设两段独立。",
+        "note": "Phillips, Mathematical Foundations for Data Analysis · Exercise 1.2（改编）",
+        "bank": "written",
+        "options": [],
+        "answer": null,
+        "kind": "计算",
+        "origin": "textbook"
+      },
+      {
+        "label": "W2-VAR",
+        "text": "Expand the variance\nStarting from Var(X)=E[(X−μ)²] with μ=E[X], derive Var(X)=E[X²]−μ². What is the SD if Var(X)=9?",
+        "zh": {
+          "text": "展开方差公式\n由 Var(X)=E[(X−μ)²]、μ=E[X] 推导 Var(X)=E[X²]−μ²。若 Var(X)=9，标准差是多少？",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "MLE 最大化 Σᵢlog p(xᵢ|θ)。MAP 在此基础上加 log p(θ)，固定数据时证据是常数。log 在正数上严格递增，乘积变和也更稳定；零似然可对应 −∞。",
-        "note": "Week 2 Slides · p. 25、29–36",
-        "kind": "理论",
-        "chapter": 0
-      },
-      {
-        "label": "W2-TOTAL",
-        "text": "Prove total probability and Bayes\nFor a partition {H₁,…,Hₖ} and P(D)>0, derive P(Hⱼ|D) in terms of the priors and likelihoods.",
-        "zh": {
-          "text": "全概率与贝叶斯公式推导\n对于划分 {H₁,…,Hₖ} 且 P(D)>0，用先验和似然推导 P(Hⱼ|D)。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "D 是互斥的 D∩Hᵢ 之并。故 P(D)=ΣᵢP(D|Hᵢ)P(Hᵢ)（零概率项可略）。条件概率分子 P(Hⱼ∩D)=P(D|Hⱼ)P(Hⱼ)，代入即可。",
-        "note": "Week 2 Slides · p. 11、22–27",
+        "explanation": "展开得 E[X²]−2μE[X]+μ²=E[X²]−μ²。标准差为 √9=3。",
+        "note": "Week 2 Slides · p. 20",
         "kind": "证明",
-        "chapter": 0
+        "chapter": 0,
+        "id": 330
       },
       {
-        "label": "W2-NAIVE",
-        "text": "Predict a class with two words\nSpam prior is 1/4. For the two observed present words, class-conditional probabilities are (0.8,0.5) in Spam and (0.2,0.5) otherwise. Under Naive Bayes find the spam posterior.",
+        "label": "M63",
+        "text": "Affine variance\nVar(X)=9. Find Var(7−2X) and its standard deviation.",
         "zh": {
-          "text": "手算两词朴素贝叶斯后验\n垃圾类先验 1/4，两个出现词在垃圾类中的条件概率为 (0.8,0.5)，在另一类为 (0.2,0.5)。求垃圾后验。",
+          "text": "仿射变换后的方差\nVar(X)=9。求 Var(7−2X) 和标准差。",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "两个未归一化分数分别为 (1/4)·0.8·0.5=0.10 与 (3/4)·0.2·0.5=0.075。归一化得到 0.10/0.175=4/7。",
-        "note": "Week 2 Slides · p. 14–15、25",
+        "explanation": "平移不改方差，缩放系数平方为 4，所以方差 36，标准差 6。",
+        "note": "原 100 题 · Q63 提高变式",
         "kind": "计算",
-        "chapter": 0
+        "pair": "Q63",
+        "origin": "bank",
+        "role": "variant",
+        "chapter": 0,
+        "id": 38
+      },
+      {
+        "label": "W2-COV",
+        "text": "When variances add\nIf Var(X)=2 and Var(Y)=3, find Var(X+Y) when X,Y are independent. Which extra term is needed in general?",
+        "zh": {
+          "text": "什么时候方差可以相加？\nVar(X)=2、Var(Y)=3。独立时求 Var(X+Y)。一般情况还要加哪一项？",
+          "options": []
+        },
+        "bank": "written",
+        "options": [],
+        "answer": null,
+        "explanation": "独立时 Cov(X,Y)=0，所以和的方差是 5。一般公式为 Var(X)+Var(Y)+2Cov(X,Y)。",
+        "note": "Week 2 Slides · p. 18、20",
+        "kind": "理论",
+        "chapter": 0,
+        "id": 331
       },
       {
         "label": "W2-SE",
-        "text": "Compute a two-proportion standard error\nTreatment and control each have 200 independent observations, with estimated rates 0.6 and 0.4. Use the unpooled Wald formula to find SE, z and a 95% interval for the difference.",
+        "text": "Test the conversion lift\nThe observed conversion lift is 0.4 percentage points with SE=0.1 percentage points. Find z and the approximate 95% interval using 1.96. Does it exclude 0?",
         "zh": {
-          "text": "手算两比例差的标准误\n实验与对照各 200 个独立观测，估计比例为 0.6 与 0.4。用非合并 Wald 公式求差的 SE、z 和 95% 区间。",
+          "text": "判断转化率差是否显著\n观察到转化率提高 0.4 个百分点，标准误为 0.1 个百分点。用 1.96 求 z 值和近似 95% 置信区间。区间是否含 0？",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "两组各有 p̂(1−p̂)/n=0.24/200=0.0012。差的 SE=√0.0024≈0.049，z≈4.08。95% 区间 0.20±1.96×0.049≈[0.104,0.296]，不含 0。",
+        "explanation": "z=0.4/0.1=4。区间是 0.4±1.96×0.1=[0.204,0.596] 个百分点。不含零，与相应的双侧 5% 显著性判断一致。",
         "note": "Week 2 Slides · p. 21",
         "kind": "计算",
-        "chapter": 0
+        "chapter": 0,
+        "id": 332
+      },
+      {
+        "label": "W2-CHI",
+        "text": "Check independence from a small table\nThe observed counts are [[30,20;20,30]], with expected counts of 25 in each cell under independence. Compute χ² and compare with 3.84.",
+        "zh": {
+          "text": "用小列联表判断独立性\n观测计数为 [[30,20;20,30]]，独立时每格期望为 25。求 χ² 并与临界值 3.84 比较。",
+          "options": []
+        },
+        "bank": "written",
+        "options": [],
+        "answer": null,
+        "explanation": "四项 (观察−期望)²/期望 都是 25/25=1，所以 χ²=4>3.84，在 5% 水平拒绝独立。",
+        "note": "Week 2 Slides · p. 13、21–22",
+        "kind": "计算",
+        "chapter": 0,
+        "id": 333
+      },
+      {
+        "label": "M66",
+        "text": "Name all four terms\nIn P(H|D)=P(D|H)P(H)/P(D), identify all four terms and state which is constant across hypotheses for fixed observed D.",
+        "zh": {
+          "text": "辨认贝叶斯四项\n在 P(H|D)=P(D|H)P(H)/P(D) 中识别四项，并指出 D 固定时哪项不随假设而变。",
+          "options": []
+        },
+        "bank": "written",
+        "options": [],
+        "answer": null,
+        "explanation": "P(H|D) 后验、P(D|H) 似然、P(H) 先验、P(D) 证据。观测固定时证据是归一化常数，且用此式需 P(D)>0。",
+        "note": "原 100 题 · Q66 提高变式",
+        "kind": "理论",
+        "pair": "Q66",
+        "origin": "bank",
+        "role": "variant",
+        "chapter": 0,
+        "id": 44
+      },
+      {
+        "label": "M67",
+        "text": "When the rare source wins\nFactory A supplies 80% of parts at 1% defect rate. B supplies 20% at 8%. Given a defect, find P(B|defect).",
+        "zh": {
+          "text": "低先验的来源能胜出吗\nA 供货 80%，缺陷率 1%；B 供货 20%，缺陷率 8%。已知有缺陷，求 P(B|缺陷)。",
+          "options": []
+        },
+        "bank": "written",
+        "options": [],
+        "answer": null,
+        "explanation": "A、B 联合权重分别为 0.008、0.016，故后验为 0.016/0.024=2/3。",
+        "note": "原 100 题 · Q67 提高变式",
+        "kind": "计算",
+        "pair": "Q67",
+        "origin": "bank",
+        "role": "variant",
+        "chapter": 0,
+        "id": 46
+      },
+      {
+        "label": "M69",
+        "text": "What do MLE and MAP maximize?\nWrite the MLE and MAP objectives for observed data D. State when a constant prior makes their maximizers agree.",
+        "zh": {
+          "text": "MLE 与 MAP 各最大化什么？\n给定观测 D，写出 MLE 和 MAP 的目标。说明常数先验在什么条件下让两者的最优解相同。",
+          "options": []
+        },
+        "bank": "written",
+        "options": [],
+        "answer": null,
+        "explanation": "MLE 最大化 P(D|θ) 或似然密度。MAP 最大化 P(D|θ)p(θ)，证据与 θ 无关。先验若在整个待优化参数范围内是同一个正常数，两者相同；若先验仅在部分区间非零，MAP 只能在其支持上选。可用严格递增的 log 将连乘化为求和。",
+        "note": "原 100 题 · Q69 提高变式",
+        "kind": "理论",
+        "pair": "Q69",
+        "origin": "bank",
+        "role": "variant",
+        "chapter": 0,
+        "id": 328
+      },
+      {
+        "label": "M70",
+        "text": "A Gaussian mean by hand\nThree independent Gaussian observations with known common variance are 2, 4, and 9. Find the MLE of the mean and name the equivalent loss.",
+        "zh": {
+          "text": "手算高斯均值的 MLE\n三个独立高斯观测为 2、4、9，共同方差已知。求均值的 MLE，并写出等价的最小化目标。",
+          "options": []
+        },
+        "bank": "written",
+        "options": [],
+        "answer": null,
+        "explanation": "高斯对数似然中依赖均值的项正比于负平方误差，所以等价于最小化 Σ(xᵢ−μ)²。最优均值为 (2+4+9)/3=5。",
+        "note": "原 100 题 · Q70 提高变式",
+        "kind": "计算",
+        "pair": "Q70",
+        "origin": "bank",
+        "role": "variant",
+        "chapter": 0,
+        "id": 329
+      },
+      {
+        "label": "M71",
+        "text": "Bernoulli boundary MLE\nFive independent impressions yield zero clicks. Maximize the likelihood on 0≤p≤1. Why does the log-derivative interior formula need a boundary check?",
+        "zh": {
+          "text": "Bernoulli MLE 的边界\n五次独立曝光均无点击。在 [0,1] 上最大化似然。为什么要检查边界？",
+          "options": []
+        },
+        "bank": "written",
+        "options": [],
+        "answer": null,
+        "explanation": "L(p)=(1−p)⁵ 递减，最大值在 p=0。只有内部驻点能由导数为零找到，边界解无需满足该条件。",
+        "note": "原 100 题 · Q71 提高变式",
+        "kind": "计算",
+        "pair": "Q71",
+        "origin": "bank",
+        "role": "variant",
+        "chapter": 0,
+        "id": 54
+      },
+      {
+        "label": "M72",
+        "text": "Recover a penalty from a prior\nFor independent coefficients with prior density proportional to exp(−2Σ|wⱼ|), what objective is minimized by MAP?",
+        "zh": {
+          "text": "从先验反推惩罚\n各系数独立，先验密度正比于 exp(−2Σ|wⱼ|)。MAP 最小化的目标是什么？",
+          "options": []
+        },
+        "bank": "written",
+        "options": [],
+        "answer": null,
+        "explanation": "取负对数后，最小化负对数似然 + 2Σ|wⱼ|，即 L1 型惩罚；归一化常数可省略。",
+        "note": "原 100 题 · Q72 提高变式",
+        "kind": "理论",
+        "pair": "Q72",
+        "origin": "bank",
+        "role": "variant",
+        "chapter": 0,
+        "id": 56
       }
     ],
     [
-      "Q75",
-      {
-        "label": "M75",
-        "text": "Occupancy is an upper bound\nThere are 1,000 observations and 10,000 equal cells. What minimum percentage of cells must be empty? Why can the actual fraction be larger?",
-        "zh": {
-          "text": "空格比例的下界\n1000 条观测放入 10000 个等大 cell。至少多少比例的 cell 为空？实际比例为何可能更高？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "至多 1000 个 cell 非空，所以至少 90% 为空。多条观测可能挤在同一个 cell，进一步增加空格比例。",
-        "note": "原 100 题 · Q75 提高变式",
-        "kind": "计算",
-        "pair": "Q75",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 1
-      },
-      "Q76",
-      {
-        "label": "M76",
-        "text": "Different bins on different axes\nFour axes each have 5 bins and two more axes each have 2 bins. Count the cells. What multiplier comes from adding one 5-bin feature?",
-        "zh": {
-          "text": "各维分箱数不同\n4 个轴各分 5 箱，另两个轴各分 2 箱。求 cell 数。再加一个 5 箱特征后变几倍？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "乘法原则给 5⁴×2²=2500；新增一个轴使 cell 数乘 5。",
-        "note": "原 100 题 · Q76 提高变式",
-        "kind": "计算",
-        "pair": "Q76",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 1
-      },
-      "Q77",
-      {
-        "label": "M77",
-        "text": "Infer dimension from distance scale\nFor two independent points uniform in the unit cube, their RMS Euclidean distance is 5. Find p. Is 5 exactly the mean distance?",
-        "zh": {
-          "text": "由距离尺度反求维数\n两个独立点均匀取自单位立方体，欧氏距离的均方根是 5。求 p。5 是否就是平均距离？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "E[D²]=p/6=25，p=150。RMS 是 √E[D²]，一般大于 E[D]；高维集中时两者相近。",
-        "note": "原 100 题 · Q77 提高变式",
-        "kind": "计算",
-        "pair": "Q77",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 1
-      },
-      "Q78",
-      {
-        "label": "M78",
-        "text": "Compare relative distance gaps\nTwo datasets have nearest/farthest distances 9/12 and 99/102 from a query. Compute the relative contrast in each and identify the less discriminating scale.",
-        "zh": {
-          "text": "对比相对距离差\n两个数据集中到查询点最近／最远距离分别为 9／12 与 99／102。计算相对差，并判断哪组区分能力较弱。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "对比分别为 (12−9)/9=1/3 和 (102−99)/99=1/33。绝对差相同，第二组相对差小，排序更容易受扰动影响。",
-        "note": "原 100 题 · Q78 提高变式",
-        "kind": "计算",
-        "pair": "Q78",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 1
-      },
-      "Q79",
-      {
-        "label": "M79",
-        "text": "Inner cube versus boundary\nA centered inner cube has side 1/2 in four dimensions. What fraction of the unit cube is outside it?",
-        "zh": {
-          "text": "内立方体以外的占比\n四维单位立方体中，居中的内立方体边长为 1/2。内立方体之外占多少体积？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "内体积 (1/2)⁴=1/16，所以外部占 15/16。",
-        "note": "原 100 题 · Q79 提高变式",
-        "kind": "计算",
-        "pair": "Q79",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 1
-      },
-      "Q80",
-      {
-        "label": "M80",
-        "text": "Infer cube dimension\nAn inner cube of side 1/2 occupies 1/32 of the unit cube. What is the dimension? Write the inverse formula for a general fraction f and side s.",
-        "zh": {
-          "text": "由体积反求立方体维数\n边长为 1/2 的内立方体占单位立方体的 1/32。求维数，并写出一般 f、s 的反解。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "sᵖ=f，p=log f/log s；(1/2)⁵=1/32，p=5。",
-        "note": "原 100 题 · Q80 提高变式",
-        "kind": "计算",
-        "pair": "Q80",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 1
-      },
-      "Q81",
-      {
-        "label": "M81",
-        "text": "Invert the shell fraction\nA shell uses the outer 20% of radius in a p-ball and contains fraction 1−0.8⁶ of its volume. Find p. Does changing the ball radius change that fraction?",
-        "zh": {
-          "text": "用壳层占比求维数\np 维球最外 20% 半径的壳层占体积 1−0.8⁶。求 p。改变球半径会改变该比例吗？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "内球比例 0.8ᵖ，因此 p=6。总球与内球同乘 rᵖ，半径抵消。",
-        "note": "原 100 题 · Q81 提高变式",
-        "kind": "计算",
-        "pair": "Q81",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 1
-      },
-      "Q82",
-      {
-        "label": "M82",
-        "text": "Gaussian radius versus pair distance\nFor independent X,Y∼N(0,I₁₀₀), give the typical scale of ‖X‖ and ‖X−Y‖. Why do they differ?",
-        "zh": {
-          "text": "高斯到原点与两点间距离\n独立 X、Y∼N(0,I₁₀₀)。求 ‖X‖、‖X−Y‖ 的典型尺度，并解释差异。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "原点半径约 √100=10。差向量的每坐标方差是 2，两点距离约 √200=10√2。",
-        "note": "原 100 题 · Q82 提高变式",
-        "kind": "计算",
-        "pair": "Q82",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 1
-      },
-      "Q83",
-      {
-        "label": "M83",
-        "text": "Compare two JL targets\nAt fixed n, reducing the allowed distortion from 0.20 to 0.10 changes the JL dimension bound by what factor? What is preserved?",
-        "zh": {
-          "text": "JL 误差减半的代价\nn 不变，允许畸变从 0.20 降到 0.10，JL 维数上界的量级变几倍？它保留什么？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "k=O(log n/ε²)，ε 减半使量级乘 4。保留的是给定 n 点的所有成对距离在指定相对误差内，常数和距离／平方距离版本要按定理口径解释。",
-        "note": "原 100 题 · Q83 提高变式",
-        "kind": "计算",
-        "pair": "Q83",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 1
-      },
       {
         "label": "W3-H01",
         "text": "Three symptoms\nBriefly define sparsity, distance concentration, and volume concentration in high-dimensional space.",
@@ -1061,27 +422,9 @@
         "kind": "理论",
         "role": "original",
         "origin": "homework",
-        "pair": "W3-HV01",
         "context": "",
-        "chapter": 1
-      },
-      {
-        "label": "W3-HV01",
-        "text": "Match observations to symptoms\nClassify these observations: almost all cells are empty; nearest/farthest tends to 1; a thin outer shell contains most of the volume.",
-        "zh": {
-          "text": "把观察与现象配对\n几乎所有格子都空、最近／最远距离趋近 1、薄外壳含大部分体积，分别是什么现象？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "依次是稀疏性、距离集中、体积集中。",
-        "note": "Week 3 Assignment · Part 1 #1 变式",
-        "kind": "理论",
-        "role": "variant",
-        "origin": "homework",
-        "pair": "W3-H01",
-        "chapter": 1
+        "chapter": 1,
+        "id": 96
       },
       {
         "label": "W3-H02",
@@ -1098,27 +441,9 @@
         "kind": "计算",
         "role": "original",
         "origin": "homework",
-        "pair": "W3-HV02",
         "context": "",
-        "chapter": 1
-      },
-      {
-        "label": "W3-HV02",
-        "text": "Use centered-cube coordinates\nIf X,Y are uniform on [−1,1]ᵖ instead, give E[‖X−Y‖²] and the RMS distance.",
-        "zh": {
-          "text": "把区间换成 [−1,1]\n若 X、Y 在 [−1,1]ᵖ 上均匀，求平方距离期望和 RMS。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "每维尺度是 [0,1] 的两倍，平移在相减中抵消。平方距离期望乘 4，得 2p/3，RMS 为 √(2p/3)。",
-        "note": "Week 3 Assignment · Part 1 #2(a) 变式",
-        "kind": "计算",
-        "role": "variant",
-        "origin": "homework",
-        "pair": "W3-H02",
-        "chapter": 1
+        "chapter": 1,
+        "id": 98
       },
       {
         "label": "W3-H03",
@@ -1135,27 +460,10 @@
         "kind": "证明",
         "role": "original",
         "origin": "homework",
-        "pair": "W3-HV03",
         "context": "",
-        "chapter": 1
-      },
-      {
-        "label": "W3-HV03",
-        "text": "Absolute vs. relative spread\nIf squared distances are p±√p, derive the ratio of the smaller to the larger ordinary distance as p grows.",
-        "zh": {
-          "text": "绝对差与相对差\n平方距离为 p±√p。写出开根号后的较小／较大距离之比，并判断极限。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "比值为 √[(1−1/√p)/(1+1/√p)]，极限 1。平方距离差 2√p 虽然变大，相对差变小。",
-        "note": "Week 3 Assignment · Part 1 #2(b) 变式",
-        "kind": "证明",
-        "role": "variant",
-        "origin": "homework",
-        "pair": "W3-H03",
-        "chapter": 1
+        "chapter": 1,
+        "id": 100,
+        "hint": "先比较平方距离的标准差与均值的量级，再想开平方后，两个都靠近同一尺度的距离之比。"
       },
       {
         "label": "W3-H04",
@@ -1172,27 +480,9 @@
         "kind": "理论",
         "role": "original",
         "origin": "homework",
-        "pair": "W3-HV04",
         "context": "",
-        "chapter": 1
-      },
-      {
-        "label": "W3-HV04",
-        "text": "Choose an intervention\nA 500-feature classifier has only 5 informative dimensions. Should you add 500 random features or select informative features before KNN? Explain.",
-        "zh": {
-          "text": "选一种干预方式\n500 个特征里只有 5 个信息特征。做 KNN 前要再加 500 个随机特征，还是筛选信息特征？解释。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "优先在训练／验证数据上筛选有信息的维。增加随机维会让距离更多由噪声决定。",
-        "note": "Week 3 Assignment · Part 1 #3(a) 变式",
-        "kind": "理论",
-        "role": "variant",
-        "origin": "homework",
-        "pair": "W3-H04",
-        "chapter": 1
+        "chapter": 1,
+        "id": 102
       },
       {
         "label": "W3-H05",
@@ -1209,27 +499,28 @@
         "kind": "理论",
         "role": "original",
         "origin": "homework",
-        "pair": "W3-HV05",
         "context": "",
-        "chapter": 1
+        "chapter": 1,
+        "id": 104
       },
       {
-        "label": "W3-HV05",
-        "text": "Solve for a distortion scaling\nAt the same n, increasing projection dimension fourfold gives what change in ε under k proportional to 1/ε²?",
+        "label": "M76",
+        "text": "Different bins on different axes\nFour axes each have 5 bins and two more axes each have 2 bins. Count the cells. What multiplier comes from adding one 5-bin feature?",
         "zh": {
-          "text": "由维数变化反推畸变\nn 相同，投影维数增为 4 倍。按 k 与 1/ε² 成比例，ε 怎样变化？",
+          "text": "各维分箱数不同\n4 个轴各分 5 箱，另两个轴各分 2 箱。求 cell 数。再加一个 5 箱特征后变几倍？",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "ε 变为原来的一半。比例只是界的量级比较，不能当成固定数据上的误差等式。",
-        "note": "Week 3 Assignment · Part 1 #3(b) 变式",
-        "kind": "理论",
+        "explanation": "乘法原则给 5⁴×2²=2500；新增一个轴使 cell 数乘 5。",
+        "note": "原 100 题 · Q76 提高变式",
+        "kind": "计算",
+        "pair": "Q76",
+        "origin": "bank",
         "role": "variant",
-        "origin": "homework",
-        "pair": "W3-H05",
-        "chapter": 1
+        "chapter": 1,
+        "id": 81
       },
       {
         "label": "W3-UNIFPAIR",
@@ -1244,67 +535,46 @@
         "explanation": "E[U]=1/2、E[U²]=1/3。展开得 2/3−2(1/2)²=1/6。对 p 个坐标求和，平方距离期望为 p/6。开根号得到 RMS 尺度，不是有限 p 下的严格期望。",
         "note": "Week 3 Slides · p. 5、13–15",
         "kind": "证明",
-        "chapter": 1
+        "chapter": 1,
+        "id": 106
       },
       {
-        "label": "W3-UNIFCON",
-        "text": "Relative spread of uniform pairwise distances\nFor independent uniform cube points, let S=‖X−Y‖². Given E[(U−V)⁴]=1/15, derive Var(S) and the order of SD(S)/E[S].",
+        "label": "M80",
+        "text": "Infer cube dimension\nAn inner cube of side 1/2 occupies 1/32 of the unit cube. What is the dimension? Write the inverse formula for a general fraction f and side s.",
         "zh": {
-          "text": "均匀点对的距离相对波动\n独立均匀立方体点 X、Y，设 S=‖X−Y‖²。已知 E[(U−V)⁴]=1/15，推导 Var(S) 和 SD(S)/E[S] 的阶。",
+          "text": "由体积反求立方体维数\n边长为 1/2 的内立方体占单位立方体的 1/32。求维数，并写出一般 f、s 的反解。",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "单项方差 1/15−(1/6)²=7/180。独立坐标相加得 Var(S)=7p/180，标准差是 √(7p/180)，除以 p/6 得 √(7/(5p))。绝对距离随 p 增长，相对差异却缩小。",
-        "note": "Week 3 Slides · p. 5、15、25",
-        "kind": "证明",
-        "chapter": 1
+        "explanation": "sᵖ=f，p=log f/log s；(1/2)⁵=1/32，p=5。",
+        "note": "原 100 题 · Q80 提高变式",
+        "kind": "计算",
+        "pair": "Q80",
+        "origin": "bank",
+        "role": "variant",
+        "chapter": 1,
+        "id": 89
       },
       {
-        "label": "W3-GAUSPAIR",
-        "text": "Gaussian pair: mean and variance\nFor independent X,Y∼N(0,Iₚ), derive the mean, variance and SD of S=‖X−Y‖². State the typical distance and its approximate SD for large p.",
+        "label": "M81",
+        "text": "Invert the shell fraction\nA shell uses the outer 20% of radius in a p-ball and contains fraction 1−0.8⁶ of its volume. Find p. Does changing the ball radius change that fraction?",
         "zh": {
-          "text": "高斯点对平方距离的三项\n独立 X、Y∼N(0,Iₚ)，求 S=‖X−Y‖² 的均值、方差和标准差。再给出高维距离的典型值和近似标准差。",
+          "text": "用壳层占比求维数\np 维球最外 20% 半径的壳层占体积 1−0.8⁶。求 p。改变球半径会改变该比例吗？",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "X−Y∼N(0,2Iₚ)，S∼2χ²ₚ。均值 2p、方差 8p、标准差 √(8p)。距离约 √(2p)；在均值附近用 sqrt 的导数 1/(2√(2p)) 线性化，得到距离标准差约 1。",
-        "note": "Week 3 Slides · p. 15、23",
-        "kind": "证明",
-        "chapter": 1
-      },
-      {
-        "label": "W3-GAUSSHELL",
-        "text": "Gaussian annulus around the origin\nFor X∼N(0,Iₚ), derive E[‖X‖²] and Var(‖X‖²). If E[Xᵢ⁴]=3, explain the shell radius and why its relative thickness goes to zero.",
-        "zh": {
-          "text": "高斯环带理论\nX∼N(0,Iₚ)，推导 E[‖X‖²]、Var(‖X‖²)。已知 E[Xᵢ⁴]=3，说明环带半径及相对厚度为什么缩小。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "每项平方均值 1、方差 3−1²=2，独立和给 p 与 2p。半径约 √p，线性化给 SD(‖X‖)≈1/√2，因此绝对厚度是常数量级，相对厚度约 O(1/√p)。",
-        "note": "Week 3 Slides · p. 23–25",
-        "kind": "证明",
-        "chapter": 1
-      },
-      {
-        "label": "W3-UNIFSHELL",
-        "text": "Uniform cube annulus around the origin\nFor X uniform on [0,1]ᵖ, derive E[‖X‖²], Var(‖X‖²) and the typical radius. Use E[Xᵢ²]=1/3 and E[Xᵢ⁴]=1/5.",
-        "zh": {
-          "text": "均匀立方体的环带\nX 在 [0,1]ᵖ 上均匀。用 E[Xᵢ²]=1/3、E[Xᵢ⁴]=1/5，推导平方半径均值、方差和典型半径。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "均值 p/3，独立相加给方差 p(1/5−1/9)=4p/45，SD=√(4p/45)。半径集中在 √(p/3)；开根号后一阶近似给半径 SD≈1/√15。这里从原点量，与两个均匀点的 p/6 不同。",
-        "note": "Week 3 Slides · p. 22、24–25",
-        "kind": "证明",
-        "chapter": 1
+        "explanation": "内球比例 0.8ᵖ，因此 p=6。总球与内球同乘 rᵖ，半径抵消。",
+        "note": "原 100 题 · Q81 提高变式",
+        "kind": "计算",
+        "pair": "Q81",
+        "origin": "bank",
+        "role": "variant",
+        "chapter": 1,
+        "id": 91
       },
       {
         "label": "W3-HYPER",
@@ -1319,82 +589,91 @@
         "explanation": "Vₚ(r)=π^(p/2)rᵖ/Γ(p/2+1)。内球半径 r(1−ε)，因此内球比例为 (1−ε)ᵖ，外壳为 1−(1−ε)ᵖ。例子是 1−1/8=7/8。",
         "note": "Week 3 Slides · p. 17–22",
         "kind": "证明",
-        "chapter": 1
+        "chapter": 1,
+        "id": 111
       },
       {
-        "label": "W3-VOLUME",
-        "text": "Neighborhood side versus dimension\nFor fixed target fraction f=0.1, write the side s(p) for a cube neighborhood. What happens as p grows?",
+        "label": "W3-GAUSPAIR",
+        "text": "Squared distance of two Gaussian points\nFor independent standard Gaussian points X,Y in dimension p, each coordinate of X−Y has variance 2. If Z is χ² with p degrees of freedom, S=‖X−Y‖² has the same law as 2Z. Find E[S], Var(S), SD(S), and the RMS distance.",
         "zh": {
-          "text": "同一体积占比需要多宽的邻域\n目标占比固定 f=0.1，写出 p 维立方体邻域的边长 s(p)，说明 p 增大时怎样变化。",
+          "text": "两高斯点之间的平方距离\n独立标准高斯点 X、Y 的差向量每维方差为 2，故 S=‖X−Y‖² 同分布于 2Z，Z∼χ²ₚ。求 S 的均值、方差、标准差及距离的 RMS。",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "s(p)=0.1^(1/p)=exp(log 0.1/p)→1。只占 10% 体积，也需要在每个坐标上覆盖接近全范围，局部学习因此面临稀疏问题。",
-        "note": "Week 3 Slides · p. 17–22",
-        "kind": "理论",
-        "chapter": 1
+        "explanation": "χ²ₚ 的均值 p、方差 2p。乘 2 后均值 2p、方差 8p、标准差 √(8p)。普通距离的 RMS 为 √(2p)。",
+        "note": "Week 3 Slides · p. 15、23",
+        "kind": "计算",
+        "chapter": 1,
+        "id": 337
       },
       {
-        "label": "W3-KNN",
-        "text": "Make a KNN decision and explain a failure\nFor k=3, the three closest distances are 1.0(A), 1.1(B), 1.2(B), and the fourth is 1.21(A). Predict the class. Why would adding noisy features threaten this vote?",
+        "label": "W3-GAUSSHELL",
+        "text": "The Gaussian shell around the origin\nFor X∼N(0,Iₚ), each squared coordinate has mean 1 and variance 2. Give the mean and variance of ‖X‖² and the typical radius. Why does relative thickness shrink?",
         "zh": {
-          "text": "KNN 投票与高维失效\nk=3，最近三个距离为 1.0(A)、1.1(B)、1.2(B)，第四为 1.21(A)。预测类别，并解释无关维度为何可能影响投票。",
+          "text": "高斯点到原点的环带\nX∼N(0,Iₚ)，各坐标平方均值为 1、方差为 2。求 ‖X‖² 的均值和方差，以及典型半径。相对厚度为什么变小？",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "B 得两票。第三、第四名接近，额外噪声维度会干扰距离排序并改变邻居；同时高维局部区域样本稀疏。可先选有用特征、学习低维表示或在允许误差时随机投影。",
-        "note": "Week 3 Slides · p. 7–9、13–16、26",
-        "kind": "理论",
-        "chapter": 1
+        "explanation": "独立求和给均值 p、方差 2p。相对标准差 √(2p)/p 随维度减小，因此开根后的半径集中在 √p 附近。",
+        "note": "Week 3 Slides · p. 23–25",
+        "kind": "计算",
+        "chapter": 1,
+        "id": 338
+      },
+      {
+        "label": "W3-UNIFSHELL",
+        "text": "Uniform points and the origin\nFor X uniform in [0,1]ᵖ, use E[Xᵢ²]=1/3 and E[Xᵢ⁴]=1/5 to find E[‖X‖²], Var(‖X‖²), and the typical radius.",
+        "zh": {
+          "text": "均匀点到原点的半径\nX 在 [0,1]ᵖ 中均匀。用 E[Xᵢ²]=1/3、E[Xᵢ⁴]=1/5 求 ‖X‖² 的均值、方差与典型半径。",
+          "options": []
+        },
+        "bank": "written",
+        "options": [],
+        "answer": null,
+        "explanation": "每个平方项的方差是 1/5−1/9=4/45。独立求和给均值 p/3、方差 4p/45、标准差 √(4p/45)，典型半径约 √(p/3)。",
+        "note": "Week 3 Slides · p. 22、24–25",
+        "kind": "计算",
+        "chapter": 1,
+        "id": 339
       },
       {
         "label": "W3-HOEFF",
-        "text": "Read a concentration bound\nFor independent Uᵢ∈[0,1], Hoeffding bounds P(|Ȳ−EȲ|≥ε) by 2exp(−2pε²), where Ȳ=p⁻¹ΣUᵢ. If ε halves, how must p change to keep the bound fixed? Can the same bounded argument be applied directly to squared Gaussians?",
+        "text": "Read the concentration formula\nA bound has the form 2exp(−2pε²). Holding ε fixed, does it increase or decrease as p grows? What happens to the exponent when p doubles?",
         "zh": {
-          "text": "理解集中不等式\n独立 Uᵢ∈[0,1] 时，均值的双侧 Hoeffding 界为 2exp(−2pε²)。ε 减半时 p 如何变才能保持界？能直接用于高斯平方吗？",
+          "text": "读懂集中界\n集中界写成 2exp(−2pε²)。ε 固定时，p 增大，界变大还是变小？p 加倍时指数怎样变？",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "保持 pε² 不变，p 乘 4。高斯平方不有界，不能直接套这个有界版本；可用 χ² 集中等适用工具。均匀平方坐标有界，因此可用。",
+        "explanation": "上界变小。p 加倍后指数从 −2pε² 变成 −4pε²，更负。这里是有界独立变量均值的 Hoeffding 界。",
         "note": "Week 3 Slides · p. 25",
         "kind": "理论",
-        "chapter": 1
+        "chapter": 1,
+        "id": 340
       },
       {
-        "label": "W3-JL",
-        "text": "Calculate a JL scaling comparison\nIf the number of points changes from n to n² at fixed ε, what happens to log n/ε²? Does the projection preserve each original coordinate?",
+        "label": "M83",
+        "text": "Compare two JL targets\nAt fixed n, reducing the allowed distortion from 0.20 to 0.10 changes the JL dimension bound by what factor? What is preserved?",
         "zh": {
-          "text": "JL 保什么、上界怎么算\nε 固定，点数从 n 变成 n²，log n/ε² 怎样变化？随机投影会保留每个原坐标吗？",
+          "text": "JL 误差减半的代价\nn 不变，允许畸变从 0.20 降到 0.10，JL 维数上界的量级变几倍？它保留什么？",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "log(n²)=2log n，量级乘 2。JL 控制给定点的成对距离，投影后的坐标通常是原特征的线性组合。若估算出的维数大于原维数，结论并未给出有用压缩。",
-        "note": "Week 3 Slides · p. 26–28",
-        "kind": "理论",
-        "chapter": 1
-      },
-      {
-        "label": "W3-BALL",
-        "text": "Why unit-ball volume eventually shrinks\nUse Γ(t+1)=tΓ(t) to derive Vₚ₊₂(1)/Vₚ(1). Explain why the volumes go to zero.",
-        "zh": {
-          "text": "单位球体积为什么最终缩小？\n用 Γ(t+1)=tΓ(t) 推导 Vₚ₊₂(1)/Vₚ(1)，解释为何体积趋于零。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "相邻同奇偶维度的比为 π/(p/2+1)=2π/(p+2)。它趋于 0，所以从某个维数起每加两维，体积至少以固定几何比例下降；奇、偶两个子序列都趋于 0。",
-        "note": "Week 3 Slides · p. 20–21",
-        "kind": "证明",
-        "chapter": 1
+        "explanation": "k=O(log n/ε²)，ε 减半使量级乘 4。保留的是给定 n 点的所有成对距离在指定相对误差内，常数和距离／平方距离版本要按定理口径解释。",
+        "note": "原 100 题 · Q83 提高变式",
+        "kind": "计算",
+        "pair": "Q83",
+        "origin": "bank",
+        "role": "variant",
+        "chapter": 1,
+        "id": 95
       }
     ],
     [
@@ -1413,27 +692,10 @@
         "kind": "证明",
         "role": "original",
         "origin": "slides",
-        "pair": "W4-LV01",
         "context": "原题的 “greater than” 一般应读作“不小于”，解析给出严格不等式的条件。",
-        "chapter": 2
-      },
-      {
-        "label": "W4-LV01",
-        "text": "Equality case\nFor 1≤i<j<∞, give the exact equality condition in ‖d‖ᵢ≥‖d‖ⱼ and justify it from the normalized proof.",
-        "zh": {
-          "text": "补全等号条件\n1≤i<j<∞ 时，‖d‖ᵢ≥‖d‖ⱼ 什么时候取等号？用归一化证明解释。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "零向量显然取等。非零时，归一化后每个非零项必须满足 tʲ=tⁱ，即 t=1。由于 Σtⁱ=1，只能有一个非零项。",
-        "note": "Week 4 Slides · p. 12 变式",
-        "kind": "证明",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W4-L01",
-        "chapter": 2
+        "chapter": 2,
+        "id": 117,
+        "hint": "先用 Lᵢ 除每个坐标差，让各项在 [0,1]。在这个区间内，对同一个数增加指数会怎样？"
       },
       {
         "label": "W4-L02",
@@ -1450,27 +712,9 @@
         "kind": "计算",
         "role": "original",
         "origin": "slides",
-        "pair": "W4-LV02",
         "context": "",
-        "chapter": 2
-      },
-      {
-        "label": "W4-LV02",
-        "text": "Order three norms\nFind L₁,L₂,L∞ for the absolute coordinate differences (1,2,2).",
-        "zh": {
-          "text": "对同一差向量求三种范数\n坐标绝对差为 (1,2,2)。求 L₁、L₂、L∞。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "分别为 5、3、2，满足 L₁≥L₂≥L∞。",
-        "note": "Week 4 Slides · p. 13(a) 变式",
-        "kind": "计算",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W4-L02",
-        "chapter": 2
+        "chapter": 2,
+        "id": 119
       },
       {
         "label": "W4-L03",
@@ -1487,27 +731,9 @@
         "kind": "证明",
         "role": "original",
         "origin": "slides",
-        "pair": "W4-LV03",
         "chapter": 2,
-        "hint": "手算门槛提示：只需比较 k=14 与 k=15 的给定近似 L₁₄≈4.010017、L₁₅≈4.007040，再说明为什么比较这两项即可。"
-      },
-      {
-        "label": "W4-LV03",
-        "text": "A finite equality can occur\nFor differences (0,5,0) and (0,5,1), determine when Lₖ=L∞ for finite k≥1.",
-        "zh": {
-          "text": "哪组差向量能有限取等？\n差向量 (0,5,0) 与 (0,5,1) 中，分别何时有有限 k≥1 的 Lₖ=L∞？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "第一组仅一个非零坐标，任意 k 都等于 5。第二组多一项 1ᵏ，任何有限 k 都严格大于 5。",
-        "note": "Week 4 Slides · p. 13(b) 变式",
-        "kind": "证明",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W4-L03",
-        "chapter": 2
+        "hint": "手算门槛提示：只需比较 k=14 与 k=15 的给定近似 L₁₄≈4.010017、L₁₅≈4.007040，再说明为什么比较这两项即可。",
+        "id": 121
       },
       {
         "label": "W4-L04",
@@ -1524,27 +750,9 @@
         "kind": "计算",
         "role": "original",
         "origin": "slides",
-        "pair": "W4-LV04",
         "context": "",
-        "chapter": 2
-      },
-      {
-        "label": "W4-LV04",
-        "text": "Feature units change the metric\nTwo feature differences are 3 cm and 4 cm. After converting only the first to mm and treating numbers as unitless, what happens to raw L₂?",
-        "zh": {
-          "text": "单位会改变原始距离\n两个特征差为 3 cm、4 cm，只把第一个换算成 mm 后忽略单位。原始 L₂ 怎样变？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "数值从 √(3²+4²)=5 变为 √(30²+4²)=√916。单位选择改变了权重，可先统一单位或在合适时标准化。",
-        "note": "Week 4 Slides · p. 14 变式",
-        "kind": "计算",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W4-L04",
-        "chapter": 2
+        "chapter": 2,
+        "id": 123
       },
       {
         "label": "W4-L05",
@@ -1561,27 +769,9 @@
         "kind": "计算",
         "role": "original",
         "origin": "slides",
-        "pair": "W4-LV05",
         "context": "",
-        "chapter": 2
-      },
-      {
-        "label": "W4-LV05",
-        "text": "Recover the angle from a sign and ratio\nFor x=(1,−1), y=(−1,0), find the cosine and the angle.",
-        "zh": {
-          "text": "由余弦求钝角\nx=(1,−1)、y=(−1,0)。求余弦和角度。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "点积 −1，范数 √2 和 1，所以 cosθ=−1/√2，θ=135°。",
-        "note": "Week 4 Slides · p. 28 变式",
-        "kind": "计算",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W4-L05",
-        "chapter": 2
+        "chapter": 2,
+        "id": 125
       },
       {
         "label": "W4-L06",
@@ -1598,27 +788,9 @@
         "kind": "证明",
         "role": "original",
         "origin": "slides",
-        "pair": "W4-LV06",
         "context": "余弦角要求两向量均非零。",
-        "chapter": 2
-      },
-      {
-        "label": "W4-LV06",
-        "text": "Characterize both extreme binary angles\nFor nonzero binary vectors, when is the angle exactly 90°, and when is it exactly 0°?",
-        "zh": {
-          "text": "二元向量何时是 0° 或 90°？\n两个非零二元向量何时恰好为 90°？何时恰好为 0°？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "点积是重叠 1 的个数，所以 90° 当且仅当无重叠。0° 当且仅当正比例；非零二元向量正比例只能系数为 1，故两向量相同。",
-        "note": "Week 4 Slides · p. 29 变式",
-        "kind": "证明",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W4-L06",
-        "chapter": 2
+        "chapter": 2,
+        "id": 127
       },
       {
         "label": "W4-L07",
@@ -1635,27 +807,9 @@
         "kind": "计算",
         "role": "original",
         "origin": "slides",
-        "pair": "W4-LV07",
         "context": "",
-        "chapter": 2
-      },
-      {
-        "label": "W4-LV07",
-        "text": "Read a small LCS table\nFind one LCS and the insert-delete distance between cab and abc.",
-        "zh": {
-          "text": "手算小 LCS\n找 cab 与 abc 的一个 LCS，并计算仅插删距离。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "ab 是共同子序列。两个长度 3 的串不同，LCS 长度不可能是 3，所以最大长度为 2，距离 6−4=2。",
-        "note": "Week 4 Slides · p. 34 变式",
-        "kind": "计算",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W4-L07",
-        "chapter": 2
+        "chapter": 2,
+        "id": 129
       },
       {
         "label": "W4-L08",
@@ -1672,27 +826,28 @@
         "kind": "计算",
         "role": "original",
         "origin": "slides",
-        "pair": "W4-LV08",
         "context": "",
-        "chapter": 2
+        "chapter": 2,
+        "id": 131
       },
       {
-        "label": "W4-LV08",
-        "text": "A transposition helps\nCompare ordinary Levenshtein and adjacent-transposition-allowed edit distances from form to from.",
+        "id": 341,
+        "label": "W4-L08B",
+        "chapter": 2,
+        "text": "Extended edit distance: repeat the three pairs\nFind the distances for (a) abcdef → bdaefc; (b) abccdabc → acbdcab; (c) abcdef → baedfc. Insertions, deletions, substitutions, and adjacent swaps each cost 1.",
         "zh": {
-          "text": "交换什么时候更省？\n比较 form 到 from 的普通 Levenshtein 距离和允许相邻交换的距离。",
+          "text": "扩展编辑距离：重做三组字符串\n求 (a) abcdef → bdaefc；(b) abccdabc → acbdcab；(c) abcdef → baedfc 的编辑距离。插入、删除、替换和相邻交换各计 1。",
           "options": []
         },
+        "explanation": "依次为 4、3、4。一组最短路径如下。(a) abcdef → bcdef → bdef → bdaef → bdaefc。(b) abccdabc → acbcdabc → acbdcabc → acbdcab。(c) abcdef → bcdef → badef → baedf → baedfc。核验最小时，可以按操作数逐层比较；这三组在允许交换的前缀表中也分别得到 4、3、4。",
+        "note": "Week 4 Slides · p. 35 · “Repeat Exercise 3.5.7”; Mining of Massive Datasets · §3.5.7 Exercises 3.5.7–3.5.8",
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "普通定义下有两个错位，长度相同，一次替换不足，需两步。允许交换时直接交换相邻 o、r，距离为 1。",
-        "note": "Week 4 Slides · p. 35 变式",
         "kind": "计算",
-        "role": "variant",
         "origin": "slides",
-        "pair": "W4-L08",
-        "chapter": 2
+        "role": "original",
+        "hint": "课件这里引用课本 3.5.7，所以第 (a)、(c) 组按课本写成 abcdef。先按一对一对做。填前缀表时，在插、删、替换之外，末尾两字母恰好互换时还可比较左上两格的值加 1。"
       },
       {
         "label": "W4-L09",
@@ -1709,27 +864,9 @@
         "kind": "计算",
         "role": "original",
         "origin": "slides",
-        "pair": "W4-LV09",
         "context": "课件表中的部分数值与逐位比较不符，本题解析按 Hamming 定义核对。",
-        "chapter": 2
-      },
-      {
-        "label": "W4-LV09",
-        "text": "Hamming as XOR popcount\nUse XOR to find the Hamming distance of 101100 and 111001.",
-        "zh": {
-          "text": "异或后数 1\n用异或求 101100 与 111001 的 Hamming 距离。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "异或为 010101，有 3 个 1，距离为 3。",
-        "note": "Week 4 Slides · p. 39 变式",
-        "kind": "计算",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W4-L09",
-        "chapter": 2
+        "chapter": 2,
+        "id": 133
       },
       {
         "label": "W4-L10",
@@ -1746,27 +883,9 @@
         "kind": "计算",
         "role": "original",
         "origin": "slides",
-        "pair": "W4-LV10",
         "context": "",
-        "chapter": 2
-      },
-      {
-        "label": "W4-LV10",
-        "text": "Equal angle, different norm distance\nCompare distances for (x,y) and (2x,2y), where x=(1,0,1) and y=(0,1,1). Which stay fixed?",
-        "zh": {
-          "text": "整体缩放后哪些距离不变？\n对 x=(1,0,1)、y=(0,1,1)，比较 (x,y) 与 (2x,2y)。哪些距离不变？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "所有 Lᵣ 距离（含 L∞）乘 2；角距离不变，因余弦分子分母同乘 4。",
-        "note": "Week 4 Slides · p. 45 #1 变式",
-        "kind": "计算",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W4-L10",
-        "chapter": 2
+        "chapter": 2,
+        "id": 135
       },
       {
         "label": "W4-L11",
@@ -1783,27 +902,10 @@
         "kind": "证明",
         "role": "original",
         "origin": "slides",
-        "pair": "W4-LV11",
         "context": "",
-        "chapter": 2
-      },
-      {
-        "label": "W4-LV11",
-        "text": "Without the square root\nUse unit directions at 0°, 60°, and 120° to test whether 1−cos θ is a metric.",
-        "zh": {
-          "text": "去掉平方根会怎样？\n用 0°、60°、120° 的单位向量检验 1−cos θ 是否为度量。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "两小段各是 1−1/2=1/2，大段是 1−(−1/2)=1.5>1，违反三角不等式。",
-        "note": "Week 4 Slides · p. 45 #2 变式",
-        "kind": "证明",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W4-L11",
-        "chapter": 2
+        "chapter": 2,
+        "id": 137,
+        "hint": "先展开 ‖x−y‖₂²，再用 ‖x‖₂=‖y‖₂=1。"
       },
       {
         "label": "W4-L12",
@@ -1820,27 +922,10 @@
         "kind": "证明",
         "role": "original",
         "origin": "slides",
-        "pair": "W4-LV12",
         "context": "",
-        "chapter": 2
-      },
-      {
-        "label": "W4-LV12",
-        "text": "Name the other three axioms\nWith d(∅,∅)=0, show that Jaccard distance is nonnegative, symmetric, and zero only for equal sets.",
-        "zh": {
-          "text": "证明 Jaccard 另外三条公理\n约定 d(∅,∅)=0，证明 Jaccard 非负、对称且只有相等集合距离为零。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "交集包含于并集，故比值至多 1。交换集合不改变交并。并集非空时距离为零要求交集与并集一样大，对有限集合这意味着交集=并集，从而 A=B。",
-        "note": "Week 4 Slides · p. 45 #3 变式",
-        "kind": "证明",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W4-L12",
-        "chapter": 2
+        "chapter": 2,
+        "id": 139,
+        "hint": "对同一个随机 minhash，若 h(A)≠h(C)，h(B) 能同时等于 h(A) 与 h(C) 吗？"
       },
       {
         "label": "W4-L13",
@@ -1857,27 +942,9 @@
         "kind": "证明",
         "role": "original",
         "origin": "slides",
-        "pair": "W4-LV13",
         "context": "",
-        "chapter": 2
-      },
-      {
-        "label": "W4-LV13",
-        "text": "Prove the LCS distance formula\nWhy is the minimum insert-delete distance |x|+|y|−2|LCS(x,y)|? Give both inequalities.",
-        "zh": {
-          "text": "证明插删距离的 LCS 公式\n为什么最小插删距离等于 |x|+|y|−2|LCS(x,y)|？给出上下界。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "任一编辑路径中保留下来的原字符按序构成共同子序列，保留数至多 L，故至少删 |x|−L、插 |y|−L。选一条最长公共子序列，只删和插它之外的字符即可达到该下界。",
-        "note": "Week 4 Slides · p. 45 #4 变式",
-        "kind": "证明",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W4-L13",
-        "chapter": 2
+        "chapter": 2,
+        "id": 141
       },
       {
         "label": "W4-L14",
@@ -1894,179 +961,9 @@
         "kind": "证明",
         "role": "original",
         "origin": "slides",
-        "pair": "W4-LV14",
         "context": "",
-        "chapter": 2
-      },
-      {
-        "label": "W4-LV14",
-        "text": "What if both are unit vectors?\nCan two unit vectors have cosine similarity 1 and positive Euclidean distance? Prove your answer.",
-        "zh": {
-          "text": "如果两个都已归一化呢？\n两个单位向量可以余弦相似度为 1，欧氏距离却为正吗？证明。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "不能。‖x−y‖²=2−2xᵀy=2−2=0，所以单位向量相同。",
-        "note": "Week 4 Slides · p. 45 #5 变式",
-        "kind": "证明",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W4-L14",
-        "chapter": 2
-      },
-      "Q84",
-      {
-        "label": "M84",
-        "text": "Find the failed metric axiom\nOn ℝ let d(x,y)=|x−y|². Use the points 0,1,2 to decide which metric axiom fails.",
-        "zh": {
-          "text": "指出失败的度量公理\n在 ℝ 上令 d(x,y)=|x−y|²。用 0、1、2 判断哪个度量公理不成立。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "d(0,2)=4>d(0,1)+d(1,2)=2，三角不等式失败；非负性、同一性和对称性仍成立。",
-        "note": "原 100 题 · Q84 提高变式",
-        "kind": "理论",
-        "pair": "Q84",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 2
-      },
-      "Q85",
-      {
-        "label": "M85",
-        "text": "Three distances in four coordinates\nFor x=(1,0,−2,4) and y=(−1,1,−2,1), compute L₁,L₂,L∞.",
-        "zh": {
-          "text": "四坐标的三种距离\nx=(1,0,−2,4)、y=(−1,1,−2,1)。求 L₁、L₂、L∞。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "绝对差为 (2,1,0,3)。结果分别为 6、√14、3。",
-        "note": "原 100 题 · Q85 提高变式",
-        "kind": "计算",
-        "pair": "Q85",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 2
-      },
-      "Q86",
-      {
-        "label": "M86",
-        "text": "Recover a missing difference\nA coordinate-difference vector is (2,3,a), a≥0. Its L₁ norm is 9. Find a and its L∞ norm.",
-        "zh": {
-          "text": "反推未知坐标差\n坐标差为 (2,3,a)、a≥0，L₁ 范数为 9。求 a 和 L∞ 范数。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "2+3+a=9，故 a=4，最大绝对差为 4。",
-        "note": "原 100 题 · Q86 提高变式",
-        "kind": "计算",
-        "pair": "Q86",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 2
-      },
-      "Q87",
-      {
-        "label": "M87",
-        "text": "Sets discard duplicates\nA bag lists a,a,b,c and B lists b,c,d,d. Treat them as sets and compute Jaccard similarity and distance.",
-        "zh": {
-          "text": "集合的重复元素怎么处理\nA 列出 a,a,b,c，B 列出 b,c,d,d。按集合处理，求 Jaccard 相似度与距离。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "去重后交集为 {b,c}，并集为 {a,b,c,d}。相似度 1/2，距离 1/2。",
-        "note": "原 100 题 · Q87 提高变式",
-        "kind": "计算",
-        "pair": "Q87",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 2
-      },
-      "Q88",
-      {
-        "label": "M88",
-        "text": "Separate three cosine-derived quantities\nFor x=(1,0), y=(1,√3), give cosine similarity, the angle in degrees, and 1−cos θ.",
-        "zh": {
-          "text": "区分余弦、角距离与 1−cos\nx=(1,0)、y=(1,√3)。分别求余弦相似度、角距离（度）和 1−cos θ。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "点积 1，范数为 1 和 2，所以相似度 1/2，角度 60°，1−cos θ=1/2。",
-        "note": "原 100 题 · Q88 提高变式",
-        "kind": "计算",
-        "pair": "Q88",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 2
-      },
-      "Q89",
-      {
-        "label": "M89",
-        "text": "Negative rescaling changes direction\nFor a nonzero x, compare cosine similarity and L₂ distance for pairs (x,3x) and (x,−3x).",
-        "zh": {
-          "text": "正负缩放对方向的影响\nx 非零。分别比较 (x,3x) 和 (x,−3x) 的余弦相似度及 L₂ 距离。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "正缩放同向，相似度 1，距离 2‖x‖。负缩放反向，相似度 −1，距离 4‖x‖。",
-        "note": "原 100 题 · Q89 提高变式",
-        "kind": "计算",
-        "pair": "Q89",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 2
-      },
-      "Q90",
-      {
-        "label": "M90",
-        "text": "Explain an insert-delete path\nFor abc and bcd, find an LCS and the insert-delete distance. Give a matching edit path.",
-        "zh": {
-          "text": "找 LCS 并写编辑路径\n对 abc 和 bcd，找一个 LCS 与仅插删距离，并写一条达到该距离的路径。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "LCS 是 bc，长度 2，距离 3+3−4=2。删除开头 a，在末尾插入 d。",
-        "note": "原 100 题 · Q90 提高变式",
-        "kind": "计算",
-        "pair": "Q90",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 2
-      },
-      "Q91",
-      {
-        "label": "M91",
-        "text": "Hamming versus transposition\nCompare the Hamming distance and the adjacent-transposition-allowed edit distance between 01 and 10.",
-        "zh": {
-          "text": "Hamming 与交换编辑\n比较 01 和 10 的 Hamming 距离，以及允许相邻交换的编辑距离。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "两个位置都不同，Hamming=2。一次交换即可变换，扩展编辑距离为 1。",
-        "note": "原 100 题 · Q91 提高变式",
-        "kind": "计算",
-        "pair": "Q91",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 2
+        "chapter": 2,
+        "id": 143
       },
       {
         "label": "W4-H01",
@@ -2083,27 +980,9 @@
         "kind": "证明",
         "role": "original",
         "origin": "homework",
-        "pair": "W4-HV01",
         "context": "",
-        "chapter": 2
-      },
-      {
-        "label": "W4-HV01",
-        "text": "A weighted Hamming metric\nDoes the same proof work with a positive weight per position? What breaks if some weight is zero?",
-        "zh": {
-          "text": "加权 Hamming 还是度量吗？\n每个位置乘正权重，上述证明还成立吗？若某位置权重为零会怎样？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "每个位置乘非负权重后求和，三角不等式仍成立。若有零权重，仅在该位置不同的串也可距离零，失去同一性。",
-        "note": "Week 4 Assignment · Demo 5 Q3 变式",
-        "kind": "证明",
-        "role": "variant",
-        "origin": "homework",
-        "pair": "W4-H01",
-        "chapter": 2
+        "chapter": 2,
+        "id": 161
       },
       {
         "label": "W4-H02",
@@ -2120,27 +999,9 @@
         "kind": "理论",
         "role": "original",
         "origin": "homework",
-        "pair": "W4-HV02",
         "context": "",
-        "chapter": 2
-      },
-      {
-        "label": "W4-HV02",
-        "text": "TF-IDF vs. raw counts\nWhy might a word that occurs in nearly all documents be given less weight than a rare topic word?",
-        "zh": {
-          "text": "TF-IDF 为什么降低常见词权重？\n为什么几乎出现在所有文档里的词，比只在少数文档出现的主题词权重更低？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "常见词对区分文档主题帮助较小，IDF 会减小其影响；原始词频没有这个跨文档区分。",
-        "note": "Week 4 Assignment · Demo 3 Q3 变式",
-        "kind": "理论",
-        "role": "variant",
-        "origin": "homework",
-        "pair": "W4-H02",
-        "chapter": 2
+        "chapter": 2,
+        "id": 163
       },
       {
         "label": "W4-H03",
@@ -2157,27 +1018,9 @@
         "kind": "计算",
         "role": "original",
         "origin": "homework",
-        "pair": "W4-HV03",
         "context": "",
-        "chapter": 2
-      },
-      {
-        "label": "W4-HV03",
-        "text": "Switch the allowed operations\nWhat is the distance between recieve and receive if adjacent transposition costs one?",
-        "zh": {
-          "text": "允许相邻交换以后\n相邻交换成本为 1 时，recieve 与 receive 的距离是多少？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "相邻 i、e 对调一次即可，故距离 1。",
-        "note": "Week 4 Assignment · Demo 4 Q3 变式",
-        "kind": "计算",
-        "role": "variant",
-        "origin": "homework",
-        "pair": "W4-H03",
-        "chapter": 2
+        "chapter": 2,
+        "id": 165
       },
       {
         "label": "W4-H04",
@@ -2194,27 +1037,28 @@
         "kind": "理论",
         "role": "original",
         "origin": "homework",
-        "pair": "W4-HV04",
         "context": "",
-        "chapter": 2
+        "chapter": 2,
+        "id": 167
       },
       {
-        "label": "W4-HV04",
-        "text": "Two candidates for a set median\nUnder Jaccard distance, compare the total distance from candidate {a} and candidate {b} to the two sets {a} and {b}.",
+        "label": "M84",
+        "text": "Find the failed metric axiom\nOn ℝ let d(x,y)=|x−y|². Use the points 0,1,2 to decide which metric axiom fails.",
         "zh": {
-          "text": "集合中位点也可能不唯一\n在 Jaccard 距离下，候选 {a} 和 {b} 到给定两集合 {a}、{b} 的距离和各是多少？",
+          "text": "指出失败的度量公理\n在 ℝ 上令 d(x,y)=|x−y|²。用 0、1、2 判断哪个度量公理不成立。",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "均为 0+1=1。由三角不等式任何候选距离和至少是两端距离 1，因此两者都是最优。",
-        "note": "Week 4 Assignment · Consolidated Q5 变式",
+        "explanation": "d(0,2)=4>d(0,1)+d(1,2)=2，三角不等式失败；非负性、同一性和对称性仍成立。",
+        "note": "原 100 题 · Q84 提高变式",
         "kind": "理论",
+        "pair": "Q84",
+        "origin": "bank",
         "role": "variant",
-        "origin": "homework",
-        "pair": "W4-H04",
-        "chapter": 2
+        "chapter": 2,
+        "id": 146
       },
       {
         "label": "W4-EUCLID",
@@ -2229,7 +1073,8 @@
         "explanation": "平方和开根非负；为零当且仅当每个差都为零；换序取反不改平方。令 a=x−z、b=z−y，‖a+b‖²=‖a‖²+2a·b+‖b‖²≤(‖a‖+‖b‖)²，开根即三角不等式。",
         "note": "Week 4 Slides · p. 5–6",
         "kind": "证明",
-        "chapter": 2
+        "chapter": 2,
+        "id": 169
       },
       {
         "label": "W4-NORMS",
@@ -2244,37 +1089,27 @@
         "explanation": "‖d‖ᵣ=(Σ|dᵢ|ʳ)^(1/r)，r=1 是绝对值和，r=2 是平方和开根。M≤‖d‖ᵣ≤p^(1/r)M，p 固定，令 r→∞ 得 M。二维单位球分别是菱形、圆盘、轴对齐正方形。",
         "note": "Week 4 Slides · p. 7–11",
         "kind": "证明",
-        "chapter": 2
+        "chapter": 2,
+        "id": 170
       },
       {
-        "label": "W4-ANGULAR",
-        "text": "Distinguish angle, direction, and distance\nWhy is the angle not a metric on all nonzero raw vectors? What domain fixes the identity issue?",
+        "label": "M87",
+        "text": "Sets discard duplicates\nA bag lists a,a,b,c and B lists b,c,d,d. Treat them as sets and compute Jaccard similarity and distance.",
         "zh": {
-          "text": "角距离为什么在原向量上不总是度量\n为什么角度在全部非零原始向量上不是度量？在哪个定义域上能解决同一性问题？",
+          "text": "集合的重复元素怎么处理\nA 列出 a,a,b,c，B 列出 b,c,d,d。按集合处理，求 Jaccard 相似度与距离。",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "不同的正比例向量如 (1,0)、(2,0) 角度为零，违反同一性。限制到单位向量（或把同向正比例向量识别为同一方向）后，角距离是球面最短弧长度，满足三角不等式。",
-        "note": "Week 4 Slides · p. 23–27、40–42",
-        "kind": "理论",
-        "chapter": 2
-      },
-      {
-        "label": "W4-EDITDP",
-        "text": "Write the edit recurrence\nFor insertions and deletions only, give the dynamic-programming recurrence and boundary values for prefix distance D(i,j). Why is the resulting distance symmetric?",
-        "zh": {
-          "text": "写出插删距离递推\n只允许插入与删除，给出前缀距离 D(i,j) 的递推、边界，并解释为什么对称。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "D(i,0)=i、D(0,j)=j。若末字符相同，可取 D(i−1,j−1)；否则取 1+min(D(i−1,j),D(i,j−1))。每次插入的逆操作是删除，反转任意路径费用不变。拼接两条路径还能证明三角不等式。",
-        "note": "Week 4 Slides · p. 30–35",
-        "kind": "理论",
-        "chapter": 2
+        "explanation": "去重后交集为 {b,c}，并集为 {a,b,c,d}。相似度 1/2，距离 1/2。",
+        "note": "原 100 题 · Q87 提高变式",
+        "kind": "计算",
+        "pair": "Q87",
+        "origin": "bank",
+        "role": "variant",
+        "chapter": 2,
+        "id": 152
       },
       {
         "label": "W4-SHINGLE",
@@ -2289,7 +1124,24 @@
         "explanation": "集合分别 {ab,bc,ca} 与 {ab,bd,da}，相似度 1/5。随机排列下相同最小哈希的概率就是相似度，多次碰撞的频率用于估计。",
         "note": "Week 4 Slides · p. 17–22",
         "kind": "计算",
-        "chapter": 2
+        "chapter": 2,
+        "id": 173
+      },
+      {
+        "label": "W4-EDITDP",
+        "text": "Write the edit recurrence\nFor insertions and deletions only, give the dynamic-programming recurrence and boundary values for prefix distance D(i,j). Why is the resulting distance symmetric?",
+        "zh": {
+          "text": "写出插删距离递推\n只允许插入与删除，给出前缀距离 D(i,j) 的递推、边界，并解释为什么对称。",
+          "options": []
+        },
+        "bank": "written",
+        "options": [],
+        "answer": null,
+        "explanation": "D(i,0)=i、D(0,j)=j。若末字符相同，可取 D(i−1,j−1)；否则取 1+min(D(i−1,j),D(i,j−1))。每次插入的逆操作是删除，反转任意路径费用不变。拼接两条路径还能证明三角不等式。",
+        "note": "Week 4 Slides · p. 30–35",
+        "kind": "理论",
+        "chapter": 2,
+        "id": 172
       },
       {
         "label": "W4-CHOICE",
@@ -2304,7 +1156,25 @@
         "explanation": "依次用 Jaccard、角距离（向量非零）、Hamming、编辑距离。数值坐标则可按特征尺度与任务选择 Lᵣ；高维下还要关注距离集中。",
         "note": "Week 4 Slides · p. 3–4、11、22、27、36–44",
         "kind": "理论",
-        "chapter": 2
+        "chapter": 2,
+        "id": 174
+      },
+      {
+        "id": 342,
+        "label": "W4-T01",
+        "chapter": 2,
+        "text": "Can two norms rank neighbors differently?\nFrom a=(0,0), compare points b=(3,0) and c=(2,2). Which is nearer under L₁? Under L₂?",
+        "zh": {
+          "text": "两个范数会改变最近邻吗？\n以 a=(0,0) 为查询点，比较 b=(3,0) 和 c=(2,2)。按 L₁ 谁更近？按 L₂ 呢？",
+          "options": []
+        },
+        "explanation": "L₁ 下分别是 3、4，所以 b 更近。L₂ 下分别是 3、√8，因 √8<3，所以 c 更近。",
+        "note": "Phillips, Mathematical Foundations for Data Analysis · Exercise 4.5（改编）",
+        "bank": "written",
+        "options": [],
+        "answer": null,
+        "kind": "计算",
+        "origin": "textbook"
       }
     ],
     [
@@ -2323,27 +1193,9 @@
         "kind": "计算",
         "role": "original",
         "origin": "slides",
-        "pair": "W5-LV01",
         "context": "课件按二元逻辑回归，使用 ∇ℓ=(σ(wᵀx)−y)x。",
-        "chapter": 3
-      },
-      {
-        "label": "W5-LV01",
-        "text": "Flip the binary label\nFor the same Iris x and initial w, change the label to 0. With the same η, find the new update and explain the change in direction.",
-        "zh": {
-          "text": "把标签改成 0\n同样的 Iris x 和初始 w，把标签改为 0。η 不变，求更新并解释方向变化。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "预测仍为 0.5，梯度由 −0.5x 变成 +0.5x。新权重是 (−0.255,−0.175,−0.07,−0.01)，初始预测被推向更低的正类概率。",
-        "note": "Week 5 Slides · p. 16 变式",
-        "kind": "计算",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W5-L01",
-        "chapter": 3
+        "chapter": 3,
+        "id": 175
       },
       {
         "label": "W5-L02",
@@ -2360,27 +1212,9 @@
         "kind": "计算",
         "role": "original",
         "origin": "slides",
-        "pair": "W5-LV02",
         "context": "",
-        "chapter": 3
-      },
-      {
-        "label": "W5-LV02",
-        "text": "Equal leading work, different update count\nFor n=8192,d=100 and B=256, compare the gradient work and update count of one epoch across all three modes.",
-        "zh": {
-          "text": "总主项相同、更新频率不同\nn=8192、d=100、B=256。比较全批、小批和纯 SGD 每轮的梯度主项与更新次数。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "各模式每轮都处理 8192 个样本，梯度主项都是 8192×100。更新次数分别是 1、32、8192。",
-        "note": "Week 5 Slides · p. 28 #1 变式",
-        "kind": "计算",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W5-L02",
-        "chapter": 3
+        "chapter": 3,
+        "id": 177
       },
       {
         "label": "W5-L03",
@@ -2397,27 +1231,9 @@
         "kind": "计算",
         "role": "original",
         "origin": "slides",
-        "pair": "W5-LV03",
         "context": "",
-        "chapter": 3
-      },
-      {
-        "label": "W5-LV03",
-        "text": "Double-buffer an input stream\nA batch has 128 samples with 250 float32 features. If one batch is being processed and another is prefetched, how many bytes do the two input buffers occupy?",
-        "zh": {
-          "text": "双缓冲要多少内存？\n每批 128 条样本、250 个 float32 特征。当前一批计算、下一批预取。两个输入缓冲共多少字节？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "单批 128×250×4=128,000 字节，两批共 256,000 字节。",
-        "note": "Week 5 Slides · p. 28 #2 变式",
-        "kind": "计算",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W5-L03",
-        "chapter": 3
+        "chapter": 3,
+        "id": 179
       },
       {
         "label": "W5-L04",
@@ -2434,27 +1250,9 @@
         "kind": "计算",
         "role": "original",
         "origin": "slides",
-        "pair": "W5-LV04",
         "context": "",
-        "chapter": 3
-      },
-      {
-        "label": "W5-LV04",
-        "text": "Weight workers by sample count\nWorker A averages 32 samples and reports gradient 2. Worker B averages 96 and reports gradient 6. Find the global mean.",
-        "zh": {
-          "text": "批大小不同的 worker 怎样聚合\nA 平均 32 个样本得到梯度 2，B 平均 96 个样本得到梯度 6。求全局平均梯度。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "按样本数加权：(32×2+96×6)/128=5。直接平均两个 worker 的结果会得到 4，给两边每条样本不同权重。",
-        "note": "Week 5 Slides · p. 28 #3 变式",
-        "kind": "计算",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W5-L04",
-        "chapter": 3
+        "chapter": 3,
+        "id": 181
       },
       {
         "label": "W5-L05",
@@ -2471,198 +1269,9 @@
         "kind": "理论",
         "role": "original",
         "origin": "slides",
-        "pair": "W5-LV05",
         "context": "",
-        "chapter": 3
-      },
-      {
-        "label": "W5-LV05",
-        "text": "Map bottlenecks to design choices\nChoose one response for each bottleneck: input reads are slow; model weights cannot fit on a device; batch gradients are too noisy.",
-        "zh": {
-          "text": "给三种瓶颈各找一个办法\n分别应对数据读取慢、单设备放不下模型权重和批梯度噪声过大三个瓶颈。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "读取慢可分片预取；权重放不下可切分模型；梯度太噪时可在显存允许下提高有效批大小并重新核对学习率。",
-        "note": "Week 5 Slides · p. 28 #4 变式",
-        "kind": "理论",
-        "role": "variant",
-        "origin": "slides",
-        "pair": "W5-L05",
-        "chapter": 3
-      },
-      "Q92",
-      {
-        "label": "M92",
-        "text": "A vector weight update\nFor w=(2,−1), gradient g=(4,−2) and η=1/4, compute the next weight vector.",
-        "zh": {
-          "text": "向量权重更新\nw=(2,−1)、梯度 g=(4,−2)、η=1/4。求下一步权重。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "w⁺=w−ηg=(2,−1)−(1,−1/2)=(1,−1/2)。",
-        "note": "原 100 题 · Q92 提高变式",
-        "kind": "计算",
-        "pair": "Q92",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 3
-      },
-      "Q93",
-      {
-        "label": "M93",
-        "text": "What changes when n or d doubles?\nA dense gradient costs O(nd). If both n and d double, what is the cost multiplier? What about a mini-batch step when B stays fixed?",
-        "zh": {
-          "text": "全批和小批的计算量比较\n稠密梯度是 O(nd)。n 和 d 都加倍时，全批每步增几倍？B 固定的小批每步又如何？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "全批每步约 4 倍；小批每步 O(Bd)，只随 d 加倍，因此约 2 倍。",
-        "note": "原 100 题 · Q93 提高变式",
-        "kind": "计算",
-        "pair": "Q93",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 3
-      },
-      "Q94",
-      {
-        "label": "M94",
-        "text": "Cost-equivalent steps\nFor n=1536 and B=64, how many mini-batch gradients examine as many examples as one full gradient? Will the final weights generally coincide?",
-        "zh": {
-          "text": "样本开销相同，更新相同吗\nn=1536、B=64。多少次小批梯度处理的样本数等于一次全批？最终权重通常会相同吗？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "1536/64=24 次。小批每次更新权重，下一个梯度在新权重处算，通常不同于固定一个权重计算全批梯度。",
-        "note": "原 100 题 · Q94 提高变式",
-        "kind": "计算",
-        "pair": "Q94",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 3
-      },
-      "Q95",
-      {
-        "label": "M95",
-        "text": "Take two scalar GD steps\nFor L(w)=(w−4)², start at w₀=0 and use η=1/4. Compute w₁,w₂.",
-        "zh": {
-          "text": "连算两步梯度下降\nL(w)=(w−4)²，w₀=0、η=1/4。求 w₁、w₂。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "梯度 2(w−4)，递推 w⁺=w/2+2。依次得到 2、3。",
-        "note": "原 100 题 · Q95 提高变式",
-        "kind": "计算",
-        "pair": "Q95",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 3
-      },
-      "Q96",
-      {
-        "label": "M96",
-        "text": "Partial last batch\nn=130 and B=32. If the last partial batch is kept, give the update counts for full batch, mini-batch, and pure SGD.",
-        "zh": {
-          "text": "末批不足时的更新次数\nn=130、B=32，保留最后不满的小批。求全批、小批、纯 SGD 一轮更新次数。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "分别是 1、⌈130/32⌉=5、130。若丢弃末批，小批会只有 4 次。",
-        "note": "原 100 题 · Q96 提高变式",
-        "kind": "计算",
-        "pair": "Q96",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 3
-      },
-      "Q97",
-      {
-        "label": "M97",
-        "text": "Same algorithm, different batch edge\nA loader uses batch size 1 and shuffles without replacement each epoch. How does it differ from full batch, and from sampling one index independently with replacement at every step?",
-        "zh": {
-          "text": "单样本洗牌与有放回抽样\n每轮洗牌后无放回、batch size=1。与全批和每步有放回抽样分别有何区别？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "这是单样本更新，每轮每条样本用一次。全批用全体平均梯度只更新一次。有放回版本可能重复用某样本或漏用某样本。",
-        "note": "原 100 题 · Q97 提高变式",
-        "kind": "理论",
-        "pair": "Q97",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 3
-      },
-      "Q98",
-      {
-        "label": "M98",
-        "text": "Batch inputs versus full training memory\nA 256×2000 batch is stored in float32. Compute feature bytes. Name two allocations excluded from that number.",
-        "zh": {
-          "text": "输入批占用与总训练显存\n256×2000 的 float32 输入批占多少字节？举两个未计入的训练显存来源。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "256×2000×4=2,048,000 字节，约 2.048 MB。模型参数、梯度、激活或优化器状态都未计入。",
-        "note": "原 100 题 · Q98 提高变式",
-        "kind": "计算",
-        "pair": "Q98",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 3
-      },
-      "Q99",
-      {
-        "label": "M99",
-        "text": "Predict oscillation and convergence\nFor L(w)=(w−3)², derive the multiplier on error e=w−3. Classify η=0.25, 0.75, and 1.1.",
-        "zh": {
-          "text": "用误差递推判断收敛\nL(w)=(w−3)²，推导误差 e=w−3 的一步乘数。判断 η=0.25、0.75、1.1 的表现。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "e⁺=(1−2η)e。乘数依次为 0.5（同侧收敛）、−0.5（交替收敛）、−1.2（交替发散）。",
-        "note": "原 100 题 · Q99 提高变式",
-        "kind": "计算",
-        "pair": "Q99",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 3
-      },
-      "Q100",
-      {
-        "label": "M100",
-        "text": "Separate optimizer ideas\nWhich ingredients in Adam come from momentum and RMSProp? What changes in AdamW’s treatment of weight decay?",
-        "zh": {
-          "text": "区分 Adam 与 AdamW\nAdam 中分别借鉴了 momentum 和 RMSProp 的什么？AdamW 怎样处理权重衰减？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "Adam 估计梯度的一阶指数平均和梯度平方的二阶指数平均，用二阶量缩放步幅。AdamW 将权重衰减从自适应的梯度更新中解耦。",
-        "note": "原 100 题 · Q100 提高变式",
-        "kind": "理论",
-        "pair": "Q100",
-        "origin": "bank",
-        "role": "variant",
-        "chapter": 3
+        "chapter": 3,
+        "id": 183
       },
       {
         "label": "W5-H01",
@@ -2679,27 +1288,9 @@
         "kind": "计算",
         "role": "original",
         "origin": "homework",
-        "pair": "W5-HV01",
         "context": "",
-        "chapter": 3
-      },
-      {
-        "label": "W5-HV01",
-        "text": "Ratio cancels d\nWith n=4,096 and B=128, derive the ratio of full-batch and mini-batch step work if both use the same feature dimension.",
-        "zh": {
-          "text": "为什么维数在比值中消掉？\nn=4096、B=128，同一维数下推导全批与小批每步工作量之比。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "nd/(Bd)=n/B=32。",
-        "note": "Week 5 Assignment · Task 3 Q1 变式",
-        "kind": "计算",
-        "role": "variant",
-        "origin": "homework",
-        "pair": "W5-H01",
-        "chapter": 3
+        "chapter": 3,
+        "id": 203
       },
       {
         "label": "W5-H02",
@@ -2716,27 +1307,64 @@
         "kind": "理论",
         "role": "original",
         "origin": "homework",
-        "pair": "W5-HV02",
         "context": "",
-        "chapter": 3
+        "chapter": 3,
+        "id": 205
       },
       {
-        "label": "W5-HV02",
-        "text": "Compare one epoch at different B\nFor n=1,000 compare B=100 and B=500 in updates per epoch and, under independent gradients, the ratio of their gradient variances.",
+        "label": "M92",
+        "text": "One gradient step\nAt w=(1,2), the gradient is g=(2,−4). Compute the next w using η=1/2.",
         "zh": {
-          "text": "改变 B 后更新次数和方差怎么变？\nn=1000，比较 B=100 与 B=500 的每轮更新次数及独立梯度假设下的方差比。",
+          "text": "做一次梯度下降\n当前权重 w=(1,2)，梯度 g=(2,−4)，学习率 η=1/2。求新权重。",
           "options": []
         },
         "bank": "written",
         "options": [],
         "answer": null,
-        "explanation": "更新次数为 10 与 2；方差为 σ²/100 与 σ²/500，前者是后者的 5 倍。",
-        "note": "Week 5 Assignment · Task 3 Q5 变式",
-        "kind": "理论",
+        "explanation": "w⁺=w−ηg=(1,2)−(1,−2)=(0,4)。",
+        "note": "原 100 题 · Q92 提高变式",
+        "kind": "计算",
+        "pair": "Q92",
+        "origin": "bank",
         "role": "variant",
-        "origin": "homework",
-        "pair": "W5-H02",
-        "chapter": 3
+        "chapter": 3,
+        "id": 343
+      },
+      {
+        "label": "W5-LR",
+        "text": "Diagnose two loss sequences\nWith a fixed learning rate, run A has losses 10,9.9,9.8,9.7. Run B has 10,7,13,6,18. Which suggests too small a learning rate, and which suggests too large a learning rate?",
+        "zh": {
+          "text": "从损失序列判断学习率\n固定学习率下，A 的损失为 10、9.9、9.8、9.7；B 为 10、7、13、6、18。哪组更像学习率太小，哪组更像学习率太大？",
+          "options": []
+        },
+        "bank": "written",
+        "options": [],
+        "answer": null,
+        "explanation": "A 缓慢且稳定下降，可能步长太小。B 大幅震荡、后期损失反而增大，可能步长太大。这是诊断线索，具体仍要结合目标和梯度噪声。",
+        "note": "Phillips, Mathematical Foundations for Data Analysis · Exercise 6.2（改编）",
+        "kind": "理论",
+        "chapter": 3,
+        "id": 344,
+        "origin": "textbook"
+      },
+      {
+        "label": "M96",
+        "text": "Partial last batch\nn=130 and B=32. If the last partial batch is kept, give the update counts for full batch, mini-batch, and pure SGD.",
+        "zh": {
+          "text": "末批不足时的更新次数\nn=130、B=32，保留最后不满的小批。求全批、小批、纯 SGD 一轮更新次数。",
+          "options": []
+        },
+        "bank": "written",
+        "options": [],
+        "answer": null,
+        "explanation": "分别是 1、⌈130/32⌉=5、130。若丢弃末批，小批会只有 4 次。",
+        "note": "原 100 题 · Q96 提高变式",
+        "kind": "计算",
+        "pair": "Q96",
+        "origin": "bank",
+        "role": "variant",
+        "chapter": 3,
+        "id": 194
       },
       {
         "label": "W5-UNBIASED",
@@ -2751,22 +1379,8 @@
         "explanation": "E[gᵢ]=Σ(1/n)∇ℓᵢ(w)=∇[(1/n)Σℓᵢ(w)]。这里在固定 w 处比较，且抽样权重和目标平均一致。",
         "note": "Week 5 Slides · p. 17–19",
         "kind": "证明",
-        "chapter": 3
-      },
-      {
-        "label": "W5-BVAR",
-        "text": "Derive mini-batch variance\nAssume independent scalar gradients each have variance σ². Derive the variance of their average over B samples.",
-        "zh": {
-          "text": "推导小批梯度的方差\n假设 B 个标量梯度独立且各有方差 σ²，推导平均梯度的方差。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "Var((1/B)Σgᵢ)=(1/B²)ΣVar(gᵢ)=σ²/B。若样本相关，需要协方差项；无放回有限总体抽样也会改变精确方差。",
-        "note": "Week 5 Slides · p. 18–19、23",
-        "kind": "证明",
-        "chapter": 3
+        "chapter": 3,
+        "id": 207
       },
       {
         "label": "W5-SHAPE",
@@ -2781,52 +1395,8 @@
         "explanation": "Xᴮ 是 5×4，w 是 4×1，Xᴮw 是 5×1，参数梯度和 w 同形，为 4×1。",
         "note": "Week 5 Slides · p. 9–13、16",
         "kind": "计算",
-        "chapter": 3
-      },
-      {
-        "label": "W5-PAR",
-        "text": "Choose data or model parallelism\nA model fits on one device but the data are too large. In a second task the model itself does not fit. Which parallel strategy fits each case, and what does AllReduce do?",
-        "zh": {
-          "text": "数据并行与模型并行\n任务一模型放得进单卡但数据太大。任务二模型本身放不进单卡。分别适合哪种并行？AllReduce 做什么？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "任务一可让每个设备保留模型副本、用不同数据分片，AllReduce 汇总各 worker 梯度。任务二可用模型／张量／流水线并行，把模型计算和存储切分。",
-        "note": "Week 5 Slides · p. 21–23、26",
-        "kind": "理论",
-        "chapter": 3
-      },
-      {
-        "label": "W5-LR",
-        "text": "Separate batch size and learning rate\nTwo updates use the same gradient direction but learning rates 0.01 and 0.1. Which step is longer and by how much? Why can a schedule help?",
-        "zh": {
-          "text": "学习率步幅和调度\n同一个梯度方向下，学习率分别为 0.01 和 0.1。哪一步长，长几倍？调度为何可能有用？",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "0.1 的步长为 0.01 的 10 倍。早期可用较大步快速下降，后期缩小步幅有助于减少震荡；合适的范围取决于目标曲率和梯度噪声。",
-        "note": "Week 5 Slides · p. 7–8、24–25",
-        "kind": "理论",
-        "chapter": 3
-      },
-      {
-        "label": "W5-MEM",
-        "text": "Diagnose a streaming bottleneck\nThe GPU is idle while each next batch is read. Identify the likely bottleneck and explain what prefetching and sharding change.",
-        "zh": {
-          "text": "判断流式训练瓶颈\nGPU 经常空闲等下一批数据读取。指出可能的瓶颈，并解释预取和分片怎样改变流程。",
-          "options": []
-        },
-        "bank": "written",
-        "options": [],
-        "answer": null,
-        "explanation": "更可能是数据 I/O 或预处理供给不足。预取把下一批读入与当前计算重叠；分片允许多个 worker 并行读取不同数据，减少串行等待。",
-        "note": "Week 5 Slides · p. 3–5、15、21–23",
-        "kind": "理论",
-        "chapter": 3
+        "chapter": 3,
+        "id": 209
       },
       {
         "label": "W5-OPT",
@@ -2841,7 +1411,8 @@
         "explanation": "依次是 momentum、Nesterov momentum、AdaGrad、RMSProp。Adam 同时用梯度的一阶和平方梯度的二阶指数平均。",
         "note": "Week 5 Slides · p. 24–25",
         "kind": "理论",
-        "chapter": 3
+        "chapter": 3,
+        "id": 213
       }
     ],
     [
@@ -2860,27 +1431,10 @@
         "bank": "written",
         "origin": "slides",
         "role": "original",
-        "pair": "W6-LV01",
         "context": "",
-        "kind": "证明"
-      },
-      {
-        "label": "W6-LV01",
-        "chapter": 4,
-        "text": "A singular design becomes invertible\nFor X=[[1,1;1,1]], y=(2,2)ᵀ and λ=1, use the mean squared loss plus λ‖w‖². Compute the Ridge coefficients by symmetry.",
-        "zh": {
-          "text": "重复特征的 Ridge\nX=[[1,1;1,1]]、y=(2,2)ᵀ、λ=1。用均方误差加 λ‖w‖²，利用对称性求系数。",
-          "options": []
-        },
-        "explanation": "XᵀX=[[2,2;2,2]]、Xᵀy=(4,4)ᵀ。加 nλI=2I 后，正规方程每行系数和为 6。交换两列目标不变，且解唯一，所以 w₁=w₂=4/6=2/3。",
-        "note": "Week 6 Slides · p. 42 · Exercise 1 变式",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "origin": "slides",
-        "role": "variant",
-        "pair": "W6-L01",
-        "kind": "计算"
+        "kind": "证明",
+        "id": 214,
+        "hint": "先令平方损失加 L2 惩罚的梯度为零。判断可逆性时，计算 vᵀ(XᵀX+nλI)v。"
       },
       {
         "label": "W6-L02",
@@ -2897,27 +1451,10 @@
         "bank": "written",
         "origin": "slides",
         "role": "original",
-        "pair": "W6-LV02",
         "context": "题设阈值 λ 对应平方损失 ‖Xw−y‖²/(2n)。若写成课件部分页面的 ‖Xw−y‖²/n 且惩罚仍为 λ|w|，同样的标准化条件下阈值是 λ/2。",
-        "kind": "证明"
-      },
-      {
-        "label": "W6-LV02",
-        "chapter": 4,
-        "text": "Find the actual threshold\nMinimize J(w)=2(w+3)²+λ|w|. Find w* for λ=4, and find the smallest λ that sets w* to zero.",
-        "zh": {
-          "text": "找实际阈值\n最小化 J(w)=2(w+3)²+λ|w|。求 λ=4 时的解，并求使解为零的最小 λ。",
-          "options": []
-        },
-        "explanation": "把目标除以 4，得到 ½(w−(−3))²+(λ/4)|w|。因此 w*=Sλ/4(−3)。当 λ=4 时 w*=−2；最小归零 λ 满足 λ/4=3，即 λ=12。",
-        "note": "Week 6 Slides · p. 42 · Exercise 2 变式",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "origin": "slides",
-        "role": "variant",
-        "pair": "W6-L02",
-        "kind": "计算"
+        "kind": "证明",
+        "id": 216,
+        "hint": "分别检查 w>0、w<0 和 w=0。前两段可求导，零点用 |w| 的次梯度 [−1,1]。"
       },
       {
         "label": "W6-L03",
@@ -2934,27 +1471,10 @@
         "bank": "written",
         "origin": "slides",
         "role": "original",
-        "pair": "W6-LV03",
         "context": "本题沿用 Slides 第 17、22 页写出的目标函数：无截距，损失为 (1/n)Σ(yᵢ−xᵢw)²，分别加 λw² 或 λ|w|。以下参考解按这两个目标计算。",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-LV03",
-        "chapter": 4,
-        "text": "Compare at a smaller scale\nUse no intercept and the mean squared loss for (x,y)=(1,2),(1,2). At λ=2, find the Ridge and Lasso solutions using penalties λw² and λ|w|, respectively.",
-        "zh": {
-          "text": "换一组尺度更小的数据\n对 (x,y)=(1,2)、(1,2)，无截距且用均方误差。取 λ=2，分别用 λw² 和 λ|w| 求 Ridge 和 Lasso 解。",
-          "options": []
-        },
-        "explanation": "拟合项是 (w−2)²。Ridge 解 2/(1+2)=2/3。Lasso 的有效阈值是 λ/2=1，因此 w*=S₁(2)=1。这个结果也说明同一个 λ 在两种惩罚中的作用大小不可直接比较。",
-        "note": "Week 6 Slides · p. 42 · Exercise 3 变式",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "origin": "slides",
-        "role": "variant",
-        "pair": "W6-L03",
-        "kind": "计算"
+        "kind": "计算",
+        "id": 218,
+        "hint": "先把三个残差平方合并成 (14/3)(w−2)²，再分别加 λw² 和 λ|w|。"
       },
       {
         "label": "W6-L04",
@@ -2971,27 +1491,9 @@
         "bank": "written",
         "origin": "slides",
         "role": "original",
-        "pair": "W6-LV04",
         "context": "",
-        "kind": "理论"
-      },
-      {
-        "label": "W6-LV04",
-        "chapter": 4,
-        "text": "Same loss, different feasible region\nMinimize (w₁−2)²+w₂² subject to |w₁|+|w₂|≤1. Mark the minimizer on a sketch. Would the unit L2 ball give a zero second coordinate here too?",
-        "zh": {
-          "text": "从等高线找接触点\n在 |w₁|+|w₂|≤1 下最小化 (w₁−2)²+w₂²，在草图上标最优点。换单位 L2 球后，第二坐标也会是零吗？",
-          "options": []
-        },
-        "explanation": "两种约束都给 (1,0)：w₁≤1，因此第一项至少为 1，取 (1,0) 同时令第二项为零。L1 的角点让零系数更常出现，但 Ridge 在这种对称问题中也可能出现零系数。",
-        "note": "Week 6 Slides · p. 42 · Exercise 4 变式",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "origin": "slides",
-        "role": "variant",
-        "pair": "W6-L04",
-        "kind": "证明"
+        "kind": "理论",
+        "id": 220
       },
       {
         "label": "W6-L05",
@@ -3008,27 +1510,9 @@
         "bank": "written",
         "origin": "slides",
         "role": "original",
-        "pair": "W6-LV05",
         "context": "",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-LV05",
-        "chapter": 4,
-        "text": "Separate per-step and per-epoch cost\nA dense dataset has n=1,024 and d=100. Compare the number of updates per epoch and the gradient work per update for full-batch proximal GD and B=32.",
-        "zh": {
-          "text": "区分每步与每轮\n稠密数据有 n=1024、d=100。对比全批量近端 GD 和 B=32 的方法，每轮各更新几次？每次梯度计算量有多大？",
-          "options": []
-        },
-        "explanation": "全批每轮更新 1 次，梯度工作约 1024×100。小批每轮更新 1024/32=32 次，每次约 32×100。两者一轮梯度的主项相同，小批的近端操作执行 32 次。",
-        "note": "Week 6 Slides · p. 42 · Exercise 5 变式",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "origin": "slides",
-        "role": "variant",
-        "pair": "W6-L05",
-        "kind": "计算"
+        "kind": "计算",
+        "id": 222
       },
       {
         "label": "W6-L06",
@@ -3045,27 +1529,9 @@
         "bank": "written",
         "origin": "slides",
         "role": "original",
-        "pair": "W6-LV06",
         "context": "",
-        "kind": "理论"
-      },
-      {
-        "label": "W6-LV06",
-        "chapter": 4,
-        "text": "When correlated groups matter\nIn a sparse ad dataset, many correlated indicators measure the same behavior. You want some coefficients to be exactly zero while retaining useful groups more consistently. Choose a regularizer and explain both requirements.",
-        "zh": {
-          "text": "既要稀疏又要保留相关特征组\n稀疏广告数据里，多项相关指标都在衡量同一种行为。希望部分系数归零，同时较稳定地保留有用的相关组。选一种正则化并解释两个要求。",
-          "options": []
-        },
-        "explanation": "选 Elastic Net，L1 部分可以把弱系数压到零，L2 部分有助于相关变量共享权重，缓和纯 Lasso 在相关变量间的选择不稳定。",
-        "note": "Week 6 Slides · p. 42 · Exercise 6 变式",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "origin": "slides",
-        "role": "variant",
-        "pair": "W6-L06",
-        "kind": "理论"
+        "kind": "理论",
+        "id": 224
       },
       {
         "label": "W6-H01",
@@ -3082,27 +1548,9 @@
         "bank": "written",
         "origin": "homework",
         "role": "original",
-        "pair": "W6-HV01",
         "context": "",
-        "kind": "证明"
-      },
-      {
-        "label": "W6-HV01",
-        "chapter": 4,
-        "text": "Show an indicator dependency\nTwo one-hot columns a,b encode two exhaustive categories and the design also contains an intercept. Give a nonzero linear dependence. Which matrix would be singular before regularization?",
-        "zh": {
-          "text": "找出独热列的依赖\na、b 是两类互斥且穷尽的独热列，设计矩阵还包含截距。写出一个非零线性依赖，并指出正则化前哪个矩阵奇异。",
-          "options": []
-        },
-        "explanation": "a+b=1，所以把三列排成 [1,a,b] 时，X(−1,1,1)ᵀ=0。XᵀX 也将该非零向量映成 0，故奇异。",
-        "note": "Week 6 Assignment · Task 6 · Q1 变式",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "origin": "homework",
-        "role": "variant",
-        "pair": "W6-H01",
-        "kind": "证明"
+        "kind": "证明",
+        "id": 226
       },
       {
         "label": "W6-H05",
@@ -3119,27 +1567,9 @@
         "bank": "written",
         "origin": "homework",
         "role": "original",
-        "pair": "W6-HV05",
         "context": "",
-        "kind": "理论"
-      },
-      {
-        "label": "W6-HV05",
-        "chapter": 4,
-        "text": "Predict which weights survive\nThe pre-threshold vector is z=(0.12,−0.04,0.08). Use η=0.1, λ=1, α=0.8. Compute the proximal output and find the smallest λ that would set all three to zero if z were held fixed.",
-        "zh": {
-          "text": "判断哪些权重留下\n阈值处理前 z=(0.12,−0.04,0.08)，η=0.1、λ=1、α=0.8。求近端输出。如果固定 z，使三项全为零的最小 λ 是多少？",
-          "options": []
-        },
-        "explanation": "阈值是 0.1×1×0.8=0.08。超过阈值的只有 0.12，输出 (0.04,0,0)。固定 z 后，全归零需 0.08λ≥0.12，最小 λ=1.5。",
-        "note": "Week 6 Assignment · Task 6 · Q5 变式",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "origin": "homework",
-        "role": "variant",
-        "pair": "W6-H05",
-        "kind": "计算"
+        "kind": "理论",
+        "id": 228
       },
       {
         "label": "W6-H07",
@@ -3156,27 +1586,9 @@
         "bank": "written",
         "origin": "homework",
         "role": "original",
-        "pair": "W6-HV07",
         "context": "",
-        "kind": "理论"
-      },
-      {
-        "label": "W6-HV07",
-        "chapter": 4,
-        "text": "Average first, threshold once\nTwo equal-weight workers report gradients 1 and −3 at the same scalar w=0.2. With η=0.1 and λ=1, compute the next w under distributed proximal SGD.",
-        "zh": {
-          "text": "先平均，再做阈值\n两个等权 worker 在同一个标量 w=0.2 处报告梯度 1、−3。取 η=0.1、λ=1，求分布式近端 SGD 的下一步 w。",
-          "options": []
-        },
-        "explanation": "平均梯度为 (1−3)/2=−1，梯度步为 z=0.2−0.1(−1)=0.3，阈值是 0.1，所以新 w=0.2。",
-        "note": "Week 6 Assignment · Task 6 · Q7 变式",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "origin": "homework",
-        "role": "variant",
-        "pair": "W6-H07",
-        "kind": "计算"
+        "kind": "理论",
+        "id": 230
       },
       {
         "label": "W6-H08",
@@ -3193,442 +1605,9 @@
         "bank": "written",
         "origin": "homework",
         "role": "original",
-        "pair": "W6-HV08",
         "context": "",
-        "kind": "理论"
-      },
-      {
-        "label": "W6-HV08",
-        "chapter": 4,
-        "text": "Write one softmax update\nLet G be the mini-batch gradient of the softmax data loss. For the penalty λ‖W‖F², write one SGD update with learning rate η. Which term is new?",
-        "zh": {
-          "text": "写出一次 softmax 更新\nG 是 softmax 数据损失的小批量梯度。惩罚为 λ‖W‖F²，学习率为 η。写出一次 SGD 更新，并指出新增项。",
-          "options": []
-        },
-        "explanation": "W⁺=W−η(G+2λW)=(1−2ηλ)W−ηG。新增的是来自惩罚的 2λW，G 仍然是小批量数据梯度。",
-        "note": "Week 6 Assignment · Task 6 · Q8 变式",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "origin": "homework",
-        "role": "variant",
-        "pair": "W6-H08",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-01",
-        "chapter": 4,
-        "text": "Model A has lower training loss but higher validation loss than model B, with the same data split and loss. Which statement follows?",
-        "zh": {
-          "text": "A 的训练损失比 B 低，验证损失却更高。数据划分和损失口径相同。哪个结论成立？",
-          "options": [
-            "A 一定泛化得更好",
-            "单凭更低的训练损失不能证明泛化更好",
-            "A 的不可约噪声一定更大",
-            "必须将验证集加入训练"
-          ]
-        },
-        "explanation": "训练损失衡量对已见数据的拟合，验证损失衡量对留出数据的表现。这里 B 的验证表现更好。仅凭两组损失无法断定所有差异的原因。",
-        "note": "Week 6 Slides · pp. 3–7, 11",
-        "options": [
-          "A must generalize better",
-          "The lower training loss alone does not establish better generalization",
-          "A necessarily has larger irreducible noise",
-          "The validation split must be used in training"
-        ],
-        "answer": "B",
-        "bank": "mc",
-        "kind": "理论"
-      },
-      {
-        "label": "W6-02",
-        "chapter": 4,
-        "text": "For squared-error prediction, suppose regularization increases squared bias by 2, decreases variance by 5, and leaves noise unchanged. What happens to expected test error?",
-        "zh": {
-          "text": "在平方误差预测中，正则化使偏差平方增加 2、方差减少 5，不可约噪声不变。期望测试误差如何变化？",
-          "options": [
-            "增加 3",
-            "减少 7",
-            "不变",
-            "减少 3"
-          ]
-        },
-        "explanation": "变化量是 +2−5=−3。若 λ 过大，偏差平方的增加可能超过方差的减少。",
-        "note": "Week 6 Slides · pp. 7–10, 13–15",
-        "options": [
-          "Increases by 3",
-          "Decreases by 7",
-          "Is unchanged",
-          "Decreases by 3"
-        ],
-        "answer": "D",
-        "bank": "mc",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-03",
-        "chapter": 4,
-        "text": "Which description distinguishes the two decisions introduced in Weeks 5 and 6?",
-        "zh": {
-          "text": "哪个选项准确区分第 5 周与第 6 周要做的两个选择？",
-          "options": [
-            "mini-batch SGD 决定怎样计算更新，λ 决定惩罚强度",
-            "批大小与 λ 可以互换",
-            "λ 决定使用哪折验证集",
-            "改 λ 只改变最小化同一目标的速度"
-          ]
-        },
-        "explanation": "优化器和批大小控制如何更新；λ 改变要最小化的目标及其解。",
-        "note": "Week 6 Slides · pp. 3–4, 20",
-        "options": [
-          "Mini-batch SGD controls how updates are computed; λ controls the strength of the penalty",
-          "Mini-batch size and λ are interchangeable",
-          "λ selects the validation fold",
-          "Changing λ only alters how fast the same objective is minimized"
-        ],
-        "answer": "A",
-        "bank": "mc",
-        "kind": "理论"
-      },
-      {
-        "label": "W6-04",
-        "chapter": 4,
-        "text": "For J(w)=‖Xw−y‖²/n+λ‖w‖², what are the normal equations?",
-        "zh": {
-          "text": "目标 J(w)=‖Xw−y‖²/n+λ‖w‖² 的正规方程是什么？",
-          "options": [
-            "(XᵀX+λI)w=Xᵀy",
-            "(XᵀX+2nλI)w=Xᵀy",
-            "(XᵀX+nλI)w=Xᵀy",
-            "(XᵀX−nλI)w=Xᵀy"
-          ]
-        },
-        "explanation": "令 2Xᵀ(Xw−y)/n+2λw=0，两边乘 n/2。λ 的系数由数据损失的归一化决定。",
-        "note": "Week 6 Slides · pp. 16, 19",
-        "options": [
-          "(XᵀX+λI)w=Xᵀy",
-          "(XᵀX+2nλI)w=Xᵀy",
-          "(XᵀX+nλI)w=Xᵀy",
-          "(XᵀX−nλI)w=Xᵀy"
-        ],
-        "answer": "C",
-        "bank": "mc",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-05",
-        "chapter": 4,
-        "text": "If XᵀX=diag(4,0), n=2 and λ=0.5, what are the eigenvalues of XᵀX+nλI?",
-        "zh": {
-          "text": "若 XᵀX=diag(4,0)，n=2、λ=0.5，求 XᵀX+nλI 的特征值。",
-          "options": [
-            "5 和 1",
-            "4.5 和 0.5",
-            "4 和 1",
-            "5 和 0"
-          ]
-        },
-        "explanation": "nλ=1，加 I 会让每个特征值加 1。零特征值被抬成 1。",
-        "note": "Week 6 Slides · pp. 16–19",
-        "options": [
-          "5 and 1",
-          "4.5 and 0.5",
-          "4 and 1",
-          "5 and 0"
-        ],
-        "answer": "A",
-        "bank": "mc",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-06",
-        "chapter": 4,
-        "text": "One ordinary SGD step uses data gradient g=(3,−1), w=(1,−2), η=0.1 and the penalty λ‖w‖² with λ=0.5. What is the updated w?",
-        "zh": {
-          "text": "普通 SGD 的数据梯度 g=(3,−1)，w=(1,−2)，η=0.1，惩罚 λ‖w‖² 的 λ=0.5。更新后 w 是多少？",
-          "options": [
-            "(0.7,−1.9)",
-            "(0.65,−1.8)",
-            "(0.6,−2.3)",
-            "(0.6,−1.7)"
-          ]
-        },
-        "explanation": "惩罚梯度为 2λw=(1,−2)，总梯度为 (4,−3)。减去 0.1 倍总梯度得到 (0.6,−1.7)。",
-        "note": "Week 6 Slides · pp. 8, 19–20",
-        "options": [
-          "(0.7,−1.9)",
-          "(0.65,−1.8)",
-          "(0.6,−2.3)",
-          "(0.6,−1.7)"
-        ],
-        "answer": "D",
-        "bank": "mc",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-07",
-        "chapter": 4,
-        "text": "What is the subdifferential of |w| at w=0?",
-        "zh": {
-          "text": "|w| 在 w=0 处的次梯度集合是什么？",
-          "options": [
-            "{0}",
-            "[−1,1]",
-            "{−1,1}",
-            "空集"
-          ]
-        },
-        "explanation": "左右导数分别为 −1 和 1；凸函数在折点的次梯度是整个闭区间。它允许 0 成为 Lasso 的最优解。",
-        "note": "Week 6 Slides · pp. 21, 25–27",
-        "options": [
-          "{0}",
-          "[−1,1]",
-          "{−1,1}",
-          "Empty set"
-        ],
-        "answer": "B",
-        "bank": "mc",
-        "kind": "理论"
-      },
-      {
-        "label": "W6-08",
-        "chapter": 4,
-        "text": "Apply the soft-threshold operator S₀.₅ to (−1.5,−0.5,0.2,2).",
-        "zh": {
-          "text": "用软阈值 S₀.₅ 处理 (−1.5,−0.5,0.2,2)。",
-          "options": [
-            "(−1.5,0,0,2)",
-            "(−2,−1,0,1.5)",
-            "(−1,0,0,1.5)",
-            "(−1,0,0.2,1.5)"
-          ]
-        },
-        "explanation": "绝对值不超过 0.5 的项归零。其余项保留符号，并把绝对值减 0.5。",
-        "note": "Week 6 Slides · pp. 26–27",
-        "options": [
-          "(−1.5,0,0,2)",
-          "(−2,−1,0,1.5)",
-          "(−1,0,0,1.5)",
-          "(−1,0,0.2,1.5)"
-        ],
-        "answer": "C",
-        "bank": "mc",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-09",
-        "chapter": 4,
-        "text": "Minimize 3(w−2)²+2|w|. What is w*?",
-        "zh": {
-          "text": "最小化 3(w−2)²+2|w|。求 w*。",
-          "options": [
-            "5/3",
-            "4/3",
-            "0",
-            "2/3"
-          ]
-        },
-        "explanation": "把目标除以 6，等价为 ½(w−2)²+(1/3)|w|，阈值是 1/3，所以结果为 2−1/3=5/3。",
-        "note": "Week 6 Slides · pp. 22–23, 26",
-        "options": [
-          "5/3",
-          "4/3",
-          "0",
-          "2/3"
-        ],
-        "answer": "A",
-        "bank": "mc",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-10",
-        "chapter": 4,
-        "text": "Two predictors are identical, and their nonnegative coefficients must sum to 2. Which statement holds?",
-        "zh": {
-          "text": "两个预测变量完全相同，其非负系数之和固定为 2。哪项成立？",
-          "options": [
-            "L1 唯一偏好 (1,1)",
-            "L2 唯一偏好 (2,0)",
-            "L1 和 L2 沿整条线段都不变",
-            "L1 沿线段不变，L2 在 (1,1) 处最小"
-          ]
-        },
-        "explanation": "L1 恒为 2；L2 平方和为 w₁²+w₂²，在平均分摊时最小。纯 Lasso 在完全重复的列上可能有多个解。",
-        "note": "Week 6 Slides · pp. 24, 30–32",
-        "options": [
-          "L1 uniquely prefers (1,1)",
-          "L2 uniquely prefers (2,0)",
-          "L1 and L2 are both constant along the segment",
-          "L1 is constant along the segment, while L2 is minimized at (1,1)"
-        ],
-        "answer": "D",
-        "bank": "mc",
-        "kind": "理论"
-      },
-      {
-        "label": "W6-11",
-        "chapter": 4,
-        "text": "Elastic Net uses λ[α‖w‖₁+(1−α)‖w‖²]. For λ=0.4 and α=0.25, what are the L1 and squared L2 coefficients?",
-        "zh": {
-          "text": "Elastic Net 的惩罚为 λ[α‖w‖₁+(1−α)‖w‖²]。λ=0.4、α=0.25 时，L1 和平方 L2 的系数分别是多少？",
-          "options": [
-            "(0.3,0.1)",
-            "(0.1,0.3)",
-            "(0.25,0.75)",
-            "(0.4,0.4)"
-          ]
-        },
-        "explanation": "λ₁=λα=0.1，λ₂=λ(1−α)=0.3。α=1 退化为 Lasso，α=0 退化为 Ridge。",
-        "note": "Week 6 Slides · pp. 30–32",
-        "options": [
-          "(0.3,0.1)",
-          "(0.1,0.3)",
-          "(0.25,0.75)",
-          "(0.4,0.4)"
-        ],
-        "answer": "B",
-        "bank": "mc",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-12",
-        "chapter": 4,
-        "text": "For f(w)=(w−3)², g(w)=0.5|w|, w=0 and η=0.1, what is one proximal-gradient step?",
-        "zh": {
-          "text": "若 f(w)=(w−3)²、g(w)=0.5|w|，从 w=0 以 η=0.1 做一步近端梯度。结果是多少？",
-          "options": [
-            "0.10",
-            "0.50",
-            "0.55",
-            "0.60"
-          ]
-        },
-        "explanation": "梯度步给 z=0.6。用阈值 ηλ=0.05 处理得到 0.55。",
-        "note": "Week 6 Slides · pp. 33–35",
-        "options": [
-          "0.10",
-          "0.50",
-          "0.55",
-          "0.60"
-        ],
-        "answer": "C",
-        "bank": "mc",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-13",
-        "chapter": 4,
-        "text": "Which method–description match is correct?",
-        "zh": {
-          "text": "哪个算法和描述配对正确？",
-          "options": [
-            "LARS：追踪 Lasso 正则化路径",
-            "ADMM：每次对一个坐标做普通梯度步",
-            "ISTA：直接求 XᵀX 的逆",
-            "坐标下降：同时更新所有坐标"
-          ]
-        },
-        "explanation": "LARS 可用于路径算法。ADMM 拆分变量并协调子问题；ISTA 是近端梯度；坐标下降逐坐标更新。",
-        "note": "Week 6 Slides · pp. 28, 33, 36",
-        "options": [
-          "LARS: trace a Lasso regularization path",
-          "ADMM: one ordinary gradient step per coordinate",
-          "ISTA: solve by directly inverting XᵀX",
-          "Coordinate descent: update all coordinates simultaneously"
-        ],
-        "answer": "A",
-        "bank": "mc",
-        "kind": "理论"
-      },
-      {
-        "label": "W6-14",
-        "chapter": 4,
-        "text": "Which statement describes distributed proximal SGD for equally weighted workers?",
-        "zh": {
-          "text": "对于等权 worker，哪个陈述描述了分布式近端 SGD？",
-          "options": [
-            "先对各 worker 权重做阈值再平均，总是等价",
-            "worker 从不通信",
-            "只取最大的梯度",
-            "在共享参数处平均梯度，走一步，再做近端运算"
-          ]
-        },
-        "explanation": "近端软阈值是非线性的，通常不能和平均互换。不同样本权重下还要用相应的加权平均。",
-        "note": "Week 6 Slides · pp. 36–37, 40",
-        "options": [
-          "Threshold each worker’s weights and average, which is always equivalent",
-          "Never communicate between workers",
-          "Pick the largest worker gradient",
-          "Average gradients at the shared iterate, take one step, then apply the proximal operator"
-        ],
-        "answer": "D",
-        "bank": "mc",
-        "kind": "理论"
-      },
-      {
-        "label": "W6-15",
-        "chapter": 4,
-        "text": "Mean validation MSE is 1.8, 1.3, 1.1, 1.4 for λ=0, 0.1, 0.5, 1. Which λ should be selected by CV?",
-        "zh": {
-          "text": "λ=0、0.1、0.5、1 的平均验证 MSE 分别为 1.8、1.3、1.1、1.4。按交叉验证选哪个 λ？",
-          "options": [
-            "0",
-            "0.5",
-            "1",
-            "选最终测试损失最低的那个"
-          ]
-        },
-        "explanation": "选平均验证误差最低的 λ=0.5。测试集留到超参数确定之后做最终评估。",
-        "note": "Week 6 Slides · pp. 38–39",
-        "options": [
-          "0",
-          "0.5",
-          "1",
-          "Choose whichever has the lowest final test loss"
-        ],
-        "answer": "B",
-        "bank": "mc",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-16",
-        "chapter": 4,
-        "text": "A genomics model has thousands of predictors and a strict budget to measure only a few of them. Which penalty directly promotes the desired sparsity?",
-        "zh": {
-          "text": "基因组模型有数千个预测变量，但测量预算只允许用少数变量。哪个惩罚直接促进这种稀疏性？",
-          "options": [
-            "无惩罚",
-            "仅平方 L2",
-            "L1",
-            "给每个系数加同一个常数"
-          ]
-        },
-        "explanation": "L1 通过软阈值让部分系数变成精确的零。若相关变量的成组保留同样重要，可再考虑 Elastic Net。",
-        "note": "Week 6 Slides · pp. 30–32, 37",
-        "options": [
-          "No penalty",
-          "Squared L2 only",
-          "L1",
-          "Adding the same constant to every coefficient"
-        ],
-        "answer": "C",
-        "bank": "mc",
-        "kind": "理论"
-      },
-      {
-        "label": "W6-S01",
-        "chapter": 4,
-        "text": "Interpolate four observations\nThe rows (x₁,x₂,x₃,y) are (1,0,0,2),(0,1,0,3),(0,0,1,1),(0,0,0,5). Find an intercept and three slopes giving zero training error.",
-        "zh": {
-          "text": "用四个参数恰好拟合四条观测\n四行 (x₁,x₂,x₃,y) 为 (1,0,0,2)、(0,1,0,3)、(0,0,1,1)、(0,0,0,5)。求让训练误差为零的截距和三个斜率。",
-          "options": []
-        },
-        "explanation": "全零特征行给出截距 b=5。再逐行减去截距，得到 w₁=−3、w₂=−2、w₃=−4。这个计算说明模型能插值，留出数据上的误差还需另行判断。",
-        "note": "Week 6 Slides · pp. 11–13",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "kind": "计算"
+        "kind": "理论",
+        "id": 232
       },
       {
         "label": "W6-S02",
@@ -3643,157 +1622,73 @@
         "options": [],
         "answer": null,
         "bank": "written",
-        "kind": "理论"
+        "kind": "理论",
+        "id": 251
       },
       {
-        "label": "W6-S03",
+        "label": "W6-02",
         "chapter": 4,
-        "text": "One-feature Ridge without standardizing\nUse no intercept and J(w)=MSE+λw² for (x,y)=(1,3),(2,6) with λ=5/2. Find w*.",
+        "text": "Bias, variance, and noise\nWrite the three terms of the expected test MSE decomposition. If squared bias goes from 1 to 2 and variance goes from 5 to 2, with the same noise, how does the expected test MSE change?",
         "zh": {
-          "text": "原尺度的一维 Ridge\n数据为 (1,3)、(2,6)，无截距，J(w)=MSE+λw²，λ=5/2。求 w*。",
+          "text": "偏差、方差和噪声\n写出期望测试 MSE 的三个组成项。偏差平方由 1 增为 2，方差由 5 减到 2，噪声不变，期望测试 MSE 怎么变？",
           "options": []
         },
-        "explanation": "MSE=(5/2)(w−3)²。加入 (5/2)w² 后，令 5(w−3)+5w=0，得到 w*=3/2。",
-        "note": "Week 6 Slides · pp. 16–17",
+        "explanation": "期望测试 MSE = 偏差平方 + 方差 + 不可约噪声。净变化是 +1−3=−2。偏差过大通常对应欠拟合，方差过大通常对应过拟合。",
+        "note": "Week 6 Slides · pp. 7–10, 13–15",
         "options": [],
         "answer": null,
         "bank": "written",
-        "kind": "计算"
+        "kind": "理论",
+        "id": 345
       },
       {
-        "label": "W6-S04",
+        "id": 348,
+        "label": "W6-T01",
         "chapter": 4,
-        "text": "Exploit symmetry\nRows of X are (1,0),(0,1),(1,1), and y=(1,1,2)ᵀ. For J(w)=MSE+‖w‖² with no intercept, use symmetry to find the two slopes.",
+        "text": "OLS and Ridge on one feature\nFor two observations (x,y)=(1,2),(1,4) with no intercept, find the OLS slope. Then minimize mean squared error plus w² to find the Ridge slope.",
         "zh": {
-          "text": "利用对称性解二元 Ridge\nX 的行为 (1,0)、(0,1)、(1,1)，y=(1,1,2)ᵀ。无截距，J(w)=MSE+‖w‖²。利用对称性求两个系数。",
+          "text": "单特征 OLS 和 Ridge\n两条观测 (x,y)=(1,2)、(1,4)，无截距。先求 OLS 斜率，再用「均方误差 + w²」求 Ridge 斜率。",
           "options": []
         },
-        "explanation": "XᵀX=[[2,1;1,2]]、Xᵀy=(3,3)ᵀ。加 3I 后每行系数和为 6。由唯一性与交换对称性，w₁=w₂=3/6=1/2。",
-        "note": "Week 6 Slides · pp. 18–19",
+        "explanation": "OLS 的预测是样本均值 3，故 w=3。均方误差为 w²−6w+10，加 w² 后导数是 4w−6，Ridge 得 w=3/2。",
+        "note": "Phillips, Mathematical Foundations for Data Analysis · Exercise 5.8（缩成纸笔版）",
+        "bank": "written",
+        "options": [],
+        "answer": null,
+        "kind": "计算",
+        "origin": "textbook"
+      },
+      {
+        "label": "W6-08",
+        "chapter": 4,
+        "text": "Soft thresholding by hand\nApply threshold 1 to (3,−2,0.5). Which coordinate is eliminated?",
+        "zh": {
+          "text": "手算软阈值\n用阈值 1 对 (3,−2,0.5) 做软阈值。哪一个坐标被置零？",
+          "options": []
+        },
+        "explanation": "绝对值减 1，低于 0 的按 0 算，再恢复符号。得到 (2,−1,0)，第三坐标被置零。",
+        "note": "Week 6 Slides · pp. 26–27",
         "options": [],
         "answer": null,
         "bank": "written",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-S05",
-        "chapter": 4,
-        "text": "Which direction shrinks more?\nXᵀX has eigenvalues 9 and 1. For the mean squared loss, take nλ=1. Relative to OLS, by what factors does Ridge multiply the coefficients in those two eigendirections?",
-        "zh": {
-          "text": "哪个方向缩得更多？\nXᵀX 的特征值为 9、1。用均方误差且 nλ=1。相较 OLS，Ridge 把两个特征方向上的系数分别乘以多少？",
-          "options": []
-        },
-        "explanation": "特征方向上的因子为 s/(s+nλ)。两个方向分别为 9/10 和 1/2。对应较小特征值的方向缩得更多。",
-        "note": "Week 6 Slides · pp. 16, 19",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-S06",
-        "chapter": 4,
-        "text": "Weight decay vs. a penalty gradient\nAn ordinary SGD step with gradient g uses an added penalty λ‖w‖². Rewrite the update to show its multiplicative shrinkage. Why should this identity not be carried over directly to Adam’s adaptive preconditioning?",
-        "zh": {
-          "text": "权重衰减与惩罚梯度\n普通 SGD 的数据梯度为 g，目标额外加 λ‖w‖²。把更新写成对权重的乘法收缩。为什么这一步不能直接照搬到 Adam 的自适应预处理里？",
-          "options": []
-        },
-        "explanation": "普通 SGD 有 w⁺=(1−2ηλ)w−ηg。若把 2λw 混进 Adam 的梯度，它也会经过按坐标的自适应缩放和动量。AdamW 的衰减是独立施加的，所以这两种操作通常不同。",
-        "note": "Week 6 Slides · pp. 4, 19–20",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "kind": "理论"
-      },
-      {
-        "label": "W6-S07",
-        "chapter": 4,
-        "text": "When does the last coefficient vanish?\nIn the normalized orthogonal Lasso setting, wⱼ=Sλ(zⱼ). For z=(2,−3,1), find the smallest λ that makes all coefficients zero, and give w at λ=2.",
-        "zh": {
-          "text": "最后一个非零系数何时消失？\n正交归一化的 Lasso 设定下 wⱼ=Sλ(zⱼ)。若 z=(2,−3,1)，求全归零的最小 λ，并给出 λ=2 时的 w。",
-          "options": []
-        },
-        "explanation": "全归零需 λ≥max|zⱼ|=3。λ=2 时，第一项在阈值边界也归零，第二项为 −(3−2)=−1，第三项为零。",
-        "note": "Week 6 Slides · pp. 21–27",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "kind": "计算"
+        "kind": "计算",
+        "id": 346
       },
       {
         "label": "W6-S08",
         "chapter": 4,
-        "text": "Use the updated coordinate\nFor X=[[1,0;0,1;1,1]] and y=(1,1,2)ᵀ, use J(w)=‖Xw−y‖²/(2n)+(1/3)‖w‖₁. Start at (0,0). Update coordinate 1, then coordinate 2 using the new w₁.",
+        "text": "One coordinate update\nIn normalized Lasso coordinate descent, the partial-residual score for coordinate 2 is z₂=1.5. With λ=0.5, update w₂ and state which other coefficients change in this step.",
         "zh": {
-          "text": "坐标下降要用刚更新的值\nX=[[1,0;0,1;1,1]]、y=(1,1,2)ᵀ，目标为 ‖Xw−y‖²/(2n)+(1/3)‖w‖₁。从 (0,0) 出发，先更新第 1 坐标，再用新的 w₁ 更新第 2 坐标。",
+          "text": "坐标下降只更新一步\n在已归一化的 Lasso 坐标下降中，第 2 坐标的部分残差分数为 z₂=1.5，λ=0.5。求新 w₂，并说明其他坐标会不会变。",
           "options": []
         },
-        "explanation": "把目标乘 n=3，坐标公式是 S₁(xⱼᵀrⱼ)/‖xⱼ‖²。第 1 步 x₁ᵀy=3、‖x₁‖²=2，所以 w₁=1。第 2 步 r₂=y−x₁=(0,1,1)ᵀ，x₂ᵀr₂=2、‖x₂‖²=2，所以 w₂=1/2。一轮结果 (1,1/2)。",
+        "explanation": "w₂←S₀.₅(1.5)=1.0。这一步只更新第 2 坐标；之后计算下一个坐标的残差时使用新的 w₂。",
         "note": "Week 6 Slides · pp. 23, 28–29",
         "options": [],
         "answer": null,
         "bank": "written",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-S09",
-        "chapter": 4,
-        "text": "Maintain the residual\nFor residual r=y−Xw, coordinate j changes from wⱼ to wⱼ+δ. Write the residual update. Why can this make a dense coordinate step O(n)?",
-        "zh": {
-          "text": "增量更新残差\n设残差 r=y−Xw，第 j 个系数从 wⱼ 变为 wⱼ+δ。如何更新残差？为什么稠密情形下这一坐标步可以做到 O(n)？",
-          "options": []
-        },
-        "explanation": "新残差是 r−δxⱼ。用当前残差计算与 xⱼ 的内积，再减去一列的倍数，两步各处理 n 个元素。无需对每个坐标重新做完整矩阵乘法。",
-        "note": "Week 6 Slides · pp. 28–29, 36",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "kind": "证明"
-      },
-      {
-        "label": "W6-S10",
-        "chapter": 4,
-        "text": "One-hot is not identical\nIn a three-category one-hot group, what linear relation holds with an intercept? Must two columns in the group be identical or perfectly correlated?",
-        "zh": {
-          "text": "独热编码的线性依赖\n一个含三类的独热组和截距之间有什么线性关系？组内任意两列一定相同或完全相关吗？",
-          "options": []
-        },
-        "explanation": "三列之和等于截距列。任意两列互斥，非退化情形下会负相关；三类都有出现时，两列通常不是彼此的线性倍数，也不会完全相关。共线性可来自整组列和。",
-        "note": "Week 6 Slides · pp. 24, 30–32",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "kind": "理论"
-      },
-      {
-        "label": "W6-S11",
-        "chapter": 4,
-        "text": "Threshold then shrink\nMinimize ½(w−3)²+|w|+½w². Find w* and explain what the L1 and L2 parts do.",
-        "zh": {
-          "text": "先阈值，再收缩\n最小化 ½(w−3)²+|w|+½w²，求 w*，并解释 L1、L2 各自的作用。",
-          "options": []
-        },
-        "explanation": "若 w>0，导数为 (w−3)+1+w=2w−2，解为 1，符合正号条件。也可写成 S₁(3)/(1+1)=2/2=1。L1 从 3 减去阈值 1，额外的二次惩罚再按因子 1/2 收缩。",
-        "note": "Week 6 Slides · pp. 30–31, 33",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-S12",
-        "chapter": 4,
-        "text": "Elastic Net on identical columns\nMinimize J=(2−w₁−w₂)²+0.5(|w₁|+|w₂|)+0.5(w₁²+w₂²). Use symmetry to find w₁ and w₂.",
-        "zh": {
-          "text": "相关列的 Elastic Net 手算\n最小化 J=(2−w₁−w₂)²+0.5(|w₁|+|w₂|)+0.5(w₁²+w₂²)。利用对称性求 w₁ 和 w₂。",
-          "options": []
-        },
-        "explanation": "正的 L2 项保证严格凸，交换对称性给出 w₁=w₂=t。目标为 (2−2t)²+|t|+t²。若 t>0，导数为 10t−7，得 t=0.7，满足假设，且是凸目标的最优解。",
-        "note": "Week 6 Slides · pp. 24, 30–32",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "kind": "计算"
+        "kind": "计算",
+        "id": 347
       },
       {
         "label": "W6-S13",
@@ -3808,52 +1703,8 @@
         "options": [],
         "answer": null,
         "bank": "written",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-S14",
-        "chapter": 4,
-        "text": "Average folds before choosing λ\nThree equal-sized validation folds give MSEs (1.0,2.0,1.5) for λ=0.1 and (1.3,1.4,1.2) for λ=0.5. Which λ is selected? What data may be used to fit a scaler inside each fold?",
-        "zh": {
-          "text": "先平均各折，再选 λ\n三个等大的验证折，λ=0.1 的 MSE 是 (1.0,2.0,1.5)，λ=0.5 为 (1.3,1.4,1.2)。选哪个 λ？折内标准化器用哪部分数据拟合？",
-          "options": []
-        },
-        "explanation": "平均值分别为 1.5 和 1.3，所以选 λ=0.5。每折只用该折的训练部分拟合 scaler，再用这套参数变换该折的验证部分。",
-        "note": "Week 6 Slides · pp. 38–39",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-S15",
-        "chapter": 4,
-        "text": "Thresholding does not commute with averaging\nTwo workers have tentative values z₁=0.4 and z₂=−0.1. For threshold 0.2, compare thresholding the mean with averaging the individually thresholded values.",
-        "zh": {
-          "text": "平均和阈值操作能交换吗？\n两个 worker 的暂定值为 z₁=0.4 和 z₂=−0.1。阈值是 0.2。比较先平均再阈值，与先分别阈值再平均。",
-          "options": []
-        },
-        "explanation": "先平均得 0.15，做阈值得 0。分别做阈值为 0.2 和 0，平均为 0.1。软阈值是非线性，两种流程一般不同。",
-        "note": "Week 6 Slides · p. 40",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "kind": "计算"
-      },
-      {
-        "label": "W6-S16",
-        "chapter": 4,
-        "text": "What does consensus mean in ADMM?\nIn distributed Lasso with one local variable wₖ per shard and one shared vector z, what constraint expresses consensus? What two kinds of updates alternate?",
-        "zh": {
-          "text": "ADMM 的一致性是什么？\n分布式 Lasso 中，每个分片有局部变量 wₖ，并共享一个全局向量 z。用什么约束表示一致性？算法交替做哪两类更新？",
-          "options": []
-        },
-        "explanation": "对每个 k 要求 wₖ=z。局部步骤用分片数据更新 wₖ；全局步骤结合各局部结果更新共享 z 并处理正则项，同时更新对偶变量，逐步协调一致。",
-        "note": "Week 6 Slides · pp. 36–40",
-        "options": [],
-        "answer": null,
-        "bank": "written",
-        "kind": "理论"
+        "kind": "计算",
+        "id": 262
       },
       {
         "label": "W6-COMPARE",
@@ -3868,7 +1719,40 @@
         "explanation": "Ridge 是平方 L2，平滑，对线性最小二乘有正规方程闭式解；一般收缩且不主动置零，相关变量可共享权重。Lasso 是 L1，在零不可微，能做原特征选择；高度相关时选择可能不稳定，一般无全局通用闭式解，用坐标下降或近端法。Elastic Net 加权混合两者，有正 L1 时在零不可微、可稀疏，L2 有助成组保留，一般也用坐标下降或近端法。",
         "note": "Week 6 Slides · pp. 24–32、36",
         "kind": "理论",
-        "chapter": 4
+        "chapter": 4,
+        "id": 266
+      },
+      {
+        "label": "W6-S14",
+        "chapter": 4,
+        "text": "Average folds before choosing λ\nThree equal-sized validation folds give MSEs (1.0,2.0,1.5) for λ=0.1 and (1.3,1.4,1.2) for λ=0.5. Which λ is selected? What data may be used to fit a scaler inside each fold?",
+        "zh": {
+          "text": "先平均各折，再选 λ\n三个等大的验证折，λ=0.1 的 MSE 是 (1.0,2.0,1.5)，λ=0.5 为 (1.3,1.4,1.2)。选哪个 λ？折内标准化器用哪部分数据拟合？",
+          "options": []
+        },
+        "explanation": "平均值分别为 1.5 和 1.3，所以选 λ=0.5。每折只用该折的训练部分拟合 scaler，再用这套参数变换该折的验证部分。",
+        "note": "Week 6 Slides · pp. 38–39",
+        "options": [],
+        "answer": null,
+        "bank": "written",
+        "kind": "计算",
+        "id": 263
+      },
+      {
+        "label": "W6-S16",
+        "chapter": 4,
+        "text": "What does consensus mean in ADMM?\nIn distributed Lasso with one local variable wₖ per shard and one shared vector z, what constraint expresses consensus? What two kinds of updates alternate?",
+        "zh": {
+          "text": "ADMM 的一致性是什么？\n分布式 Lasso 中，每个分片有局部变量 wₖ，并共享一个全局向量 z。用什么约束表示一致性？算法交替做哪两类更新？",
+          "options": []
+        },
+        "explanation": "对每个 k 要求 wₖ=z。局部步骤用分片数据更新 wₖ；全局步骤结合各局部结果更新共享 z 并处理正则项，同时更新对偶变量，逐步协调一致。",
+        "note": "Week 6 Slides · pp. 36–40",
+        "options": [],
+        "answer": null,
+        "bank": "written",
+        "kind": "理论",
+        "id": 265
       }
     ],
     [
@@ -3888,26 +1772,9 @@
         "origin": "slides",
         "role": "original",
         "context": "",
-        "pair": "W7-S02",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S02",
-        "text": "Build a full SVD\nFor X = [[1,1,0;1,−1,0]], use v₁=e₁ and v₂=e₂ with σ₁=σ₂=√2. Give U, Σ and V for one full SVD and show how you obtained u₁ and u₂.",
-        "options": [],
-        "zh": {
-          "text": "构造完整 SVD\n设 X = [[1,1,0;1,−1,0]]。已知 v₁=e₁、v₂=e₂，σ₁=σ₂=√2。给出一组完整 SVD 的 U、Σ 和 V，并说明 u₁、u₂ 怎么算。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "由 uᵢ=Xvᵢ/σᵢ 得到 U=(1/√2)[[1,1;1,−1]]。两列各自单位长度，且内积为 0。取 V=I₃、Σ=[[√2,0,0;0,√2,0]]，相乘 UΣVᵀ 得到原矩阵。",
-        "note": "课件 p. 39 第 1 题；pp. 9–11、14",
-        "origin": "slides",
-        "role": "variant",
-        "pair": "W7-L01",
-        "kind": "计算"
+        "kind": "计算",
+        "id": 267,
+        "hint": "先算 XᵀX。它是标量乘单位矩阵，所以可以直接取标准基作为右奇异向量。"
       },
       {
         "bank": "written",
@@ -3925,26 +1792,8 @@
         "origin": "slides",
         "role": "original",
         "context": "原题中的 “the matrix above” 指 L01 的 X=[[1,1;1,−1]]。",
-        "pair": "W7-S04",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S04",
-        "text": "A tie at the cutoff\nX=[[1,1,0;1,−1,0]] has singular values √2, √2. The matrix [[1,0,0;1,0,0]] is a best rank-1 approximation in Frobenius norm. Give a different one and show that it has the same error.",
-        "options": [],
-        "zh": {
-          "text": "截断处出现重复奇异值\nX=[[1,1,0;1,−1,0]] 的奇异值为 √2、√2。[[1,0,0;1,0,0]] 是一个 Frobenius 范数下的最优秩 1 近似。另给一个，并证明误差相同。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "也可取 [[0,1,0;0,−1,0]]。此时只丢掉第一列，误差为 √(1²+1²)=√2，等于 Eckart–Young 的最优误差 σ₂。截断点两边奇异值相等，保留其中任何一个对应方向都能达到这个误差。",
-        "note": "课件 p. 39 第 2 题；pp. 12–13",
-        "origin": "slides",
-        "role": "variant",
-        "pair": "W7-L02",
-        "kind": "证明"
+        "kind": "计算",
+        "id": 269
       },
       {
         "bank": "written",
@@ -3962,26 +1811,9 @@
         "origin": "slides",
         "role": "original",
         "context": "",
-        "pair": "W7-S09",
-        "kind": "证明"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S09",
-        "text": "Why does the top eigenvector win?\nA covariance matrix has orthonormal eigenvectors v₁,v₂ with variances 5 and 2. Use v=av₁+bv₂ to show that the variance of a unit direction cannot exceed 5.",
-        "options": [],
-        "zh": {
-          "text": "为什么最大特征值对应 PC1？\n协方差矩阵的正交单位特征向量 v₁、v₂ 对应方差 5 和 2。用 v=av₁+bv₂ 证明任意单位方向的方差不超过 5。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "因为两向量正交归一，a²+b²=1。交叉项为零，故 vᵀSv=5a²+2b²=5−3b²≤5。等号在 b=0、a=±1 时成立，所以最优方向为 ±v₁。",
-        "note": "课件 p. 39 第 3 题；pp. 15、21",
-        "origin": "slides",
-        "role": "variant",
-        "pair": "W7-L03",
-        "kind": "证明"
+        "kind": "证明",
+        "id": 271,
+        "hint": "把任一单位向量展开为协方差矩阵的正交特征向量的线性组合。展开系数的平方和等于 1。"
       },
       {
         "bank": "written",
@@ -3999,26 +1831,8 @@
         "origin": "slides",
         "role": "original",
         "context": "",
-        "pair": "W7-S10",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S10",
-        "text": "Choose k from cumulative EVR\nThe singular values of centered X are (8,6,4,2,1). Find the smallest k that retains at least 95% of the total variance. Show how you check minimality.",
-        "options": [],
-        "zh": {
-          "text": "由累计 EVR 选择 k\n中心化矩阵 X 的奇异值为 (8,6,4,2,1)。求保留至少 95% 总方差的最小 k，并说明为什么不能更小。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "奇异值平方总和为 121。前两项保留 100/121≈82.6%，前 3 项为 116/121≈95.9%。由于累计比例随 k 增加，最小 k 为 3。",
-        "note": "课件 p. 39 第 4 题；实验 Task 1、Task 6 Q1",
-        "origin": "slides",
-        "role": "variant",
-        "pair": "W7-L04",
-        "kind": "计算"
+        "kind": "计算",
+        "id": 273
       },
       {
         "bank": "written",
@@ -4036,26 +1850,8 @@
         "origin": "slides",
         "role": "original",
         "context": "",
-        "pair": "W7-S26",
-        "kind": "理论"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S26",
-        "text": "Oversampling near a clustered cutoff\nTwo matrices are compressed to rank 10. In A, the singular values drop sharply after σ₁₀; in B, σ₉ through σ₁₄ are close. For which matrix is a width-10 random sketch more likely to struggle to capture the leading subspace? Explain why a width-16 sketch can help while the result is still rank 10.",
-        "options": [],
-        "zh": {
-          "text": "截断附近的奇异值挤在一起\n两个矩阵都压成秩 10。A 的奇异值在 σ₁₀ 后急剧下降；B 的 σ₉ 到 σ₁₄ 非常接近。宽度 10 的随机草图在哪个矩阵上更难覆盖领先子空间？解释宽度 16 为什么可能有帮助，且结果仍然是秩 10。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "B 在截断处的谱隙小，随机草图更难区分相近的方向。宽度 16 的草图容纳更多候选方向，再在投影后取最好的 10 个，因此草图宽度增加而输出秩保持 10。",
-        "note": "Week 7 Slides p. 39 Exercise 5 变式",
-        "origin": "slides",
-        "role": "variant",
-        "pair": "W7-L05",
-        "kind": "理论"
+        "kind": "理论",
+        "id": 275
       },
       {
         "bank": "written",
@@ -4073,26 +1869,8 @@
         "origin": "slides",
         "role": "original",
         "context": "",
-        "pair": "W7-S23",
-        "kind": "理论"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S23",
-        "text": "Verify a streamed PCA target\nYou fit a common basis in batches for flattened images. What two sums of squares should you accumulate to test whether the final basis retains 95% of the centered training variance?",
-        "options": [],
-        "zh": {
-          "text": "分批核验 95% 方差门槛\n把图像展平并分批拟合共享基后，要判断最终的基是否保留了至少 95% 的中心化训练方差，应分批累加哪两个平方和？",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "用同一训练均值中心化每批样本。分子累加投影坐标的平方和 Σ‖Vₖᵀ(x−μ)‖₂²；分母累加中心化原向量的平方和 Σ‖x−μ‖₂²。用最终的同一套基计算，检查分子／分母是否至少为 0.95。",
-        "note": "课件 pp. 17、29–31；p. 39 第 6 题；实验 Task 6 Q7",
-        "origin": "slides",
-        "role": "variant",
-        "pair": "W7-L06",
-        "kind": "计算"
+        "kind": "理论",
+        "id": 277
       },
       {
         "bank": "written",
@@ -4110,26 +1888,8 @@
         "origin": "homework",
         "role": "original",
         "context": "",
-        "pair": "W7-S27",
-        "kind": "理论"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S27",
-        "text": "Storage with a shared basis\nOne million grayscale images are 32 × 32. A shared PCA basis retains 95% of training variance at k=16. Using float32, count the bytes for the scores, the mean and the basis. Estimate the compression factor over raw float32 pixels.",
-        "options": [],
-        "zh": {
-          "text": "计入共享基的存储量\n一百万张 32×32 灰度图，共享 PCA 基在 k=16 时保留 95% 的训练方差。用 float32，求得分、均值和基各占多少字节，并估算相对于原始 float32 像素的压缩倍数。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "得分是 10⁶×16×4=64,000,000 字节。均值是 1024×4=4096 字节，基是 1024×16×4=65,536 字节。原图是 10⁶×1024×4=4,096,000,000 字节。把三项相加作为分母，压缩倍数约为 64。",
-        "note": "Week 7 作业 Task 6 Q7 变式",
-        "origin": "homework",
-        "role": "variant",
-        "pair": "W7-H07",
-        "kind": "计算"
+        "kind": "理论",
+        "id": 279
       },
       {
         "bank": "written",
@@ -4147,816 +1907,40 @@
         "origin": "homework",
         "role": "original",
         "context": "",
-        "pair": "W7-S25",
-        "kind": "理论"
+        "kind": "理论",
+        "id": 281
       },
       {
         "bank": "written",
-        "chapter": 5,
-        "label": "W7-S25",
-        "text": "What changes when you add PCA?\nA mini-batch softmax classifier originally uses 100 standardized features. After PCA it uses 12 scores. What is the input shape for a batch of B samples, and which part of the optimization pipeline can stay the same?",
-        "options": [],
-        "zh": {
-          "text": "加入 PCA 后，哪一步变了？\nmini-batch softmax 分类器原来使用 100 个标准化特征。做 PCA 后改用 12 个得分。B 个样本构成的批次输入形状是什么？优化流程的哪部分可以照用？",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "输入由 B×100 变成 B×12，权重矩阵的第一维也变成 12。mini-batch SGD 的更新规则和正则化形式可以照用；k 和正则强度可用验证数据选择。",
-        "note": "Week 7 作业 Task 6 Q8 变式",
-        "origin": "homework",
-        "role": "variant",
-        "pair": "W7-H08",
-        "kind": "理论"
-      },
-      {
-        "bank": "mc",
-        "chapter": 5,
-        "label": "W7-01",
-        "text": "X has 900 observations and 60 features. Which operation performs linear feature extraction into 8 dimensions?",
-        "options": [
-          "Keep 8 original columns",
-          "Compute XW with W of shape 60 × 8 whose columns mix the features",
-          "Keep 8 rows",
-          "Compute WᵀX with W of shape 900 × 8"
-        ],
-        "zh": {
-          "text": "X 有 900 条观测、60 个特征。哪个操作将数据线性提取为 8 个新特征？",
-          "options": [
-            "保留 8 个原始列",
-            "用 60 × 8 的 W 混合原特征，计算 XW",
-            "保留 8 行",
-            "用 900 × 8 的 W 计算 WᵀX"
-          ]
-        },
-        "answer": "B",
-        "explanation": "XW 为 900 × 8，每条观测保留，新的列是原列的线性组合。A 是特征选择。D 改变的是观测轴。",
-        "note": "课件 pp. 3–6",
-        "kind": "理论"
-      },
-      {
-        "bank": "mc",
         "chapter": 5,
         "label": "W7-02",
-        "text": "D = diag(−2, 4, 4). Which statement is true?",
-        "options": [
-          "det(D) = 32",
-          "D³ = diag(−8, 16, 16)",
-          "D⁻¹ = diag(1/2, 1/4, 1/4)",
-          "The eigenspace for λ = 4 is {(0, a, b)ᵀ : a, b ∈ ℝ}"
-        ],
+        "text": "What a diagonal matrix does\nLet D=diag(2,−1,0). Find D(1,2,3)ᵀ, det(D), and say whether D is invertible.",
+        "options": [],
         "zh": {
-          "text": "设 D = diag(−2, 4, 4)。哪个说法正确？",
-          "options": [
-            "行列式等于 32",
-            "三次方为 diag(−8, 16, 16)",
-            "逆矩阵为 diag(1/2, 1/4, 1/4)",
-            "λ = 4 的特征空间是 {(0, a, b)ᵀ : a, b ∈ ℝ}"
-          ]
+          "text": "对角矩阵怎么乘？\nD=diag(2,−1,0)。求 D(1,2,3)ᵀ、det(D)，并判断可逆性。",
+          "options": []
         },
-        "answer": "D",
-        "explanation": "D − 4I = diag(−6, 0, 0)，所以第一坐标为 0。特征空间包含零向量，特征向量需非零。行列式为 −32，三次方为 diag(−8, 64, 64)，逆的第一项为 −1/2。",
+        "answer": null,
+        "explanation": "逐坐标相乘得到 (2,−2,0)ᵀ。行列式是对角元素乘积，为 0，因此不可逆。",
         "note": "课件 pp. 7–8",
-        "kind": "计算"
+        "kind": "计算",
+        "id": 349
       },
       {
-        "bank": "mc",
+        "bank": "written",
         "chapter": 5,
         "label": "W7-03",
-        "text": "A = [[4,2;1,3]]. Which is an eigenpair (λ, v) of A?",
-        "options": [
-          "(5, (2, 1)ᵀ)",
-          "(5, (1, 2)ᵀ)",
-          "(2, (1, 1)ᵀ)",
-          "(3, (1, −1)ᵀ)"
-        ],
+        "text": "Find a simple eigenpair\nA=[[3,1;1,3]]. Multiply A by v=(1,1)ᵀ and give its eigenvalue. Then test (1,−1)ᵀ.",
+        "options": [],
         "zh": {
-          "text": "设 A = [[4,2;1,3]]。哪组 (λ, v) 是 A 的特征值和特征向量？",
-          "options": [
-            "(5, (2, 1)ᵀ)",
-            "(5, (1, 2)ᵀ)",
-            "(2, (1, 1)ᵀ)",
-            "(3, (1, −1)ᵀ)"
-          ]
+          "text": "找出两组简单特征对\nA=[[3,1;1,3]]。用 A 乘 v=(1,1)ᵀ，找其特征值。再对 (1,−1)ᵀ 做同样检查。",
+          "options": []
         },
-        "answer": "A",
-        "explanation": "det(A−λI) = (4−λ)(3−λ)−2 = (λ−5)(λ−2)。当 λ=5 时，(A−5I)v=0 给出 x=2y，取 y=1 即得。λ=2 时可取 (1,−1)ᵀ。",
+        "answer": null,
+        "explanation": "A(1,1)ᵀ=(4,4)ᵀ，所以特征值为 4；A(1,−1)ᵀ=(2,−2)ᵀ，所以另一特征值为 2。",
         "note": "课件 p. 8",
-        "kind": "计算"
-      },
-      {
-        "bank": "mc",
-        "chapter": 5,
-        "label": "W7-04",
-        "text": "In the full SVD of a 5 × 3 matrix X of rank 2, which claim is correct?",
-        "options": [
-          "Σ has shape 2 × 2",
-          "The five columns of U form a basis for col(X)",
-          "Σ has shape 5 × 3, and v₁, v₂ form a basis for row(X)",
-          "v₃ belongs to row(X) and Xv₃ ≠ 0"
-        ],
-        "zh": {
-          "text": "对一个 5 × 3、秩为 2 的 X 作完整 SVD。哪个说法正确？",
-          "options": [
-            "Σ 的尺寸为 2 × 2",
-            "U 的全部五列构成 X 列空间的一组基",
-            "Σ 为 5 × 3，且 v₁、v₂ 构成 X 行空间的一组基",
-            "v₃ 属于 X 的行空间，且 Xv₃ ≠ 0"
-          ]
-        },
-        "answer": "C",
-        "explanation": "完整 U 是 5 × 5，V 是 3 × 3。只有前两组对应正奇异值，因此 col(X)=span(u₁,u₂)，row(X)=span(v₁,v₂)，而 Xv₃=0。",
-        "note": "课件 pp. 9–10、14",
-        "kind": "理论"
-      },
-      {
-        "bank": "mc",
-        "chapter": 5,
-        "label": "W7-05",
-        "text": "X = [[2,−2,4;1,−1,2]]. What is its only positive singular value?",
-        "options": [
-          "30",
-          "√6",
-          "5",
-          "√30"
-        ],
-        "zh": {
-          "text": "设 X = [[2,−2,4;1,−1,2]]。它唯一的正奇异值是多少？",
-          "options": [
-            "30",
-            "√6",
-            "5",
-            "√30"
-          ]
-        },
-        "answer": "D",
-        "explanation": "X=(2,1)ᵀ(1,−1,2)，秩为 1。将两边向量单位化，唯一的奇异值为 √5·√6=√30，也等于此矩阵的 Frobenius 范数。",
-        "note": "课件 pp. 10–12",
-        "kind": "计算"
-      },
-      {
-        "bank": "mc",
-        "chapter": 5,
-        "label": "W7-06",
-        "text": "The positive singular values of X are 9, 4, 3, 1. For the truncated rank-2 SVD, what are (‖X−X₂‖F, ‖X−X₂‖₂)?",
-        "options": [
-          "(√10, 3)",
-          "(3, √10)",
-          "(4, 3)",
-          "(10, 3)"
-        ],
-        "zh": {
-          "text": "X 的正奇异值为 9、4、3、1。对截断秩 2 SVD，(Frobenius 误差，谱范数误差) 是多少？",
-          "options": [
-            "(√10, 3)",
-            "(3, √10)",
-            "(4, 3)",
-            "(10, 3)"
-          ]
-        },
-        "answer": "A",
-        "explanation": "丢掉的是 3 和 1。Frobenius 误差平方为 3²+1²=10，误差为 √10；谱范数误差取最大的丢弃奇异值 3。",
-        "note": "课件 pp. 12–13；p. 39 第 2 题",
-        "kind": "计算"
-      },
-      {
-        "bank": "mc",
-        "chapter": 5,
-        "label": "W7-07",
-        "text": "For 5 samples and 8 features, center each feature before SVD. If the largest singular value is 6, which statement is correct for sample covariance PCA?",
-        "options": [
-          "At most 5 nonzero PCs; variance of PC1 is 36/5",
-          "At most 4 nonzero PCs; variance of PC1 is 9",
-          "At most 4 nonzero PCs; variance of PC1 is 6",
-          "At most 8 nonzero PCs; variance of PC1 is 9"
-        ],
-        "zh": {
-          "text": "5 个样本、8 个特征。逐列中心化后做 SVD，最大奇异值为 6。对样本协方差 PCA，哪个说法正确？",
-          "options": [
-            "最多 5 个非零方差主成分，PC1 方差为 36/5",
-            "最多 4 个非零方差主成分，PC1 方差为 9",
-            "最多 4 个非零方差主成分，PC1 方差为 6",
-            "最多 8 个非零方差主成分，PC1 方差为 9"
-          ]
-        },
-        "answer": "B",
-        "explanation": "中心化后各行向量之和为 0，因此秩至多 n−1=4。样本协方差的最大特征值为 σ₁²/(n−1)=36/4=9。",
-        "note": "课件 pp. 14、16–19、21、35",
-        "kind": "计算"
-      },
-      {
-        "bank": "mc",
-        "chapter": 5,
-        "label": "W7-08",
-        "text": "For centered data Xc, which pair gives the PCA score matrix and the reconstruction in centered feature space?",
-        "options": [
-          "(Uₖ, UₖVₖᵀ)",
-          "(Xc Vₖ, Xc)",
-          "(UₖΣₖ, UₖΣₖVₖᵀ)",
-          "(Vₖ, VₖVₖᵀ)"
-        ],
-        "zh": {
-          "text": "对中心化数据 Xc，哪一组分别给出 PCA 得分矩阵和中心化特征空间中的重构？",
-          "options": [
-            "(Uₖ, UₖVₖᵀ)",
-            "(Xc Vₖ, Xc)",
-            "(UₖΣₖ, UₖΣₖVₖᵀ)",
-            "(Vₖ, VₖVₖᵀ)"
-          ]
-        },
-        "answer": "C",
-        "explanation": "Vₖ 给出方向，Xc Vₖ=UₖΣₖ 给出样本坐标。右乘 Vₖᵀ 回到中心化特征空间。若要返回原始尺度，中心化须加回均值；标准化还须先恢复尺度。",
-        "note": "课件 pp. 15–19、22、35",
-        "kind": "理论"
-      },
-      {
-        "bank": "mc",
-        "chapter": 5,
-        "label": "W7-09",
-        "text": "The covariance of two centered features is diag(100, 1). If each feature is divided by its sample standard deviation, what changes?",
-        "options": [
-          "PC1 must now be the second coordinate axis",
-          "The covariance is still diag(100, 1)",
-          "The covariance becomes I; any unit direction is a valid PC1",
-          "The covariance becomes diag(10, 1)"
-        ],
-        "zh": {
-          "text": "两个中心化特征的协方差为 diag(100, 1)。各自除以样本标准差后，会发生什么？",
-          "options": [
-            "PC1 一定变成第二个坐标轴",
-            "协方差仍为 diag(100, 1)",
-            "协方差变成 I，任意单位方向均可作为 PC1",
-            "协方差变成 diag(10, 1)"
-          ]
-        },
-        "answer": "C",
-        "explanation": "第一个坐标除以 10，方差除以 10²；第二个坐标不变。协方差为 I，所有单位方向的方差同为 1。标准化统一各列方差，并不保证方向唯一。",
-        "note": "课件 pp. 20–21、36；实验 Task 6 Q5",
-        "kind": "计算"
-      },
-      {
-        "bank": "mc",
-        "chapter": 5,
-        "label": "W7-10",
-        "text": "A centered matrix Xc has shape 800 × 50,000. Which smaller Gram matrix has the same positive eigenvalues as XcᵀXc?",
-        "options": [
-          "XcᵀXc, 800 × 800",
-          "XcXcᵀ, 800 × 800",
-          "XcᵀXc, 50,000 × 800",
-          "XcXcᵀ, 50,000 × 50,000"
-        ],
-        "zh": {
-          "text": "中心化矩阵 Xc 是 800 × 50,000。哪个较小的 Gram 矩阵具有与 XcᵀXc 相同的正奇异值平方（即正特征值）？",
-          "options": [
-            "XcᵀXc，800 × 800",
-            "XcXcᵀ，800 × 800",
-            "XcᵀXc，50,000 × 800",
-            "XcXcᵀ，50,000 × 50,000"
-          ]
-        },
-        "answer": "B",
-        "explanation": "两个 Gram 矩阵的正特征值都是 σᵢ²。XcXcᵀ 的特征向量位于样本空间，得到 uᵢ 后用 vᵢ=Xcᵀuᵢ/σᵢ 恢复正奇异值对应的特征方向。",
-        "note": "课件 pp. 14、23、26",
-        "kind": "计算"
-      },
-      {
-        "bank": "mc",
-        "chapter": 5,
-        "label": "W7-11",
-        "text": "In randomized SVD, X has shape n × p, ℓ = k + r ≤ min(n,p), and Q has ℓ columns. Which pair forms B and lifts its left singular vectors Uᴮ?",
-        "options": [
-          "(XQ, UᴮQᵀ)",
-          "(QᵀX, QᵀUᴮ)",
-          "(XᵀQ, QUᴮ)",
-          "(QᵀX, QUᴮ)"
-        ],
-        "zh": {
-          "text": "随机 SVD 中，X 为 n × p，ℓ = k + r ≤ min(n,p)，Q 有 ℓ 列。哪个组合给出小矩阵 B 以及从 Uᴮ 恢复左奇异向量的公式？",
-          "options": [
-            "(XQ, UᴮQᵀ)",
-            "(QᵀX, QᵀUᴮ)",
-            "(XᵀQ, QUᴮ)",
-            "(QᵀX, QUᴮ)"
-          ]
-        },
-        "answer": "D",
-        "explanation": "Q 是 n × ℓ，B=QᵀX 是 ℓ × p。B 的左奇异向量在草图坐标内，左乘 Q 回到 n 维样本空间。",
-        "note": "课件 pp. 26–28；p. 39 第 5 题",
-        "kind": "理论"
-      },
-      {
-        "bank": "mc",
-        "chapter": 5,
-        "label": "W7-12",
-        "text": "Samples arrive in batches that fit memory, but the full dataset does not. Which workflow fits a common PCA basis and embeds all batches in that basis?",
-        "options": [
-          "Call IncrementalPCA.partial_fit on training batches, then transform batches using the final basis",
-          "Build the full data matrix in RAM before applying exact SVD",
-          "Fit independent PCA bases on each batch and concatenate their scores",
-          "Call partial_fit on held-out batches just before scoring them"
-        ],
-        "zh": {
-          "text": "每批数据可放入内存，但完整数据放不下。哪个流程能拟合一套共同的 PCA 基，并用这套基表示所有批次？",
-          "options": [
-            "对训练批次调用 partial_fit，再用最终的一套基转换各批次",
-            "先把完整数据装入内存再做完整 SVD",
-            "每批单独拟合 PCA，再拼接得分",
-            "在测试批次上先 partial_fit 再评分"
-          ]
-        },
-        "answer": "A",
-        "explanation": "partial_fit 更新同一模型。要让所有坐标使用同一套基，应在拟合完后用最终模型 transform（历史批次需可重读）。若只能单次读取且只需在线更新子空间，可考虑 Oja 更新。D 会引入测试信息。",
-        "note": "课件 pp. 29–30、37；实验 Task 7(a)",
-        "kind": "理论"
-      },
-      {
-        "bank": "mc",
-        "chapter": 5,
-        "label": "W7-13",
-        "text": "A document–term SVD uses term directions Vₖ. Separately, a user–item SVD must predict entries by dot products in a symmetric factorization. Which pair works?",
-        "options": [
-          "Documents: XᵀUₖ. User/item factors: Uₖ and Vₖ",
-          "Documents: X Vₖ. User/item factors: Uₖ and Vₖ",
-          "Documents: Vₖ. User/item factors: UₖΣₖ and VₖΣₖ",
-          "Documents: X Vₖ. User/item factors: UₖΣₖ¹ᐟ² and VₖΣₖ¹ᐟ²"
-        ],
-        "zh": {
-          "text": "文档–词项 SVD 用词项方向 Vₖ。另一个用户–物品 SVD 要把奇异值对称分到两个因子，使内积给出预测值。哪个组合正确？",
-          "options": [
-            "文档：XᵀUₖ。用户／物品：Uₖ 与 Vₖ",
-            "文档：X Vₖ。用户／物品：Uₖ 与 Vₖ",
-            "文档：Vₖ。用户／物品：UₖΣₖ 与 VₖΣₖ",
-            "文档：X Vₖ。用户／物品：UₖΣₖ¹ᐟ² 与 VₖΣₖ¹ᐟ²"
-          ]
-        },
-        "answer": "D",
-        "explanation": "文档是 X 的行，X Vₖ 得到每篇文档的投影。对称分配时两个 √Σₖ 相乘还原 Σₖ，行向量内积给出截断矩阵对应元素。只用 Uₖ、Vₖ 会丢掉奇异值权重。",
-        "note": "课件 pp. 32、34、37",
-        "kind": "理论"
-      },
-      {
-        "bank": "mc",
-        "chapter": 5,
-        "label": "W7-14",
-        "text": "In a gene-expression dataset, PC1 mainly reflects batch effects, while a lower-variance direction separates two labelled subtypes. Which conclusion follows?",
-        "options": [
-          "PCA uses the labels to keep the subtype direction",
-          "PCA can preserve a high-variance nuisance direction and discard a discriminative direction",
-          "Standardization guarantees that PC1 separates subtypes",
-          "Large explained variance guarantees high classification accuracy"
-        ],
-        "zh": {
-          "text": "基因表达数据中，PC1 主要反映批次效应，区分两种有标签亚型的方向方差较小。哪项结论成立？",
-          "options": [
-            "PCA 会使用标签保留亚型方向",
-            "PCA 可能保留高方差的干扰方向，丢掉有判别力的方向",
-            "标准化保证 PC1 区分亚型",
-            "解释方差高就保证分类准确率高"
-          ]
-        },
-        "answer": "B",
-        "explanation": "PCA 优化总体方差，没有用标签。按 EVR 选 k 与按验证集分类表现选 k 是不同目标。需要监督投影时可考虑课件中的 LDA。",
-        "note": "课件 pp. 15、24、33、36；实验 Task 3/6 Q4",
-        "kind": "理论"
-      },
-      {
-        "bank": "mc",
-        "chapter": 5,
-        "label": "W7-15",
-        "text": "After fitting PCA, a Lasso classifier has only one nonzero coefficient, on PC1. The loading v₁ is dense. What follows for the original standardized features?",
-        "options": [
-          "The implied original-space weight can be dense",
-          "Exactly one original feature has nonzero weight",
-          "The implied original-space weight must be zero",
-          "PCA selects original features before Lasso"
-        ],
-        "zh": {
-          "text": "PCA 后用 Lasso 分类，只有 PC1 的权重非零，而且 v₁ 是稠密的。对原来的标准化特征，这意味着什么？",
-          "options": [
-            "折回原特征空间后的权重可以是稠密的",
-            "恰有一个原始特征权重非零",
-            "折回原特征空间后的权重一定是零",
-            "PCA 已经在 Lasso 之前选好了原始特征"
-          ]
-        },
-        "answer": "A",
-        "explanation": "若唯一非零系数是 w₁，则原坐标系中的等效权重是 w₁v₁。主成分空间的稀疏性和原始特征空间的稀疏性是两回事。",
-        "note": "课件 pp. 5、36；实验 Task 4/6 Q6",
-        "kind": "理论"
-      },
-      {
-        "bank": "mc",
-        "chapter": 5,
-        "label": "W7-16",
-        "text": "A centered dataset has total sample variance 100. A truncated SVD returns σ₁² = 480 and σ₂² = 320, with n = 11. Which is the cumulative EVR of the first two PCs?",
-        "options": [
-          "100%",
-          "72.7%",
-          "80%",
-          "48%"
-        ],
-        "zh": {
-          "text": "中心化数据的总样本方差为 100。截断 SVD 给出 σ₁² = 480、σ₂² = 320，n = 11。前两个主成分的累计 EVR 是多少？",
-          "options": [
-            "100%",
-            "72.7%",
-            "80%",
-            "48%"
-          ]
-        },
-        "answer": "C",
-        "explanation": "前两项样本方差之和为 (480+320)/(11−1)=80，除以完整总样本方差 100 得 80%。只用返回的两个 σᵢ² 归一化会把它们的累计比例错误地算成 100%。",
-        "note": "课件 pp. 17–19、24；实验 Task 1/6 Q1",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S01",
-        "text": "Right singular vectors\nLet X = [[1,1,0;1,−1,0]]. Compute XᵀX and give its eigenvalues and one orthonormal eigenbasis.",
-        "options": [],
-        "zh": {
-          "text": "右奇异向量\n设 X = [[1,1,0;1,−1,0]]。求 XᵀX，并写出它的特征值和一组正交归一的特征向量基。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "X 的前两列长度平方都是 2，内积为 0，第三列为零。因此 XᵀX=diag(2,2,0)。特征值是 2、2、0，可取标准基 e₁、e₂、e₃。前两个方向也可换成同一平面内任意一组正交归一基。",
-        "note": "课件 p. 39 第 1 题；pp. 8–9、14",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S03",
-        "text": "Truncate one term\nLet X=[[1,1,0;1,−1,0]]. Its first singular triplet is σ₁=√2, u₁=(1,1)ᵀ/√2, v₁=e₁. Write the best rank-1 approximation obtained by keeping this term.",
-        "options": [],
-        "zh": {
-          "text": "只保留第一项\n设 X=[[1,1,0;1,−1,0]]，第一组奇异三元组为 σ₁=√2、u₁=(1,1)ᵀ/√2、v₁=e₁。写出保留这一项得到的最优秩 1 近似。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "X₁=σ₁u₁v₁ᵀ=(1,1)ᵀ(1,0,0)=[[1,0,0;1,0,0]]。这里是列向量乘行向量，结果仍是 2×3 矩阵。",
-        "note": "课件 p. 39 第 2 题；pp. 10–13",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S05",
-        "text": "Different residual norms\nThe singular values of X are (6,3,2,1). For the rank-1 truncated SVD, find both the squared Frobenius residual and the spectral residual.",
-        "options": [],
-        "zh": {
-          "text": "区分两种残差\nX 的奇异值为 (6,3,2,1)。做秩 1 截断 SVD，分别求 Frobenius 残差的平方和谱范数残差。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "丢弃奇异值 3、2、1。Frobenius 残差的平方为 3²+2²+1²=14，谱范数残差取最大丢弃奇异值 3。",
-        "note": "课件 pp. 12–13；实验 Task 6 Q2",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S06",
-        "text": "Center, then compute covariance\nThe observations are (5,3), (1,−1), (4,0), (2,2). Find their mean and 2 × 2 sample covariance matrix.",
-        "options": [],
-        "zh": {
-          "text": "先中心化，再求协方差\n观测为 (5,3)、(1,−1)、(4,0)、(2,2)。求均值和 2×2 样本协方差矩阵。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "均值为 (3,1)，中心化矩阵为 Xc=[[2,2;−2,−2;1,−1;−1,1]]。两列平方和各为 10，列内积为 4+4−1−1=6。除以 n−1=3 得 S=(1/3)[[10,6;6,10]]。",
-        "note": "课件 pp. 16、21、25",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S07",
-        "text": "Find PC1 by inspection\nS=(1/3)[[10,6;6,10]] is a sample covariance matrix. Test the directions (1,1)ᵀ and (1,−1)ᵀ. Which unit direction is PC1, and what fraction of variance does it capture?",
-        "options": [],
-        "zh": {
-          "text": "用对称性找 PC1\n样本协方差 S=(1/3)[[10,6;6,10]]。试验 (1,1)ᵀ 和 (1,−1)ᵀ 两个方向。哪个单位方向是 PC1？它解释多少方差？",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "相乘后分别得到原向量的 16/3 倍和 4/3 倍，所以 PC1 可取 (1,1)ᵀ/√2。EVR₁=(16/3)/[(16+4)/3]=80%。PC1 取反方向也成立。",
-        "note": "课件 pp. 17、21、25；p. 39 第 3 题",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S08",
-        "text": "From one score back to one point\nThe training mean is μ=(3,1)ᵀ, and v₁=(1,1)ᵀ/√2. Find the PC1 score of x=(4,0)ᵀ and reconstruct x in the original coordinates using only PC1.",
-        "options": [],
-        "zh": {
-          "text": "从一维得分还原一点\n训练均值为 μ=(3,1)ᵀ，v₁=(1,1)ᵀ/√2。求 x=(4,0)ᵀ 的 PC1 得分，并仅用 PC1 重构到原坐标。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "先做 x−μ=(1,−1)ᵀ。得分 z=v₁ᵀ(x−μ)=(1−1)/√2=0。重构为 μ+v₁z=(3,1)ᵀ。零得分意味着点在中心化后与 PC1 正交。",
-        "note": "课件 pp. 16、22、25",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S11",
-        "text": "Read the shape of a spectrum\nTwo datasets have equal total variance and five features. Their sorted variance shares are A=(70,15,10,4,1)% and B=(35,25,20,12,8)%. For each, give the smallest k for 90% EVR. Why do they differ?",
-        "options": [],
-        "zh": {
-          "text": "读出谱形差异\n两个数据集总方差相同，都有五个特征。排序后的各 PC 方差占比为 A=(70,15,10,4,1)%、B=(35,25,20,12,8)%。分别求达到 90% EVR 的最小 k，并解释差异。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "A 前 2 项为 85%，前 3 项为 95%，所以 k=3。B 前 3 项为 80%，前 4 项为 92%，所以 k=4。B 的谱较平坦，方差分散到更多方向。",
-        "note": "课件 pp. 17、24；实验 Task 1、Task 6 Q1",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S12",
-        "text": "Check the same error metric\nAt k=3 the discarded singular values are 2 and 1. A direct computation gives ‖X−X₃‖F²=5.05 on the same matrix. What is the relative discrepancy from the Eckart–Young prediction?",
-        "options": [],
-        "zh": {
-          "text": "用相同的误差口径核验\nk=3 时丢弃的奇异值为 2 和 1。同一个矩阵直接算出 ‖X−X₃‖F²=5.05。它相对 Eckart–Young 理论值偏差多少？",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "理论残差平方为 2²+1²=5。相对偏差为 |5.05−5|/5=1%。题目给的是平方残差，所以应与 5 比较。",
-        "note": "课件 pp. 12–13；实验 Task 2、Task 6 Q2",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S13",
-        "text": "Shape the randomized sketch\nX has shape 4000 × 1000. Use k=20, oversampling r=8, Y=XΩ, thin QR Y=QR, and B=QᵀX. Give the shapes of Ω, Y, Q and B.",
-        "options": [],
-        "zh": {
-          "text": "随机 SVD 的尺寸\nX 是 4000×1000。令 k=20、过采样 r=8，计算 Y=XΩ、薄 QR 分解 Y=QR 和 B=QᵀX。求 Ω、Y、Q、B 的尺寸。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "草图宽度为 k+r=28。Ω 是 1000×28，Y 和 Q 都是 4000×28，B 是 28×1000。B 的行数缩到 28，仍保留原来的特征轴。",
-        "note": "课件 p. 39 第 5 题；pp. 26–28",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S14",
-        "text": "Map vectors back\nIn a randomized SVD, B=QᵀX and B≈UᴮₖΣₖVₖᵀ. Which matrix gives the approximate left singular vectors in the original sample space? Explain using the projected matrix QQᵀX.",
-        "options": [],
-        "zh": {
-          "text": "把小矩阵的方向映回去\n随机 SVD 中 B=QᵀX，且 B≈UᴮₖΣₖVₖᵀ。哪个矩阵给出原样本空间里的近似左奇异向量？请用 QQᵀX 解释。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "取 QUᴮₖ。因为 QQᵀX=QB≈(QUᴮₖ)ΣₖVₖᵀ，左乘 Q 把草图坐标映回样本空间。Q 的列正交归一，因此会保留 Uᴮₖ 各列间的内积。",
-        "note": "课件 pp. 27–28",
-        "kind": "理论"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S15",
-        "text": "Why oversample?\nTwo randomized SVD runs both return k components. One sketches with k columns and the other with k+8. Why can the wider sketch improve accuracy? Does using r=0 imply failure?",
-        "options": [],
-        "zh": {
-          "text": "为什么多采样几列？\n两次随机 SVD 都输出 k 个成分，一次草图用 k 列，一次用 k+8 列。为什么后者可能更准？r=0 是否一定失败？",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "多出的随机方向让草图更容易覆盖主列空间，再从这个更大的子空间选前 k 个方向。r=0 缺少缓冲，漏掉重要方向的风险增加；如果草图已经张成需要的子空间，也可以成功。",
-        "note": "课件 p. 39 第 5 题；实验 Task 6 Q3",
-        "kind": "理论"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S16",
-        "text": "One power iteration\nThe leading singular values of X are 4 and 2. The sketch starts at Y=XΩ. How does one update Y←X(XᵀY) change the ratio of the singular-value weights on these two directions?",
-        "options": [],
-        "zh": {
-          "text": "一次幂迭代\nX 的前两个奇异值是 4 和 2，初始草图为 Y=XΩ。做一次 Y←X(XᵀY)，两个方向上的奇异值权重之比如何变化？",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "初始权重比为 4/2=2。再乘 XXᵀ 时，各左奇异方向多乘 σᵢ²，因此权重变成 σᵢ³，权重比 4³/2³=8。这说的是奇异值带来的权重，随机草图本身的系数还取决于 Ω。",
-        "note": "课件 p. 28；实验 Task 2",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S19",
-        "text": "Locate the leakage\nA student fits the scaler on training data, then fits PCA on the concatenated standardized training and validation rows. They choose k using validation accuracy and report test accuracy once. Which step should change, and how?",
-        "options": [],
-        "zh": {
-          "text": "找出数据泄漏\n学生在训练集上拟合标准化器，然后把标准化后的训练集和验证集合并拟合 PCA，用验证准确率选 k，最后在测试集报告一次准确率。哪一步需要改？怎么改？",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "PCA 拟合使用了验证集，验证集的信息提前进入了投影基。每个候选 PCA 都只用训练集拟合；验证集、测试集只调用训练好的 scaler 和 PCA 的 transform。验证集可以用来选 k。",
-        "note": "实验 pp. 1–3、Task 3、Task 6 Q8；课件 pp. 16、24",
-        "kind": "理论"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S20",
-        "text": "Scaling changes the PCA target\nA centered dataset has covariance S=[[4,2;2,9]]. Divide each column by its sample standard deviation. Find the resulting covariance matrix and give its PC1 direction.",
-        "options": [],
-        "zh": {
-          "text": "标准化如何改变 PCA\n中心化数据的协方差为 S=[[4,2;2,9]]。每列除以其样本标准差，求新协方差矩阵和 PC1 的方向。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "标准差分别为 2、3。对角项除以各自标准差的平方，非对角项除以 2×3，得 [[1,1/3;1/3,1]]。正相关使 (1,1) 方向的特征值 4/3 大于 (1,−1) 方向的 2/3，因此 PC1 可取 (1,1)ᵀ/√2。",
-        "note": "课件 pp. 20–21；实验 Task 6 Q5",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S21",
-        "text": "Apply one streaming update\nUse Oja’s update V←V+η(x−Vz)zᵀ with z=Vᵀx. For k=1, let V=(1,0)ᵀ, x=(2,1)ᵀ and η=1/4. Find the new V before any renormalization.",
-        "options": [],
-        "zh": {
-          "text": "做一次流式更新\n用课件中的 Oja 更新 V←V+η(x−Vz)zᵀ，其中 z=Vᵀx。取 k=1、V=(1,0)ᵀ、x=(2,1)ᵀ、η=1/4。求重新归一化前的 V。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "z=2，Vz=(2,0)ᵀ，残差 x−Vz=(0,1)ᵀ。乘 ηz=1/2 后，加到原 V 得 (1,1/2)ᵀ。",
-        "note": "课件 pp. 29–30；实验 Task 7(a)",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S22",
-        "text": "Store one billion image scores\nThere are 10⁹ grayscale images, 64 × 64 each. A shared PCA basis reduces each flattened image to 20 scores. Use float32 and decimal GB/TB. Ignoring the one-time mean and basis, find the raw storage, score storage and compression factor.",
-        "options": [],
-        "zh": {
-          "text": "计算十亿张图像的存储量\n10⁹ 张灰度图，每张 64×64。用共享 PCA 基把每张展平图压到 20 个得分。用 float32 和十进制 GB/TB，暂忽略只存一份的均值和基。求原始存储、得分存储和压缩倍数。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "float32 为 4 字节。原图占 10⁹×4096×4=16.384 TB；得分占 10⁹×20×4=80 GB。压缩倍数为 4096/20=204.8。若把共享均值和基计入，只需额外存 4096×21 个浮点数。",
-        "note": "课件 p. 39 第 6 题；实验 Task 6 Q7",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S24",
-        "text": "Single-image SVD storage\nFor one 64 × 64 image, store U₅, the five singular values, and V₅. Count the stored floats. Would a shared rank-5 PCA basis across many images require this many floats per image?",
-        "options": [],
-        "zh": {
-          "text": "单图 SVD 要存什么？\n对一张 64×64 图，保存 U₅、5 个奇异值和 V₅。求保存的浮点数个数。如果改用跨图像共享的 5 维 PCA，每张也要存这么多吗？",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "单图 SVD 要存 5×(64+64+1)=645 个浮点数。跨图像 PCA 只为每张图存 5 个得分，均值和基全体共用。两种表示的保真度需要分别评价。",
-        "note": "课件 pp. 31、37；实验 Task 6 Q7、Task 7(d)",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S28",
-        "text": "When nearest and farthest are nearly tied\nFor a query in a high-dimensional dataset, the closest and farthest samples are at distances 98 and 102. In another dataset they are at 2 and 6. Both gaps are 4. Which gap is less informative relative to the distance scale, and why might useful low-dimensional features help?",
-        "options": [],
-        "zh": {
-          "text": "最近和最远的距离很接近\n高维数据中，某查询点到最近和最远样本的距离分别为 98、102。另一个数据集中分别为 2、6。两组都差 4，哪一组的距离相对区分度更弱？提取低维特征为什么可能有用？",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "第一组的差距相对最近距离只有 4/98≈4%，第二组是 4/2=200%。第一组的相对区分度更弱。若主要结构确实在低维方向上，提取这些方向可以削弱无关坐标的影响；成败仍取决于保留的方向是否含有任务信号。",
-        "note": "Week 7 Slides · pp. 3–6",
-        "kind": "理论"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S29",
-        "text": "Follow the three SVD steps\nLet U=[[0,1;1,0]], Σ=diag(3,1), V=[[0,−1;1,0]], and X=UΣVᵀ. Without expanding X, apply the three factors in order to x=(0,1)ᵀ.",
-        "options": [],
-        "zh": {
-          "text": "按 SVD 的三步做变换\n设 U=[[0,1;1,0]]、Σ=diag(3,1)、V=[[0,−1;1,0]]，且 X=UΣVᵀ。不展开 X，按乘法顺序将三个因子作用到 x=(0,1)ᵀ。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "先右侧 Vᵀ：x→(1,0)ᵀ。再 Σ：得到 (3,0)ᵀ。最后 U 交换两坐标，得到 Xx=(0,3)ᵀ。U、V 是正交变换，允许旋转或反射。",
-        "note": "Week 7 Slides · pp. 9–10",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S30",
-        "text": "Find the direction of maximum stretch\nX=[[0,3;1,0]]. Without computing a full SVD, give a unit input direction attaining the spectral norm and find that norm.",
-        "options": [],
-        "zh": {
-          "text": "找出拉伸最大的方向\n设 X=[[0,3;1,0]]。无需做完整 SVD，找一个达到谱范数的单位输入方向，并求该范数。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "对单位向量 (a,b)ᵀ，输出为 (3b,a)ᵀ，长度平方为 9b²+a²=1+8b²≤9。取 (0,1)ᵀ 或其反方向就达到上界，所以谱范数为 3。",
-        "note": "Week 7 Slides · pp. 12、14",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S31",
-        "text": "Why centering can change rank\nLet X=[[2,3;2,3;2,3]]. What is rank(X)? After column centering, how many nonzero-variance PCs remain? Explain the difference.",
-        "options": [],
-        "zh": {
-          "text": "为什么中心化可能改变秩？\n设 X=[[2,3;2,3;2,3]]。求 rank(X)。逐列中心化后剩几个方差非零的主成分？解释差异。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "原来的三个行向量完全相同但非零，所以秩为 1。每行减去均值 (2,3) 后得到零矩阵，非零方差主成分有 0 个。原矩阵的非零结构在均值里，样本之间没有变化。",
-        "note": "Week 7 Slides · pp. 15–19、35",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S32",
-        "text": "Scree elbow vs. variance threshold\nThe ordered PC variances are (12,5,1,1,1). The scree plot visibly levels off after PC2. What k does the elbow suggest, and what is the smallest k that keeps 95% of the variance?",
-        "options": [],
-        "zh": {
-          "text": "碎石图拐点和方差门槛\n排序后的主成分方差为 (12,5,1,1,1)，碎石图在 PC2 之后明显变平。拐点提示选多少维？达到 95% 方差的最小 k 又是多少？",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "拐点提示 k=2。总方差为 20，前 2 项是 17，前 3 项是 18，前 4 项是 19，所以 95% 门槛要求 k=4。拐点看曲线形状，门槛看累计占比。",
-        "note": "Week 7 Slides · pp. 17、24",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S33",
-        "text": "Small directions in the Gram matrix\nThe largest and smallest positive singular values of Xc are 10 and 0.1. Compare their ratio with the ratio of the corresponding positive eigenvalues of XcᵀXc. What numerical concern does this illustrate?",
-        "options": [],
-        "zh": {
-          "text": "Gram 矩阵中的小方向\nXc 的最大和最小正奇异值为 10 和 0.1。比较奇异值之比，以及 XcᵀXc 对应正特征值之比。这体现了什么数值问题？",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "奇异值比是 100。Gram 矩阵的两个特征值是 100 和 0.01，比为 10,000。谱被平方后动态范围更大，在有限精度下小方向更难辨认。这是直接做 SVD 的数值优势之一。",
-        "note": "Week 7 Slides · pp. 14、23",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S34",
-        "text": "How dense SVD cost scales\nFor a tall dense n × p matrix with n≫p, use the lecture’s cost O(min(np²,n²p)). If p doubles and n stays fixed while n≫p still holds, how does the leading cost scale? If only k≪p directions matter, name a suitable alternative.",
-        "options": [],
-        "zh": {
-          "text": "完整 SVD 的计算量怎样变化？\n对 n≫p 的稠密 n×p 矩阵，使用课件的复杂度 O(min(np²,n²p))。若 p 加倍、n 固定，且仍有 n≫p，主导计算量怎样变化？只需要 k≪p 个方向时，可用什么方法？",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "在 n≫p 时取 np²。把 p 换成 2p，主导项约变为 4 倍。若只需要前 k 个方向，可用随机 SVD 或迭代截断 SVD。",
-        "note": "Week 7 Slides · pp. 23、26–28",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S35",
-        "text": "A large point can change PC1\nConsider the four centered points (2,0),(−2,0),(0,1),(0,−1). Then add two points (0,6),(0,−6). Which coordinate axis is PC1 before and after adding the points? Explain without computing an eigendecomposition.",
-        "options": [],
-        "zh": {
-          "text": "极端点能改变 PC1\n已有四个中心化的点 (2,0)、(−2,0)、(0,1)、(0,−1)。再加入 (0,6)、(0,−6)。加入前后 PC1 分别是哪条坐标轴？无需做特征分解。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "加入前两个坐标的平方和分别是 8 和 2。加入后均值仍为零，平方和变为 8 和 74。所有 xy 都为零，协方差是对角矩阵，直接取方差较大的坐标轴即可。PC1 从 x 轴变成 y 轴。",
-        "note": "Week 7 Slides · pp. 20–21、36",
-        "kind": "计算"
-      },
-      {
-        "bank": "written",
-        "chapter": 5,
-        "label": "W7-S36",
-        "text": "Linear projection and a curved manifold\nSuppose unlabeled points lie along a curved Swiss-roll surface. Why can a two-dimensional linear PCA projection put distant points on the roll close together? Name one nonlinear approach from the lecture.",
-        "options": [],
-        "zh": {
-          "text": "线性投影遇到弯曲流形\n无标签样本落在 Swiss roll 的弯曲表面。为什么二维线性 PCA 投影可能把沿曲面距离很远的点投得很近？写出课件中一种非线性方法。",
-          "options": []
-        },
-        "answer": null,
-        "explanation": "线性 PCA 把所有点投到同一个平面，卷的不同层可能在平面上重叠，沿曲面的距离关系因而丢失。课件提到 Kernel PCA 或自编码器；能否把曲面展开还取决于模型、参数和数据。",
-        "note": "Week 7 Slides · p. 36",
-        "kind": "理论"
+        "kind": "计算",
+        "id": 350
       },
       {
         "bank": "written",
@@ -4971,7 +1955,89 @@
         "answer": null,
         "explanation": "A³ 在 p₁、p₂ 方向分别乘 2³ 和 (−1)³，所以 A³x=24p₁−p₂。若 P 的列是 p₁、p₂，D=diag(2,−1)，这正是 A³=PD³P⁻¹ 在 x 上的作用。",
         "note": "Week 7 Slides · pp. 7–8",
-        "kind": "计算"
+        "kind": "计算",
+        "id": 325
+      },
+      {
+        "bank": "written",
+        "chapter": 5,
+        "label": "W7-04",
+        "text": "Sizes in a full SVD\nA is a 5×3 matrix of rank 2. In A=UΣVᵀ, give the shapes of U, Σ, V and the number of positive singular values.",
+        "options": [],
+        "zh": {
+          "text": "完整 SVD 的三个形状\nA 是 5×3、秩为 2 的矩阵。对完整 SVD A=UΣVᵀ，写 U、Σ、V 的尺寸及正奇异值个数。",
+          "options": []
+        },
+        "answer": null,
+        "explanation": "U 为 5×5，Σ 为 5×3，V 为 3×3。秩等于正奇异值个数，因此有两个。它们对应的左右奇异向量分别张成列空间和行空间。",
+        "note": "课件 pp. 9–10、14",
+        "kind": "理论",
+        "id": 351
+      },
+      {
+        "bank": "written",
+        "chapter": 5,
+        "label": "W7-S29",
+        "text": "Follow the three SVD steps\nLet U=[[0,1;1,0]], Σ=diag(3,1), V=[[0,−1;1,0]], and X=UΣVᵀ. Without expanding X, apply the three factors in order to x=(0,1)ᵀ.",
+        "options": [],
+        "zh": {
+          "text": "按 SVD 的三步做变换\n设 U=[[0,1;1,0]]、Σ=diag(3,1)、V=[[0,−1;1,0]]，且 X=UΣVᵀ。不展开 X，按乘法顺序将三个因子作用到 x=(0,1)ᵀ。",
+          "options": []
+        },
+        "answer": null,
+        "explanation": "先右侧 Vᵀ：x→(1,0)ᵀ。再 Σ：得到 (3,0)ᵀ。最后 U 交换两坐标，得到 Xx=(0,3)ᵀ。U、V 是正交变换，允许旋转或反射。",
+        "note": "Week 7 Slides · pp. 9–10",
+        "kind": "计算",
+        "id": 317
+      },
+      {
+        "bank": "written",
+        "chapter": 5,
+        "label": "W7-S05",
+        "text": "Matrix norms from a short spectrum\nA has singular values 4,2,1. Find ‖A‖F and ‖A‖₂, then find the Frobenius and spectral errors after keeping only the largest singular value.",
+        "options": [],
+        "zh": {
+          "text": "用三个奇异值求范数和误差\nA 的奇异值为 4、2、1。求 ‖A‖F 和 ‖A‖₂，再求只保留最大奇异值时的两种误差。",
+          "options": []
+        },
+        "answer": null,
+        "explanation": "原矩阵的 Frobenius 范数为 √(16+4+1)=√21，谱范数为 4。截断后丢掉 2、1，误差分别是 √5 和 2。",
+        "note": "Phillips, Mathematical Foundations for Data Analysis · Exercise 7.2（改编）",
+        "kind": "计算",
+        "id": 352,
+        "origin": "textbook"
+      },
+      {
+        "bank": "written",
+        "chapter": 5,
+        "label": "W7-S06",
+        "text": "Center, then compute covariance\nThe observations are (5,3), (1,−1), (4,0), (2,2). Find their mean and 2 × 2 sample covariance matrix.",
+        "options": [],
+        "zh": {
+          "text": "先中心化，再求协方差\n观测为 (5,3)、(1,−1)、(4,0)、(2,2)。求均值和 2×2 样本协方差矩阵。",
+          "options": []
+        },
+        "answer": null,
+        "explanation": "均值为 (3,1)，中心化矩阵为 Xc=[[2,2;−2,−2;1,−1;−1,1]]。两列平方和各为 10，列内积为 4+4−1−1=6。除以 n−1=3 得 S=(1/3)[[10,6;6,10]]。",
+        "note": "课件 pp. 16、21、25",
+        "kind": "计算",
+        "id": 302
+      },
+      {
+        "bank": "written",
+        "chapter": 5,
+        "label": "W7-S08",
+        "text": "From one score back to one point\nThe training mean is μ=(3,1)ᵀ, and v₁=(1,1)ᵀ/√2. Find the PC1 score of x=(4,0)ᵀ and reconstruct x in the original coordinates using only PC1.",
+        "options": [],
+        "zh": {
+          "text": "从一维得分还原一点\n训练均值为 μ=(3,1)ᵀ，v₁=(1,1)ᵀ/√2。求 x=(4,0)ᵀ 的 PC1 得分，并仅用 PC1 重构到原坐标。",
+          "options": []
+        },
+        "answer": null,
+        "explanation": "先做 x−μ=(1,−1)ᵀ。得分 z=v₁ᵀ(x−μ)=(1−1)/√2=0。重构为 μ+v₁z=(3,1)ᵀ。零得分意味着点在中心化后与 PC1 正交。",
+        "note": "课件 pp. 16、22、25",
+        "kind": "计算",
+        "id": 304
       },
       {
         "label": "W7-SCALE",
@@ -4986,7 +2052,88 @@
         "explanation": "同尺度且相对方差有意义时可仅逐列减均值，PCA 对应协方差矩阵。单位差异若不应主导比较，可减均值后除以各列标准差，PCA 对应相关矩阵。常量列的标准差为零，需要单独处理。",
         "note": "Week 7 Slides · pp. 16、20–21",
         "kind": "理论",
-        "chapter": 5
+        "chapter": 5,
+        "id": 326
+      },
+      {
+        "bank": "written",
+        "chapter": 5,
+        "label": "W7-S13",
+        "text": "Shape the randomized sketch\nX has shape 4000 × 1000. Use k=20, oversampling r=8, Y=XΩ, thin QR Y=QR, and B=QᵀX. Give the shapes of Ω, Y, Q and B.",
+        "options": [],
+        "zh": {
+          "text": "随机 SVD 的尺寸\nX 是 4000×1000。令 k=20、过采样 r=8，计算 Y=XΩ、薄 QR 分解 Y=QR 和 B=QᵀX。求 Ω、Y、Q、B 的尺寸。",
+          "options": []
+        },
+        "answer": null,
+        "explanation": "草图宽度为 k+r=28。Ω 是 1000×28，Y 和 Q 都是 4000×28，B 是 28×1000。B 的行数缩到 28，仍保留原来的特征轴。",
+        "note": "课件 p. 39 第 5 题；pp. 26–28",
+        "kind": "计算",
+        "id": 307
+      },
+      {
+        "bank": "written",
+        "chapter": 5,
+        "label": "W7-S21",
+        "text": "Apply one streaming update\nUse Oja’s update V←V+η(x−Vz)zᵀ with z=Vᵀx. For k=1, let V=(1,0)ᵀ, x=(2,1)ᵀ and η=1/4. Find the new V before any renormalization.",
+        "options": [],
+        "zh": {
+          "text": "做一次流式更新\n用课件中的 Oja 更新 V←V+η(x−Vz)zᵀ，其中 z=Vᵀx。取 k=1、V=(1,0)ᵀ、x=(2,1)ᵀ、η=1/4。求重新归一化前的 V。",
+          "options": []
+        },
+        "answer": null,
+        "explanation": "z=2，Vz=(2,0)ᵀ，残差 x−Vz=(0,1)ᵀ。乘 ηz=1/2 后，加到原 V 得 (1,1/2)ᵀ。",
+        "note": "课件 pp. 29–30；实验 Task 7(a)",
+        "kind": "计算",
+        "id": 313
+      },
+      {
+        "bank": "written",
+        "chapter": 5,
+        "label": "W7-S24",
+        "text": "Single-image SVD storage\nFor one 64 × 64 image, store U₅, the five singular values, and V₅. Count the stored floats. Would a shared rank-5 PCA basis across many images require this many floats per image?",
+        "options": [],
+        "zh": {
+          "text": "单图 SVD 要存什么？\n对一张 64×64 图，保存 U₅、5 个奇异值和 V₅。求保存的浮点数个数。如果改用跨图像共享的 5 维 PCA，每张也要存这么多吗？",
+          "options": []
+        },
+        "answer": null,
+        "explanation": "单图 SVD 要存 5×(64+64+1)=645 个浮点数。跨图像 PCA 只为每张图存 5 个得分，均值和基全体共用。两种表示的保真度需要分别评价。",
+        "note": "课件 pp. 31、37；实验 Task 6 Q7、Task 7(d)",
+        "kind": "计算",
+        "id": 315
+      },
+      {
+        "bank": "written",
+        "chapter": 5,
+        "label": "W7-S32",
+        "text": "Scree elbow vs. variance threshold\nThe ordered PC variances are (12,5,1,1,1). The scree plot visibly levels off after PC2. What k does the elbow suggest, and what is the smallest k that keeps 95% of the variance?",
+        "options": [],
+        "zh": {
+          "text": "碎石图拐点和方差门槛\n排序后的主成分方差为 (12,5,1,1,1)，碎石图在 PC2 之后明显变平。拐点提示选多少维？达到 95% 方差的最小 k 又是多少？",
+          "options": []
+        },
+        "answer": null,
+        "explanation": "拐点提示 k=2。总方差为 20，前 2 项是 17，前 3 项是 18，前 4 项是 19，所以 95% 门槛要求 k=4。拐点看曲线形状，门槛看累计占比。",
+        "note": "Week 7 Slides · pp. 17、24",
+        "kind": "计算",
+        "id": 320
+      },
+      {
+        "bank": "written",
+        "chapter": 5,
+        "label": "W7-S36",
+        "text": "Linear projection and a curved manifold\nSuppose unlabeled points lie along a curved Swiss-roll surface. Why can a two-dimensional linear PCA projection put distant points on the roll close together? Name one nonlinear approach from the lecture.",
+        "options": [],
+        "zh": {
+          "text": "线性投影遇到弯曲流形\n无标签样本落在 Swiss roll 的弯曲表面。为什么二维线性 PCA 投影可能把沿曲面距离很远的点投得很近？写出课件中一种非线性方法。",
+          "options": []
+        },
+        "answer": null,
+        "explanation": "线性 PCA 把所有点投到同一个平面，卷的不同层可能在平面上重叠，沿曲面的距离关系因而丢失。课件提到 Kernel PCA 或自编码器；能否把曲面展开还取决于模型、参数和数据。",
+        "note": "Week 7 Slides · p. 36",
+        "kind": "理论",
+        "id": 324
       }
     ]
   ]

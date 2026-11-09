@@ -35,7 +35,9 @@ not predictions of exam content. Original reference questions remain Q01–Q100.
 
 ## Mid2 practice
 
-The Mid2 page contains 56 independently written variants based on Q45–Q100,
-plus selected paper-solvable Week 2–7 lecture and assignment exercises, their
-variants, Chinese meanings, and worked solutions. Exercise cards identify
-their source.
+The Mid2 page contains selected written adaptations from the original question
+bank and Jeff M. Phillips’s *Mathematical Foundations for Data Analysis*, as
+well as paper-solvable lecture and assignment exercises. Exercise cards identify
+their source and include Chinese meanings and worked solutions. The Week 4
+extended edit-distance exercise follows the slides’ reference to *Mining of
+Massive Datasets*, §3.5.7.
